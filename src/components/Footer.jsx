@@ -1,5 +1,6 @@
 import React from 'react';
-import { Phone, Mail, ChevronRight, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { Phone, Mail, ChevronRight } from 'lucide-react';
+import { FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -14,9 +15,9 @@ const Footer = () => {
               Mostech Business Solutions is a Dubai-based software company trusted across the UAE and GCC. We offer Software Development, Web and Mobile Application Development, and Digital Marketing services. We create intelligent, powerful applications that streamline business operations efficiently.
             </p>
             <div className="footer-socials">
-              <a href="https://www.linkedin.com/company/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link linkedin"><Linkedin size={20} /></a>
-              <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link facebook"><Facebook size={20} /></a>
-              <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link instagram"><Instagram size={20} /></a>
+              <a href="https://www.linkedin.com/company/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link linkedin"><FaLinkedinIn size={20} /></a>
+              <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link facebook"><FaFacebookF size={20} /></a>
+              <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link instagram"><FaInstagram size={20} /></a>
             </div>
           </div>
           
