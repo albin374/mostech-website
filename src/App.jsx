@@ -12,6 +12,7 @@ import SeoSection from './components/SeoSection';
 import GlobalPresence from './components/GlobalPresence';
 import CompanyStats from './components/CompanyStats';
 import CeoMessage from './components/CeoMessage';
+import S3Model from './components/S3Model';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <SeoSection />
           <DigitalSolutions />
           <MobileSection />
+          <S3Model />
         </main>
         <Footer />
       </div>

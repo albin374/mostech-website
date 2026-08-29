@@ -13,7 +13,7 @@ const HeroSection = () => {
           playsInline 
           className="hero-bg-video"
         >
-          <source src="/Robot_working_at_desk_1080p_202608281117.mp4" type="video/mp4" />
+          <source src="/banner video.mp4" type="video/mp4" />
         </video>
       </div>
     </section>

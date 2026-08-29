@@ -40,6 +40,8 @@ const Header = () => {
                     <li><a href="#seo">SEO</a></li>
                   </ul>
                 </li>
+                <li><a href="#products" className="nav-link">Products</a></li>
+                <li className="mobile-only-contact"><a href="#contact" className="nav-link">Contact Us</a></li>
               </ul>
             </nav>
             

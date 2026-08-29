@@ -31,7 +31,7 @@ const CeoMessage = () => {
           </div>
 
           <div className="ceo-right">
-            <img src="/ceo.png" alt="CEO Message" className="ceo-main-image" />
+            <img src="/ceo2.jpeg" alt="CEO Message" className="ceo-main-image" />
           </div>
         </div>
 
@@ -48,7 +48,6 @@ const CeoMessage = () => {
                 To deliver world-class digital solutions across industries, maximizing growth and value for both our clients and our business.
               </p>
             </div>
-            <img src="/mission.png" alt="Mission" className="ceo-card-graphic" />
           </div>
 
           <div className="ceo-card">
@@ -61,7 +60,6 @@ const CeoMessage = () => {
                 To be a globally recognised company empowering clients to outpace competition through innovative digital excellence.
               </p>
             </div>
-            <img src="/vission.png" alt="Vision" className="ceo-card-graphic" />
           </div>
 
           <div className="ceo-card">
@@ -74,7 +72,6 @@ const CeoMessage = () => {
                 Drive innovation, ensure client success, foster growth, deliver excellence, and uphold integrity in every digital solution we provide.
               </p>
             </div>
-            <img src="/goal.png" alt="Goals" className="ceo-card-graphic" />
           </div>
 
         </div>

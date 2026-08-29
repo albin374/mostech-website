@@ -117,10 +117,11 @@
 }
 
 .ceo-main-image {
-  width: 110%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 500px;
   height: auto;
-  margin-left: -5%;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 /* Cards Wrapper */
@@ -156,7 +157,7 @@
 .ceo-card-content {
   position: relative;
   z-index: 2;
-  width: 70%; /* Leave space for graphic on the right */
+  width: 100%;
 }
 
 .ceo-card-icon-wrapper {

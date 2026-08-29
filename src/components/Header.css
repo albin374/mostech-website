@@ -154,10 +154,26 @@
   cursor: pointer;
 }
 
+.mobile-only-contact {
+  display: none;
+}
+
 @media (max-width: 991px) {
   .header-main-content {
     display: flex;
     justify-content: space-between;
+  }
+
+  .logo-img {
+    max-height: 32px;
+  }
+  
+  .header-right .nav-contact-btn {
+    display: none;
+  }
+  
+  .mobile-only-contact {
+    display: block;
   }
   
   .header-actions {
