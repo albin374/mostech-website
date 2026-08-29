@@ -1,0 +1,17 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.hero-bg-video-wrapper {
+  width: 100%;
+  display: block;
+}
+
+.hero-bg-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,0 +1,227 @@
+.stats-section {
+  padding: 5rem 0 0 0;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.badge-overlay {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.stats-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stats-badge-line {
+  height: 1px;
+  width: 40px;
+  background-color: #0d6efd;
+  opacity: 0.3;
+}
+
+.stats-badge-text {
+  color: #0d6efd;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Visual Area */
+.stats-visual-area {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats-bg-wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.stats-robot-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.stats-cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  z-index: 2;
+  margin-top: -100px; /* Pull up over the image */
+  padding: 0 1rem;
+}
+
+@media (min-width: 576px) {
+  .stats-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .stats-cards-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+    margin-top: -220px;
+  }
+}
+
+/* Glass Cards */
+.stats-glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 15px 35px rgba(13, 110, 253, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(13, 110, 253, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+}
+
+.stats-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.stats-glass-card h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0d6efd;
+  margin: 0 0 0.5rem 0;
+  line-height: 1;
+}
+
+.stats-glass-card p {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0a1930;
+  margin: 0 0 1rem 0;
+}
+
+.stats-card-underline {
+  width: 30px;
+  height: 3px;
+  background-color: #0d6efd;
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+/* Features Bar */
+.stats-features-bar {
+  background-color: #ffffff;
+  border-radius: 100px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+@media (min-width: 992px) {
+  .stats-features-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+  }
+}
+
+.stats-feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .stats-feature {
+    padding: 0 2rem;
+  }
+  
+  /* Add separators between items on desktop */
+  .stats-feature:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background-color: #e2e8f0;
+  }
+}
+
+.stats-feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #f0f7ff;
+  color: #0d6efd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stats-feature-text h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0a1930;
+  margin: 0 0 0.2rem 0;
+}
+
+.stats-feature-text p {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 991px) {
+  .stats-features-bar {
+    border-radius: 24px;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  .stats-title {
+    font-size: 2.5rem;
+  }
+}
