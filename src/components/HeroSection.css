@@ -5,12 +5,12 @@
   overflow: hidden;
 }
 
-.hero-bg-video-wrapper {
+.hero-bg-image-wrapper {
   width: 100%;
   display: block;
 }
 
-.hero-bg-video {
+.hero-bg-image {
   width: 100%;
   height: auto;
   display: block;

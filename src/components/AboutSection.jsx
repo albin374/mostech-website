@@ -18,7 +18,7 @@ const AboutSection = () => {
           >
             <h2 className="corporate-title">
               Driving Digital Success<br />
-              <span className="gradient-text">for Businesses</span>
+              <span className="navy-blue-text">for Businesses</span>
             </h2>
             
             <p className="corporate-desc">

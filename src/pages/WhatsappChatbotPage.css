@@ -1,0 +1,229 @@
+.whatsapp-page-wrapper {
+  padding-top: 80px;
+}
+
+/* ================= HERO SECTION ================= */
+.whatsapp-hero-section {
+  position: relative;
+  width: 100%;
+  padding: 20px 0 6rem 0;
+  background-color: #ffffff;
+}
+
+.whatsapp-hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .whatsapp-hero-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+/* Left Content */
+.whatsapp-hero-left {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.whatsapp-hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.whatsapp-bot-icon {
+  width: 44px;
+  height: 44px;
+  background-color: #0b9e66;
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-badge-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.w-brand {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #051636;
+  letter-spacing: 0.5px;
+}
+
+.w-sub {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0b9e66;
+  letter-spacing: 0.5px;
+}
+
+.whatsapp-main-title {
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  font-weight: 800;
+  color: #051636;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.5px;
+}
+
+.whatsapp-main-title .text-green {
+  color: #0b9e66;
+}
+
+.whatsapp-title-line {
+  width: 50px;
+  height: 3px;
+  background-color: #0b9e66;
+  margin-bottom: 1.5rem;
+}
+
+.whatsapp-desc {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  max-width: 550px;
+}
+
+/* Action Buttons */
+.whatsapp-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.whatsapp-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #0b9e66;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn-primary:hover {
+  background-color: #087a4f;
+  transform: translateY(-2px);
+}
+
+.whatsapp-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  color: #051636;
+  border: 1.5px solid #0b9e66;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn-secondary:hover {
+  background-color: #f0fdf4;
+  transform: translateY(-2px);
+}
+
+/* Right Content */
+.whatsapp-hero-right {
+  flex: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-hero-img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================= Bottom Green Banner ================= */
+.whatsapp-bottom-banner {
+  margin-top: 2rem;
+  background-color: #0a4f36; /* Dark Green */
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 40px rgba(10, 79, 54, 0.2);
+}
+
+.w-banner-feature {
+  display: flex;
+  flex-direction: column;
+}
+
+.w-banner-feature.feature-main {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.w-b-icon {
+  color: white;
+}
+
+.w-banner-feature h4 {
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.w-banner-feature p {
+  color: #86efac; /* Light Green text */
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.w-banner-divider {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin: 0 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .whatsapp-bottom-banner {
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .w-banner-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-main-title {
+    font-size: 2.5rem;
+  }
+}

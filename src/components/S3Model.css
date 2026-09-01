@@ -26,7 +26,7 @@
 
 .s3-badge {
   background-color: #eef4ff;
-  color: #0d6efd;
+  color: navy;
   font-weight: 600;
   font-size: 0.9rem;
   padding: 0.5rem 1.5rem;
@@ -40,7 +40,7 @@
 .s3-badge-dot {
   width: 8px;
   height: 8px;
-  background-color: #0d6efd;
+  background-color: navy;
   border-radius: 50%;
 }
 

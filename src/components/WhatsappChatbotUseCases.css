@@ -1,0 +1,295 @@
+.whatsapp-usecases-section {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+/* ================= Top Row ================= */
+.usecases-top-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .usecases-top-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+
+.usecases-left-content {
+  flex: 1.2;
+}
+
+.usecases-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.badge-number {
+  background-color: #0b9e66;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.badge-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0b9e66;
+  letter-spacing: 0.5px;
+}
+
+.usecases-main-title {
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  font-weight: 800;
+  color: #051636;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.5px;
+}
+
+.usecases-main-title .text-green {
+  color: #0b9e66;
+}
+
+.usecases-desc {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  max-width: 550px;
+}
+
+.usecases-right-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.usecases-graphic-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================= Cards Grid ================= */
+.usecases-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .usecases-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .usecases-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .usecases-cards-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.usecase-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.usecase-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.uc-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  background-color: #f8fafc;
+}
+
+/* Icon Colors */
+.icon-green { color: #0b9e66; background-color: #ecfdf5; }
+.icon-blue { color: #3b82f6; background-color: #eff6ff; }
+.icon-purple { color: #a855f7; background-color: #faf5ff; }
+.icon-orange { color: #f97316; background-color: #fff7ed; }
+.icon-teal { color: #14b8a6; background-color: #f0fdfa; }
+
+.uc-card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #051636;
+  margin-bottom: 0.5rem;
+}
+
+.uc-card-subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  min-height: 40px; /* Aligns dividers */
+}
+
+.uc-card-divider {
+  width: 100%;
+  height: 2px;
+  background-color: #f1f5f9;
+  margin-bottom: 1.5rem;
+}
+
+.divider-green { background-color: #86efac; }
+.divider-blue { background-color: #93c5fd; }
+.divider-purple { background-color: #d8b4fe; }
+.divider-orange { background-color: #fdba74; }
+.divider-teal { background-color: #5eead4; }
+
+.uc-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.uc-card-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #4b5563;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+/* List Icon Colors */
+.list-green li svg { color: #0b9e66; }
+.list-blue li svg { color: #3b82f6; }
+.list-purple li svg { color: #a855f7; }
+.list-orange li svg { color: #f97316; }
+.list-teal li svg { color: #14b8a6; }
+
+/* ================= Bottom Dark Green Banner ================= */
+.usecases-bottom-banner {
+  background-color: #0a4f36;
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 0 10px 40px rgba(10, 79, 54, 0.15);
+}
+
+@media (min-width: 1024px) {
+  .usecases-bottom-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.uc-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.uc-banner-icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.uc-banner-text {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.uc-banner-text .text-light-green {
+  color: #86efac;
+}
+
+.uc-banner-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  flex: 2;
+}
+
+@media (min-width: 640px) {
+  .uc-banner-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .uc-banner-stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.uc-stat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.uc-stat-item .stat-icon {
+  color: #86efac;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.uc-stat-item h5 {
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.uc-stat-item p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0;
+}

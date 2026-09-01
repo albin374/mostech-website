@@ -1,0 +1,183 @@
+.erp-product-page-wrapper {
+  padding-top: 80px; /* Offset for fixed header */
+}
+
+/* ================= HERO SECTION ================= */
+.erp-product-hero-section {
+  position: relative;
+  width: 100%;
+  padding: 20px 0 6rem 0;
+  background-color: #ffffff;
+}
+
+.erp-product-hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .erp-product-hero-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+/* Left Content */
+.erp-product-hero-left {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.erp-product-hero-badge {
+  margin-bottom: 2rem;
+}
+
+.erp-product-blue-text-badge {
+  color: #0044cc;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.erp-product-main-title {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 900;
+  color: #051636;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1.5px;
+}
+
+.erp-product-blue-text {
+  color: #0044cc;
+}
+
+.erp-product-subtitle-bold {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #051636;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.erp-product-desc {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Action Buttons */
+.erp-product-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.erp-product-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #051636;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.erp-product-btn-primary:hover {
+  background-color: #0044cc;
+  transform: translateY(-2px);
+}
+
+.erp-product-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #051636;
+  border: 1.5px solid #051636;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.erp-product-btn-secondary:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+/* Bottom Icons List */
+.erp-product-hero-icons-list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.erp-product-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.erp-product-blue-icon {
+  color: #0044cc;
+}
+
+.erp-product-circle-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid #0044cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.erp-product-cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.erp-product-icon-item span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #051636;
+  text-align: center;
+}
+
+/* Right Content */
+.erp-product-hero-right {
+  flex: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.erp-product-hero-img {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  object-fit: contain;
+}

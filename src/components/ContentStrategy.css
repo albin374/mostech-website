@@ -1,0 +1,202 @@
+.content-strategy-section {
+  padding: 2rem 0 4rem 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .content-card {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Left Column (Text) */
+.content-card-left {
+  flex: 1;
+  position: relative;
+}
+
+.content-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #0044cc;
+  border-radius: 30px;
+  padding: 4px 16px 4px 4px;
+  margin-bottom: 1.5rem;
+}
+
+.content-badge .badge-icon {
+  width: 28px;
+  height: 28px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-badge .badge-icon svg {
+  color: #0044cc !important;
+}
+
+.content-badge span {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.content-card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.content-card-title .light-blue-text {
+  color: #3b82f6; /* Lighter blue for STRATEGY */
+}
+
+.content-divider {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.content-divider .line {
+  width: 40px;
+  height: 3px;
+  background-color: #3b82f6;
+  border-radius: 2px;
+}
+
+.content-divider .dot {
+  width: 6px;
+  height: 6px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+}
+
+.content-divider .dot.small {
+  width: 4px;
+  height: 4px;
+}
+
+.content-card-desc {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Timeline */
+.content-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* The vertical dotted line connecting the number circles */
+.content-timeline::before {
+  content: '';
+  position: absolute;
+  left: 31px; /* Centers with the 44px number circle */
+  top: 22px;
+  bottom: 22px;
+  width: 2px;
+  border-left: 2px dotted #94a3b8;
+  z-index: 1;
+}
+
+.content-timeline-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  padding: 12px 25px 12px 10px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.content-timeline-item:hover {
+  transform: translateX(5px);
+}
+
+.timeline-number-circle {
+  width: 44px;
+  height: 44px;
+  background-color: #0044cc;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.timeline-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #f1f5f9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-content h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-content p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Right Column (Image) */
+.content-card-right {
+  flex: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-image {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  object-fit: contain;
+}

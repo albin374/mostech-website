@@ -40,7 +40,7 @@
   align-items: center;
   gap: 0.5rem;
   background: #ffffff;
-  color: #2563eb;
+  color: navy;
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-size: 0.75rem;
@@ -52,7 +52,7 @@
 }
 
 .mobile-title {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-weight: 800;
   color: #0f172a;
   line-height: 1.1;
@@ -61,7 +61,7 @@
 }
 
 .mobile-title-blue {
-  color: #2563eb;
+  color: navy;
 }
 
 .mobile-subtitle {
@@ -103,7 +103,7 @@
   height: 40px;
   border-radius: 50%;
   background: #eff6ff;
-  color: #2563eb;
+  color: navy;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,17 +174,17 @@
 
 .android-icon {
   background: #eff6ff;
-  color: #2563eb;
+  color: navy;
 }
 
 .apple-icon {
   background: #eff6ff;
-  color: #2563eb;
+  color: navy;
 }
 
 .cross-icon {
   background: #eff6ff;
-  color: #2563eb;
+  color: navy;
 }
 
 .card-title {
@@ -209,8 +209,8 @@
   justify-content: center;
   gap: 0.5rem;
   background: transparent;
-  color: #2563eb;
-  border: 1px solid #2563eb;
+  color: navy;
+  border: 1px solid navy;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   font-size: 0.9rem;
@@ -221,7 +221,7 @@
 }
 
 .card-btn:hover {
-  background: #2563eb;
+  background: navy;
   color: #ffffff;
 }
 

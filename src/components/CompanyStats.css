@@ -1,5 +1,5 @@
 .stats-section {
-  padding: 5rem 0 0 0;
+  padding: 0;
   background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
   font-family: 'Inter', sans-serif;
   overflow: hidden;
@@ -29,12 +29,12 @@
 .stats-badge-line {
   height: 1px;
   width: 40px;
-  background-color: #0d6efd;
+  background-color: navy;
   opacity: 0.3;
 }
 
 .stats-badge-text {
-  color: #0d6efd;
+  color: navy;
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 2px;
@@ -112,7 +112,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  background: linear-gradient(135deg, navy 0%, navy 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,7 +124,7 @@
 .stats-glass-card h3 {
   font-size: 2rem;
   font-weight: 800;
-  color: #0d6efd;
+  color: navy;
   margin: 0 0 0.5rem 0;
   line-height: 1;
 }
@@ -139,7 +139,7 @@
 .stats-card-underline {
   width: 30px;
   height: 3px;
-  background-color: #0d6efd;
+  background-color: navy;
   border-radius: 2px;
   opacity: 0.5;
 }
@@ -194,7 +194,7 @@
   height: 48px;
   border-radius: 50%;
   background-color: #f0f7ff;
-  color: #0d6efd;
+  color: navy;
   display: flex;
   align-items: center;
   justify-content: center;

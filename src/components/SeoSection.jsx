@@ -42,7 +42,7 @@ const SeoSection = () => {
             </div>
             
             <h2 className="seo-title">
-              Best SEO Service<br/>in <span className="seo-highlight">Dubai</span>
+              Best SEO Service<br/>in <span style={{ color: 'navy' }}>Dubai</span>
             </h2>
             <div className="seo-title-line"></div>
             

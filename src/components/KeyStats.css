@@ -1,0 +1,91 @@
+.key-stats-section {
+  width: 100%;
+  padding: 6rem 0;
+  background-color: #fdfdfe;
+  overflow: hidden;
+}
+
+.key-stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .key-stats-container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+.key-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.key-stat-icon-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #ffffff 0%, #edf2fa 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(47, 107, 216, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+/* Subtle outer glow effect for the icon */
+.key-stat-icon-wrapper::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  border: 1px solid rgba(47, 107, 216, 0.1);
+  pointer-events: none;
+}
+
+.key-stat-icon {
+  color: #03256c; /* Deep rich blue */
+}
+
+.key-stat-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0a1930;
+  margin: 0 0 0.5rem 0;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.key-stat-label {
+  font-size: 1rem;
+  color: #475569;
+  font-weight: 500;
+  margin: 0;
+}
+
+.key-stat-divider {
+  width: 1px;
+  height: 80px; /* Animated via framer motion, but fallback height */
+  background: linear-gradient(to bottom, rgba(226, 232, 240, 0), rgba(226, 232, 240, 1) 20%, rgba(226, 232, 240, 1) 80%, rgba(226, 232, 240, 0));
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .key-stat-divider {
+    display: block;
+  }
+}

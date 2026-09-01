@@ -1,47 +1,51 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import ServicesGrid from './components/ServicesGrid';
-import DigitalSolutions from './components/DigitalSolutions';
-import MobileSection from './components/MobileSection';
 import Footer from './components/Footer';
-import WebDevSection from './components/WebDevSection';
-import SeoSection from './components/SeoSection';
-import GlobalPresence from './components/GlobalPresence';
-import CompanyStats from './components/CompanyStats';
-import CeoMessage from './components/CeoMessage';
-import S3Model from './components/S3Model';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import MobileAppDevPage from './pages/MobileAppDevPage';
+import WebDevPage from './pages/WebDevPage';
+import DigitalMarketingPage from './pages/DigitalMarketingPage';
+import EcommercePage from './pages/EcommercePage';
+import ErpPage from './pages/ErpPage';
+import ErpProductPage from './pages/ErpProductPage';
+import SeoPage from './pages/SeoPage';
+import HrmsPage from './pages/HrmsPage';
+import WhatsappChatbotPage from './pages/WhatsappChatbotPage';
 
 function App() {
   return (
     <HelmetProvider>
-      <div className="app-container">
-        <Helmet>
-          <title>Web Design & Development Company in Dubai - Mostech</title>
-          <meta name="description" content="Mostech is a leading Dubai software company delivering web development, mobile apps, and digital marketing across the UAE & GCC. Trusted by 500+ clients." />
-          <meta name="keywords" content="Mostech Business Solutions | The Best Software Company in Dubai, Digital Marketing Agency in Dubai, UAE." />
-        </Helmet>
-        
-        <Header />
-        <main>
-          <HeroSection />
-          <AboutSection />
-          <CeoMessage />
-          <ServicesGrid />
-          <GlobalPresence />
-          <CompanyStats />
-          <WebDevSection />
-          <SeoSection />
-          <DigitalSolutions />
-          <MobileSection />
-          <S3Model />
-        </main>
-        <Footer />
-      </div>
+      <Router>
+        <div className="app-container">
+          <Helmet>
+            <title>Web Design & Development Company in Dubai - Mostech</title>
+            <meta name="description" content="Mostech is a leading Dubai software company delivering web development, mobile apps, and digital marketing across the UAE & GCC. Trusted by 500+ clients." />
+            <meta name="keywords" content="Mostech Business Solutions | The Best Software Company in Dubai, Digital Marketing Agency in Dubai, UAE." />
+          </Helmet>
+          
+          <Header />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/mobile-app-development" element={<MobileAppDevPage />} />
+            <Route path="/web-development" element={<WebDevPage />} />
+            <Route path="/digital-marketing" element={<DigitalMarketingPage />} />
+            <Route path="/ecommerce" element={<EcommercePage />} />
+            <Route path="/erp-solution" element={<ErpPage />} />
+            <Route path="/erp-product" element={<ErpProductPage />} />
+            <Route path="/seo" element={<SeoPage />} />
+            <Route path="/hrms" element={<HrmsPage />} />
+            <Route path="/whatsapp-chatbot" element={<WhatsappChatbotPage />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
     </HelmetProvider>
   );
 }
 
 export default App;
+

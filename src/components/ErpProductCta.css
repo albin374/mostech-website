@@ -1,0 +1,218 @@
+.erp-product-cta-section {
+  padding: 6rem 0 4rem 0;
+  background-color: #f8fafc;
+  overflow: hidden;
+}
+
+/* ================= Top Row ================= */
+.erp-cta-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.erp-cta-text-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.erp-cta-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.badge-text-blue {
+  color: #0044cc;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.badge-line {
+  height: 2px;
+  width: 40px;
+  background-color: #0044cc;
+}
+
+.erp-cta-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #051636;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.erp-cta-title .text-blue {
+  color: #0044cc;
+}
+
+.erp-cta-subtitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #051636;
+  margin-bottom: 2rem;
+}
+
+.erp-cta-desc {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.erp-cta-desc .text-blue {
+  color: #0044cc;
+}
+
+.erp-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #0044cc;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.erp-btn-primary:hover {
+  background-color: #0033aa;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 68, 204, 0.2);
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+/* ================= Image ================= */
+.erp-cta-image-wrapper {
+  flex: 1.2;
+  position: relative;
+}
+
+.erp-cta-img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+}
+
+
+/* ================= Bottom Banner ================= */
+.erp-cta-bottom-banner {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+}
+
+.banner-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-text strong {
+  font-size: 1.3rem;
+  color: #051636;
+  line-height: 1;
+}
+
+.logo-text span {
+  font-size: 1.3rem;
+  color: #051636;
+  line-height: 1;
+}
+
+.banner-divider {
+  width: 1px;
+  height: 60px;
+  background-color: #e2e8f0;
+  margin: 0 1rem;
+}
+
+.banner-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 280px;
+}
+
+.b-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background-color: #051636;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.b-text h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #051636;
+  margin-bottom: 6px;
+}
+
+.b-text p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .erp-cta-top-row {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .erp-cta-text-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .erp-cta-badge {
+    justify-content: center;
+  }
+  .erp-cta-bottom-banner {
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .banner-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .erp-cta-title {
+    font-size: 2.5rem;
+  }
+  .erp-cta-subtitle {
+    font-size: 1.4rem;
+  }
+  .banner-feature {
+    width: 100%;
+    max-width: 100%;
+  }
+}

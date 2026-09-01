@@ -1,0 +1,246 @@
+.onpage-seo-section {
+  padding: 20px 0 2rem 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.onpage-seo-section .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Section */
+.onpage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.onpage-header-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: none; /* hidden on small screens */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 68, 204, 0.08);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.onpage-header-icon::before {
+  content: '';
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+}
+
+@media (min-width: 992px) {
+  .onpage-header-icon {
+    display: flex;
+  }
+}
+
+.onpage-header-content {
+  text-align: center;
+  flex: 1;
+  max-width: 800px;
+}
+
+.onpage-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.onpage-dots .dot {
+  border-radius: 50%;
+  background-color: #0044cc;
+}
+
+.onpage-dots .dot.small {
+  width: 6px;
+  height: 6px;
+  opacity: 0.5;
+}
+
+.onpage-dots .dot.large {
+  width: 8px;
+  height: 8px;
+}
+
+.onpage-title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+}
+
+.onpage-title .blue-text {
+  color: #0044cc;
+}
+
+.onpage-desc {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.onpage-desc strong {
+  color: #0044cc;
+  font-weight: 700;
+}
+
+/* Main Layout Container */
+.onpage-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .onpage-card {
+    flex-direction: row;
+  }
+}
+
+/* Left Column */
+.onpage-card-left {
+  flex: 1;
+  padding: 2rem;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .onpage-card-left {
+    padding: 2rem;
+  }
+  
+  /* Divider Line */
+  .onpage-card-left::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #e2e8f0, transparent);
+  }
+}
+
+.onpage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #0044cc;
+  border-radius: 30px;
+  padding: 4px 16px 4px 4px;
+  margin-bottom: 1.5rem;
+}
+
+.onpage-badge .badge-icon {
+  width: 28px;
+  height: 28px;
+  background-color: #0044cc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.onpage-badge span {
+  color: #0044cc;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.onpage-card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1.2rem;
+}
+
+.onpage-card-desc {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+}
+
+.onpage-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.onpage-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 1.2rem;
+}
+
+.onpage-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.onpage-list .list-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #eef2ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.onpage-list span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Right Column (Image) */
+.onpage-card-right {
+  flex: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.onpage-image {
+  width: 100%;
+  height: auto;
+  max-width: 650px;
+  object-fit: contain;
+}

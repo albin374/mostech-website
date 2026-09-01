@@ -47,12 +47,8 @@ const ServicesGrid = () => {
     <section id="services" className="services-modern-section" style={{ backgroundImage: "url('/services.png')" }}>
       <div className="container">
         <div className="services-header">
-          <div className="services-badge-pill">
-            OUR SERVICES <span className="services-badge-dot"></span>
-          </div>
-          
           <h2 className="services-title">
-            Our <span className="services-gradient-text">Services</span>
+            Our <span style={{ color: 'navy' }}>Services</span>
           </h2>
           
           <p className="services-desc">

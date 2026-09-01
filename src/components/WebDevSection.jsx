@@ -47,7 +47,7 @@ const WebDevSection = () => {
       <div className="container webdev-container">
         
         <div className="wds-left">
-          <h2 className="wds-title">Website Design and<br/>Development</h2>
+          <h2 className="wds-title">Website Design and<br/><span style={{ color: 'navy' }}>Development</span></h2>
           <p className="wds-subtitle">
             We create modern, responsive websites that combine strong visual design with seamless functionality to deliver meaningful digital experiences and drive business growth.
           </p>

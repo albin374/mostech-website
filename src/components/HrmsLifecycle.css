@@ -1,0 +1,304 @@
+.hrms-lifecycle-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.lifecycle-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.lifecycle-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ecfdf5;
+  color: #16a34a;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.badge-number {
+  background-color: #16a34a;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.lifecycle-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.text-green { color: #16a34a; }
+.text-blue { color: #3b82f6; }
+
+.lifecycle-subtitle {
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+/* Process Container */
+.lifecycle-process-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+
+/* Top connectors */
+.top-connectors {
+  position: absolute;
+  top: 45px; /* Aligned with center of icons */
+  left: 10%;
+  right: 10%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 0;
+}
+
+.connector {
+  flex: 1;
+  height: 2px;
+  margin: 0 40px;
+  position: relative;
+}
+
+.connector::after {
+  content: '▶';
+  position: absolute;
+  right: -5px;
+  top: -6px;
+  font-size: 12px;
+}
+
+.c-green { border-bottom: 2px dashed #16a34a; color: #16a34a; }
+.c-teal { border-bottom: 2px dashed #14b8a6; color: #14b8a6; }
+.c-blue { border-bottom: 2px dashed #3b82f6; color: #3b82f6; }
+.c-purple { border-bottom: 2px dashed #8b5cf6; color: #8b5cf6; }
+
+/* Steps */
+.lifecycle-steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.lifecycle-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%;
+}
+
+.step-icon-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.step-icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.step-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.step-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  width: 100%;
+  border-top-width: 4px;
+  border-top-style: solid;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+.step-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.step-desc {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  min-height: 60px;
+}
+
+/* Colors for each step */
+.step-green .step-icon-circle { border: 2px solid #bbf7d0; color: #16a34a; }
+.step-green .step-number { background-color: #16a34a; }
+.step-green .step-card { border-top-color: #16a34a; }
+.step-green .step-title { color: #16a34a; }
+.step-green .bottom-dot { background: #16a34a; }
+
+.step-teal .step-icon-circle { border: 2px solid #ccfbf1; color: #14b8a6; }
+.step-teal .step-number { background-color: #14b8a6; }
+.step-teal .step-card { border-top-color: #14b8a6; }
+.step-teal .step-title { color: #14b8a6; }
+.step-teal .bottom-dot { background: #14b8a6; }
+
+.step-blue .step-icon-circle { border: 2px solid #bfdbfe; color: #3b82f6; }
+.step-blue .step-number { background-color: #3b82f6; }
+.step-blue .step-card { border-top-color: #3b82f6; }
+.step-blue .step-title { color: #3b82f6; }
+.step-blue .bottom-dot { background: #3b82f6; }
+
+.step-purple .step-icon-circle { border: 2px solid #e9d5ff; color: #8b5cf6; }
+.step-purple .step-number { background-color: #8b5cf6; }
+.step-purple .step-card { border-top-color: #8b5cf6; }
+.step-purple .step-title { color: #8b5cf6; }
+.step-purple .bottom-dot { background: #8b5cf6; }
+
+.step-orange .step-icon-circle { border: 2px solid #fef08a; color: #f59e0b; }
+.step-orange .step-number { background-color: #f59e0b; }
+.step-orange .step-card { border-top-color: #f59e0b; }
+.step-orange .step-title { color: #f59e0b; }
+.step-orange .bottom-dot { background: #f59e0b; }
+
+
+/* Bottom Dot */
+.bottom-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 25px;
+  z-index: 2;
+}
+
+/* Bottom Curve */
+.bottom-curve {
+  position: absolute;
+  bottom: 30px;
+  left: 10%;
+  right: 10%;
+  height: 50px;
+  z-index: 0;
+  pointer-events: none;
+}
+.bottom-curve svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom CSS Graphics inside cards */
+.step-graphic {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 15px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 1. Onboard Graphic */
+.graphic-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  position: relative;
+}
+.profile-avatar {
+  width: 40px; height: 40px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.profile-lines { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.profile-lines .line { height: 6px; background: #e2e8f0; border-radius: 3px; }
+.l-long { width: 100%; }
+.l-short { width: 40%; }
+.l-medium { width: 70%; }
+.profile-check { position: absolute; bottom: -5px; right: 0; background: #16a34a; border-radius: 50%; padding: 2px; }
+
+/* 2. Manage Graphic */
+.graphic-manage { width: 100%; display: flex; flex-direction: column; gap: 10px; }
+.manage-header { display: flex; gap: 10px; align-items: center; background: #fff; padding: 6px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+.m-avatar { width: 24px; height: 24px; background: #ccfbf1; border-radius: 50%; }
+.m-lines { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.manage-folders { display: flex; gap: 10px; }
+.m-box { flex: 1; height: 30px; background: #fff; border-radius: 6px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+
+/* 3. Track Graphic */
+.graphic-track { width: 100%; display: flex; flex-direction: column; gap: 10px; }
+.track-icons { display: flex; gap: 8px; justify-content: space-between; }
+.t-icon { width: 30px; height: 30px; background: #fff; border-radius: 6px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+.track-chart { height: 30px; background: #fff; border-radius: 6px; padding: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+.t-line { width: 100%; height: 100%; overflow: visible; }
+
+/* 4. Empower Graphic */
+.graphic-empower { width: 100%; display: flex; gap: 8px; height: 70px; }
+.e-sidebar { width: 30px; background: #1e293b; border-radius: 8px; display: flex; flex-direction: column; align-items: center; padding: 8px 0; gap: 6px; }
+.e-avatar { width: 16px; height: 16px; background: #64748b; border-radius: 50%; }
+.e-menu-line { width: 12px; height: 2px; background: #475569; border-radius: 1px; }
+.e-content { flex: 1; }
+.e-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; height: 100%; }
+.e-cell { background: #fff; border-radius: 6px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+.e-question { width: 16px; height: 16px; background: #8b5cf6; color: white; border-radius: 50%; font-size: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+
+/* 5. Grow Graphic */
+.graphic-grow { width: 100%; display: flex; align-items: center; gap: 15px; }
+.g-chart { flex: 1; display: flex; justify-content: center; }
+.g-bars { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.g-bar { height: 6px; background: #e2e8f0; border-radius: 3px; }
+.b1 { width: 100%; }
+.b2 { width: 60%; }
+.b3 { width: 80%; }
+
+
+/* Pill removed by user request */
+
+@media (max-width: 992px) {
+  .lifecycle-steps {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .lifecycle-step {
+    width: 45%;
+  }
+  .top-connectors, .bottom-curve {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .lifecycle-step {
+    width: 100%;
+  }
+}

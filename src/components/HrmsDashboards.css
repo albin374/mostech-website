@@ -1,0 +1,413 @@
+.hrms-dashboards-section {
+  padding: 80px 0 100px; /* Extra bottom padding for the floating pill */
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle dotted background pattern */
+.hrms-dashboards-section::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+  background-size: 15px 15px;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.hrms-dashboards-section::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  width: 150px;
+  height: 150px;
+  background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+  background-size: 15px 15px;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.dashboards-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.dashboards-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ecfdf5;
+  color: #16a34a; /* Primary HRMS green */
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.dashboards-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0f172a; /* Dark navy text */
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.text-green {
+  color: #16a34a;
+}
+
+.dashboards-subtitle {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.dashboards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 0 auto 40px;
+  max-width: 1150px; /* Reduce overall size */
+  position: relative;
+  z-index: 1;
+  perspective: 1800px; /* Perspective for the cards */
+}
+
+.dashboard-card {
+  border-radius: 20px;
+  padding: 30px 20px 30px 30px; /* Reduced padding */
+  display: flex;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.admin-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transform: rotateY(5deg) scale(0.95); /* 3D card tilt */
+}
+
+.employee-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transform: rotateY(-5deg) scale(0.95); /* 3D card tilt */
+}
+
+.dashboard-card-content {
+  flex: 1;
+  max-width: 50%; /* Text takes up slightly more room if image is smaller */
+  z-index: 2;
+  transform: translateZ(20px); /* Pop text out slightly for 3D card effect */
+  padding-bottom: 50px; /* Space for absolute button */
+}
+
+.card-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.admin-icon-box {
+  background-color: #16a34a;
+}
+
+.employee-icon-box {
+  background-color: #3b82f6;
+}
+
+.card-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.admin-label { color: #16a34a; }
+.employee-label { color: #3b82f6; }
+
+.card-heading {
+  font-size: 1.4rem; /* Smaller heading */
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 0.85rem; /* Smaller desc */
+  color: #4b5563;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.dashboard-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.dashboard-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 0.85rem; /* Smaller list text */
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.admin-list .check-icon { color: #16a34a; }
+.employee-list .check-icon { color: #3b82f6; }
+
+.dashboard-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  white-space: nowrap;
+  min-width: 260px; /* Force both buttons to be the exact same width */
+}
+
+.dashboard-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-btn:focus-visible {
+  outline: 3px solid #0f172a;
+  outline-offset: 2px;
+}
+
+.admin-btn { background-color: #16a34a; }
+.employee-btn { background-color: #3b82f6; }
+
+/* 3D Dashboard Image Wrapper */
+.dashboard-card-image-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateZ(40px); /* Pop image out even further */
+  width: 50%; /* Reduced from 60% to 50% */
+  height: auto;
+  z-index: 3;
+  perspective: 1200px;
+}
+
+.admin-card .dashboard-card-image-wrapper {
+  right: -5%; /* Overlaps outside slightly */
+}
+
+.employee-card .dashboard-card-image-wrapper {
+  right: -5%;
+}
+
+/* Background Glow Effect */
+.glow-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.green-glow { background: #dcfce7; }
+.blue-glow { background: #dbeafe; }
+
+/* The actual 3D mockup */
+.dashboard-mockup {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  /* Multi-layered box-shadow for depth */
+  box-shadow: 
+    0 35px 70px rgba(15, 23, 42, 0.16),
+    0 15px 30px rgba(15, 23, 42, 0.10);
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.6s ease;
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle edge highlight */
+}
+
+.admin-mockup {
+  transform: rotateY(-8deg) rotateX(2deg) scale(1.03);
+  transform-origin: right center;
+}
+
+.employee-mockup {
+  transform: rotateY(8deg) rotateX(2deg) scale(1.03);
+  transform-origin: left center;
+}
+
+/* Hover Interactivity */
+.admin-card:hover .admin-mockup {
+  transform: rotateY(-4deg) rotateX(1deg) translateY(-8px) scale(1.05);
+  box-shadow: 
+    0 45px 80px rgba(15, 23, 42, 0.20),
+    0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+.employee-card:hover .employee-mockup {
+  transform: rotateY(4deg) rotateX(1deg) translateY(-8px) scale(1.05);
+  box-shadow: 
+    0 45px 80px rgba(15, 23, 42, 0.20),
+    0 20px 40px rgba(15, 23, 42, 0.12);
+}
+
+
+/* Bottom Floating Pill */
+.dashboards-bottom-pill-wrapper {
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  position: relative;
+  margin-top: 30px;
+}
+
+.dashboards-bottom-pill {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 12px 24px 12px 14px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid #f1f5f9;
+  gap: 15px;
+}
+
+.bottom-pill-icon {
+  width: 44px;
+  height: 44px;
+  background-color: #ecfdf5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-pill-icon svg {
+  color: #16a34a;
+}
+
+.bottom-pill-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-pill-text strong {
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.bottom-pill-text span {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .dashboard-card-image-wrapper {
+    width: 55%;
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboards-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .dashboard-card {
+    padding: 40px;
+  }
+  
+  .dashboard-card-image-wrapper {
+    right: 0; /* Less overlap on tablet */
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-card {
+    flex-direction: column;
+    padding: 30px 20px;
+    overflow: hidden; /* Prevent horizontal scroll on mobile */
+  }
+  
+  .dashboard-card-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .dashboard-card-image-wrapper {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+  }
+  
+  .admin-card .dashboard-card-image-wrapper,
+  .employee-card .dashboard-card-image-wrapper {
+    right: 0;
+  }
+
+  /* Reduce extreme 3D on mobile to maintain readability */
+  .admin-mockup {
+    transform: perspective(800px) rotateY(-2deg) rotateX(1deg) scale(1);
+    transform-origin: center;
+  }
+  
+  .employee-mockup {
+    transform: perspective(800px) rotateY(2deg) rotateX(1deg) scale(1);
+    transform-origin: center;
+  }
+
+  .admin-card:hover .admin-mockup,
+  .employee-card:hover .employee-mockup {
+    transform: perspective(800px) rotateY(0deg) rotateX(0deg) translateY(-4px) scale(1.02);
+  }
+
+  .dashboards-bottom-pill-wrapper {
+    margin-top: 20px;
+  }
+  
+  .hrms-dashboards-section {
+    padding-bottom: 60px;
+  }
+}

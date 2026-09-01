@@ -46,7 +46,7 @@ const MobileSection = () => {
             
             <h2 className="mobile-title">
               Mobile Application <br />
-              <span className="mobile-title-blue">Development</span>
+              <span style={{ color: 'navy' }}>Development</span>
             </h2>
             
             <h3 className="mobile-subtitle">

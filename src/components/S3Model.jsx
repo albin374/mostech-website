@@ -13,7 +13,7 @@ const S3Model = () => {
             Our Framework
           </div>
           <h2 className="s3-title">
-            Productized S3+ <span className="s3-highlight">Services Model</span>
+            Productized S3+ <span style={{ color: 'navy' }}>Services Model</span>
           </h2>
           <div className="s3-title-underline"></div>
           <p className="s3-subtitle">

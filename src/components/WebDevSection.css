@@ -36,7 +36,7 @@
 
 .wds-badge-text {
   background-color: #e6f0ff;
-  color: #0d6efd;
+  color: navy;
   font-weight: 700;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -97,7 +97,7 @@
 }
 
 .wds-btn {
-  background-color: #0d6efd;
+  background-color: navy;
   color: #ffffff;
   padding: 1rem 2rem;
   border-radius: 8px;
@@ -182,7 +182,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0d6efd;
+  color: navy;
 }
 
 .wds-icon {
@@ -220,7 +220,7 @@
 .wds-card-arrow {
   background: #f0f7ff;
   border: none;
-  color: #0d6efd;
+  color: navy;
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -232,7 +232,7 @@
 }
 
 .wds-card:hover .wds-card-arrow {
-  background: #0d6efd;
+  background: navy;
   color: #ffffff;
 }
 
@@ -269,7 +269,7 @@
 .wds-stat-icon {
   width: 32px;
   height: 32px;
-  color: #0d6efd;
+  color: navy;
 }
 
 .wds-stat-content h5 {

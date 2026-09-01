@@ -1,0 +1,328 @@
+.whatsapp-cta-section {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+  background-image: radial-gradient(circle at 100% 50%, rgba(11, 158, 102, 0.03) 0%, rgba(248, 250, 252, 0) 50%);
+}
+
+/* ================= Top Content Row ================= */
+.cta-top-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .cta-top-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+.cta-left-content {
+  flex: 1;
+}
+
+.cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.cta-badge .badge-number {
+  background-color: #0b9e66;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.cta-badge .badge-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0b9e66;
+}
+
+.cta-main-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: #051636;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+.cta-subtitle {
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.cta-subtitle::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #0b9e66;
+}
+
+.cta-subtitle .text-green {
+  color: #0b9e66;
+}
+
+.cta-desc {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  max-width: 550px;
+}
+
+.text-bold-green {
+  color: #0b9e66;
+  font-weight: 700;
+}
+
+/* ================= 4 Feature Icons ================= */
+.cta-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .cta-features-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.cta-feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cta-f-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.bg-light-green { background-color: #ecfdf5; }
+.text-green { color: #0b9e66; }
+.bg-light-gray { background-color: #f1f5f9; }
+.text-gray { color: #64748b; }
+
+.cta-feature-item h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #051636;
+  margin-bottom: 0.25rem;
+}
+
+.cta-feature-item p {
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ================= Right Graphic ================= */
+.cta-right-graphic {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-graphic-img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================= Bottom Dark CTA Banner ================= */
+.cta-bottom-banner {
+  background-color: #062b1d; /* Very dark green */
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add some background styling patterns */
+.cta-bottom-banner::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background: radial-gradient(circle at 100% 50%, rgba(11, 158, 102, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .cta-bottom-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 4rem;
+  }
+}
+
+.cta-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.cta-banner-logo {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(11, 158, 102, 0.5);
+}
+
+.cta-logo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(11, 158, 102, 0.4) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.cta-banner-logo svg {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-banner-titles h2 {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.cta-banner-titles .text-light-green {
+  color: #0b9e66;
+}
+
+.cta-banner-titles p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.cta-banner-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+@media (min-width: 1024px) {
+  .cta-banner-right {
+    align-items: flex-end;
+  }
+}
+
+.cta-banner-question {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  background-color: #0b9e66;
+  color: white;
+  padding: 10px 30px 10px 10px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn-primary:hover {
+  background-color: #0a8a58;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(11, 158, 102, 0.3);
+}
+
+.btn-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: #0b9e66;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.cta-btn-primary > svg {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.cta-btn-primary:hover > svg {
+  transform: translateX(5px);
+}
+
+.cta-banner-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .cta-banner-features {
+    justify-content: flex-end;
+  }
+}
+
+.cta-banner-features span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+}

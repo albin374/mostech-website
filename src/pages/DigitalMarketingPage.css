@@ -1,0 +1,933 @@
+/* ==================================================
+   DIGITAL MARKETING PAGE STYLES
+   ================================================== */
+.dm-page {
+  min-height: 100vh;
+  background-color: #fcfdfe;
+}
+
+/* ================= HERO SECTION ================= */
+.dm-hero-section {
+  position: relative;
+  width: 100%;
+  padding: 20px 0 10rem 0;
+  background-color: #f8fbff; /* Replaced background image with color */
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.dm-hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .dm-hero-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Left Text Content */
+.dm-hero-text {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Right Image */
+.dm-hero-img-col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dm-hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+}
+
+.dm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid rgba(47, 107, 216, 0.3);
+  border-radius: 30px;
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(47, 107, 216, 0.05);
+}
+
+.dm-badge span {
+  color: #0a1930;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.dm-main-title {
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  font-weight: 800;
+  color: #0a1930;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.dm-title-highlight {
+  color: #2f6bd8;
+}
+
+.dm-subtitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a1930;
+  margin-bottom: 1.5rem;
+}
+
+.dm-desc {
+  font-size: 1rem;
+  color: #475569;
+  font-weight: normal;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+/* Metrics Bar */
+.dm-metrics-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background-color: #f0f5ff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(47, 107, 216, 0.05);
+}
+
+.dm-metric-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dm-metric-item span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0a1930;
+}
+
+.dm-metric-divider {
+  width: 1px;
+  height: 20px;
+  background-color: rgba(47, 107, 216, 0.2);
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .dm-metric-divider {
+    display: block;
+  }
+}
+
+/* Buttons */
+.dm-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.dm-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 1rem 1.8rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.dm-btn.primary {
+  background-color: #0a1930;
+  color: #ffffff;
+  border: 1px solid #0a1930;
+}
+
+.dm-btn.primary:hover {
+  background-color: #2f6bd8;
+  border-color: #2f6bd8;
+}
+
+.dm-btn.secondary {
+  background-color: #ffffff;
+  color: #0a1930;
+  border: 1px solid #cbd5e1;
+}
+
+.dm-btn.secondary:hover {
+  border-color: #2f6bd8;
+  color: #2f6bd8;
+}
+
+/* ================= BOTTOM FEATURES ROW ================= */
+.dm-features-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 4rem; /* Adds space between the columns above and the cards */
+  padding: 0 1rem;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .dm-features-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .dm-features-row {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.dm-feature-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem 1rem; /* Original padding */
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dm-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(47, 107, 216, 0.1);
+}
+
+.dm-feature-icon {
+  width: 45px; /* Original icon size */
+  height: 45px; /* Original icon size */
+  margin-bottom: 0.8rem; /* Original margin */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dm-feature-img-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.dm-feature-card h5 {
+  font-size: 0.85rem; /* Original font size */
+  font-weight: 800;
+  color: #0a1930;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.dm-feature-card p {
+  font-size: 0.75rem; /* Original font size */
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ================= WHY DIGITAL MARKETING MATTERS SECTION ================= */
+.dm-matter-section {
+  padding: 6rem 0;
+  background-color: #ffffff;
+}
+
+.dm-matter-top {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+  .dm-matter-top {
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+
+.dm-matter-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dm-matter-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.dm-badge-line {
+  width: 30px;
+  height: 2px;
+  background-color: #2f6bd8;
+}
+
+.dm-matter-badge span {
+  color: #2f6bd8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.dm-matter-text h2 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: #0a1930;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.dm-blue-text {
+  color: #2f6bd8;
+}
+
+.dm-matter-text p {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.dm-matter-image-col {
+  flex: 1.2;
+}
+
+.dm-matter-img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+
+/* Matter Cards */
+.dm-matter-cards-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .dm-matter-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .dm-matter-cards-row {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.dm-matter-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dm-matter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(47, 107, 216, 0.08);
+}
+
+.dm-matter-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f0f5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.dm-matter-card h4 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0a1930;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+/* Small underline below card titles */
+.dm-matter-card h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: #0a1930; /* Dark line like the design */
+}
+
+.dm-matter-card p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ================= OUR SERVICES SECTION ================= */
+.dm-services-section {
+  padding: 6rem 0;
+  background-color: #f8fbff; /* Soft light blue/gray background */
+  position: relative;
+  overflow: hidden;
+}
+
+.dm-services-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+}
+
+.dm-section-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.dm-badge-dash {
+  width: 25px;
+  height: 2px;
+  background-color: #2f6bd8;
+  position: relative;
+}
+
+.dm-badge-dash::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: -2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2f6bd8;
+}
+
+.dm-section-badge .dm-badge-dash:last-child::after {
+  left: -5px;
+  right: auto;
+}
+
+.dm-section-badge span {
+  color: #2f6bd8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.dm-services-header h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  color: #0a1930;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.dm-services-header p {
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Services Grid */
+.dm-services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .dm-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .dm-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.dm-service-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f1f5f9;
+}
+
+.dm-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(47, 107, 216, 0.08);
+}
+
+.dm-service-icon-wrapper {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border: 2px solid rgba(47, 107, 216, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  z-index: 2;
+}
+
+/* The light blue half-circle background behind the icon */
+.dm-icon-bg-shape {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 50px;
+  height: 50px;
+  background-color: #f0f5ff;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.dm-service-card h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0a1930;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.dm-card-divider {
+  display: none; /* The design doesn't actually have a divider, it's just a bottom border highlight. Wait, looking closely, there's no divider line between h4 and p. */
+}
+
+.dm-service-card p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Small blue bar at bottom left of card */
+.dm-card-bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  width: 40px;
+  height: 4px;
+  background-color: #2f6bd8;
+  border-radius: 4px 4px 0 0;
+}
+
+/* ================= OUR PROCESS SECTION ================= */
+.dm-process-section {
+  padding: 6rem 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(circle at top left, #f0f5ff 0%, transparent 40%),
+                    radial-gradient(circle at bottom right, #f0f5ff 0%, transparent 40%);
+}
+
+.dm-process-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dm-process-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  border: 1px solid rgba(47, 107, 216, 0.2);
+  margin-bottom: 1.5rem;
+  background-color: #f8fbff;
+}
+
+.dm-process-badge span {
+  color: #2f6bd8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.dm-dot {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.dm-process-header h2 {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-weight: 800;
+  color: #0a1930;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.dm-process-header p {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.dm-process-header-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #2f6bd8;
+  border-radius: 2px;
+}
+
+/* Process Row */
+.dm-process-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .dm-process-row {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem; /* Arrow takes some space */
+  }
+}
+
+.dm-process-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid rgba(47, 107, 216, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+  padding: 4rem 1.5rem 2.5rem 1.5rem; /* Large top padding for number, normal bottom */
+  position: relative;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dm-process-number {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #2f6bd8;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+  box-shadow: 0 0 0 6px #e0ecff; /* Light blue ring around it */
+}
+
+.dm-process-icon {
+  margin-bottom: 1.5rem;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dm-process-card h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0a1930;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dm-process-card p {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.dm-process-arrow {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .dm-process-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -2rem; /* visually align with the middle of the card contents */
+  }
+}
+
+/* ================= WHY CHOOSE US SECTION ================= */
+.dm-choose-section {
+  padding: 6rem 0;
+  background-color: #fcfdfe; /* Very light background to make white cards pop */
+}
+
+.dm-choose-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+@media (min-width: 1200px) {
+  .dm-choose-container {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+/* Left Column */
+.dm-choose-left {
+  flex: 0 0 35%; /* Takes up roughly 35% of the space */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dm-choose-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.dm-slash {
+  color: #2f6bd8;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.dm-choose-badge span:last-child {
+  color: #2f6bd8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dm-choose-left h2 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: #0a1930;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.dm-title-underline {
+  width: 50px;
+  height: 4px;
+  background-color: #2f6bd8;
+  margin-bottom: 2rem;
+  border-radius: 2px;
+}
+
+.dm-choose-left p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.dm-trusted-box {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.dm-trusted-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #0037b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 55, 184, 0.2);
+}
+
+.dm-trusted-text h5 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0a1930;
+  margin-bottom: 0.3rem;
+}
+
+.dm-trusted-text p {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Right Column */
+.dm-choose-right {
+  flex: 1; /* Takes remaining 65% space */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Dark Mission Box (Replaced with Image) */
+.dm-mission-img-wrapper {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(5, 22, 54, 0.15);
+  display: flex;
+}
+
+.dm-mission-full-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* 4 Cards Row */
+.dm-choose-cards-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .dm-choose-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .dm-choose-cards-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.dm-choose-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #f1f5f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dm-choose-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(47, 107, 216, 0.08);
+}
+
+.dm-choose-card-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #f0f5ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.dm-choose-card-dash {
+  width: 20px;
+  height: 3px;
+  background-color: #2f6bd8;
+  margin-bottom: 1.2rem;
+  border-radius: 2px;
+}
+
+.dm-choose-card h6 {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #0a1930;
+  margin-bottom: 1rem;
+}
+
+.dm-choose-card p {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+  padding-bottom: 1rem; /* space for the absolute number */
+}
+
+.dm-choose-number {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 35px;
+  background-color: #0037b8;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px 0 0 0;
+}
