@@ -79,7 +79,7 @@ const Header = () => {
                     <li><Link to="/hrms" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>HRMS</Link></li>
                     <li><Link to="/erp-product" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ERP</Link></li>
                     <li><Link to="/whatsapp-chatbot" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>WHATSAPP CHATBOT</Link></li>
-                    <li><a href="/#project-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>PROJECT MANAGEMENT</a></li>
+                    <li><Link to="/project-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>PROJECT MANAGEMENT</Link></li>
                     <li><a href="/#task-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>TASK MANAGEMENT</a></li>
                     <li><a href="/#accounting-software" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ACCOUNTING SOFTWARE</a></li>
                     <li><a href="/#pos-machine" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>POS MACHINE + SOFTWARE</a></li>

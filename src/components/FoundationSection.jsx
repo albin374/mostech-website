@@ -34,7 +34,7 @@ const FoundationSection = () => {
                 To deliver world-class IT solutions and digital engineering services that maximize client ROI, operational speed, and business innovation. We prioritize long-term client partnerships, continuous technical excellence, and transparent delivery standards while maintaining strict compliance with global software benchmarks.
               </p>
             </div>
-            <img src="/final%20mission.png" alt="Mission" className="card-bottom-image" />
+            <img src="/about1.png" alt="Mission" className="card-bottom-image" />
           </div>
 
           {/* Card 2: Vision */}
@@ -49,7 +49,7 @@ const FoundationSection = () => {
                 To be the most trusted technology partner in the UAE and Middle East, empowering enterprises with resilient, secure, and intuitive digital applications that simplify complexity and drive sustainable competitive advantage in an evolving global market.
               </p>
             </div>
-            <img src="/about34.png" alt="Vision" className="card-bottom-image" />
+            <img src="/finalaboutvission.png" alt="Vision" className="card-bottom-image" />
           </div>
 
           {/* Card 3: Goals */}

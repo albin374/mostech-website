@@ -14,6 +14,7 @@ import ErpProductPage from './pages/ErpProductPage';
 import SeoPage from './pages/SeoPage';
 import HrmsPage from './pages/HrmsPage';
 import WhatsappChatbotPage from './pages/WhatsappChatbotPage';
+import ProjectManagementPage from './pages/ProjectManagementPage';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="/seo" element={<SeoPage />} />
             <Route path="/hrms" element={<HrmsPage />} />
             <Route path="/whatsapp-chatbot" element={<WhatsappChatbotPage />} />
+            <Route path="/project-management" element={<ProjectManagementPage />} />
           </Routes>
           <Footer />
         </div>
