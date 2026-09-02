@@ -3,7 +3,7 @@ import { Target, Layers, Users, Code, Smartphone, Database, ShoppingCart, Megaph
 import FoundationSection from '../components/FoundationSection';
 import KeyStats from '../components/KeyStats';
 import AboutHeroSection from '../components/AboutHeroSection';
-import CeoMessage from '../components/CeoMessage';
+import AboutCeoMessage from '../components/AboutCeoMessage';
 import './AboutPage.css';
 
 const AboutPage = () => {
@@ -20,7 +20,7 @@ const AboutPage = () => {
       <KeyStats />
       
       {/* CEO Message Section */}
-      <CeoMessage />
+      <AboutCeoMessage />
       
     </main>
   );

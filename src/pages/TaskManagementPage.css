@@ -1,0 +1,353 @@
+.tm-page {
+  background-color: #f6f8fd; /* Soft blueish background matching the image */
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.tm-hero-section {
+  padding: 8rem 0 10rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background decorations */
+.tm-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 70% 30%, rgba(100, 102, 241, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tm-hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .tm-hero-container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* LEFT COLUMN */
+.tm-hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tm-hero-title {
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.tm-text-gradient {
+  color: #4f46e5;
+}
+
+.tm-hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.tm-text-blue-bold {
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.tm-hero-desc {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 580px;
+}
+
+/* BUTTONS */
+.tm-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.tm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.tm-btn-primary {
+  background-color: #3b82f6;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.tm-btn-primary:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+}
+
+.tm-btn-secondary {
+  background-color: transparent;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+}
+
+.tm-btn-secondary:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+/* FEATURES UNDER BUTTONS */
+.tm-hero-features {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .tm-hero-features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tm-feature-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tm-feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.icon-blue { color: #3b82f6; }
+.icon-green { color: #22c55e; }
+.icon-purple { color: #2dd4bf; }
+
+.tm-feature-text h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.tm-feature-text p {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* RIGHT COLUMN */
+.tm-hero-right {
+  flex: 1.2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tm-floating-badge {
+  position: absolute;
+  top: -40px;
+  right: -30px;
+  background: #ffffff;
+  padding: 12px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  font-size: 0.9rem;
+  color: #334155;
+  z-index: 10;
+}
+
+.tm-text-purple {
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+.tm-hero-img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  object-fit: contain;
+  margin-left: 2rem;
+}
+
+@media (max-width: 1023px) {
+  .tm-hero-img {
+    margin-left: 0;
+  }
+  .tm-floating-badge {
+    position: static;
+    margin-bottom: 2rem;
+    align-self: center;
+  }
+  .tm-hero-right {
+    flex-direction: column;
+  }
+  .tm-floating-cards {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .card-1, .card-2, .card-3 {
+    position: static;
+    margin: 0.5rem;
+    transform: none;
+  }
+}
+
+/* FLOATING CARDS */
+.tm-floating-cards {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.tm-task-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: auto;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.tm-task-card:hover {
+  transform: translateY(-5px) !important;
+}
+
+.card-1 {
+  bottom: -30px;
+  left: -15%;
+  transform: rotate(-2deg);
+}
+
+.card-2 {
+  bottom: -70px;
+  left: 28%;
+  transform: rotate(2deg);
+}
+
+.card-3 {
+  bottom: -40px;
+  right: -10%;
+  transform: rotate(1deg);
+}
+
+.tm-task-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tm-task-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.tm-task-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.tm-task-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.tm-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  margin-left: -8px;
+}
+.tm-avatar:first-child {
+  margin-left: 0;
+}
+.bg-1 { background-image: url('/ceo.png'); background-size: cover; background-position: center; }
+.bg-2 { background-image: url('/ceo2.jpeg'); background-size: cover; background-position: center; }
+.bg-3 { background-color: #94a3b8; }
+
+.tm-task-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.tm-task-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.badge-blue {
+  background-color: #eff6ff;
+  color: #3b82f6;
+}
+
+.badge-purple {
+  background-color: #f5f3ff;
+  color: #8b5cf6;
+}
+
+.badge-red {
+  background-color: #fef2f2;
+  color: #ef4444;
+}

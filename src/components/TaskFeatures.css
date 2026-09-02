@@ -1,0 +1,133 @@
+.tm-features-section {
+  padding: 6rem 0;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.tm-section-badge-center {
+  display: inline-block;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.tm-features-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: #0b1c3e;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.tm-text-blue {
+  color: #2563eb;
+}
+
+.tm-features-subtitle {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 6 CARDS GRID */
+.tm-features-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 640px) {
+  .tm-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tm-features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .tm-features-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
+}
+
+.tm-f-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+  border: 1px solid #f1f5f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.tm-f-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+}
+
+.tm-f-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Colors for icon wrapper */
+.icon-blue-light { background-color: #eff6ff; }
+.icon-green-light { background-color: #f0fdf4; }
+.icon-orange-light { background-color: #fff7ed; }
+.icon-purple-light { background-color: #f5f3ff; }
+.icon-blue2-light { background-color: #f0f9ff; }
+.icon-red-light { background-color: #fef2f2; }
+
+.tm-f-card h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.tm-f-card p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.tm-f-number {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-top: auto;
+}
+
+/* Numbers color */
+.num-blue { color: #3b82f6; }
+.num-green { color: #22c55e; }
+.num-orange { color: #f97316; }
+.num-purple { color: #8b5cf6; }
+.num-blue2 { color: #0ea5e9; }
+.num-red { color: #ef4444; }

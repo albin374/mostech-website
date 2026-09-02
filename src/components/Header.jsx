@@ -42,7 +42,7 @@ const Header = () => {
         </div>
       </div>
       
-      <div className="header-main-wrapper">
+      <div className="header-main-wrapper header-main-bg">
         <div className="container">
           <div className="header-main-inner">
             <Link to="/" className="logo">
@@ -71,7 +71,7 @@ const Header = () => {
                     <li><Link to="/erp-product" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ERP</Link></li>
                     <li><Link to="/whatsapp-chatbot" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>WHATSAPP CHATBOT</Link></li>
                     <li><Link to="/project-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>PROJECT MANAGEMENT</Link></li>
-                    <li><a href="/#task-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>TASK MANAGEMENT</a></li>
+                    <li><Link to="/task-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>TASK MANAGEMENT</Link></li>
                     <li><a href="/#accounting-software" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ACCOUNTING SOFTWARE</a></li>
                     <li><a href="/#pos-machine" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>POS MACHINE + SOFTWARE</a></li>
                   </ul>
@@ -83,7 +83,7 @@ const Header = () => {
             
             <div className="header-right">
               <a href="/#contact" className="nav-contact-btn">
-                Contact Us 
+                Let's Talk 
                 <ArrowRight size={16} />
               </a>
               <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
