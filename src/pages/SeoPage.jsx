@@ -12,7 +12,7 @@ const SeoPage = () => {
   }, []);
 
   return (
-    <main className="seo-page-wrapper" style={{ paddingTop: '80px', minHeight: '100vh', backgroundColor: '#ffffff' }}>
+    <main className="seo-page-wrapper" style={{ paddingTop: '140px', minHeight: '100vh', backgroundColor: '#ffffff' }}>
       <OnpageSeo />
       <OffpageSeo />
       <TechnicalSeo />

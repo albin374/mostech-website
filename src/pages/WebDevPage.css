@@ -2,7 +2,7 @@
    WEB DEVELOPMENT PAGE STYLES
    ================================================== */
 .web-page {
-  padding-top: 80px; /* Offset for fixed header */
+  padding-top: 140px; /* Offset for fixed header */
   min-height: 100vh;
   background-color: #fcfdfe; /* Clean light background */
 }

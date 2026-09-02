@@ -72,6 +72,7 @@
 .header-main-wrapper {
   padding: 0 1rem;
   margin-top: -25px; /* Overlap the top bar and hero section */
+  transition: margin-top 0.3s ease;
 }
 
 .header-main-inner {
@@ -244,7 +245,6 @@
 }
 
 .header-scrolled {
-  position: fixed;
   padding-bottom: 0;
   background-color: transparent;
 }
