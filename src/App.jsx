@@ -22,7 +22,7 @@ function App() {
       <Router>
         <div className="app-container">
           <Helmet>
-            <title>Web Design & Development Company in Dubai - Mostech</title>
+            <title>Leading software company in dubai</title>
             <meta name="description" content="Mostech is a leading Dubai software company delivering web development, mobile apps, and digital marketing across the UAE & GCC. Trusted by 500+ clients." />
             <meta name="keywords" content="Mostech Business Solutions | The Best Software Company in Dubai, Digital Marketing Agency in Dubai, UAE." />
           </Helmet>
