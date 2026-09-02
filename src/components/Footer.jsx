@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Mostech Business Solutions. All Rights Reserved.</p>
+          <p>&copy; All Rights Reserved | Developed by Mostech Business Solutions</p>
         </div>
       </div>
     </footer>

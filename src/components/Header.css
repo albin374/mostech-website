@@ -1,16 +1,16 @@
 .header {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   transition: all 0.3s ease;
-  background-color: #0b0c10;
-  padding-bottom: 20px;
+  background-color: transparent;
 }
 
 .top-bar {
-  padding: 12px 0;
+  background-color: #030816; /* Dark navy */
+  padding: 12px 0 35px 0; /* Extra bottom padding for overlap */
   color: #fff;
   font-size: 0.85rem;
 }
@@ -61,25 +61,23 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.2);
   color: #fff;
   transition: all 0.3s;
 }
 
 .social-icon:hover {
-  background-color: #1a4aff;
-  border-color: #1a4aff;
+  color: #1a4aff;
 }
 
 .header-main-wrapper {
   padding: 0 1rem;
+  margin-top: -25px; /* Overlap the top bar and hero section */
 }
 
 .header-main-inner {
   background-color: #ffffff;
-  border-radius: 50px;
-  padding: 0.6rem 0.6rem 0.6rem 2rem;
+  border-radius: 60px;
+  padding: 14px 18px 14px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,9 +131,10 @@
 .nav-link-active::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
   height: 2px;
   background-color: #1a4aff;
   border-radius: 2px;
@@ -146,32 +145,21 @@
 }
 
 .nav-contact-btn {
-  background-color: navy;
+  background-color: #1135a5;
   color: #ffffff;
-  padding: 0.5rem 0.6rem 0.5rem 1.5rem;
+  padding: 10px 24px;
   border-radius: 50px;
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 8px;
   transition: background-color 0.3s ease;
   font-size: 0.95rem;
   text-decoration: none;
 }
 
-.btn-icon-wrapper {
-  background-color: #fff;
-  color: navy;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .nav-contact-btn:hover {
-  background-color: #000066;
+  background-color: #0d277d;
   color: #ffffff;
 }
 
@@ -200,7 +188,7 @@
   overflow: hidden; /* Keep border radius */
 }
 
-.has-dropdown:hover .dropdown {
+.has-dropdown.dropdown-open .dropdown, .has-dropdown:hover .dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -256,6 +244,7 @@
 }
 
 .header-scrolled {
+  position: fixed;
   padding-bottom: 0;
   background-color: transparent;
 }
@@ -327,7 +316,7 @@
     display: none;
   }
   
-  .has-dropdown:hover .dropdown {
+  .has-dropdown.dropdown-open .dropdown {
     display: flex;
   }
   
