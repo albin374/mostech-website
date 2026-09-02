@@ -1,5 +1,5 @@
 .hrms-hero-section {
-  padding: 120px 0 80px; /* Space for fixed header */
+  padding: 120px 0 40px; /* Space for fixed header */
   background-color: #ffffff;
   overflow: hidden;
   font-family: 'Inter', sans-serif;
@@ -14,7 +14,7 @@
   transform: translateY(-50%);
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, rgba(255, 255, 255, 0) 65%);
+  background: radial-gradient(circle, rgba(26, 86, 219, 0.05) 0%, rgba(255, 255, 255, 0) 65%);
   border-radius: 50%;
   z-index: 0;
   pointer-events: none;
@@ -38,8 +38,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: rgba(16, 185, 129, 0.1);
-  color: #10b981;
+  background-color: rgba(26, 86, 219, 0.1);
+  color: #1a56db;
   padding: 6px 16px;
   border-radius: 50px;
   font-weight: 600;
@@ -50,7 +50,7 @@
 .hrms-badge-dot {
   width: 8px;
   height: 8px;
-  background-color: #10b981;
+  background-color: #1a56db;
   border-radius: 50%;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .hrms-title-green {
-  color: #10b981;
+  color: #1a56db;
 }
 
 .hrms-title-black {
@@ -89,7 +89,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #10b981;
+  background-color: #0b1b3d;
   color: #ffffff;
   padding: 14px 28px;
   border-radius: 8px;
@@ -98,13 +98,13 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 4px 15px rgba(11, 27, 61, 0.2);
 }
 
 .hrms-btn:hover {
-  background-color: #059669;
+  background-color: #071228;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 6px 20px rgba(11, 27, 61, 0.3);
 }
 
 .hrms-btn-outline {
@@ -112,18 +112,18 @@
   align-items: center;
   gap: 10px;
   background-color: transparent;
-  color: #10b981;
+  color: #1a56db;
   padding: 14px 28px;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
-  border: 2px solid #10b981;
+  border: 2px solid #1a56db;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .hrms-btn-outline:hover {
-  background-color: rgba(16, 185, 129, 0.05);
+  background-color: rgba(26, 86, 219, 0.05);
 }
 
 .hrms-features-list {
@@ -149,8 +149,8 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  background-color: #ecfdf5;
-  color: #10b981;
+  background-color: #e8f0fe;
+  color: #1a56db;
   border-radius: 50%;
 }
 
@@ -277,9 +277,9 @@
   flex-shrink: 0;
 }
 
-.bg-green-light { background-color: #d1fae5; }
-.text-green-dark { color: #059669; }
-.bg-green { background-color: #10b981; }
+.bg-green-light { background-color: #d0e1fd; }
+.text-green-dark { color: #1440a3; }
+.bg-green { background-color: #1a56db; }
 .bg-purple { background-color: #8b5cf6; }
 .bg-orange { background-color: #f97316; }
 .text-white { color: white; }
@@ -312,7 +312,7 @@
 
 .float-card-trend {
   font-size: 0.75rem;
-  color: #059669;
+  color: #1440a3;
   font-weight: 600;
   margin-top: 4px;
 }
@@ -326,26 +326,26 @@
 
 /* Specific Positions */
 .card-employees {
-  top: -40px;
-  left: -20px;
+  top: -90px;
+  left: 5%;
   animation-delay: 0s;
 }
 
 .card-attendance {
-  top: -40px;
-  right: -30px;
+  top: -90px;
+  right: 5%;
   animation-delay: 1.5s;
 }
 
 .card-analytics {
-  bottom: -60px;
-  left: 20px;
+  bottom: -110px;
+  left: 10%;
   animation-delay: 2s;
 }
 
 .card-leaves {
-  bottom: -20px;
-  right: -40px;
+  bottom: -110px;
+  right: 10%;
   animation-delay: 0.5s;
 }
 

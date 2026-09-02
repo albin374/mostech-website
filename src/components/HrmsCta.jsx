@@ -14,7 +14,7 @@ const HrmsCta = () => {
             <h2 className="cta-title">
               Your People.<br />
               Your Processes.<br />
-              <span className="text-green">One Powerful HRMS.</span>
+              <span className="text-blue">One Powerful HRMS.</span>
             </h2>
             
             <p className="cta-desc">
@@ -27,7 +27,7 @@ const HrmsCta = () => {
             
             <div className="cta-footer-blurb">
               <div className="blurb-icon">
-                <Users size={20} color="#16a34a" />
+                <Users size={20} color="#1a56db" />
               </div>
               <div className="blurb-text">
                 <strong>Built for modern teams.</strong>
@@ -41,8 +41,8 @@ const HrmsCta = () => {
             {/* Background Graphic Elements */}
             <div className="bg-glow"></div>
             <svg className="bg-lines" viewBox="0 0 400 400">
-               <circle cx="200" cy="200" r="150" fill="none" stroke="#dcfce7" strokeWidth="1" strokeDasharray="4 4" />
-               <circle cx="200" cy="200" r="190" fill="none" stroke="#dcfce7" strokeWidth="1" strokeDasharray="4 4" />
+               <circle cx="200" cy="200" r="150" fill="none" stroke="#d0e1fd" strokeWidth="1" strokeDasharray="4 4" />
+               <circle cx="200" cy="200" r="190" fill="none" stroke="#d0e1fd" strokeWidth="1" strokeDasharray="4 4" />
             </svg>
 
             {/* Provided Image */}

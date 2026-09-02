@@ -1,5 +1,5 @@
 .hrms-modules-section {
-  padding: 80px 0;
+  padding: 40px 0;
   background-color: #fafcff;
   font-family: 'Inter', sans-serif;
 }
@@ -18,9 +18,9 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-  color: #4b5563;
+  background-color: #e8f0fe;
+  border: 1px solid #d0e1fd;
+  color: #1a56db;
   padding: 8px 16px;
   border-radius: 50px;
   font-weight: 500;
@@ -37,8 +37,8 @@
   line-height: 1.2;
 }
 
-.text-green {
-  color: #16a34a;
+.text-blue {
+  color: #1a56db;
 }
 
 .modules-subtitle {
@@ -76,7 +76,7 @@
 .module-icon-box {
   width: 50px;
   height: 50px;
-  background-color: #16a34a;
+  background-color: #0b1b3d;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -115,7 +115,7 @@
 }
 
 .list-icon {
-  color: #16a34a;
+  color: #1a56db;
 }
 
 /* Module mockups */
@@ -141,14 +141,14 @@
 
 /* Bottom Banner */
 .modules-bottom-banner {
-  background: #ffffff;
+  background: #0b1b3d;
   border-radius: 50px;
   padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-  border: 1px solid #f1f5f9;
+  box-shadow: 0 10px 40px rgba(11, 27, 61, 0.2);
+  border: none;
   position: relative;
   overflow: hidden;
 }
@@ -158,10 +158,10 @@
   content: '';
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 50%;
-  background: linear-gradient(135deg, transparent 0%, #ecfdf5 100%);
+  background: linear-gradient(135deg, transparent 0%, rgba(26, 86, 219, 0.4) 100%);
   z-index: 0;
   border-radius: 0 50px 50px 0;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .banner-left {
@@ -175,7 +175,7 @@
 .banner-icon-large {
   width: 60px;
   height: 60px;
-  background-color: #ecfdf5;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -190,20 +190,20 @@
 .stat-number {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #16a34a;
+  color: #ffffff;
   line-height: 1;
 }
 
 .stat-text {
   font-size: 0.9rem;
-  color: #4b5563;
+  color: #94a3b8;
   font-weight: 600;
 }
 
 .banner-separator {
   width: 1px;
   height: 60px;
-  background-color: #e2e8f0;
+  background-color: rgba(255, 255, 255, 0.1);
   margin: 0 30px;
   position: relative;
   z-index: 1;
@@ -218,13 +218,13 @@
 .banner-title {
   font-size: 1.4rem;
   font-weight: 800;
-  color: #111827;
+  color: #ffffff;
   margin-bottom: 5px;
 }
 
 .banner-desc {
   font-size: 0.95rem;
-  color: #64748b;
+  color: #94a3b8;
   margin: 0;
 }
 
@@ -263,9 +263,9 @@
 }
 
 .n2 {
-  width: 48px; height: 48px; background: #16a34a;
+  width: 48px; height: 48px; background: #1a56db;
   top: 30%; left: 45%;
-  box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
+  box-shadow: 0 4px 15px rgba(26, 86, 219, 0.3);
 }
 
 .n3 {
@@ -297,7 +297,7 @@
   .modules-bottom-banner::before {
     left: 0;
     border-radius: 24px;
-    background: linear-gradient(180deg, transparent 0%, #ecfdf5 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(26, 86, 219, 0.4) 100%);
   }
 }
 

@@ -43,7 +43,7 @@
 .whatsapp-bot-icon {
   width: 44px;
   height: 44px;
-  background-color: #0b9e66;
+  background-color: #1a56db;
   color: white;
   border-radius: 12px;
   display: flex;
@@ -67,7 +67,7 @@
 .w-sub {
   font-size: 0.9rem;
   font-weight: 700;
-  color: #0b9e66;
+  color: #1a56db;
   letter-spacing: 0.5px;
 }
 
@@ -80,14 +80,14 @@
   letter-spacing: -0.5px;
 }
 
-.whatsapp-main-title .text-green {
-  color: #0b9e66;
+.whatsapp-main-title .text-blue {
+  color: #1a56db;
 }
 
 .whatsapp-title-line {
   width: 50px;
   height: 3px;
-  background-color: #0b9e66;
+  background-color: #1a56db;
   margin-bottom: 1.5rem;
 }
 
@@ -112,7 +112,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #0b9e66;
+  background-color: #1a56db;
   color: #ffffff;
   padding: 10px 20px;
   border-radius: 8px;
@@ -123,7 +123,7 @@
 }
 
 .whatsapp-btn-primary:hover {
-  background-color: #087a4f;
+  background-color: #1e40af;
   transform: translateY(-2px);
 }
 
@@ -134,7 +134,7 @@
   gap: 8px;
   background-color: transparent;
   color: #051636;
-  border: 1.5px solid #0b9e66;
+  border: 1.5px solid #1a56db;
   padding: 10px 20px;
   border-radius: 8px;
   font-weight: 700;
@@ -144,7 +144,7 @@
 }
 
 .whatsapp-btn-secondary:hover {
-  background-color: #f0fdf4;
+  background-color: #eff6ff;
   transform: translateY(-2px);
 }
 
@@ -163,16 +163,16 @@
   object-fit: contain;
 }
 
-/* ================= Bottom Green Banner ================= */
+/* ================= Bottom Blue Banner ================= */
 .whatsapp-bottom-banner {
   margin-top: 2rem;
-  background-color: #0a4f36; /* Dark Green */
+  background-color: #0b1b3d; /* Dark Navy Blue */
   border-radius: 20px;
   padding: 2rem 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 10px 40px rgba(10, 79, 54, 0.2);
+  box-shadow: 0 10px 40px rgba(11, 27, 61, 0.2);
 }
 
 .w-banner-feature {
@@ -198,7 +198,7 @@
 }
 
 .w-banner-feature p {
-  color: #86efac; /* Light Green text */
+  color: #93c5fd; /* Light Blue text */
   font-size: 0.85rem;
   margin: 0;
 }

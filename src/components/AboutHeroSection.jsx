@@ -61,27 +61,25 @@ const AboutHeroSection = () => {
             {/* Bottom Stats Banner */}
             <div className="about-stats-banner">
               <div className="stat-col">
-                <Calendar size={28} className="stat-icon" />
+                <Calendar size={24} strokeWidth={1.5} className="stat-icon" />
                 <h4>2018</h4>
                 <h5>Founded</h5>
                 <p>Building digital solutions since 2018</p>
               </div>
               <div className="stat-col">
-                <Users size={28} className="stat-icon" />
+                <Users size={24} strokeWidth={1.5} className="stat-icon" />
                 <h4>100+</h4>
                 <h5>Projects Delivered</h5>
                 <p>Successful solutions across industries</p>
               </div>
               <div className="stat-col">
-                <Globe size={28} className="stat-icon" />
+                <Globe size={24} strokeWidth={1.5} className="stat-icon" />
                 <h4>GCC & Global</h4>
-                <h5>&nbsp;</h5>
                 <p>Serving clients locally and globally</p>
               </div>
               <div className="stat-col">
-                <ShieldCheck size={28} className="stat-icon" />
+                <ShieldCheck size={24} strokeWidth={1.5} className="stat-icon" />
                 <h4>Quality & Trust</h4>
-                <h5>&nbsp;</h5>
                 <p>Committed to security, scalability & success</p>
               </div>
             </div>

@@ -40,50 +40,6 @@ const ErpProductCta = () => {
           </div>
 
         </div>
-
-        {/* Bottom Banner */}
-        <div className="erp-cta-bottom-banner">
-          
-          {/* Logo Block */}
-          <div className="banner-logo-block">
-            <Infinity size={48} color="#051636" strokeWidth={2.5} />
-            <div className="logo-text">
-              <strong>MOSTECH</strong><br/>
-              <span>ERP</span>
-            </div>
-          </div>
-          
-          <div className="banner-divider"></div>
-          
-          {/* Feature 1 */}
-          <div className="banner-feature">
-            <div className="b-icon-wrapper"><Layers size={24} /></div>
-            <div className="b-text">
-              <h4>One Platform.</h4>
-              <p>All your business functions in one place.</p>
-            </div>
-          </div>
-          
-          {/* Feature 2 */}
-          <div className="banner-feature">
-            <div className="b-icon-wrapper"><Settings size={24} /></div>
-            <div className="b-text">
-              <h4>Every Process.</h4>
-              <p>Automate workflows and eliminate silos.</p>
-            </div>
-          </div>
-          
-          {/* Feature 3 */}
-          <div className="banner-feature">
-            <div className="b-icon-wrapper"><ShieldCheck size={24} /></div>
-            <div className="b-text">
-              <h4>Complete Business Control.</h4>
-              <p>Real-time visibility. Smarter decisions. Better results.</p>
-            </div>
-          </div>
-
-        </div>
-
       </div>
     </section>
   );

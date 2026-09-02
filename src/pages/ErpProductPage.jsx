@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ArrowRight, Users, Package, Store, SlidersHorizontal } from 'lucide-react';
+import { ArrowRight, Users, Package, Store, SlidersHorizontal, DollarSign } from 'lucide-react';
 import ErpProductFeatures from '../components/ErpProductFeatures';
 import ErpProductCta from '../components/ErpProductCta';
 import './ErpProductPage.css';
@@ -18,9 +18,7 @@ const ErpProductPage = () => {
           
           {/* Left Content */}
           <div className="erp-product-hero-left">
-            <div className="erp-product-hero-badge">
-              <span className="erp-product-blue-text-badge">MOSTECH ERP —</span>
-            </div>
+
 
             <h1 className="erp-product-main-title">
               <span className="erp-product-blue-text">Switch to<br/>Smarter</span> ERP.

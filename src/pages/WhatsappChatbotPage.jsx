@@ -23,7 +23,7 @@ const WhatsappChatbotPage = () => {
             <h1 className="whatsapp-main-title">
               Turn Every WhatsApp<br/>
               Message Into a<br/>
-              <span className="text-green">Business Conversation.</span>
+              <span className="text-blue">Business Conversation.</span>
             </h1>
 
             <div className="whatsapp-title-line"></div>

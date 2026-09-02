@@ -10,11 +10,11 @@ const HrmsModules = () => {
         {/* Header Section */}
         <div className="modules-header">
           <div className="modules-badge">
-            <LayoutGrid size={16} className="text-green" />
+            <LayoutGrid size={16} className="text-blue" />
             All Your HR Operations, Connected
           </div>
           <h2 className="modules-title">
-            Everything HR Needs. <span className="text-green">Nothing You Don't.</span>
+            Everything HR Needs. <span className="text-blue">Nothing You Don't.</span>
           </h2>
           <p className="modules-subtitle">
             Manage your people, processes and performance with fully integrated HR modules designed to simplify every aspect of workforce management.
@@ -29,7 +29,7 @@ const HrmsModules = () => {
             <div className="module-icon-box">
               <Users size={24} color="#ffffff" />
             </div>
-            <h3 className="module-card-title text-green">People Management</h3>
+            <h3 className="module-card-title text-blue">People Management</h3>
             <p className="module-card-desc">Build a complete employee ecosystem.</p>
             <ul className="module-feature-list">
               <li><CheckCircle2 size={16} className="list-icon" /> Employees</li>
@@ -48,7 +48,7 @@ const HrmsModules = () => {
             <div className="module-icon-box">
               <Clock size={24} color="#ffffff" />
             </div>
-            <h3 className="module-card-title text-green">Time & Attendance</h3>
+            <h3 className="module-card-title text-blue">Time & Attendance</h3>
             <p className="module-card-desc">Stay on top of workforce activity.</p>
             <ul className="module-feature-list">
               <li><CheckCircle2 size={16} className="list-icon" /> Attendance</li>
@@ -66,7 +66,7 @@ const HrmsModules = () => {
             <div className="module-icon-box">
               <BarChart2 size={24} color="#ffffff" />
             </div>
-            <h3 className="module-card-title text-green">Work & Operations</h3>
+            <h3 className="module-card-title text-blue">Work & Operations</h3>
             <p className="module-card-desc">Connect people with the work they do.</p>
             <ul className="module-feature-list">
               <li><CheckCircle2 size={16} className="list-icon" /> Projects</li>
@@ -84,7 +84,7 @@ const HrmsModules = () => {
             <div className="module-icon-box">
               <Folder size={24} color="#ffffff" />
             </div>
-            <h3 className="module-card-title text-green">Documents & Support</h3>
+            <h3 className="module-card-title text-blue">Documents & Support</h3>
             <p className="module-card-desc">Keep everything organized and accessible.</p>
             <ul className="module-feature-list">
               <li><CheckCircle2 size={16} className="list-icon" /> Documents</li>
@@ -103,7 +103,7 @@ const HrmsModules = () => {
         <div className="modules-bottom-banner">
           <div className="banner-left">
             <div className="banner-icon-large">
-              <LayoutGrid size={32} color="#16a34a" />
+              <LayoutGrid size={32} color="#ffffff" />
             </div>
             <div className="banner-stat">
               <span className="stat-number">18+</span>
@@ -115,7 +115,7 @@ const HrmsModules = () => {
 
           <div className="banner-center">
             <h3 className="banner-title">
-              One Unified Platform. <span className="text-green">Every HR Need.</span>
+              One Unified Platform. <span style={{color: "#60a5fa"}}>Every HR Need.</span>
             </h3>
             <p className="banner-desc">
               All modules work seamlessly together to simplify HR and drive organizational success.
@@ -125,12 +125,12 @@ const HrmsModules = () => {
           <div className="banner-right">
             <div className="node-graphic">
               <svg viewBox="0 0 100 100" className="node-lines">
-                <path d="M 20 80 Q 50 20 80 50" fill="none" stroke="#dcfce7" strokeWidth="3" strokeDasharray="5,5" />
-                <path d="M 80 50 Q 60 80 20 80" fill="none" stroke="#dcfce7" strokeWidth="3" strokeDasharray="5,5" />
+                <path d="M 20 80 Q 50 20 80 50" fill="none" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="3" strokeDasharray="5,5" />
+                <path d="M 80 50 Q 60 80 20 80" fill="none" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="3" strokeDasharray="5,5" />
               </svg>
-              <div className="node n1"><Users size={16} color="#16a34a"/></div>
+              <div className="node n1"><Users size={16} color="#ffffff"/></div>
               <div className="node n2"><Users size={20} color="#ffffff"/></div>
-              <div className="node n3"><Users size={14} color="#16a34a"/></div>
+              <div className="node n3"><Users size={14} color="#ffffff"/></div>
             </div>
           </div>
         </div>

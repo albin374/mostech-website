@@ -1,221 +1,163 @@
-.ceo-section {
-  padding: 6rem 0;
-  background-color: #010a26;
-  background-image: url('/ceomessge.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.ceo-message-section {
+  position: relative;
+  background-color: #f4f7f9;
+  overflow: hidden;
   font-family: 'Inter', sans-serif;
-  color: #ffffff;
+  color: #1e293b;
 }
 
-.ceo-container {
+.ceo-message-layout {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  width: 100%;
 }
 
-/* Top Content */
-.ceo-top-content {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  align-items: center;
-}
-
-@media (min-width: 992px) {
-  .ceo-top-content {
+@media (min-width: 1024px) {
+  .ceo-message-layout {
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+    min-height: 600px;
   }
 }
 
-.ceo-left {
-  flex: 0 0 50%;
+/* ================= Left Content ================= */
+.ceo-message-content {
+  flex: 1;
+  padding: 4rem 1.5rem;
+  max-width: 100%;
+  z-index: 2;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.ceo-badge {
+@media (min-width: 1024px) {
+  .ceo-message-content {
+    max-width: 60%;
+    padding: 6rem 4rem 6rem 10%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ceo-message-content {
+    padding-left: calc((100vw - 1200px) / 2);
+  }
+}
+
+.ceo-message-badge {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 10px;
+  margin-bottom: 1rem;
 }
 
-.ceo-badge-line {
-  width: 30px;
-  height: 2px;
-  background-color: #3b82f6; /* Blue line */
+.ceo-message-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #0b45a6;
+  border-radius: 50%;
 }
 
-.ceo-badge-text {
-  color: #3b82f6;
+.ceo-message-badge-text {
+  color: #0b45a6;
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 1px;
+}
+
+.ceo-message-title {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 800;
+  color: #051636;
+  line-height: 1.1;
+  margin: 0 0 1rem 0;
   text-transform: uppercase;
 }
 
-.ceo-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.2;
-  margin: 0 0 1.5rem 0;
+.ceo-message-title .text-blue {
+  color: #0b45a6;
 }
 
-.ceo-description {
-  font-size: 0.95rem;
-  color: #a0aec0;
-  line-height: 1.8;
-  margin-bottom: 2.5rem;
-  max-width: 95%;
-}
-
-.ceo-profile {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  border-left: 3px solid #3b82f6;
-  padding-left: 1.5rem;
-}
-
-.ceo-signature-circle {
+.ceo-message-divider {
   width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-}
-
-.signature-mark {
-  color: #ffffff;
-  font-size: 1.5rem;
-  opacity: 0.8;
-}
-
-.ceo-profile-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.ceo-name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0 0 0.2rem 0;
-}
-
-.ceo-role {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #3b82f6;
-  margin: 0 0 0.2rem 0;
-}
-
-.ceo-company {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #a0aec0;
-  margin: 0;
-}
-
-.ceo-right {
-  flex: 0 0 45%;
-  display: flex;
-  justify-content: center;
-}
-
-/* If ceomessge.png has the CEO inside it, hide the separate image */
-.hidden-if-bg-has-ceo {
-  display: none;
-}
-
-/* Cards Wrapper */
-.ceo-cards-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-@media (min-width: 768px) {
-  .ceo-cards-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.ceo-card {
-  position: relative;
-  background: rgba(3, 11, 38, 0.6);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(59, 130, 246, 0.2); /* Subtle blue border */
-  border-radius: 12px;
-  padding: 2.5rem 2rem;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease;
-}
-
-.ceo-card:hover {
-  border-color: rgba(59, 130, 246, 0.5);
-  transform: translateY(-5px);
-  background: rgba(3, 11, 38, 0.8);
-}
-
-.ceo-card-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.2rem;
-}
-
-.ceo-card-icon-wrapper {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid #3b82f6;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ceo-card-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0;
-  letter-spacing: 0.5px;
-}
-
-.ceo-card-text {
-  font-size: 0.9rem;
-  color: #a0aec0;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.ceo-card-bottom-line {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
   height: 4px;
-  background-color: #3b82f6;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  background-color: #0b45a6;
+  margin-bottom: 2.5rem;
 }
 
-@media (max-width: 991px) {
-  .ceo-title {
-    font-size: 2.2rem;
+.ceo-message-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.ceo-message-text-group p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* ================= Footer (Signature & Name) ================= */
+.ceo-message-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ceo-signature-img-wrapper {
+  margin-bottom: 1rem;
+  height: 60px;
+}
+
+.ceo-signature-image {
+  height: 100%;
+  object-fit: contain;
+}
+
+.ceo-name-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #051636;
+  margin: 0 0 0.25rem 0;
+}
+
+.ceo-role-text {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.ceo-company-text {
+  font-size: 0.9rem;
+  color: #0b45a6;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ================= Right Image ================= */
+.ceo-message-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  z-index: 1;
+}
+
+.ceo-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+@media (min-width: 1024px) {
+  .ceo-message-image-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 42%;
+    height: 100%;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
   }
 }
+

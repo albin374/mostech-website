@@ -24,7 +24,7 @@ const WhatsappChatbotCTA = () => {
             
             <h3 className="cta-subtitle">
               Turn WhatsApp Into Your<br/>
-              <span className="text-green">Digital Business Assistant.</span>
+              <span className="text-blue">Digital Business Assistant.</span>
             </h3>
             
             <p className="cta-desc">
@@ -32,13 +32,13 @@ const WhatsappChatbotCTA = () => {
             </p>
             
             <p className="cta-desc">
-              From a simple website chatbot to a fully integrated <span className="text-bold-green">WhatsApp AI business assistant</span>, Mostech can build a solution around your requirements.
+              From a simple website chatbot to a fully integrated <span className="text-bold-blue">WhatsApp AI business assistant</span>, Mostech can build a solution around your requirements.
             </p>
 
             {/* 4 Feature Icons */}
             <div className="cta-features-grid">
               <div className="cta-feature-item">
-                <div className="cta-f-icon bg-light-green text-green"><MessageSquare size={20} /></div>
+                <div className="cta-f-icon bg-light-blue text-blue"><MessageSquare size={20} /></div>
                 <h4>Smart Conversations</h4>
                 <p>Understand. Respond.<br/>Engage.</p>
               </div>
@@ -48,12 +48,12 @@ const WhatsappChatbotCTA = () => {
                 <p>Connect to the tools<br/>you already use.</p>
               </div>
               <div className="cta-feature-item">
-                <div className="cta-f-icon bg-light-green text-green"><Shield size={20} /></div>
+                <div className="cta-f-icon bg-light-blue text-blue"><Shield size={20} /></div>
                 <h4>Secure & Reliable</h4>
                 <p>Enterprise-grade security<br/>you can trust.</p>
               </div>
               <div className="cta-feature-item">
-                <div className="cta-f-icon bg-light-green text-green"><TrendingUp size={20} /></div>
+                <div className="cta-f-icon bg-light-blue text-blue"><TrendingUp size={20} /></div>
                 <h4>Built for Growth</h4>
                 <p>Scale your business<br/>with every conversation.</p>
               </div>
@@ -78,8 +78,8 @@ const WhatsappChatbotCTA = () => {
               <MessageCircle size={48} color="white" />
             </div>
             <div className="cta-banner-titles">
-              <h2>MOSTECH<br/><span className="text-light-green">AI CHATBOT</span></h2>
-              <p>One Conversation. <span className="text-light-green">Endless Possibilities.</span></p>
+              <h2>MOSTECH<br/><span className="text-light-blue">AI CHATBOT</span></h2>
+              <p>One Conversation. <span className="text-light-blue">Endless Possibilities.</span></p>
             </div>
           </div>
 

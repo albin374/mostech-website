@@ -1,5 +1,5 @@
 .hrms-dashboards-section {
-  padding: 80px 0 100px; /* Extra bottom padding for the floating pill */
+  padding: 40px 0 60px; /* Extra bottom padding for the floating pill */
   background-color: #ffffff;
   font-family: 'Inter', sans-serif;
   position: relative;
@@ -45,8 +45,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #ecfdf5;
-  color: #16a34a; /* Primary HRMS green */
+  background-color: #e8f0fe;
+  color: #1a56db; /* Primary HRMS blue */
   padding: 8px 16px;
   border-radius: 50px;
   font-weight: 600;
@@ -62,8 +62,8 @@
   line-height: 1.2;
 }
 
-.text-green {
-  color: #16a34a;
+.text-blue {
+  color: #1a56db;
 }
 
 .dashboards-subtitle {
@@ -126,7 +126,7 @@
 }
 
 .admin-icon-box {
-  background-color: #16a34a;
+  background-color: #1a56db;
 }
 
 .employee-icon-box {
@@ -140,7 +140,7 @@
   letter-spacing: 0.5px;
 }
 
-.admin-label { color: #16a34a; }
+.admin-label { color: #1a56db; }
 .employee-label { color: #3b82f6; }
 
 .card-heading {
@@ -174,7 +174,10 @@
   font-weight: 500;
 }
 
-.admin-list .check-icon { color: #16a34a; }
+.admin-list .check-icon {
+  color: #1a56db;
+  flex-shrink: 0;
+}
 .employee-list .check-icon { color: #3b82f6; }
 
 .dashboard-btn {
@@ -197,9 +200,15 @@
   min-width: 260px; /* Force both buttons to be the exact same width */
 }
 
-.dashboard-btn:hover {
+.admin-btn {
+  background-color: #1a56db;
+  color: #ffffff;
+}
+
+.admin-btn:hover {
+  background-color: #1440a3;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(26, 86, 219, 0.2);
 }
 
 .dashboard-btn:focus-visible {
@@ -207,7 +216,7 @@
   outline-offset: 2px;
 }
 
-.admin-btn { background-color: #16a34a; }
+.admin-btn { background-color: #1a56db; }
 .employee-btn { background-color: #3b82f6; }
 
 /* 3D Dashboard Image Wrapper */
@@ -244,7 +253,7 @@
   pointer-events: none;
 }
 
-.green-glow { background: #dcfce7; }
+.navy-glow { background: radial-gradient(circle, rgba(26, 86, 219, 0.3) 0%, rgba(255, 255, 255, 0) 70%); }
 .blue-glow { background: #dbeafe; }
 
 /* The actual 3D mockup */
@@ -312,7 +321,7 @@
 .bottom-pill-icon {
   width: 44px;
   height: 44px;
-  background-color: #ecfdf5;
+  background-color: #eff6ff;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -320,7 +329,7 @@
 }
 
 .bottom-pill-icon svg {
-  color: #16a34a;
+  color: #1a56db;
 }
 
 .bottom-pill-text {

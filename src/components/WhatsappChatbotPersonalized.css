@@ -31,7 +31,7 @@
 }
 
 .personalized-badge .badge-number {
-  background-color: #0b9e66;
+  background-color: #1a56db;
   color: white;
   width: 32px;
   height: 32px;
@@ -46,7 +46,7 @@
 .personalized-badge .badge-text {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #0b9e66;
+  color: #1a56db;
 }
 
 .personalized-main-title {
@@ -58,8 +58,8 @@
   letter-spacing: -0.5px;
 }
 
-.personalized-main-title .text-green {
-  color: #0b9e66;
+.personalized-main-title .text-blue {
+  color: #1a56db;
 }
 
 .personalized-desc {
@@ -86,20 +86,20 @@
 
 .personalized-right-card {
   flex: 0.8;
-  background: linear-gradient(135deg, #106f4d 0%, #06452e 100%);
+  background: linear-gradient(135deg, #1e40af 0%, #0b1b3d 100%);
   border-radius: 20px;
   padding: 3rem 2.5rem;
   color: white;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 20px 40px rgba(10, 79, 54, 0.2);
+  box-shadow: 0 20px 40px rgba(11, 27, 61, 0.2);
 }
 
 .p-card-icon {
   width: 50px;
   height: 50px;
   background-color: white;
-  color: #0b9e66;
+  color: #1a56db;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -184,7 +184,7 @@
 }
 
 /* Icon BG Colors */
-.bg-green { background-color: #0b9e66; }
+.bg-navy { background-color: #1a56db; }
 .bg-blue { background-color: #3b82f6; }
 .bg-purple { background-color: #a855f7; }
 .bg-orange { background-color: #f97316; }
@@ -196,7 +196,7 @@
 }
 
 /* Text Colors */
-.text-green { color: #0b9e66; }
+.text-navy { color: #1a56db; }
 .text-blue { color: #3b82f6; }
 .text-purple { color: #a855f7; }
 .text-orange { color: #f97316; }
@@ -237,7 +237,7 @@
 }
 
 /* Tag colors */
-.tag-green span { color: #0b9e66; border-color: #bbf7d0; }
+.tag-navy span { color: #1a56db; border-color: #bfdbfe; }
 .tag-blue span { color: #3b82f6; border-color: #bfdbfe; }
 .tag-purple span { color: #a855f7; border-color: #e9d5ff; }
 .tag-orange span { color: #f97316; border-color: #fed7aa; }
@@ -245,13 +245,14 @@
 
 /* ================= Bottom Benefits Banner ================= */
 .personalized-bottom-banner {
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background-color: #0b1b3d;
+  border: 1px solid rgba(26, 86, 219, 0.3);
   border-radius: 20px;
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  box-shadow: 0 10px 40px rgba(11, 27, 61, 0.15);
 }
 
 @media (min-width: 640px) {
@@ -275,20 +276,20 @@
 }
 
 .p-benefit-icon {
-  color: #0b9e66;
+  color: #93c5fd;
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .p-benefit-text h5 {
-  color: #051636;
+  color: white;
   font-size: 0.9rem;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
 .p-benefit-text p {
-  color: #4b5563;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.8rem;
   line-height: 1.4;
   margin: 0;

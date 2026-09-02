@@ -1,7 +1,7 @@
 .whatsapp-cta-section {
   padding: 5rem 0;
   background-color: #f8fafc;
-  background-image: radial-gradient(circle at 100% 50%, rgba(11, 158, 102, 0.03) 0%, rgba(248, 250, 252, 0) 50%);
+  background-image: radial-gradient(circle at 100% 50%, rgba(26, 86, 219, 0.03) 0%, rgba(248, 250, 252, 0) 50%);
 }
 
 /* ================= Top Content Row ================= */
@@ -32,7 +32,7 @@
 }
 
 .cta-badge .badge-number {
-  background-color: #0b9e66;
+  background-color: #1a56db;
   color: white;
   width: 32px;
   height: 32px;
@@ -47,7 +47,7 @@
 .cta-badge .badge-text {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #0b9e66;
+  color: #1a56db;
 }
 
 .cta-main-title {
@@ -75,11 +75,11 @@
   left: 0;
   width: 50px;
   height: 3px;
-  background-color: #0b9e66;
+  background-color: #1a56db;
 }
 
-.cta-subtitle .text-green {
-  color: #0b9e66;
+.cta-subtitle .text-blue {
+  color: #1a56db;
 }
 
 .cta-desc {
@@ -90,8 +90,8 @@
   max-width: 550px;
 }
 
-.text-bold-green {
-  color: #0b9e66;
+.text-bold-blue {
+  color: #1a56db;
   font-weight: 700;
 }
 
@@ -126,8 +126,8 @@
   margin-bottom: 1rem;
 }
 
-.bg-light-green { background-color: #ecfdf5; }
-.text-green { color: #0b9e66; }
+.bg-light-blue { background-color: #eff6ff; }
+.text-blue { color: #1a56db; }
 .bg-light-gray { background-color: #f1f5f9; }
 .text-gray { color: #64748b; }
 
@@ -162,7 +162,7 @@
 
 /* ================= Bottom Dark CTA Banner ================= */
 .cta-bottom-banner {
-  background-color: #062b1d; /* Very dark green */
+  background-color: #0b1b3d; /* Very dark navy blue */
   border-radius: 20px;
   padding: 3rem 2rem;
   display: flex;
@@ -180,7 +180,7 @@
   top: 0;
   width: 40%;
   height: 100%;
-  background: radial-gradient(circle at 100% 50%, rgba(11, 158, 102, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle at 100% 50%, rgba(26, 86, 219, 0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -208,7 +208,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgba(11, 158, 102, 0.5);
+  border: 2px solid rgba(26, 86, 219, 0.5);
 }
 
 .cta-logo-glow {
@@ -219,7 +219,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(11, 158, 102, 0.4) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(26, 86, 219, 0.4) 0%, transparent 70%);
   z-index: 0;
 }
 
@@ -236,8 +236,8 @@
   margin-bottom: 0.5rem;
 }
 
-.cta-banner-titles .text-light-green {
-  color: #0b9e66;
+.cta-banner-titles .text-light-blue {
+  color: #1a56db;
 }
 
 .cta-banner-titles p {
@@ -269,7 +269,7 @@
 .cta-btn-primary {
   display: inline-flex;
   align-items: center;
-  background-color: #0b9e66;
+  background-color: #1a56db;
   color: white;
   padding: 10px 30px 10px 10px;
   border-radius: 50px;
@@ -281,16 +281,16 @@
 }
 
 .cta-btn-primary:hover {
-  background-color: #0a8a58;
+  background-color: #1e40af;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(11, 158, 102, 0.3);
+  box-shadow: 0 10px 20px rgba(26, 86, 219, 0.3);
 }
 
 .btn-icon-wrapper {
   width: 40px;
   height: 40px;
   background-color: white;
-  color: #0b9e66;
+  color: #1a56db;
   border-radius: 50%;
   display: flex;
   align-items: center;

@@ -14,7 +14,7 @@ const HrmsDashboards = () => {
             Built for Every Role. Designed for Success.
           </div>
           <h2 className="dashboards-title">
-            Powerful for <span className="text-green">Admins.</span> Simple for <span className="text-green">Employees.</span>
+            Powerful for <span className="text-blue">Admins.</span> Simple for <span className="text-blue">Employees.</span>
           </h2>
           <p className="dashboards-subtitle">
             HRMS brings administrators and employees onto one connected platform — giving everyone the tools they need without unnecessary complexity.
@@ -53,7 +53,7 @@ const HrmsDashboards = () => {
             </div>
             
             <div className="dashboard-card-image-wrapper">
-              <div className="glow-effect green-glow"></div>
+              <div className="glow-effect navy-glow"></div>
               <img src="/hrmssection 2.png" alt="Admin Dashboard Interface" className="dashboard-mockup admin-mockup" />
             </div>
           </div>
@@ -95,7 +95,7 @@ const HrmsDashboards = () => {
         <div className="dashboards-bottom-pill-wrapper">
            <div className="dashboards-bottom-pill">
              <div className="bottom-pill-icon">
-               <Users size={20} className="text-green-dark" />
+               <Users size={20} className="text-blue-dark" />
              </div>
              <div className="bottom-pill-text">
                <strong>One Platform. Two Experiences.</strong>

@@ -11,13 +11,12 @@ const StatItem = ({ icon: Icon, endValue, suffix, label, delay }) => {
   useEffect(() => {
     if (isInView) {
       let startTimestamp = null;
-      const duration = 2000; // 2 seconds
+      const duration = 2000;
       
       const step = (timestamp) => {
         if (!startTimestamp) startTimestamp = timestamp;
         const progress = Math.min((timestamp - startTimestamp) / duration, 1);
         
-        // easeOut easing function for smoother deceleration
         const easeOut = 1 - Math.pow(1 - progress, 4);
         setCount(Math.floor(easeOut * endValue));
         
@@ -33,16 +32,22 @@ const StatItem = ({ icon: Icon, endValue, suffix, label, delay }) => {
   return (
     <motion.div 
       ref={ref}
-      className="key-stat-item"
-      initial={{ opacity: 0, y: 30 }}
+      className="key-stat-card"
+      initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: delay }}
     >
       <div className="key-stat-icon-wrapper">
-        <Icon size={32} strokeWidth={1.5} className="key-stat-icon" />
+        <div className="key-stat-icon-arc"></div>
+        <div className="key-stat-icon-inner">
+           <Icon size={32} strokeWidth={2} className="key-stat-icon" />
+        </div>
       </div>
-      <h3 className="key-stat-number">{count}{suffix}</h3>
-      <p className="key-stat-label">{label}</p>
+      <div className="key-stat-content">
+        <h3 className="key-stat-number">{count}{suffix}</h3>
+        <div className="key-stat-line"></div>
+        <p className="key-stat-label">{label}</p>
+      </div>
     </motion.div>
   );
 };
@@ -58,21 +63,50 @@ const KeyStats = () => {
 
   return (
     <section className="key-stats-section">
+      <div className="key-stats-bg-pattern"></div>
+      <div className="key-stats-bg-gradient"></div>
+      
       <div className="key-stats-container">
-        {stats.map((stat, index) => (
-          <React.Fragment key={index}>
-            <StatItem {...stat} delay={index * 0.1} />
-            {index < stats.length - 1 && (
-              <motion.div 
-                className="key-stat-divider"
-                initial={{ opacity: 0, height: 0 }}
-                whileInView={{ opacity: 1, height: "80px" }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 + (index * 0.1) }}
-              ></motion.div>
-            )}
-          </React.Fragment>
-        ))}
+        
+        <div className="key-stats-header">
+          <motion.div 
+            className="key-stats-subtitle-wrapper"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="key-stats-dot"></span>
+            <span className="key-stats-subtitle">OUR ACHIEVEMENTS</span>
+            <span className="key-stats-dot"></span>
+          </motion.div>
+          
+          <motion.h2 
+            className="key-stats-title"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
+            Numbers That Reflect Our<br/>
+            <span className="text-highlight">Commitment & Growth</span>
+          </motion.h2>
+          
+          <motion.p 
+            className="key-stats-desc"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            Delivering reliable solutions and building lasting relationships<br/>across the globe.
+          </motion.p>
+        </div>
+
+        <div className="key-stats-grid">
+          {stats.map((stat, index) => (
+            <StatItem key={index} {...stat} delay={0.3 + (index * 0.1)} />
+          ))}
+        </div>
       </div>
     </section>
   );

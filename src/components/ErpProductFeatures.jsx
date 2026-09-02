@@ -12,10 +12,7 @@ const ErpProductFeatures = () => {
           
           {/* Left Text */}
           <div className="erp-features-text-content">
-            <div className="features-badge">
-              <span className="badge-bg-num">02</span>
-              <span className="badge-text">02 ONE PLATFORM. EVERY BUSINESS FUNCTION. <span className="line"></span></span>
-            </div>
+
             
             <h2 className="features-title">
               Everything Your<br />

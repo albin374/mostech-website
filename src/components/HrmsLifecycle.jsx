@@ -13,7 +13,7 @@ const HrmsLifecycle = () => {
             <span className="badge-number">04</span> EMPLOYEE LIFECYCLE
           </div>
           <h2 className="lifecycle-title">
-            From <span className="text-green">First Day</span> to <span className="text-blue">Every Day</span>
+            From <span className="text-blue">First Day</span> to <span className="text-blue">Every Day</span>
           </h2>
           <p className="lifecycle-subtitle">
             HRMS manages the complete employee journey.
@@ -24,7 +24,7 @@ const HrmsLifecycle = () => {
         <div className="lifecycle-process-wrapper">
           {/* Top Dotted Connectors */}
           <div className="top-connectors">
-            <div className="connector c-green"></div>
+            <div className="connector c-blue-light"></div>
             <div className="connector c-teal"></div>
             <div className="connector c-blue"></div>
             <div className="connector c-purple"></div>
@@ -33,7 +33,7 @@ const HrmsLifecycle = () => {
           <div className="lifecycle-steps">
             
             {/* Step 1: Onboard */}
-            <div className="lifecycle-step step-green">
+            <div className="lifecycle-step step-blue-light">
               <div className="step-icon-wrapper">
                 <span className="step-number">01</span>
                 <div className="step-icon-circle"><UserPlus size={28} /></div>
@@ -43,7 +43,7 @@ const HrmsLifecycle = () => {
                 <p className="step-desc">Bring new employees into your organization seamlessly.</p>
                 <div className="step-graphic">
                    <div className="graphic-profile">
-                      <div className="profile-avatar"><UserCheck size={20} color="#16a34a" /></div>
+                      <div className="profile-avatar"><UserCheck size={20} color="#1a56db" /></div>
                       <div className="profile-lines">
                          <div className="line l-long"></div>
                          <div className="line l-short"></div>

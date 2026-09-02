@@ -20,7 +20,7 @@ const WhatsappChatbotPersonalized = () => {
             <h2 className="personalized-main-title">
               One Platform.<br/>
               A Chatbot Built Around<br/>
-              <span className="text-green">Your Business.</span>
+              <span className="text-blue">Your Business.</span>
             </h2>
             
             <p className="personalized-desc">
@@ -54,12 +54,12 @@ const WhatsappChatbotPersonalized = () => {
           {/* Card 1 */}
           <div className="p-industry-card">
             <div className="p-icard-header">
-              <div className="p-icard-icon bg-green"><ShoppingBag size={20} /></div>
-              <h4 className="p-icard-title text-green">For Retail</h4>
+              <div className="p-icard-icon bg-navy"><ShoppingBag size={20} /></div>
+              <h4 className="p-icard-title text-navy">For Retail</h4>
             </div>
             <img src="/retail_gen.png" alt="Retail Store" className="p-icard-img" />
             <p className="p-icard-desc">Help customers find products, compare options and check availability.</p>
-            <div className="p-icard-tags tag-green">
+            <div className="p-icard-tags tag-navy">
               <span><Search size={14} /> Product Search</span>
               <span><CheckCircle2 size={14} /> Availability</span>
               <span><ListFilter size={14} /> Compare</span>

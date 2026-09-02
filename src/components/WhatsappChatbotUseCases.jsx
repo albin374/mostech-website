@@ -19,7 +19,7 @@ const WhatsappChatbotUseCases = () => {
             
             <h2 className="usecases-main-title">
               More Than a Chatbot.<br/>
-              Your <span className="text-green">Digital Business Assistant.</span>
+              Your <span className="text-blue">Digital Business Assistant.</span>
             </h2>
             
             <p className="usecases-desc">
@@ -42,11 +42,11 @@ const WhatsappChatbotUseCases = () => {
           
           {/* Card 1 */}
           <div className="usecase-card">
-            <div className="uc-card-icon icon-green"><ShoppingBag size={28} /></div>
+            <div className="uc-card-icon icon-navy"><ShoppingBag size={28} /></div>
             <h4 className="uc-card-title">Product Assistant</h4>
             <p className="uc-card-subtitle">Help customers discover products instantly.</p>
-            <div className="uc-card-divider divider-green"></div>
-            <ul className="uc-card-list list-green">
+            <div className="uc-card-divider divider-navy"></div>
+            <ul className="uc-card-list list-navy">
               <li><CheckCircle2 size={16} /> Product Details</li>
               <li><CheckCircle2 size={16} /> Specifications</li>
               <li><CheckCircle2 size={16} /> Pricing</li>
@@ -114,7 +114,7 @@ const WhatsappChatbotUseCases = () => {
 
         </div>
 
-        {/* Bottom Dark Green Banner */}
+        {/* Bottom Dark Navy Banner */}
         <div className="usecases-bottom-banner">
           <div className="uc-banner-left">
             <div className="uc-banner-icon">
@@ -122,7 +122,7 @@ const WhatsappChatbotUseCases = () => {
             </div>
             <div className="uc-banner-text">
               Every conversation<br/>
-              can become an <span className="text-light-green">opportunity.</span>
+              can become an <span className="text-light-blue">opportunity.</span>
             </div>
           </div>
 
