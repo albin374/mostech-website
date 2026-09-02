@@ -239,20 +239,6 @@
   display: none;
 }
 
-/* Scrolled state */
-.header-scrolled .top-bar {
-  display: none; /* Hide top bar on scroll */
-}
-
-.header-scrolled {
-  padding-bottom: 0;
-  background-color: transparent;
-}
-
-.header-scrolled .header-main-wrapper {
-  margin-top: 15px;
-}
-
 @media (max-width: 991px) {
   .top-bar {
     display: none;

@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet-async';
 import './ProjectManagementPage.css';
 import ProjectFeatures from '../components/ProjectFeatures';
 import ProjectWorkflow from '../components/ProjectWorkflow';
+import ProjectCta from '../components/ProjectCta';
 
 const ProjectManagementPage = () => {
   useEffect(() => {
@@ -116,6 +117,7 @@ const ProjectManagementPage = () => {
         
         <ProjectFeatures />
         <ProjectWorkflow />
+        <ProjectCta />
       </main>
     </>
   );

@@ -5,7 +5,6 @@ import { FaLinkedinIn, FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/
 import './Header.css';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
@@ -17,16 +16,8 @@ const Header = () => {
   };
 
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
+    <header className="header">
       <div className="top-bar">
         <div className="container top-bar-content">
           <div className="top-bar-left">
