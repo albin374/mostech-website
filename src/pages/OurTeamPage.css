@@ -1,0 +1,218 @@
+.our-team-page {
+  padding: 60px 0;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.ceo-message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+@media (min-width: 992px) {
+  .ceo-message-container {
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+  }
+}
+
+.team-ceo-card {
+  position: relative;
+  background: linear-gradient(135deg, #1e40af, #0f172a);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* Removed overflow: hidden to allow image to break out if needed */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 50px; /* Space for the head if it breaks out */
+}
+
+.ceo-bg-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 150px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.15);
+  line-height: 1;
+  z-index: 1;
+  pointer-events: none;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 5px;
+  overflow: hidden;
+  border-radius: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.ceo-image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 95%; /* Fits within the container */
+  z-index: 2;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.ceo-info {
+  position: relative;
+  z-index: 3;
+  padding: 25px;
+  color: white;
+  width: 100%;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 60%, transparent 100%);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.ceo-info h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.ceo-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.ceo-quote {
+  flex: 1;
+  padding: 20px;
+}
+
+.ceo-quote h2 {
+  font-size: 32px;
+  line-height: 1.4;
+  color: #1e3a8a; /* navy blue text */
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .ceo-quote h2 {
+    font-size: 42px;
+  }
+}
+
+/* TEAM DEPARTMENTS SECTION */
+.team-departments-section {
+  padding: 80px 0 100px 0;
+  background-color: #ffffff;
+}
+
+.team-heading {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .team-grid {
+    gap: 40px;
+  }
+}
+
+.team-member {
+  width: calc(100% - 30px);
+  max-width: 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.member-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: #e2e8f0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gradient background that fades in on hover */
+.member-image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e40af, #0f172a); /* Navy blue gradient */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.team-member:hover .member-image-wrapper {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.2);
+}
+
+.team-member:hover .member-image-wrapper::before {
+  opacity: 1;
+}
+
+.member-image-wrapper img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.team-member h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 5px 0;
+}
+
+.team-member p {
+  font-size: 15px;
+  color: #1e40af; /* matching the navy blue theme */
+  margin: 0;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+

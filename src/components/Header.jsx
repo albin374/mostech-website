@@ -68,6 +68,7 @@ const Header = () => {
               <ul>
                 <li><Link to="/" className={`nav-link ${currentPath === '/' ? 'nav-link-active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
                 <li><Link to="/about" className={`nav-link ${currentPath === '/about' ? 'nav-link-active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>About Us</Link></li>
+
                 <li className={`has-dropdown ${activeDropdown === 'services' ? 'dropdown-open' : ''}`}>
                   <a href="#" className="nav-link" onClick={(e) => toggleDropdown(e, 'services')}>Services <ChevronDown size={14} className="dropdown-icon" /></a>
                   <ul className="dropdown">

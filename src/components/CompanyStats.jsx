@@ -20,7 +20,7 @@ const CompanyStats = () => {
               <div className="stats-icon-circle">
                 <Globe size={28} />
               </div>
-              <h3>16+</h3>
+              <h3>25+</h3>
               <p>Countries</p>
               <div className="stats-card-underline"></div>
             </div>

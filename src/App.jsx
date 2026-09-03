@@ -16,6 +16,7 @@ import HrmsPage from './pages/HrmsPage';
 import WhatsappChatbotPage from './pages/WhatsappChatbotPage';
 import ProjectManagementPage from './pages/ProjectManagementPage';
 import TaskManagementPage from './pages/TaskManagementPage';
+import OurTeamPage from './pages/OurTeamPage';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
             <Route path="/whatsapp-chatbot" element={<WhatsappChatbotPage />} />
             <Route path="/project-management" element={<ProjectManagementPage />} />
             <Route path="/task-management" element={<TaskManagementPage />} />
+            <Route path="/our-team" element={<OurTeamPage />} />
           </Routes>
           <Footer />
         </div>
