@@ -22,16 +22,16 @@ const Header = () => {
         <div className="container top-bar-content">
           <div className="top-bar-left">
             <a href="mailto:info@mostech.ae" className="contact-item">
-              <Mail size={14} />
+              <Mail size={14} className="contact-icon-blue" />
               <span>info@mostech.ae</span>
             </a>
-            <a href="tel:+971581730112" className="contact-item" style={{marginLeft: '15px'}}>
-              <Phone size={14} />
+            <div style={{width: '1px', height: '14px', background: 'rgba(255,255,255,0.2)', margin: '0 5px'}}></div>
+            <a href="tel:+971581730112" className="contact-item">
+              <Phone size={14} className="contact-icon-blue" />
               <span>+971 58 173 0112</span>
             </a>
           </div>
           <div className="top-bar-right">
-            <span className="follow-text">Follow Us :</span>
             <div className="social-links">
               <a href="#" className="social-icon"><FaLinkedinIn size={14} /></a>
               <a href="#" className="social-icon"><FaFacebookF size={14} /></a>
@@ -42,9 +42,9 @@ const Header = () => {
         </div>
       </div>
       
-      <div className="header-main-wrapper header-main-bg">
+      <div className="header-main-wrapper">
         <div className="container">
-          <div className="header-main-inner">
+          <div className="header-main-inner header-main-bg">
             <Link to="/" className="logo">
               <img src="/logo.webp" alt="Mostech Logo" className="logo-img" />
             </Link>

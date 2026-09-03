@@ -82,16 +82,9 @@ const ServicesGrid = () => {
               }}
               whileHover={{ y: -5 }}
             >
-              <div className="service-card-icon">
-                {service.icon}
-              </div>
               <h3 className="service-card-title">{service.title}</h3>
               <div className="service-card-divider"></div>
               <p className="service-card-desc">{service.description}</p>
-              
-              <button className="service-card-arrow">
-                <ArrowRight size={18} strokeWidth={2.5} />
-              </button>
             </motion.div>
           ))}
         </motion.div>

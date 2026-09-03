@@ -1,368 +1,296 @@
 import React, { useEffect, useRef } from 'react';
+import * as d3 from 'd3';
 import './GlobalPresence.css';
 
 const GlobalPresence = () => {
-  const canvasRef = useRef(null);
-  const stageRef = useRef(null);
+  const mapRef = useRef(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    const stage = stageRef.current;
-    const hotspots = stage.querySelectorAll('.wp-hotspot');
+    const svgElement = mapRef.current;
+    if (!svgElement) return;
 
-    // Hotspot coordinates matching percent left/top
-    const locations = [
-      { name: 'Oman', xPct: 0.47, yPct: 0.28 },
-      { name: 'Qatar', xPct: 0.19, yPct: 0.54 },
-      { name: 'Kuwait', xPct: 0.33, yPct: 0.65 },
-      { name: 'Bahrain', xPct: 0.50, yPct: 0.75 },
-      { name: 'KSA', xPct: 0.60, yPct: 0.64 },
-      { name: 'UAE', xPct: 0.66, yPct: 0.54, isHub: true },
-      { name: 'India', xPct: 0.74, yPct: 0.58 },
-      { name: 'China', xPct: 0.82, yPct: 0.48 }
-    ];
+    // Clear previous drawing if any
+    d3.select(svgElement).selectAll("*").remove();
 
-    // Connection links radiating from the UAE Hub
-    const connections = [];
-    const hubLoc = locations.find(l => l.isHub);
-    locations.forEach(loc => {
-      if (loc !== hubLoc) {
-        connections.push({
-          from: hubLoc,
-          to: loc,
-          t: Math.random(),
-          speed: 0.003 + Math.random() * 0.003
+    let animationIntervals = [];
+
+    const loadMap = async () => {
+      try {
+        /* =====================================================
+           SVG
+        ===================================================== */
+        const svg = d3.select(svgElement);
+
+        /* =====================================================
+           STATIC MAP IMAGE BACKGROUND
+        ===================================================== */
+        svg.append("image")
+          .attr("href", "/map.png")
+          .attr("width", 1000)
+          .attr("height", 620)
+          .attr("x", 0)
+          .attr("y", 0);
+
+        /* =====================================================
+           PROJECTION
+           Matches the original world map projection
+        ===================================================== */
+        const projection = d3.geoNaturalEarth1()
+          .scale(158)
+          .translate([500, 310]);
+
+        /* =====================================================
+           LOCATIONS
+           longitude, latitude
+        ===================================================== */
+        const places = {
+          Dubai: { coordinates: [55.2708, 25.2048] },
+          Kazakhstan: { coordinates: [-65.0, -35.0] }, // Moved to South America
+          India: { coordinates: [78.9629, 20.5937] },
+          Ethiopia: { coordinates: [15.0, 55.0] } // Moved to Europe
+        };
+
+        /* =====================================================
+           PROJECT LOCATIONS
+        ===================================================== */
+        Object.values(places).forEach(place => {
+          place.point = projection(place.coordinates);
         });
-      }
-    });
 
-    // Interaction ripples
-    let ripples = [];
+        const dubai = places.Dubai.point;
+        const kazakhstan = places.Kazakhstan.point;
+        const india = places.India.point;
+        const ethiopia = places.Ethiopia.point;
 
-    function addRipple(x, y) {
-      ripples.push({
-        x,
-        y,
-        radius: 0,
-        maxRadius: 160,
-        opacity: 0.75,
-        speed: 2.8
-      });
-    }
+        /* =====================================================
+           CURVED ROUTE CREATOR
+        ===================================================== */
+        function makeCurve(start, end, curveAmount) {
+          const x1 = start[0];
+          const y1 = start[1];
+          const x2 = end[0];
+          const y2 = end[1];
 
-    // Attach hover listeners to hotspots for interactive canvas ripples
-    const handleMouseEnter = (idx) => {
-      hotspots[idx].classList.add('active');
-      const w = stage.clientWidth;
-      const h = stage.clientHeight;
-      const x = locations[idx].xPct * w;
-      const y = locations[idx].yPct * h;
-      addRipple(x, y);
-    };
+          const dx = x2 - x1;
+          const dy = y2 - y1;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          const middleX = (x1 + x2) / 2;
+          const middleY = (y1 + y2) / 2;
+          const normalX = -dy / distance;
+          const normalY = dx / distance;
+          const controlX = middleX + normalX * curveAmount;
+          const controlY = middleY + normalY * curveAmount;
 
-    const handleMouseLeave = (idx) => {
-      hotspots[idx].classList.remove('active');
-    };
-
-    hotspots.forEach((hs, idx) => {
-      const hitbox = hs.querySelector('.wp-hotspot-hitbox');
-      if (hitbox) {
-        hitbox.addEventListener('mouseenter', () => handleMouseEnter(idx));
-        hitbox.addEventListener('mouseleave', () => handleMouseLeave(idx));
-      }
-    });
-
-    // Map boundary detection
-    function inLand(nx, ny) {
-      const blobs = [
-        { cx: 0.09, cy: 0.08, rx: 0.05, ry: 0.06 }, { cx: 0.14, cy: 0.20, rx: 0.10, ry: 0.10 },
-        { cx: 0.20, cy: 0.34, rx: 0.10, ry: 0.10 }, { cx: 0.24, cy: 0.48, rx: 0.06, ry: 0.06 },
-        { cx: 0.27, cy: 0.62, rx: 0.07, ry: 0.09 }, { cx: 0.30, cy: 0.78, rx: 0.06, ry: 0.10 },
-        { cx: 0.50, cy: 0.12, rx: 0.06, ry: 0.06 }, { cx: 0.55, cy: 0.20, rx: 0.05, ry: 0.05 },
-        { cx: 0.53, cy: 0.38, rx: 0.07, ry: 0.09 }, { cx: 0.55, cy: 0.54, rx: 0.06, ry: 0.10 },
-        { cx: 0.56, cy: 0.72, rx: 0.045, ry: 0.08 },
-        { cx: 0.62, cy: 0.28, rx: 0.06, ry: 0.06 }, { cx: 0.68, cy: 0.20, rx: 0.09, ry: 0.08 },
-        { cx: 0.78, cy: 0.16, rx: 0.10, ry: 0.09 }, { cx: 0.88, cy: 0.20, rx: 0.08, ry: 0.08 },
-        { cx: 0.70, cy: 0.34, rx: 0.07, ry: 0.07 }, { cx: 0.80, cy: 0.36, rx: 0.09, ry: 0.08 },
-        { cx: 0.90, cy: 0.40, rx: 0.07, ry: 0.07 }, { cx: 0.75, cy: 0.48, rx: 0.05, ry: 0.05 },
-        { cx: 0.90, cy: 0.72, rx: 0.06, ry: 0.05 }
-      ];
-      for (const b of blobs) {
-        const dx = (nx - b.cx) / b.rx, dy = (ny - b.cy) / b.ry;
-        if (dx * dx + dy * dy <= 1) return true;
-      }
-      return false;
-    }
-
-    // Dot map array
-    let dots = [];
-
-    function initDots(w, h) {
-      dots = [];
-      const sp = Math.max(12, w / 95);
-      const cols = Math.ceil(w / sp), rows = Math.ceil(h / sp);
-      for (let i = 0; i <= cols; i++) {
-        for (let j = 0; j <= rows; j++) {
-          const x = i * sp + (j % 2 ? sp / 2 : 0), y = j * sp;
-          const nx = x / w, ny = y / h;
-          if (!inLand(nx, ny)) continue;
-          const n = Math.random();
-          if (n < 0.12) continue;
-
-          dots.push({
-            x,
-            y,
-            baseRadius: n > 0.82 ? 1.6 : 1.1,
-            opacity: 0.25 + Math.random() * 0.5,
-            twinkleSpeed: (0.008 + Math.random() * 0.015) * (Math.random() > 0.5 ? 1 : -1),
-            isBright: n > 0.82
-          });
-        }
-      }
-    }
-
-    let animationFrameId;
-
-    function animate() {
-      const dpr = window.devicePixelRatio || 1;
-      const w = stage.clientWidth, h = stage.clientHeight;
-
-      if (canvas.width !== w * dpr || canvas.height !== h * dpr) {
-        canvas.width = w * dpr; canvas.height = h * dpr;
-        canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        initDots(w, h);
-      }
-
-      ctx.clearRect(0, 0, w, h);
-
-      // 1. Process active interaction ripples
-      ripples = ripples.filter(r => {
-        r.radius += r.speed;
-        r.opacity = 1 - (r.radius / r.maxRadius);
-        return r.radius < r.maxRadius;
-      });
-
-      // 2. Draw subtle starry background particles
-      for (let k = 0; k < 45; k++) {
-        const sx = (k * 7919) % w;
-        const sy = (k * 104729) % h;
-        ctx.beginPath();
-        ctx.arc(sx, sy, 0.7, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(56, 198, 244, 0.1)';
-        ctx.fill();
-      }
-
-      // 3. Update and draw world map dots
-      dots.forEach(dot => {
-        dot.opacity += dot.twinkleSpeed;
-        if (dot.opacity > 0.85) {
-          dot.opacity = 0.85;
-          dot.twinkleSpeed = -Math.abs(dot.twinkleSpeed);
-        } else if (dot.opacity < 0.2) {
-          dot.opacity = 0.2;
-          dot.twinkleSpeed = Math.abs(dot.twinkleSpeed);
+          return `M ${x1} ${y1} Q ${controlX} ${controlY} ${x2} ${y2}`;
         }
 
-        let radius = dot.baseRadius;
-        let alpha = dot.opacity;
+        /* =====================================================
+           ROUTES
+        ===================================================== */
+        const indiaRoute = makeCurve(dubai, india, 45);
+        const kazakhstanRoute = makeCurve(dubai, kazakhstan, 35);
+        const ethiopiaRoute = makeCurve(dubai, ethiopia, 0);
 
-        // Wave propagation interaction
-        ripples.forEach(r => {
-          const dx = dot.x - r.x;
-          const dy = dot.y - r.y;
-          const dist = Math.hypot(dx, dy);
-          const waveDist = Math.abs(dist - r.radius);
-          if (waveDist < 25) {
-            const strength = (1 - waveDist / 25) * r.opacity;
-            radius += strength * 1.6;
-            alpha = Math.min(1, alpha + strength * 0.7);
+        /* =====================================================
+           ROUTE GLOW
+        ===================================================== */
+        [indiaRoute, kazakhstanRoute, ethiopiaRoute].forEach(route => {
+          svg.append("path")
+            .attr("class", "route-glow")
+            .attr("d", route);
+        });
+
+        /* =====================================================
+           ROUTE PATHS
+        ===================================================== */
+        const routeData = [
+          { id: "route-india", path: indiaRoute },
+          { id: "route-kazakhstan", path: kazakhstanRoute },
+          { id: "route-ethiopia", path: ethiopiaRoute }
+        ];
+
+        routeData.forEach(route => {
+          svg.append("path")
+            .attr("id", route.id)
+            .attr("class", "route-line")
+            .attr("d", route.path);
+        });
+
+        /* =====================================================
+           LOCATION MARKERS
+        ===================================================== */
+        function createMarker(point, pulse = true) {
+          const group = svg.append("g");
+
+          /* Very subtle pulse */
+          if (pulse) {
+            const pulseCircle = group.append("circle")
+              .attr("class", "destination-pulse")
+              .attr("cx", point[0])
+              .attr("cy", point[1])
+              .attr("r", 7);
+
+            pulseCircle
+              .append("animate")
+              .attr("attributeName", "r")
+              .attr("values", "7;15;7")
+              .attr("dur", "2.2s")
+              .attr("repeatCount", "indefinite");
+
+            pulseCircle
+              .append("animate")
+              .attr("attributeName", "opacity")
+              .attr("values", ".5;0;.5")
+              .attr("dur", "2.2s")
+              .attr("repeatCount", "indefinite");
           }
-        });
 
-        ctx.beginPath();
-        ctx.arc(dot.x, dot.y, radius, 0, Math.PI * 2);
-        ctx.fillStyle = dot.isBright
-          ? `rgba(143, 227, 255, ${alpha})`
-          : `rgba(45, 95, 175, ${alpha * 0.7})`;
-        ctx.fill();
-      });
-
-      // 4. Draw connectivity arcs & photons
-      connections.forEach(conn => {
-        const x1 = conn.from.xPct * w;
-        const y1 = conn.from.yPct * h;
-        const x2 = conn.to.xPct * w;
-        const y2 = conn.to.yPct * h;
-
-        // Bend the line upward for visual curvature
-        const mx = (x1 + x2) / 2;
-        const my = (y1 + y2) / 2;
-        const dist = Math.hypot(x2 - x1, y2 - y1);
-        const cx = mx;
-        const cy = my - dist * 0.15;
-
-        // Draw bezier arc line
-        ctx.beginPath();
-        ctx.moveTo(x1, y1);
-        ctx.quadraticCurveTo(cx, cy, x2, y2);
-        ctx.strokeStyle = 'rgba(56, 198, 244, 0.13)';
-        ctx.lineWidth = 1;
-        ctx.stroke();
-
-        // Photon positioning
-        conn.t += conn.speed;
-        if (conn.t > 1) {
-          conn.t = 0;
-          conn.speed = 0.003 + Math.random() * 0.003;
+          /* Small center dot */
+          group.append("circle")
+            .attr("class", "destination-point")
+            .attr("cx", point[0])
+            .attr("cy", point[1])
+            .attr("r", 6);
         }
 
-        const t = conn.t;
-        const px = (1 - t) * (1 - t) * x1 + 2 * (1 - t) * t * cx + t * t * x2;
-        const py = (1 - t) * (1 - t) * y1 + 2 * (1 - t) * t * cy + t * t * y2;
+        /* =====================================================
+           LABELS
+        ===================================================== */
+        function createLabel(text, point, offsetX, offsetY) {
+          const x = point[0] + offsetX;
+          const y = point[1] + offsetY;
+          const width = text.length * 7 + 25;
 
-        // Photon tail
-        const tPrev = Math.max(0, t - 0.07);
-        const pxPrev = (1 - tPrev) * (1 - tPrev) * x1 + 2 * (1 - tPrev) * tPrev * cx + tPrev * tPrev * x2;
-        const pyPrev = (1 - tPrev) * (1 - tPrev) * y1 + 2 * (1 - tPrev) * tPrev * cy + tPrev * tPrev * y2;
+          const group = svg.append("g")
+            .attr("transform", `translate(${x},${y})`);
 
-        const grad = ctx.createLinearGradient(pxPrev, pyPrev, px, py);
-        grad.addColorStop(0, 'rgba(143, 227, 255, 0)');
-        grad.addColorStop(1, 'rgba(143, 227, 255, 1)');
+          group.append("rect")
+            .attr("class", "map-label-box")
+            .attr("x", -width / 2)
+            .attr("y", -15)
+            .attr("width", width)
+            .attr("height", 30)
+            .attr("rx", 7);
+
+          group.append("text")
+            .attr("class", "map-label-text")
+            .attr("text-anchor", "middle")
+            .attr("y", 4)
+            .text(text);
+        }
+
+        /* =====================================================
+           MARKERS
+        ===================================================== */
+        createMarker(dubai);
+        createMarker(kazakhstan);
+        createMarker(india);
+        createMarker(ethiopia);
+
+        /* =====================================================
+           LABEL POSITIONS
+        ===================================================== */
+        createLabel("KAZAKHSTAN", kazakhstan, 0, -35);
+        createLabel("DUBAI", dubai, -5, -34);
+        createLabel("INDIA", india, 37, -5);
+        createLabel("ETHIOPIA", ethiopia, 0, 38);
+
+        /* =====================================================
+           MOVING DOT
+        ===================================================== */
+        function animateDot(routeId, duration) {
+          // Use component scope select instead of document.getElementById
+          const routeNode = d3.select(svgElement).select(`#${routeId}`).node();
+          if (!routeNode) return;
+
+          const dot = svg.append("circle")
+            .attr("class", "travel-dot")
+            .attr("r", 4);
+
+          let isCancelled = false;
+          
+          function run() {
+            if (isCancelled) return;
+            const totalLength = routeNode.getTotalLength();
+
+            dot
+              .attr("cx", dubai[0])
+              .attr("cy", dubai[1]);
+
+            dot
+              .transition()
+              .duration(duration)
+              .ease(d3.easeLinear)
+              .attrTween("cx", function() {
+                return function(t) {
+                  const p = routeNode.getPointAtLength(t * totalLength);
+                  return p.x;
+                };
+              })
+              .attrTween("cy", function() {
+                return function(t) {
+                  const p = routeNode.getPointAtLength(t * totalLength);
+                  return p.y;
+                };
+              })
+              .on("end", run);
+          }
+          
+          run();
+
+          return () => { isCancelled = true; dot.interrupt(); };
+        }
+
+        /* =====================================================
+           ALL THREE START TOGETHER
+        ===================================================== */
+        const cleanup1 = animateDot("route-india", 3200);
+        const cleanup2 = animateDot("route-kazakhstan", 3200);
+        const cleanup3 = animateDot("route-ethiopia", 3200);
         
-        ctx.beginPath();
-        ctx.moveTo(pxPrev, pyPrev);
-        ctx.lineTo(px, py);
-        ctx.strokeStyle = grad;
-        ctx.lineWidth = 2;
-        ctx.lineCap = 'round';
-        ctx.stroke();
-        
-        // Photon head
-        ctx.beginPath();
-        ctx.arc(px, py, 1.5, 0, Math.PI * 2);
-        ctx.fillStyle = '#ffffff';
-        ctx.fill();
-      });
+        if (cleanup1) animationIntervals.push(cleanup1);
+        if (cleanup2) animationIntervals.push(cleanup2);
+        if (cleanup3) animationIntervals.push(cleanup3);
 
-      animationFrameId = requestAnimationFrame(animate);
-    }
+      } catch (err) {
+        console.error("Error loading map", err);
+      }
+    };
 
-    animate();
-
+    loadMap();
+    
     return () => {
-      cancelAnimationFrame(animationFrameId);
-      hotspots.forEach((hs, idx) => {
-        const hitbox = hs.querySelector('.wp-hotspot-hitbox');
-        if (hitbox) {
-          hitbox.removeEventListener('mouseenter', () => handleMouseEnter(idx));
-          hitbox.removeEventListener('mouseleave', () => handleMouseLeave(idx));
-        }
-      });
+      animationIntervals.forEach(cleanup => cleanup && cleanup());
     };
   }, []);
 
   return (
-    <section id="worldwide-presence">
-      <div id="wp-stage" ref={stageRef}>
-        <div id="wp-topbar"></div>
-        <canvas id="dotmap" ref={canvasRef}></canvas>
-        <div className="wp-title-wrap">
-          <h2>Our <span className="wp-accent">Worldwide</span> Presence</h2>
-        </div>
-        {/* Oman */}
-        <div className="wp-hotspot" style={{left: '47%', top: '28%'}}>
-          <div className="wp-hotspot-hitbox"></div>
-          <div className="wp-hotspot-pulse"></div>
-          <div className="wp-hotspot-pulse-2"></div>
-          <div className="wp-hotspot-core"></div>
-          <div className="wp-hotspot-line"></div>
-          <div className="wp-hotspot-text">
-            <span className="wp-h-country">🇴🇲 Oman</span>
-          </div>
-        </div>
-        {/* Qatar */}
-        <div className="wp-hotspot" style={{left: '19%', top: '54%'}}>
-          <div className="wp-hotspot-hitbox"></div>
-          <div className="wp-hotspot-pulse"></div>
-          <div className="wp-hotspot-pulse-2"></div>
-          <div className="wp-hotspot-core"></div>
-          <div className="wp-hotspot-line"></div>
-          <div className="wp-hotspot-text">
-            <span className="wp-h-country">🇶🇦 Qatar</span>
-          </div>
-        </div>
-        {/* Kuwait */}
-        <div className="wp-hotspot wp-dir-down" style={{left: '33%', top: '65%'}}>
-          <div className="wp-hotspot-hitbox"></div>
-          <div className="wp-hotspot-pulse"></div>
-          <div className="wp-hotspot-pulse-2"></div>
-          <div className="wp-hotspot-core"></div>
-          <div className="wp-hotspot-line"></div>
-          <div className="wp-hotspot-text">
-            <span className="wp-h-country">🇰🇼 Kuwait</span>
-          </div>
-        </div>
-        {/* Bahrain */}
-        <div className="wp-hotspot" style={{left: '50%', top: '75%'}}>
-          <div className="wp-hotspot-hitbox"></div>
-          <div className="wp-hotspot-pulse"></div>
-          <div className="wp-hotspot-pulse-2"></div>
-          <div className="wp-hotspot-core"></div>
-          <div className="wp-hotspot-line"></div>
-          <div className="wp-hotspot-text">
-            <span className="wp-h-country">🇧🇭 Bahrain</span>
-          </div>
-        </div>
-        {/* KSA */}
-        <div className="wp-hotspot wp-dir-down" style={{left: '60%', top: '64%'}}>
-          <div className="wp-hotspot-hitbox"></div>
-          <div className="wp-hotspot-pulse"></div>
-          <div className="wp-hotspot-pulse-2"></div>
-          <div className="wp-hotspot-core"></div>
-          <div className="wp-hotspot-line"></div>
-          <div className="wp-hotspot-text">
-            <span className="wp-h-country">🇸🇦 KSA</span>
-          </div>
-        </div>
-        {/* UAE (Dubai) - Hub */}
-        <div className="wp-hotspot" style={{left: '66%', top: '54%'}}>
-          <div className="wp-hotspot-hitbox"></div>
-          <div className="wp-hotspot-pulse"></div>
-          <div className="wp-hotspot-pulse-2"></div>
-          <div className="wp-hotspot-core"></div>
-          <div className="wp-hotspot-line"></div>
-          <div className="wp-hotspot-text">
-            <span className="wp-h-country">🇦🇪 UAE</span>
-          </div>
-        </div>
-        {/* India */}
-        <div className="wp-hotspot wp-dir-down" style={{left: '74%', top: '58%'}}>
-          <div className="wp-hotspot-hitbox"></div>
-          <div className="wp-hotspot-pulse"></div>
-          <div className="wp-hotspot-pulse-2"></div>
-          <div className="wp-hotspot-core"></div>
-          <div className="wp-hotspot-line"></div>
-          <div className="wp-hotspot-text">
-            <span className="wp-h-country">🇮🇳 India</span>
-          </div>
-        </div>
-        {/* China */}
-        <div className="wp-hotspot" style={{left: '82%', top: '48%'}}>
-          <div className="wp-hotspot-hitbox"></div>
-          <div className="wp-hotspot-pulse"></div>
-          <div className="wp-hotspot-pulse-2"></div>
-          <div className="wp-hotspot-core"></div>
-          <div className="wp-hotspot-line"></div>
-          <div className="wp-hotspot-text">
-            <span className="wp-h-country">🇨🇳 China</span>
-          </div>
-        </div>
+    <section className="vision-section">
+      {/* =========================
+           LEFT SIDE
+      ========================== */}
+      <div className="vision-content">
+        <h1 className="vision-title">
+          Our <span>Global Presence</span>
+        </h1>
+        <p className="vision-description">
+          Building technology solutions for businesses across multiple markets, with a growing presence across the GCC,
+          India, Kazakhstan, Ethiopia, and beyond.
+        </p>
+      </div>
+
+      {/* =========================
+           MAP SIDE
+      ========================== */}
+      <div className="map-container">
+        <svg
+          id="worldMap"
+          ref={mapRef}
+          viewBox="0 0 1000 620"
+        ></svg>
       </div>
     </section>
   );
 };
 
 export default GlobalPresence;
-

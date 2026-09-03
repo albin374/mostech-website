@@ -1,9 +1,12 @@
 .s3-section {
   padding: 6rem 0;
-  background: radial-gradient(circle at 10% 20%, rgba(220, 235, 255, 0.4) 0%, rgba(255, 255, 255, 1) 90%);
+  background-image: url('/s3+model.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
-  overflow: hidden;
   font-family: 'Inter', sans-serif;
+  background-color: #f8fbff; /* Fallback */
 }
 
 .s3-container {
@@ -17,7 +20,7 @@
 /* Header */
 .s3-header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,47 +28,44 @@
 }
 
 .s3-badge {
-  background-color: #eef4ff;
-  color: navy;
-  font-weight: 600;
+  color: #0a1930; /* Dark navy */
+  font-weight: 700;
   font-size: 0.9rem;
-  padding: 0.5rem 1.5rem;
-  border-radius: 50px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   margin-bottom: 1.5rem;
+  letter-spacing: 1px;
 }
 
-.s3-badge-dot {
-  width: 8px;
-  height: 8px;
-  background-color: navy;
-  border-radius: 50%;
+.s3-badge-line {
+  width: 40px;
+  height: 1px;
+  background-color: #a0aec0;
 }
 
 .s3-title {
   font-size: 2.8rem;
   font-weight: 800;
-  color: #0a1930;
+  color: #000000;
   margin: 0 0 1.5rem 0;
   line-height: 1.2;
 }
 
 .s3-highlight {
-  color: #3b3dec;
+  color: #0a1930;
 }
 
 .s3-title-underline {
-  width: 60px;
+  width: 50px;
   height: 3px;
-  background: linear-gradient(90deg, transparent, #3b3dec, transparent);
+  background-color: #0a1930;
   margin-bottom: 1.5rem;
 }
 
 .s3-subtitle {
-  color: #64748b;
-  font-size: 1.05rem;
+  color: #475569;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin: 0;
 }
@@ -74,7 +74,7 @@
 .s3-cards-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -88,80 +88,40 @@
 .s3-card {
   position: relative;
   background: #ffffff;
-  border-radius: 24px;
-  padding: 3.5rem 2rem 2.5rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  /* The chamfer is on bottom right */
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  z-index: 1;
-}
-
-.s3-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 24px;
-  z-index: -1;
-  opacity: 0.15;
+  min-height: 350px;
 }
 
 .s3-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
 }
 
-.card-purple::before {
-  background: radial-gradient(circle at center, #9d4edd 0%, transparent 70%);
-}
-.card-green::before {
-  background: radial-gradient(circle at center, #00b4d8 0%, transparent 70%);
-}
-.card-orange::before {
-  background: radial-gradient(circle at center, #fb8500 0%, transparent 70%);
-}
-
-.s3-floating-badge {
+.s3-card-number-box {
   position: absolute;
-  top: -24px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  top: 0;
+  left: 0;
+  background-color: #0a1930;
+  color: #ffffff;
+  font-size: 1.8rem;
   font-weight: 800;
-  font-size: 1.2rem;
-  border: 4px solid #ffffff;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  z-index: 5;
-}
-
-.card-purple .s3-floating-badge { background-color: #6a0dad; }
-.card-green .s3-floating-badge { background-color: #0fb38a; }
-.card-orange .s3-floating-badge { background-color: #f77f00; }
-
-.s3-image-wrapper {
-  margin-bottom: 2rem;
-  height: 140px;
+  padding: 1.2rem 1.5rem;
+  /* Slanted right edge */
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+  width: 90px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.s3-card-img {
-  max-height: 100%;
-  width: auto;
-  object-fit: contain;
+.s3-card-content {
+  padding: 6rem 2.5rem 2.5rem 2.5rem;
+  flex-grow: 1;
 }
 
 .s3-card-title {
@@ -172,50 +132,49 @@
 }
 
 .s3-card-divider {
-  width: 40px;
-  height: 3px;
-  border-radius: 2px;
-  margin-bottom: 1.2rem;
+  width: 30px;
+  height: 2px;
+  background-color: #0a1930;
+  margin-bottom: 1.5rem;
 }
-
-.card-purple .s3-card-divider { background-color: #6a0dad; }
-.card-green .s3-card-divider { background-color: #0fb38a; }
-.card-orange .s3-card-divider { background-color: #f77f00; }
 
 .s3-card-desc {
   font-size: 0.95rem;
-  color: #64748b;
+  color: #475569;
   line-height: 1.6;
-  margin: 0 0 2rem 0;
+  margin: 0;
 }
 
-.s3-card-link {
+/* Footer */
+.s3-card-footer {
+  background-color: #0a1930;
+  color: #ffffff;
+  padding: 1.5rem 2.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  color: white;
-  background-color: transparent;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  border: 1px solid;
+  justify-content: space-between;
   text-decoration: none;
+  transition: background-color 0.3s ease;
   margin-top: auto;
 }
 
-.card-purple .s3-card-link { border-color: #6a0dad; color: #6a0dad; }
-.card-green .s3-card-link { border-color: #0fb38a; color: #0fb38a; }
-.card-orange .s3-card-link { border-color: #f77f00; color: #f77f00; }
-
-.s3-card-link:hover {
-  transform: scale(1.1);
-  color: white !important;
+.s3-card-footer:hover {
+  background-color: #11284a;
 }
 
-.card-purple .s3-card-link:hover { background-color: #6a0dad; }
-.card-green .s3-card-link:hover { background-color: #0fb38a; }
-.card-orange .s3-card-link:hover { background-color: #f77f00; }
+.s3-card-footer-text {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.s3-card-footer-icon {
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.s3-card-footer:hover .s3-card-footer-icon {
+  transform: translateX(5px);
+}
 
 @media (max-width: 768px) {
   .s3-title {
