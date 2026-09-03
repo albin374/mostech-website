@@ -181,4 +181,25 @@
   .services-title {
     font-size: 2.5rem;
   }
+  .services-bg-video-desktop {
+    display: none;
+  }
+  .services-bg-video-mobile {
+    display: block;
+  }
+}
+
+.services-bg-video-desktop,
+.services-bg-video-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.services-bg-video-mobile {
+  display: none;
 }

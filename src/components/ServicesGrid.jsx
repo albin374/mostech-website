@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { BarChart2, Code, Smartphone, ShoppingBag, Layers, Wrench, ArrowRight } from 'lucide-react';
 import './ServicesGrid.css';
@@ -43,9 +43,21 @@ const services = [
 ];
 
 const ServicesGrid = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <section id="services" className="services-modern-section" style={{ position: 'relative' }}>
       <video
+        key={isMobile ? 'mobile' : 'desktop'}
         autoPlay
         loop
         muted
@@ -60,7 +72,7 @@ const ServicesGrid = () => {
           zIndex: 0
         }}
       >
-        <source src="/The_year_is_2125_Dubai_2026090316578.mp4" type="video/mp4" />
+        <source src={isMobile ? "/ourservices banner video.mp4" : "/The_year_is_2125_Dubai_2026090316578.mp4"} type="video/mp4" />
       </video>
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="services-header">
