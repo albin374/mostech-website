@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; All Rights Reserved | Developed by Mostech Business Solutions</p>
+          <p>All rights reserved | &copy; Mostech Business Solutions</p>
         </div>
       </div>
     </footer>

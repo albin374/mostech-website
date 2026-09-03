@@ -22,12 +22,12 @@ const Header = () => {
         <div className="container top-bar-content">
           <div className="top-bar-left">
             <a href="mailto:info@mostech.ae" className="contact-item">
-              <Mail size={14} className="contact-icon-blue" />
+              <Mail size={14} />
               <span>info@mostech.ae</span>
             </a>
             <div style={{width: '1px', height: '14px', background: 'rgba(255,255,255,0.2)', margin: '0 5px'}}></div>
             <a href="tel:+971581730112" className="contact-item">
-              <Phone size={14} className="contact-icon-blue" />
+              <Phone size={14} />
               <span>+971 58 173 0112</span>
             </a>
           </div>

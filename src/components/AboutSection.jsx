@@ -26,7 +26,7 @@ const AboutSection = () => {
 
 
             <p className="corporate-desc">
-              Mostech Business Solutions is a leading software and digital marketing agency in Dubai, serving as a trusted technology partner across the UAE and GCC.
+              Mostech Business Solutions is a leading software and digital marketing agency in Dubai, serving as a trusted technology partner across the UAE and Middle East.
             </p>
             <p className="corporate-desc">
               We specialize in software development, web and mobile applications, and performance-driven digital marketing solutions. Our solutions are seamless, efficient, and tailored to meet specific business needs.
@@ -38,15 +38,20 @@ const AboutSection = () => {
 
           </motion.div>
 
-          <motion.div 
-            className="about-corporate-visual"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <img src="/about banner.png" alt="Driving Digital Success" className="main-visual-img" />
-          </motion.div>
+          <div className="about-corporate-visual">
+            <motion.video 
+              src="/Robot_typing_on_laptop_202609031114 (1).mp4" 
+              className="main-visual-img"
+              autoPlay
+              loop
+              muted
+              playsInline
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            />
+          </div>
         </div>
 
         <motion.div 
@@ -57,7 +62,7 @@ const AboutSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           style={{marginTop: '3rem', position: 'relative', zIndex: 10}}
         >
-          <div className="expertise-item" style={{flexDirection: 'row', alignItems: 'center', textAlign: 'left', gap: '1rem', flex: '1 1 180px'}}>
+          <div className="expertise-item" style={{flexDirection: 'row', alignItems: 'center', textAlign: 'left', gap: '0.5rem', flex: '1 1 180px'}}>
             <div style={{padding: '10px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>
               <Lightbulb className="expertise-icon" style={{color: 'white'}} size={24} />
             </div>
@@ -69,7 +74,7 @@ const AboutSection = () => {
 
           <div className="expertise-divider"></div>
 
-          <div className="expertise-item" style={{flexDirection: 'row', alignItems: 'center', textAlign: 'left', gap: '1rem', flex: '1 1 180px'}}>
+          <div className="expertise-item" style={{flexDirection: 'row', alignItems: 'center', textAlign: 'left', gap: '0.5rem', flex: '1 1 180px'}}>
             <div style={{padding: '10px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>
               <Award className="expertise-icon" style={{color: 'white'}} size={24} />
             </div>
@@ -81,7 +86,7 @@ const AboutSection = () => {
 
           <div className="expertise-divider"></div>
 
-          <div className="expertise-item" style={{flexDirection: 'row', alignItems: 'center', textAlign: 'left', gap: '1rem', flex: '1 1 180px'}}>
+          <div className="expertise-item" style={{flexDirection: 'row', alignItems: 'center', textAlign: 'left', gap: '0.5rem', flex: '1 1 180px'}}>
             <div style={{padding: '10px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>
               <Gauge className="expertise-icon" style={{color: 'white'}} size={24} />
             </div>
@@ -93,7 +98,7 @@ const AboutSection = () => {
 
           <div className="expertise-divider"></div>
 
-          <div className="expertise-item" style={{flexDirection: 'row', alignItems: 'center', textAlign: 'left', gap: '1rem', flex: '1 1 180px'}}>
+          <div className="expertise-item" style={{flexDirection: 'row', alignItems: 'center', textAlign: 'left', gap: '0.5rem', flex: '1 1 180px'}}>
             <div style={{padding: '10px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>
               <ShieldCheck className="expertise-icon" style={{color: 'white'}} size={24} />
             </div>
@@ -105,7 +110,7 @@ const AboutSection = () => {
 
           <div className="expertise-divider"></div>
 
-          <div className="expertise-item" style={{flexDirection: 'row', alignItems: 'center', textAlign: 'left', gap: '1rem', flex: '1 1 180px'}}>
+          <div className="expertise-item" style={{flexDirection: 'row', alignItems: 'center', textAlign: 'left', gap: '0.5rem', flex: '1 1 180px'}}>
             <div style={{padding: '10px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>
               <Users className="expertise-icon" style={{color: 'white'}} size={24} />
             </div>

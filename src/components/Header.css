@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -148,7 +148,7 @@
 }
 
 .nav-link:hover, .nav-link-active {
-  color: #3b82f6;
+  color: #020c4c;
 }
 
 .nav-link-active::after {
@@ -159,7 +159,7 @@
   transform: translateX(-50%);
   width: 25px;
   height: 2px;
-  background-color: #3b82f6;
+  background-color: #020c4c;
   border-radius: 2px;
 }
 

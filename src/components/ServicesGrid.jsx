@@ -44,16 +44,29 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <section id="services" className="services-modern-section" style={{ backgroundImage: "url('/services.png')" }}>
-      <div className="container">
+    <section id="services" className="services-modern-section" style={{ position: 'relative' }}>
+      <img
+        src="/Code_execution_visualization_das…_202609031148.gif"
+        alt="Services Background"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: 0
+        }}
+      />
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(225, 240, 255, 0.85)', zIndex: 1 }}></div>
+      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="services-header">
           <h2 className="services-title">
             Our <span style={{ color: 'navy' }}>Services</span>
           </h2>
           
           <p className="services-desc">
-            We deliver innovative digital solutions that help businesses grow,<br/>
-            streamline operations, and stay ahead in a competitive digital world.
+            Innovative digital solutions to streamline operations and drive business growth.
           </p>
 
           <div className="services-header-divider"></div>

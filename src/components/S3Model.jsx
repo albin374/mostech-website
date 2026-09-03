@@ -36,7 +36,7 @@ const S3Model = () => {
           </h2>
           <div className="s3-title-underline"></div>
           <p className="s3-subtitle">
-            Our S3+ model ensures we deliver scalable, high-quality,<br/>and value-driven solutions tailored to your business needs.
+            Our S3+ model ensures we deliver scalable, high-quality, and value-driven solutions tailored to your business needs.
           </p>
         </div>
 

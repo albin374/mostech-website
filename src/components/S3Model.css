@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .s3-badge {
@@ -68,6 +68,12 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin: 0;
+}
+
+@media (min-width: 992px) {
+  .s3-subtitle {
+    white-space: nowrap;
+  }
 }
 
 /* Cards Wrapper */

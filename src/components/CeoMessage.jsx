@@ -24,9 +24,7 @@ const CeoMessage = () => {
             </p>
 
             <div className="ceo-profile">
-              <div className="ceo-signature-circle">
-                <span className="signature-mark" style={{fontFamily: 'cursive'}}>Ak</span>
-              </div>
+
               <div className="ceo-profile-details">
                 <h4 className="ceo-name">Ayoob K A</h4>
                 <p className="ceo-role">Founder & CEO</p>

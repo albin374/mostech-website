@@ -67,19 +67,10 @@
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   z-index: -1;
+  background: white;
 }
 
-.social-icon-link.linkedin::before {
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-}
 
-.social-icon-link.facebook::before {
-  background: linear-gradient(135deg, #0072ff, #8b3dff);
-}
-
-.social-icon-link.instagram::before {
-  background: linear-gradient(135deg, #8b3dff, #ff007f);
-}
 
 .social-icon-link:hover {
   transform: translateY(-3px);

@@ -20,13 +20,13 @@ const HeroSection = () => {
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '1.2rem', justifyContent: 'center' }}>
             <div style={{ height: '1px', background: '#94a3b8', width: '30px' }}></div>
             <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#94a3b8' }}></div>
-            <span style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '2px', color: '#1e293b' }}>SMART SOLUTIONS</span>
+            <span style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '2px', color: '#020c4c' }}>SMART SOLUTIONS</span>
             <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#94a3b8' }}></div>
             <div style={{ height: '1px', background: '#94a3b8', width: '30px' }}></div>
           </div>
           <h1 className="hero-main-title">
-            <span style={{ display: 'block', color: '#0f172a' }}>Smarter Business.</span>
-            <span style={{ display: 'block', color: '#4a78b5' }}>Stronger Tomorrow.</span>
+            <span style={{ display: 'block', color: '#020c4c' }}>Smarter Business.</span>
+            <span style={{ display: 'block', color: '#020c4c' }}>Stronger Tomorrow.</span>
           </h1>
           <p className="hero-subtitle">
             We deliver cutting-edge AI, software, and digital<br />
