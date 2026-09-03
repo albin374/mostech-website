@@ -165,6 +165,17 @@
 
 .dropdown-icon {
   margin-left: 2px;
+  transition: transform 0.3s ease;
+}
+
+.has-dropdown.dropdown-open .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 992px) {
+  .has-dropdown:hover .dropdown-icon {
+    transform: rotate(180deg);
+  }
 }
 
 .nav-contact-btn {

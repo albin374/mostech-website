@@ -225,3 +225,13 @@
     font-size: 2.2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .ceo-section {
+    background-image: url('/mobileview ceo.png');
+  }
+  .ceo-person-image {
+    max-height: 75%;
+    right: 0;
+  }
+}

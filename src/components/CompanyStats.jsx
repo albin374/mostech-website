@@ -4,7 +4,7 @@ import './CompanyStats.css';
 
 const CompanyStats = () => {
   return (
-    <section className="stats-section" style={{ backgroundImage: 'url("/robot%20bannerrrr.png")', backgroundSize: 'cover', backgroundPosition: 'center bottom', backgroundRepeat: 'no-repeat' }}>
+    <section className="stats-section responsive-bg-section">
       <div className="stats-container">
         
 
