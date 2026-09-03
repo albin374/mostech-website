@@ -6,23 +6,19 @@ import './Header.css';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdowns, setActiveDropdowns] = useState({});
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
   const currentPath = location.pathname;
 
   const toggleDropdown = (e, dropdown) => {
     e.preventDefault();
-    e.stopPropagation();
-    setActiveDropdowns(prev => ({
-      ...prev,
-      [dropdown]: !prev[dropdown]
-    }));
+    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
   };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
     if (isMobileMenuOpen) {
-      setActiveDropdowns({});
+      setActiveDropdown(null);
     }
   };
 
@@ -61,30 +57,38 @@ const Header = () => {
             </Link>
             
             <nav className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+              <div className="mobile-menu-top">
+                <Link to="/" onClick={toggleMobileMenu}>
+                  <img src="/logo.webp" alt="Mostech Logo" className="logo-img" />
+                </Link>
+                <button className="mobile-menu-close-btn" onClick={toggleMobileMenu}>
+                  <X size={24} />
+                </button>
+              </div>
               <ul>
                 <li><Link to="/" className={`nav-link ${currentPath === '/' ? 'nav-link-active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
                 <li><Link to="/about" className={`nav-link ${currentPath === '/about' ? 'nav-link-active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>About Us</Link></li>
-                <li className={`has-dropdown ${activeDropdowns['services'] ? 'dropdown-open' : ''}`}>
+                <li className={`has-dropdown ${activeDropdown === 'services' ? 'dropdown-open' : ''}`}>
                   <a href="#" className="nav-link" onClick={(e) => toggleDropdown(e, 'services')}>Services <ChevronDown size={14} className="dropdown-icon" /></a>
                   <ul className="dropdown">
-                    <li><Link to="/mobile-app-development" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>MOBILE APP DEVELOPMENT</Link></li>
-                    <li><Link to="/web-development" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>WEB DEVELOPMENT & DESIGN</Link></li>
-                    <li><Link to="/digital-marketing" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>DIGITAL MARKETING</Link></li>
-                    <li><Link to="/ecommerce" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>ECOMMERCE</Link></li>
-                    <li><Link to="/erp-solution" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>ERP SOLUTION</Link></li>
-                    <li><Link to="/seo" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>SEARCH ENGINE OPTIMIZATION</Link></li>
+                    <li><Link to="/mobile-app-development" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>MOBILE APP DEVELOPMENT</Link></li>
+                    <li><Link to="/web-development" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>WEB DEVELOPMENT & DESIGN</Link></li>
+                    <li><Link to="/digital-marketing" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>DIGITAL MARKETING</Link></li>
+                    <li><Link to="/ecommerce" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ECOMMERCE</Link></li>
+                    <li><Link to="/erp-solution" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ERP SOLUTION</Link></li>
+                    <li><Link to="/seo" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>SEARCH ENGINE OPTIMIZATION</Link></li>
                   </ul>
                 </li>
-                <li className={`has-dropdown ${activeDropdowns['products'] ? 'dropdown-open' : ''}`}>
+                <li className={`has-dropdown ${activeDropdown === 'products' ? 'dropdown-open' : ''}`}>
                   <a href="#" className="nav-link" onClick={(e) => toggleDropdown(e, 'products')}>Products <ChevronDown size={14} className="dropdown-icon" /></a>
                   <ul className="dropdown">
-                    <li><Link to="/hrms" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>HRMS</Link></li>
-                    <li><Link to="/erp-product" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>ERP</Link></li>
-                    <li><Link to="/whatsapp-chatbot" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>WHATSAPP CHATBOT</Link></li>
-                    <li><Link to="/project-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>PROJECT MANAGEMENT</Link></li>
-                    <li><Link to="/task-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>TASK MANAGEMENT</Link></li>
-                    <li><a href="/#accounting-software" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>ACCOUNTING SOFTWARE</a></li>
-                    <li><a href="/#pos-machine" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdowns({});}}>POS MACHINE + SOFTWARE</a></li>
+                    <li><Link to="/hrms" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>HRMS</Link></li>
+                    <li><Link to="/erp-product" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ERP</Link></li>
+                    <li><Link to="/whatsapp-chatbot" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>WHATSAPP CHATBOT</Link></li>
+                    <li><Link to="/project-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>PROJECT MANAGEMENT</Link></li>
+                    <li><Link to="/task-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>TASK MANAGEMENT</Link></li>
+                    <li><a href="/#accounting-software" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ACCOUNTING SOFTWARE</a></li>
+                    <li><a href="/#pos-machine" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>POS MACHINE + SOFTWARE</a></li>
                   </ul>
                 </li>
 
