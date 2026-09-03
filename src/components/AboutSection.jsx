@@ -39,13 +39,10 @@ const AboutSection = () => {
           </motion.div>
 
           <div className="about-corporate-visual">
-            <motion.video 
-              src="/Robot_typing_on_laptop_202609031114 (1).mp4" 
+            <motion.img 
+              src="/Typing.gif" 
               className="main-visual-img"
-              autoPlay
-              loop
-              muted
-              playsInline
+              alt="Typing"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}

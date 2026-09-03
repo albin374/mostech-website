@@ -45,9 +45,11 @@ const services = [
 const ServicesGrid = () => {
   return (
     <section id="services" className="services-modern-section" style={{ position: 'relative' }}>
-      <img
-        src="/Code_execution_visualization_das…_202609031148.gif"
-        alt="Services Background"
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
         style={{
           position: 'absolute',
           top: 0,
@@ -57,12 +59,13 @@ const ServicesGrid = () => {
           objectFit: 'cover',
           zIndex: 0
         }}
-      />
-      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(225, 240, 255, 0.85)', zIndex: 1 }}></div>
+      >
+        <source src="/Match_video_text_background_202609031200 (online-video-cutter.com).mp4" type="video/mp4" />
+      </video>
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="services-header">
           <h2 className="services-title">
-            Our <span style={{ color: 'navy' }}>Services</span>
+            Our <span>Services</span>
           </h2>
           
           <p className="services-desc">

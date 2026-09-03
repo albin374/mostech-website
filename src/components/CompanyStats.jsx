@@ -16,7 +16,7 @@ const CompanyStats = () => {
           </div>
           {/* Background image goes here */}
           <div className="stats-bg-wrapper">
-            <img src="/achivements.png" alt="Company Achievements Background" className="stats-robot-bg" />
+            <img src="/ROBOT2.png" alt="Company Achievements Background" className="stats-robot-bg" />
           </div>
 
           <div className="container stats-cards-wrapper">

@@ -61,6 +61,8 @@
   height: auto;
   display: block;
   object-fit: contain;
+  margin-top: -100px;
+  margin-bottom: 100px;
 }
 
 .stats-cards-wrapper {
@@ -69,7 +71,7 @@
   gap: 1.5rem;
   width: 100%;
   z-index: 2;
-  margin-top: -150px; /* Pull up over the image */
+  margin-top: -230px; /* Moved upwards slightly more */
   padding: 0 1rem;
 }
 
@@ -83,7 +85,7 @@
   .stats-cards-wrapper {
     grid-template-columns: repeat(4, 1fr);
     padding: 0;
-    margin-top: -350px; /* Pull up more aggressively on desktop */
+    margin-top: -400px; /* Moved upwards slightly more on desktop */
   }
 }
 

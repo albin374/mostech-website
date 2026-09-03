@@ -53,41 +53,47 @@ const MobileSection = () => {
               Building powerful apps tailored to your business needs.
             </h3>
             
-            <p className="mobile-desc">
-              We design and develop mobile applications that are built for performance, usability, and long-term growth. Our process focuses on creating streamlined, engaging user experiences, reliable functionality, and smooth performance across devices. By understanding user behavior and business objectives, we deliver apps that are secure, scalable, and aligned with real-world needs—helping businesses engage users more effectively and operate more efficiently.
-            </p>
-            
-            <div className="mobile-features">
-              <div className="mobile-feature">
-                <div className="feature-icon-wrapper">
-                  <ShieldCheck size={20} />
+            <div className="mobile-cards-row">
+              <div className="mobile-card">
+                <div className="card-icon-container android-icon">
+                  <AndroidIcon size={24} />
                 </div>
-                <div>
-                  <h4>Secure & Reliable</h4>
-                  <p>Built with best practices</p>
-                </div>
+                <h4 className="card-title">ANDROID UX-DRIVEN DEVELOPMENT</h4>
+                <p className="card-desc">
+                  We offer high-performance, customised Android app development services that satisfy all your business needs.
+                </p>
+                <button className="card-btn">
+                  Explore Android <ArrowRight size={14} className="btn-icon" />
+                </button>
               </div>
               
-              <div className="mobile-feature">
-                <div className="feature-icon-wrapper">
-                  <Zap size={20} />
+              <div className="mobile-card">
+                <div className="card-icon-container apple-icon">
+                  <AppleIcon size={24} />
                 </div>
-                <div>
-                  <h4>High Performance</h4>
-                  <p>Optimized for speed</p>
-                </div>
+                <h4 className="card-title">IOS-FIRST MOBILE EXPERIENCES</h4>
+                <p className="card-desc">
+                  Our rich expertise in iOS mobile app development helps to build beautiful and engaging iOS applications for our clients.
+                </p>
+                <button className="card-btn">
+                  Explore iOS <ArrowRight size={14} className="btn-icon" />
+                </button>
               </div>
               
-              <div className="mobile-feature">
-                <div className="feature-icon-wrapper">
-                  <TrendingUp size={20} />
+              <div className="mobile-card">
+                <div className="card-icon-container cross-icon">
+                  <Share2 size={24} />
                 </div>
-                <div>
-                  <h4>Scalable Solutions</h4>
-                  <p>Grow without limits</p>
-                </div>
+                <h4 className="card-title">CROSS-PLATFORM APP DEVELOPMENT</h4>
+                <p className="card-desc">
+                  We build consistent and cost effective hybrid mobility solutions that work equally well across multiple platforms.
+                </p>
+                <button className="card-btn">
+                  Explore Cross-Platform <ArrowRight size={14} className="btn-icon" />
+                </button>
               </div>
             </div>
+
           </motion.div>
           
           <motion.div 
@@ -101,53 +107,7 @@ const MobileSection = () => {
           </motion.div>
         </div>
 
-        {/* Bottom Cards Row */}
-        <motion.div 
-          className="mobile-cards-row"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <div className="mobile-card">
-            <div className="card-icon-container android-icon">
-              <AndroidIcon size={28} />
-            </div>
-            <h4 className="card-title">ANDROID UX-DRIVEN DEVELOPMENT</h4>
-            <p className="card-desc">
-              We offer high-performance, customised Android app development services that satisfy all your business needs.
-            </p>
-            <button className="card-btn">
-              Explore Android <ArrowRight size={16} className="btn-icon" />
-            </button>
-          </div>
-          
-          <div className="mobile-card">
-            <div className="card-icon-container apple-icon">
-              <AppleIcon size={28} />
-            </div>
-            <h4 className="card-title">IOS-FIRST MOBILE EXPERIENCES</h4>
-            <p className="card-desc">
-              Our rich expertise in iOS mobile app development helps to build beautiful and engaging iOS applications for our clients.
-            </p>
-            <button className="card-btn">
-              Explore iOS <ArrowRight size={16} className="btn-icon" />
-            </button>
-          </div>
-          
-          <div className="mobile-card">
-            <div className="card-icon-container cross-icon">
-              <Share2 size={28} />
-            </div>
-            <h4 className="card-title">CROSS-PLATFORM APP DEVELOPMENT</h4>
-            <p className="card-desc">
-              We build consistent and cost effective hybrid mobility solutions that work equally well across multiple platforms.
-            </p>
-            <button className="card-btn">
-              Explore Cross-Platform <ArrowRight size={16} className="btn-icon" />
-            </button>
-          </div>
-        </motion.div>
+
         
       </div>
     </section>

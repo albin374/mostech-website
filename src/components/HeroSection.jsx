@@ -38,7 +38,7 @@ const HeroSection = () => {
               Explore Solutions <ArrowRight size={18} />
             </a>
             <button className="hero-btn hero-btn-secondary">
-              <PlayCircle size={18} /> Watch Introduction
+              Contact Us
             </button>
           </div>
         </div>
