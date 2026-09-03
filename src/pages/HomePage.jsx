@@ -16,7 +16,6 @@ const HomePage = () => {
     <>
       <HeroSection />
       <AboutSection />
-      <TechPartners />
       <ServicesGrid />
       <GlobalPresence />
       <CompanyStats />
@@ -25,6 +24,7 @@ const HomePage = () => {
       <MobileSection />
       <CeoMessage />
       <S3Model />
+      <TechPartners />
     </>
   );
 };

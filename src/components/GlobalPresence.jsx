@@ -1,293 +1,163 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
+import * as topojson from 'topojson-client';
 import './GlobalPresence.css';
 
 const GlobalPresence = () => {
-  const mapRef = useRef(null);
+  const svgRef = useRef(null);
 
   useEffect(() => {
-    const svgElement = mapRef.current;
-    if (!svgElement) return;
+    if (!svgRef.current) return;
+    
+    // clear previous if any
+    d3.select(svgRef.current).selectAll('*').remove();
+    
+    const renderMap = async () => {
+      const width = 1180, height = 620;
+      const svg = d3.select(svgRef.current);
+      
+      const targetList = [
+        {id:398,name:'Kazakhstan',    pt:[71.47,51.16]},
+        {id:804,name:'Ukraine',       pt:[30.52,50.45]},
+        {id:616,name:'Poland',        pt:[21.01,52.23]},
+        {id:112,name:'Belarus',       pt:[27.57,53.90]},
+        {id:860,name:'Uzbekistan',    pt:[69.24,41.30]},
+        {id:356,name:'India',         pt:[77.20,28.60]},
+        {id:144,name:'Sri Lanka',     pt:[79.85,6.93]},
+        {id:586,name:'Pakistan',      pt:[73.05,33.68]},
+        {id:524,name:'Nepal',         pt:[85.32,27.72]},
+        {id:360,name:'Indonesia',     pt:[106.85,-6.20]},
+        {id:764,name:'Thailand',      pt:[100.50,13.75]},
+        {id:608,name:'Philippines',   pt:[120.98,14.60]},
+        {id:36 ,name:'Australia',     pt:[149.13,-35.28]},
+        {id:554,name:'New Zealand',   pt:[174.78,-41.29]},
+        {id:231,name:'Ethiopia',      pt:[38.74,9.03]},
+        {id:716,name:'Zimbabwe',      pt:[31.05,-17.83]},
+        {id:404,name:'Kenya',         pt:[36.82,-1.29]},
+        {id:710,name:'South Africa',  pt:[28.19,-25.75]},
+        {id:818,name:'Egypt',         pt:[31.24,30.04]},
+        {id:834,name:'Tanzania',      pt:[35.75,-6.16]},
+        {id:372,name:'Ireland',       pt:[-6.26,53.35]},
+        {id:826,name:'United Kingdom',pt:[-0.13,51.51]},
+        {id:840,name:'United States', pt:[-77.04,38.90]},
+        {id:124,name:'Canada',        pt:[-75.70,45.42]},
+        {id:643,name:'Russia',        pt:[37.62,55.75]}
+      ];
+      const targetById = new Map(targetList.map(t => [t.id, t]));
+      const HUB_ID = 784; // UAE
+      const HUB_PT = [55.27, 25.20]; // Dubai
 
-    // Clear previous drawing if any
-    d3.select(svgElement).selectAll("*").remove();
-
-    let animationIntervals = [];
-
-    const loadMap = async () => {
       try {
-        /* =====================================================
-           SVG
-        ===================================================== */
-        const svg = d3.select(svgElement);
+        const world = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
+        const countries = topojson.feature(world, world.objects.countries);
 
-        /* =====================================================
-           STATIC MAP IMAGE BACKGROUND
-        ===================================================== */
-        svg.append("image")
-          .attr("href", "/map.png")
-          .attr("width", 1000)
-          .attr("height", 620)
-          .attr("x", 0)
-          .attr("y", 0);
+        const projection = d3.geoNaturalEarth1().fitSize([width, height], countries);
+        const path = d3.geoPath(projection);
 
-        /* =====================================================
-           PROJECTION
-           Matches the original world map projection
-        ===================================================== */
-        const projection = d3.geoNaturalEarth1()
-          .scale(158)
-          .translate([500, 310]);
+        svg.append('g').selectAll('path')
+          .data(countries.features)
+          .join('path')
+          .attr('class', d => {
+            const id = +d.id;
+            if(id === HUB_ID) return 'land hub-country';
+            if(targetById.has(id)) return 'land on';
+            return 'land';
+          })
+          .attr('d', path);
 
-        /* =====================================================
-           LOCATIONS
-           longitude, latitude
-        ===================================================== */
-        const places = {
-          Dubai: { coordinates: [55.2708, 25.2048] },
-          Kazakhstan: { coordinates: [-65.0, -35.0] }, // Moved to South America
-          India: { coordinates: [78.9629, 20.5937] },
-          Ethiopia: { coordinates: [15.0, 55.0] } // Moved to Europe
-        };
+        const g = svg.append('g');
+        const hubXY = projection(HUB_PT);
 
-        /* =====================================================
-           PROJECT LOCATIONS
-        ===================================================== */
-        Object.values(places).forEach(place => {
-          place.point = projection(place.coordinates);
-        });
-
-        const dubai = places.Dubai.point;
-        const kazakhstan = places.Kazakhstan.point;
-        const india = places.India.point;
-        const ethiopia = places.Ethiopia.point;
-
-        /* =====================================================
-           CURVED ROUTE CREATOR
-        ===================================================== */
-        function makeCurve(start, end, curveAmount) {
-          const x1 = start[0];
-          const y1 = start[1];
-          const x2 = end[0];
-          const y2 = end[1];
-
-          const dx = x2 - x1;
-          const dy = y2 - y1;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          const middleX = (x1 + x2) / 2;
-          const middleY = (y1 + y2) / 2;
-          const normalX = -dy / distance;
-          const normalY = dx / distance;
-          const controlX = middleX + normalX * curveAmount;
-          const controlY = middleY + normalY * curveAmount;
-
-          return `M ${x1} ${y1} Q ${controlX} ${controlY} ${x2} ${y2}`;
+        // ---- label collision avoidance ----
+        const placedRects = [];
+        function rectsOverlap(a,b,pad){
+          return !(a.x2+pad < b.x1 || a.x1-pad > b.x2 || a.y2+pad < b.y1 || a.y1-pad > b.y2);
         }
+        function placeLabel(x0, y0, text){
+          const w = text.length * 5.3 + 6;
+          const h = 12;
+          const preferLeft = x0 > width - 140;
+          const baseDx = preferLeft ? -8 : 8;
+          const baseDy = y0 < 42 ? 14 : -6;
 
-        /* =====================================================
-           ROUTES
-        ===================================================== */
-        const indiaRoute = makeCurve(dubai, india, 45);
-        const kazakhstanRoute = makeCurve(dubai, kazakhstan, 35);
-        const ethiopiaRoute = makeCurve(dubai, ethiopia, 0);
-
-        /* =====================================================
-           ROUTE GLOW
-        ===================================================== */
-        [indiaRoute, kazakhstanRoute, ethiopiaRoute].forEach(route => {
-          svg.append("path")
-            .attr("class", "route-glow")
-            .attr("d", route);
-        });
-
-        /* =====================================================
-           ROUTE PATHS
-        ===================================================== */
-        const routeData = [
-          { id: "route-india", path: indiaRoute },
-          { id: "route-kazakhstan", path: kazakhstanRoute },
-          { id: "route-ethiopia", path: ethiopiaRoute }
-        ];
-
-        routeData.forEach(route => {
-          svg.append("path")
-            .attr("id", route.id)
-            .attr("class", "route-line")
-            .attr("d", route.path);
-        });
-
-        /* =====================================================
-           LOCATION MARKERS
-        ===================================================== */
-        function createMarker(point, pulse = true) {
-          const group = svg.append("g");
-
-          /* Very subtle pulse */
-          if (pulse) {
-            const pulseCircle = group.append("circle")
-              .attr("class", "destination-pulse")
-              .attr("cx", point[0])
-              .attr("cy", point[1])
-              .attr("r", 7);
-
-            pulseCircle
-              .append("animate")
-              .attr("attributeName", "r")
-              .attr("values", "7;15;7")
-              .attr("dur", "2.2s")
-              .attr("repeatCount", "indefinite");
-
-            pulseCircle
-              .append("animate")
-              .attr("attributeName", "opacity")
-              .attr("values", ".5;0;.5")
-              .attr("dur", "2.2s")
-              .attr("repeatCount", "indefinite");
+          const candidateDys = [baseDy];
+          for(let k=1; k<10; k++){
+            candidateDys.push(baseDy + k*7);
+            candidateDys.push(baseDy - k*7);
           }
 
-          /* Small center dot */
-          group.append("circle")
-            .attr("class", "destination-point")
-            .attr("cx", point[0])
-            .attr("cy", point[1])
-            .attr("r", 6);
-        }
-
-        /* =====================================================
-           LABELS
-        ===================================================== */
-        function createLabel(text, point, offsetX, offsetY) {
-          const x = point[0] + offsetX;
-          const y = point[1] + offsetY;
-          const width = text.length * 7 + 25;
-
-          const group = svg.append("g")
-            .attr("transform", `translate(${x},${y})`);
-
-          group.append("rect")
-            .attr("class", "map-label-box")
-            .attr("x", -width / 2)
-            .attr("y", -15)
-            .attr("width", width)
-            .attr("height", 30)
-            .attr("rx", 7);
-
-          group.append("text")
-            .attr("class", "map-label-text")
-            .attr("text-anchor", "middle")
-            .attr("y", 4)
-            .text(text);
-        }
-
-        /* =====================================================
-           MARKERS
-        ===================================================== */
-        createMarker(dubai);
-        createMarker(kazakhstan);
-        createMarker(india);
-        createMarker(ethiopia);
-
-        /* =====================================================
-           LABEL POSITIONS
-        ===================================================== */
-        createLabel("KAZAKHSTAN", kazakhstan, 0, -35);
-        createLabel("DUBAI", dubai, -5, -34);
-        createLabel("INDIA", india, 37, -5);
-        createLabel("ETHIOPIA", ethiopia, 0, 38);
-
-        /* =====================================================
-           MOVING DOT
-        ===================================================== */
-        function animateDot(routeId, duration) {
-          // Use component scope select instead of document.getElementById
-          const routeNode = d3.select(svgElement).select(`#${routeId}`).node();
-          if (!routeNode) return;
-
-          const dot = svg.append("circle")
-            .attr("class", "travel-dot")
-            .attr("r", 4);
-
-          let isCancelled = false;
-          
-          function run() {
-            if (isCancelled) return;
-            const totalLength = routeNode.getTotalLength();
-
-            dot
-              .attr("cx", dubai[0])
-              .attr("cy", dubai[1]);
-
-            dot
-              .transition()
-              .duration(duration)
-              .ease(d3.easeLinear)
-              .attrTween("cx", function() {
-                return function(t) {
-                  const p = routeNode.getPointAtLength(t * totalLength);
-                  return p.x;
-                };
-              })
-              .attrTween("cy", function() {
-                return function(t) {
-                  const p = routeNode.getPointAtLength(t * totalLength);
-                  return p.y;
-                };
-              })
-              .on("end", run);
+          let chosen = null;
+          for(const dy of candidateDys){
+            const x1 = preferLeft ? x0 + baseDx - w : x0 + baseDx;
+            const rect = { x1, y1:y0+dy-h+3, x2:x1+w, y2:y0+dy+3 };
+            if(!placedRects.some(r => rectsOverlap(rect, r, 2))){
+              chosen = { dx:baseDx, dy, rect, anchorEnd:preferLeft };
+              break;
+            }
           }
-          
-          run();
-
-          return () => { isCancelled = true; dot.interrupt(); };
+          if(!chosen){
+            const x1 = preferLeft ? x0 + baseDx - w : x0 + baseDx;
+            chosen = { dx:baseDx, dy:baseDy, rect:{x1,y1:y0+baseDy-h+3,x2:x1+w,y2:y0+baseDy+3}, anchorEnd:preferLeft };
+          }
+          placedRects.push(chosen.rect);
+          return chosen;
         }
 
-        /* =====================================================
-           ALL THREE START TOGETHER
-        ===================================================== */
-        const cleanup1 = animateDot("route-india", 3200);
-        const cleanup2 = animateDot("route-kazakhstan", 3200);
-        const cleanup3 = animateDot("route-ethiopia", 3200);
-        
-        if (cleanup1) animationIntervals.push(cleanup1);
-        if (cleanup2) animationIntervals.push(cleanup2);
-        if (cleanup3) animationIntervals.push(cleanup3);
+        placedRects.push({ x1:hubXY[0]-4, y1:hubXY[1]-22, x2:hubXY[0]+70, y2:hubXY[1]+4 });
 
+        targetList.forEach(t => {
+          const p = projection(t.pt);
+          if(!p) return;
+          const mx = (hubXY[0]+p[0])/2;
+          const dx = p[0]-hubXY[0], dy = p[1]-hubXY[1];
+          const dist = Math.sqrt(dx*dx+dy*dy);
+          const arch = Math.min(dist*0.28, 110);
+          const my = (hubXY[1]+p[1])/2 - arch;
+          g.append('path')
+            .attr('class','arc')
+            .attr('d', `M${hubXY[0]},${hubXY[1]} Q${mx},${my} ${p[0]},${p[1]}`);
+        });
+
+        targetList.forEach(t => {
+          const p = projection(t.pt);
+          if(!p) return;
+          const dg = g.append('g');
+          dg.append('circle').attr('class','dot-outer').attr('cx',p[0]).attr('cy',p[1]).attr('r',6);
+          dg.append('circle').attr('class','dot').attr('cx',p[0]).attr('cy',p[1]).attr('r',2.4);
+
+          const lp = placeLabel(p[0], p[1], t.name);
+          dg.append('text')
+            .attr('class','dot-label')
+            .attr('x', p[0] + lp.dx)
+            .attr('y', p[1] + lp.dy)
+            .attr('text-anchor', lp.anchorEnd ? 'end' : 'start')
+            .text(t.name);
+        });
+
+        const hubG = g.append('g');
+        hubG.append('circle').attr('class','hub-ring').attr('cx',hubXY[0]).attr('cy',hubXY[1]).attr('r',5);
+        hubG.append('circle').attr('class','hub-dot').attr('cx',hubXY[0]).attr('cy',hubXY[1]).attr('r',4.5);
+        hubG.append('text')
+          .attr('class','hub-label')
+          .attr('x', hubXY[0] + 9)
+          .attr('y', hubXY[1] - 8)
+          .text('Dubai, UAE');
+          
       } catch (err) {
-        console.error("Error loading map", err);
+        console.error("Map load error", err);
       }
     };
-
-    loadMap();
     
-    return () => {
-      animationIntervals.forEach(cleanup => cleanup && cleanup());
-    };
+    renderMap();
   }, []);
 
   return (
-    <section className="vision-section">
-      {/* =========================
-           LEFT SIDE
-      ========================== */}
-      <div className="vision-content">
-        <h1 className="vision-title">
-          Our <span>Global Presence</span>
-        </h1>
-        <p className="vision-description">
-          Building technology solutions for businesses across multiple markets, with a growing presence across the GCC,
-          India, Kazakhstan, Ethiopia, and beyond.
-        </p>
+    <section className="global-presence-section">
+      <div className="gp-header">
+        <h2 className="gp-title">Our <span>Global Presence</span></h2>
       </div>
-
-      {/* =========================
-           MAP SIDE
-      ========================== */}
-      <div className="map-container">
-        <svg
-          id="worldMap"
-          ref={mapRef}
-          viewBox="0 0 1000 620"
-        ></svg>
+      <div className="gp-map-container">
+        <svg id="map-svg" ref={svgRef} viewBox="0 0 1180 620" preserveAspectRatio="xMidYMid meet"></svg>
       </div>
     </section>
   );

@@ -1,27 +1,25 @@
 import React from 'react';
-import { Target, Layers, Users, Code, Smartphone, Database, ShoppingCart, Megaphone, Building2, Calendar, Globe, ShieldCheck } from 'lucide-react';
-import FoundationSection from '../components/FoundationSection';
-import KeyStats from '../components/KeyStats';
-import AboutHeroSection from '../components/AboutHeroSection';
+import AboutPageHero from '../components/AboutPageHero';
+import AboutOverview from '../components/AboutOverview';
 import AboutCeoMessage from '../components/AboutCeoMessage';
+import AboutTechnicalImpact from '../components/AboutTechnicalImpact';
+import AboutMandate from '../components/AboutMandate';
+import AboutPrinciples from '../components/AboutPrinciples';
+import AboutLifecycle from '../components/AboutLifecycle';
+import AboutCTA from '../components/AboutCTA';
 import './AboutPage.css';
 
 const AboutPage = () => {
   return (
     <main className="about-page-main">
-
-      {/* Hero Section */}
-      <AboutHeroSection />
-
-      {/* Foundation Section: Vision, Mission, Goals */}
-      <FoundationSection />
-
-      {/* Key Stats Animated Section */}
-      <KeyStats />
-      
-      {/* CEO Message Section */}
+      <AboutPageHero />
+      <AboutOverview />
       <AboutCeoMessage />
-      
+      <AboutTechnicalImpact />
+      <AboutMandate />
+      <AboutPrinciples />
+      <AboutLifecycle />
+      <AboutCTA />
     </main>
   );
 };

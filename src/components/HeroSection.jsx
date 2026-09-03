@@ -7,11 +7,14 @@ const HeroSection = () => {
     <section className="hero-section">
       {/* Background Image Only */}
       <div className="hero-bg-image-wrapper">
-        <img 
-          src="/final banner 222.png" 
-          alt="Banner"
-          className="hero-bg-image"
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet="/mobile%20banner%20final.png" />
+          <img 
+            src="/final%20banner%20222.png" 
+            alt="Banner"
+            className="hero-bg-image"
+          />
+        </picture>
       </div>
 
       {/* Text Content Overlay */}

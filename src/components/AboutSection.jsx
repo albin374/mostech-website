@@ -26,7 +26,7 @@ const AboutSection = () => {
 
 
             <p className="corporate-desc">
-              Mostech Business Solutions is a leading software and digital marketing agency in Dubai, serving as a trusted technology partner across the UAE and Middle East.
+              Mostech Business Solutions is a Dubai-based software company trusted across the Middle East & Africa.
             </p>
             <p className="corporate-desc">
               We specialize in software development, web and mobile applications, and performance-driven digital marketing solutions. Our solutions are seamless, efficient, and tailored to meet specific business needs.

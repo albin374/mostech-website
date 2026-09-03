@@ -1,18 +1,30 @@
 .ceo-section {
-  padding: 1.5rem 0;
+  padding: 4rem 0 2rem 0;
   background-color: #010a26;
-  background-image: url('/ceofinal background.png');
+  background-image: url('/ceo mesgge final final.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   font-family: 'Inter', sans-serif;
   color: #ffffff;
+  position: relative;
+}
+
+.ceo-person-image {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  max-height: 95%;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .ceo-container {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 /* Top Content */
@@ -32,9 +44,10 @@
 }
 
 .ceo-left {
-  flex: 0 0 50%;
+  flex: 0 0 55%;
   display: flex;
   flex-direction: column;
+  padding-bottom: 2rem;
 }
 
 .ceo-badge {
@@ -126,13 +139,6 @@
 }
 
 .ceo-right {
-  flex: 0 0 45%;
-  display: flex;
-  justify-content: center;
-}
-
-/* If ceomessge.png has the CEO inside it, hide the separate image */
-.hidden-if-bg-has-ceo {
   display: none;
 }
 

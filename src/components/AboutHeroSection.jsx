@@ -1,91 +1,106 @@
 import React from 'react';
-import { Rocket, Monitor, Users, Cloud, Layers, Code, TrendingUp, Calendar, Globe, ShieldCheck } from 'lucide-react';
+import { Building2, Target, Users, ShieldCheck, Rocket, Eye } from 'lucide-react';
 import './AboutHeroSection.css';
 
 const AboutHeroSection = () => {
   return (
-    <section className="about-hero-section">
-      <div className="container">
-        <div className="about-hero-grid">
+    <section className="about-hero-new">
+      <div className="container about-hero-container">
+        
+        {/* Left Column */}
+        <div className="about-hero-left">
+          <div className="about-badge-new">
+            <div className="badge-line"></div>
+            <span>WHO WE ARE</span>
+          </div>
+          <h1 className="about-title-new">
+            Mostech Business<br />
+            <span className="text-blue">Solutions Dubai</span>
+          </h1>
+          <p className="about-desc-new">
+            We build smart digital solutions that help businesses operate better, move faster, and grow stronger.
+          </p>
           
-          {/* Left Content */}
-          <div className="about-hero-content">
-            <span className="about-badge">ABOUT MOSTECH</span>
-            <h1 className="about-hero-title">
-              Mostech Business<br />
-              <span className="text-blue">Solutions Dubai</span>
-            </h1>
-            <p className="about-hero-desc">
-              Mostech Business Solutions is a premier software development company and digital technology consultancy headquartered in Dubai, United Arab Emirates. Founded in 2018, we specialize in delivering high-impact, custom software solutions, enterprise web applications, mobile app development (iOS & Android), bespoke ERP systems, e-commerce platforms, and data-driven digital marketing services across the GCC region and global markets.
-            </p>
-            
-            <div className="about-features-list">
-              <div className="feature-item">
-                <div className="feature-icon-wrapper bg-blue-light">
-                  <Rocket className="feature-icon blue" size={24} />
-                </div>
-                <div className="feature-text">
-                  <h3>Elevate Business. Accelerate Growth.</h3>
-                  <p>We believe technology should do more than automate tasks—it should elevate operations, streamline efficiency, unlock opportunities, and accelerate revenue growth.</p>
-                </div>
+          <div className="about-list">
+            <div className="about-list-item" style={{ borderTop: '2px solid #e2e8f0' }}>
+              <div className="about-list-icon">
+                <Building2 size={24} />
               </div>
-
-              <div className="feature-item">
-                <div className="feature-icon-wrapper bg-blue-light">
-                  <Monitor className="feature-icon blue" size={24} />
-                </div>
-                <div className="feature-text">
-                  <h3>Modern Solutions. Real Impact.</h3>
-                  <p>By combining human-centered UI/UX design, modern cloud architecture, and agile software development, we craft digital products that stand out for performance, security, and scalability.</p>
-                </div>
+              <div className="about-list-content">
+                <h4>Who We Are</h4>
+                <p>A Dubai-based software development and technology consultancy, delivering custom software, mobile apps, web platforms, ERP systems, and digital marketing solutions since 2018.</p>
               </div>
+            </div>
 
-              <div className="feature-item">
-                <div className="feature-icon-wrapper bg-blue-light">
-                  <Users className="feature-icon blue" size={24} />
-                </div>
-                <div className="feature-text">
-                  <h3>Experts You Can Rely On.</h3>
-                  <p>Our team of senior engineers, architects, designers, and growth specialists bring deep industry expertise and work closely with clients—from discovery to launch and beyond.</p>
-                </div>
+            <div className="about-list-item">
+              <div className="about-list-icon">
+                <Target size={24} />
+              </div>
+              <div className="about-list-content">
+                <h4>What We Do</h4>
+                <p>We use modern technologies and agile practices to build secure, scalable, and high-performance digital products that create real business impact.</p>
+              </div>
+            </div>
+
+            <div className="about-list-item" style={{ borderBottom: '2px solid #e2e8f0' }}>
+              <div className="about-list-icon">
+                <Users size={24} />
+              </div>
+              <div className="about-list-content">
+                <h4>Our Team</h4>
+                <p>Our experts collaborate with clients across industries—from discovery to deployment and support—ensuring successful digital transformation at every step.</p>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Right Content */}
-          <div className="about-hero-visuals">
-            <div className="image-and-floating-tags">
-               <img src="/aboutsession fisrtt imge.png" alt="Mostech Solutions" className="main-visual" />
-            </div>
+        {/* Right Column */}
+        <div className="about-hero-right">
+          
+          <div className="about-right-top">
+            <img src="/aboutnew.png" alt="Mostech Solutions" className="about-right-image" />
+          </div>
 
-            {/* Bottom Stats Banner */}
-            <div className="about-stats-banner">
-              <div className="stat-col">
-                <Calendar size={24} strokeWidth={1.5} className="stat-icon" />
-                <h4>2018</h4>
-                <h5>Founded</h5>
-                <p>Building digital solutions since 2018</p>
+          <div className="about-right-bottom">
+            <div className="about-cards-row">
+              
+              <div className="about-card-new">
+                <div className="about-card-icon-new">
+                  <Target size={24} />
+                </div>
+                <h4>Our Mission</h4>
+                <p>Deliver innovative and reliable solutions that help businesses grow smarter and faster.</p>
               </div>
-              <div className="stat-col">
-                <Users size={24} strokeWidth={1.5} className="stat-icon" />
-                <h4>100+</h4>
-                <h5>Projects Delivered</h5>
-                <p>Successful solutions across industries</p>
+
+              <div className="about-card-new">
+                <div className="about-card-icon-new">
+                  <Eye size={24} />
+                </div>
+                <h4>Our Vision</h4>
+                <p>Be a global leader in digital transformation through technology and creativity.</p>
               </div>
-              <div className="stat-col">
-                <Globe size={24} strokeWidth={1.5} className="stat-icon" />
-                <h4>GCC & Global</h4>
-                <p>Serving clients locally and globally</p>
+
+              <div className="about-card-new">
+                <div className="about-card-icon-new">
+                  <ShieldCheck size={24} />
+                </div>
+                <h4>Our Promise</h4>
+                <p>Quality, transparency, and innovation in everything we deliver.</p>
               </div>
-              <div className="stat-col">
-                <ShieldCheck size={24} strokeWidth={1.5} className="stat-icon" />
-                <h4>Quality & Trust</h4>
-                <p>Committed to security, scalability & success</p>
+
+              <div className="about-card-new">
+                <div className="about-card-icon-new">
+                  <Rocket size={24} />
+                </div>
+                <h4>Our Approach</h4>
+                <p>Client-focused, agile, and results-driven solutions that make a real impact.</p>
               </div>
+
             </div>
           </div>
           
         </div>
+
       </div>
     </section>
   );

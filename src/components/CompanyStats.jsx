@@ -4,7 +4,7 @@ import './CompanyStats.css';
 
 const CompanyStats = () => {
   return (
-    <section className="stats-section">
+    <section className="stats-section" style={{ backgroundImage: 'url("/robot%20bannerrrr.png")', backgroundSize: 'cover', backgroundPosition: 'center bottom', backgroundRepeat: 'no-repeat' }}>
       <div className="stats-container">
         
 
@@ -13,10 +13,6 @@ const CompanyStats = () => {
             <span className="stats-badge-line"></span>
             <span className="stats-badge-text">OUR ACHIEVEMENTS</span>
             <span className="stats-badge-line"></span>
-          </div>
-          {/* Background image goes here */}
-          <div className="stats-bg-wrapper">
-            <img src="/ROBOT2.png" alt="Company Achievements Background" className="stats-robot-bg" />
           </div>
 
           <div className="container stats-cards-wrapper">

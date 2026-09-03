@@ -48,6 +48,10 @@ const Footer = () => {
                 <span className="country-label">KSA:</span>
                 <a href="tel:+966535744308" className="contact-link"><strong>+966 53 574 4308</strong></a>
               </div>
+              <div className="contact-item">
+                <span className="country-label">QATAR:</span>
+                <a href="tel:+97450547557" className="contact-link"><strong>+974 5054 7557</strong></a>
+              </div>
               <div className="contact-item mt-3">
                 <Mail size={16} />
                 <a href="mailto:info@mostech.ae" className="contact-link">info@mostech.ae</a>

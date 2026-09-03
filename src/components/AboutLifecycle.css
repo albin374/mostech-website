@@ -1,0 +1,106 @@
+.about-lifecycle {
+  padding: 6rem 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+}
+
+.lifecycle-header {
+  margin-bottom: 4rem;
+}
+
+.lifecycle-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.lifecycle-badge .badge-line {
+  width: 30px;
+  height: 2px;
+  background-color: #3b82f6;
+}
+
+.lifecycle-badge span {
+  color: #3b82f6;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.lifecycle-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0a1930;
+  margin: 0;
+}
+
+.lifecycle-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .lifecycle-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lifecycle-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+  }
+}
+
+.lifecycle-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.lifecycle-card:hover {
+  transform: translateY(-5px);
+}
+
+.lifecycle-num {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #eff6ff; /* Very light blue */
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.lifecycle-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0a1930;
+  margin: 0 0 1rem 0;
+}
+
+.lifecycle-card p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
+  flex-grow: 1;
+}
+
+.lifecycle-bottom-line {
+  width: 100%;
+  height: 4px;
+  background-color: #eff6ff; /* light blue */
+  margin-top: auto;
+  border-radius: 2px;
+}
+
+.lifecycle-card:hover .lifecycle-bottom-line {
+  background-color: #3b82f6;
+}

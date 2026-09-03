@@ -299,9 +299,9 @@
     top: 80px;
     left: 0;
     width: 100%;
-    background: #020c4c; /* Match dark theme */
+    background: #ffffff; /* White background */
     padding: 2rem;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transform: translateY(-150%);
     transition: transform 0.3s ease;
     z-index: 999;
@@ -319,12 +319,26 @@
   
   .dropdown {
     position: static;
+    background: transparent;
     opacity: 1;
     visibility: visible;
     box-shadow: none;
     transform: none;
     padding-left: 1rem;
     display: none;
+  }
+  
+  .dropdown li {
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .dropdown li a {
+    color: #0f172a;
+  }
+
+  .dropdown li a:hover {
+    background-color: #f8fafc;
+    color: #020c4c;
   }
   
   .has-dropdown.dropdown-open .dropdown {

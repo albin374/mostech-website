@@ -5,6 +5,7 @@ import './CeoMessage.css';
 const CeoMessage = () => {
   return (
     <section className="ceo-section">
+      <img src="/ceoceo.png" alt="Ayoob K A - CEO" className="ceo-person-image" />
       <div className="container ceo-container">
         
         {/* Top Content */}
@@ -34,8 +35,7 @@ const CeoMessage = () => {
           </div>
 
           <div className="ceo-right">
-            {/* If ceomessge.png includes the person, this might be redundant, but we keep it here just in case. */}
-            <img src="/ceo2.jpeg" alt="CEO Message" className="ceo-main-image hidden-if-bg-has-ceo" />
+            {/* Image moved to absolute positioned element outside container */}
           </div>
         </div>
 
