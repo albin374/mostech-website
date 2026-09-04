@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { UsersRound, Cloud, Trophy, Rocket, Users } from 'lucide-react';
+import { Globe, Trophy, Rocket, Users } from 'lucide-react';
 import './AboutTechnicalImpact.css';
 
 const AboutTechnicalImpact = () => {
@@ -53,48 +53,35 @@ const AboutTechnicalImpact = () => {
         <div className="impact-cards-row">
           
           <div className="impact-card animate-on-scroll" style={{ animationDelay: '0.1s' }}>
-            <UsersRound size={24} className="impact-icon" />
+            <Globe size={24} className="impact-icon" />
             <div className="impact-number">
               <span className="counter-value" data-target="25" data-suffix="+">0</span>
             </div>
-            <h4 className="impact-label">In-House Architects</h4>
-            <p className="impact-sublabel">Deep engineering pools</p>
+            <h4 className="impact-label">Countries</h4>
           </div>
 
           <div className="impact-card animate-on-scroll" style={{ animationDelay: '0.2s' }}>
-            <Cloud size={24} className="impact-icon" />
+            <Trophy size={24} className="impact-icon" />
             <div className="impact-number">
-              <span className="counter-value" data-target="12" data-suffix="+">0</span>
+              <span className="counter-value" data-target="8" data-suffix="+">0</span>
             </div>
-            <h4 className="impact-label">Cloud Modules</h4>
-            <p className="impact-sublabel">AWS, Azure & Google</p>
+            <h4 className="impact-label">Years of Experience</h4>
           </div>
 
           <div className="impact-card animate-on-scroll" style={{ animationDelay: '0.3s' }}>
-            <Trophy size={24} className="impact-icon" />
+            <Users size={24} className="impact-icon" />
             <div className="impact-number">
-              <span className="counter-value" data-target="7" data-suffix="+">0</span>
+              <span className="counter-value" data-target="1000" data-suffix="+">0</span>
             </div>
-            <h4 className="impact-label">Years of Excellence</h4>
-            <p className="impact-sublabel">Established 2018</p>
+            <h4 className="impact-label">Clients</h4>
           </div>
 
           <div className="impact-card animate-on-scroll" style={{ animationDelay: '0.4s' }}>
             <Rocket size={24} className="impact-icon" />
             <div className="impact-number">
-              <span className="counter-value" data-target="1000" data-suffix="+">0</span>
+              <span className="counter-value" data-target="10000" data-suffix="+">0</span>
             </div>
-            <h4 className="impact-label">Shipped Projects</h4>
-            <p className="impact-sublabel">Agile release cycle</p>
-          </div>
-
-          <div className="impact-card animate-on-scroll" style={{ animationDelay: '0.5s' }}>
-            <Users size={24} className="impact-icon" />
-            <div className="impact-number">
-              <span className="counter-value" data-target="1000" data-suffix="+">0</span>
-            </div>
-            <h4 className="impact-label">Corporate Clients</h4>
-            <p className="impact-sublabel">B2B enterprise focus</p>
+            <h4 className="impact-label">Projects</h4>
           </div>
 
         </div>

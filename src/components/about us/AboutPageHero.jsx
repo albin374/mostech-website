@@ -7,7 +7,7 @@ import aboutHeroBg from '../../assets/about.png';
 const AboutPageHero = () => {
   return (
     <section 
-      className="about-hero animate-on-scroll"
+      className="about-hero"
       style={{
         backgroundImage: `linear-gradient(90deg, rgba(2, 12, 76, 0.95) 0%, rgba(2, 12, 76, 0.82) 50%, rgba(11, 68, 135, 0.45) 100%), url(${aboutHeroBg})`
       }}

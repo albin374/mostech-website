@@ -24,9 +24,6 @@ const AboutMandate = () => {
             <p>
               To deliver world-class IT solutions and digital engineering services that maximize client ROI, operational speed, and business innovation. We prioritize long-term client partnerships, continuous technical excellence, and transparent delivery standards while maintaining strict compliance with global software benchmarks.
             </p>
-            <a href="#mission" className="mandate-link">
-              Read Mission Strategy <ArrowRight size={16} />
-            </a>
           </div>
 
           <div className="mandate-card featured-card animate-on-scroll" style={{ animationDelay: '0.2s' }}>
@@ -37,9 +34,6 @@ const AboutMandate = () => {
             <p>
               To be the most trusted technology partner in the UAE and Middle East, empowering enterprises with resilient, secure, and intuitive digital applications that simplify complexity and drive sustainable competitive advantage in an evolving global market.
             </p>
-            <a href="#vision" className="mandate-link">
-              Read Vision Strategy <ArrowRight size={16} />
-            </a>
           </div>
 
           <div className="mandate-card animate-on-scroll" style={{ animationDelay: '0.3s' }}>
@@ -50,9 +44,6 @@ const AboutMandate = () => {
             <p>
               Our goal is to assist companies of all sizes—from high-growth startups to established corporate enterprises—in digitizing core operations, expanding online market presence through performance marketing, and executing seamless digital transformation journeys.
             </p>
-            <a href="#goals" className="mandate-link">
-              Read Goals Strategy <ArrowRight size={16} />
-            </a>
           </div>
 
         </div>
