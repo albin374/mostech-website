@@ -19,6 +19,7 @@ import TaskManagementPage from './pages/TaskManagementPage';
 import OurTeamPage from './pages/OurTeamPage';
 import AccountingPage from './pages/AccountingPage';
 import PosMachinePage from './pages/PosMachinePage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
             <Route path="/accounting-software" element={<AccountingPage />} />
             <Route path="/pos-machine" element={<PosMachinePage />} />
             <Route path="/our-team" element={<OurTeamPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
           <Footer />
         </div>

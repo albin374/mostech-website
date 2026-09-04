@@ -17,9 +17,9 @@
 }
 
 .slide {
-  max-width: 1760px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 56px 0 72px; /* Adjusted padding to rely on .container on mobile/tablet */
+  padding: 56px 40px 72px; /* Added horizontal padding to push content from the edges */
 }
 
 /* ---- Header ---- */
@@ -163,7 +163,12 @@
 }
 
 @media (max-width: 900px) {
+  .global-presence-section { overflow-x: hidden; }
   .gp-body-row { flex-direction: column; }
   .gp-legend { flex: 1 1 auto; width: 100%; }
   .gp-eyebrow-title { font-size: 38px; }
+  #map-svg {
+    transform: scale(1.5);
+    margin: 30px 0;
+  }
 }

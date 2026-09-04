@@ -139,3 +139,15 @@
     background-color: rgba(255, 255, 255, 0.2);
   }
 }
+
+@media (max-width: 767px) {
+  .accounting-cta-section {
+    background-image: url("/accounting mobile view .png");
+    background-position: bottom center;
+    align-items: flex-start;
+    padding: 60px 0 300px 0; /* Add bottom padding so text doesn't overlap hardware, similar to POS CTA */
+  }
+  .cta-features-list {
+    display: none;
+  }
+}

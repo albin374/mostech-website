@@ -155,3 +155,9 @@
     gap: 1.5rem;
   }
 }
+
+@media (max-width: 768px) {
+  .ceo-image-col {
+    display: none;
+  }
+}

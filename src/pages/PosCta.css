@@ -132,3 +132,15 @@
     display: none;
   }
 }
+
+@media (max-width: 767px) {
+  .pos-cta-section {
+    background-image: url("/mobile viewpos.png");
+    background-position: bottom center;
+    align-items: flex-start;
+    padding: 60px 0 350px 0;
+  }
+  .pos-cta-features {
+    display: none;
+  }
+}

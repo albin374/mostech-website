@@ -93,15 +93,15 @@ const Header = () => {
                   </ul>
                 </li>
 
-                <li className="mobile-only-contact"><a href="/#contact" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</a></li>
+                <li className="mobile-only-contact"><Link to="/contact" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link></li>
               </ul>
             </nav>
             
             <div className="header-right">
-              <a href="/#contact" className="nav-contact-btn">
+              <Link to="/contact" className="nav-contact-btn">
                 Let's Talk 
                 <ArrowRight size={16} />
-              </a>
+              </Link>
               <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
