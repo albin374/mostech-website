@@ -476,7 +476,7 @@
   }
 
   .about-page .ceo-image-col {
-    display: none;
+    min-height: 300px;
   }
 
   .about-page .sv-section {
