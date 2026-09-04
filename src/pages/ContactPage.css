@@ -5,7 +5,7 @@
 
 .contact-banner-section {
   position: relative;
-  background-image: url('/contact banner333.png');
+  background-image: url('/contact us banner final.png');
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
@@ -157,7 +157,7 @@
 @media (max-width: 768px) {
   .contact-banner-section {
     padding: 6rem 0 4rem 0;
-    background-image: url('/contact mobile banner .png');
+    background-image: url('/mobile contat usbanner.png');
     background-position: center;
   }
   .contact-banner-container {

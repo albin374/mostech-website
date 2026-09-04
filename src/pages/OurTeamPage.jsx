@@ -31,7 +31,8 @@ const OurTeamPage = () => {
 
       <section className="team-departments-section">
         <div className="container">
-          <div className="team-grid" style={{ marginBottom: '80px', justifyContent: 'flex-start' }}>
+          <h2 className="team-heading">HR & ADMINISTRATION TEAM</h2>
+          <div className="team-grid" style={{ marginBottom: '40px', justifyContent: 'flex-start' }}>
             <div className="team-member">
               <div className="member-image-wrapper">
                 <img src="/our team/shamila.png" alt="Shamila M" />
@@ -41,7 +42,7 @@ const OurTeamPage = () => {
             </div>
           </div>
 
-          <h2 className="team-heading">IT TEAM</h2>
+          <h2 className="team-heading">SOFTWARE DEVELOPMENT TEAM</h2>
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image-wrapper">
@@ -69,22 +70,22 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/rojin.png" alt="Rojin Roy" />
-              </div>
-              <h3>Rojin Roy</h3>
-              <p>Junior Software Engineer</p>
-            </div>
-            
-            <div className="team-member">
-              <div className="member-image-wrapper">
                 <img src="/our team/albin.png" alt="Albin Alosious" />
               </div>
               <h3>Albin Alosious</h3>
               <p>Junior Software Engineer</p>
             </div>
+            
+            <div className="team-member">
+              <div className="member-image-wrapper">
+                <img src="/our team/rojin.png" alt="Rojin Roy" />
+              </div>
+              <h3>Rojin Roy</h3>
+              <p>Junior Software Engineer</p>
+            </div>
           </div>
 
-          <h2 className="team-heading" style={{ marginTop: '80px' }}>GRAPHICS TEAM</h2>
+          <h2 className="team-heading" style={{ marginTop: '40px' }}>GRAPHICS TEAM</h2>
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image-wrapper">
@@ -111,7 +112,7 @@ const OurTeamPage = () => {
             </div>
           </div>
 
-          <h2 className="team-heading" style={{ marginTop: '80px' }}>MARKETING TEAM</h2>
+          <h2 className="team-heading" style={{ marginTop: '40px' }}>SEO & MARKETING TEAM</h2>
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image-wrapper">

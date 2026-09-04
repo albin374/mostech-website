@@ -276,7 +276,9 @@
   display: none;
 }
 
-.mobile-only-contact {
+.mobile-only-contact,
+.mobile-menu-contact-info,
+.mobile-menu-socials {
   display: none;
 }
 
@@ -385,5 +387,44 @@
   
   .mobile-menu-top .logo-img {
     max-height: 32px;
+  }
+
+  .mobile-menu-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .mobile-contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #020c4c; /* Navy blue */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .mobile-menu-socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .mobile-social-icon {
+    color: #020c4c;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mobile-social-icon:hover {
+    color: #3b82f6;
   }
 }

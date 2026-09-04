@@ -95,6 +95,22 @@ const Header = () => {
 
                 <li className="mobile-only-contact"><Link to="/contact" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link></li>
               </ul>
+              <div className="mobile-menu-contact-info">
+                <a href="mailto:info@mostech.ae" className="mobile-contact-link">
+                  <Mail size={16} />
+                  <span>info@mostech.ae</span>
+                </a>
+                <a href="tel:+971581730112" className="mobile-contact-link">
+                  <Phone size={16} />
+                  <span>+971 58 173 0112</span>
+                </a>
+              </div>
+              <div className="mobile-menu-socials">
+                <a href="#" className="mobile-social-icon"><FaLinkedinIn size={20} /></a>
+                <a href="#" className="mobile-social-icon"><FaFacebookF size={20} /></a>
+                <a href="#" className="mobile-social-icon"><FaInstagram size={20} /></a>
+                <a href="#" className="mobile-social-icon"><FaWhatsapp size={20} /></a>
+              </div>
             </nav>
             
             <div className="header-right">
