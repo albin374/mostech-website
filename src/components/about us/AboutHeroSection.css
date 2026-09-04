@@ -263,3 +263,110 @@
     font-size: 1.3rem;
   }
 }
+
+/* ─── Tablet ≤ 768px ─── */
+@media (max-width: 768px) {
+  .about-hero-new {
+    padding: 3rem 0 1.5rem 0;
+  }
+
+  .about-hero-container {
+    gap: 2rem;
+  }
+
+  .about-title-new {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+    margin-bottom: 1rem;
+  }
+
+  .about-desc-new {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-list-item {
+    padding: 1.2rem 0;
+    gap: 0.9rem;
+  }
+
+  .about-list-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .about-right-top {
+    height: 300px;
+    margin-bottom: -15px;
+    border-radius: 20px;
+  }
+
+  .about-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-right-bottom {
+    padding: 2.5rem 1.25rem 1.25rem 1.25rem;
+    border-radius: 20px;
+  }
+}
+
+/* ─── Mobile ≤ 480px ─── */
+@media (max-width: 480px) {
+  .about-hero-new {
+    padding: 2rem 0 1rem 0;
+  }
+
+  .about-badge-new {
+    margin-bottom: 1rem;
+  }
+
+  .about-title-new {
+    font-size: clamp(1.6rem, 7.5vw, 2rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .about-desc-new {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-list-content h4 {
+    font-size: 1rem;
+  }
+
+  .about-list-content p {
+    font-size: 0.85rem;
+  }
+
+  .about-right-top {
+    height: 240px;
+    border-radius: 16px;
+  }
+
+  .about-cards-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .about-card-new {
+    padding: 1.25rem 1rem;
+    border-radius: 14px;
+  }
+
+  .about-card-icon-new {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-card-new h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-right-bottom {
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 16px;
+  }
+}
+

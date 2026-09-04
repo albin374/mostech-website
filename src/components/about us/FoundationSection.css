@@ -173,10 +173,64 @@
 }
 
 @media (max-width: 768px) {
+  .about-page .foundation-section {
+    padding: 60px 0;
+  }
+
+  .about-page .foundation-header {
+    margin-bottom: 36px;
+  }
+
   .about-page .foundation-cards-wrapper {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
+
   .about-page .foundation-title {
-    font-size: 2.2rem;
+    font-size: clamp(1.6rem, 6vw, 2rem);
+  }
+
+  .about-page .foundation-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .about-page .card-bottom-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .foundation-section {
+    padding: 40px 0;
+  }
+
+  .about-page .foundation-header {
+    margin-bottom: 24px;
+  }
+
+  .about-page .foundation-title {
+    font-size: clamp(1.4rem, 7vw, 1.75rem);
+  }
+
+  .about-page .card-top-content {
+    padding: 28px 20px 14px 20px;
+  }
+
+  .about-page .foundation-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .about-page .card-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+  }
+
+  .about-page .card-bottom-image {
+    height: 150px;
+  }
+
+  .about-page .foundation-cards-wrapper {
+    gap: 14px;
   }
 }

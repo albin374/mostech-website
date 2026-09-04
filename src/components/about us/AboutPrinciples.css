@@ -121,6 +121,14 @@
 }
 
 @media (max-width: 640px) {
+  .about-page .about-principles {
+    padding: 3rem 0;
+  }
+
+  .about-page .principles-header {
+    margin-bottom: var(--space-6);
+  }
+
   .about-page .principles-grid {
     grid-template-columns: 1fr;
     gap: var(--space-4);
@@ -128,5 +136,28 @@
   
   .about-page .principle-card {
     padding: var(--space-5);
+  }
+
+  .about-page .principle-card-title {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .about-principles {
+    padding: 2.5rem 0;
+  }
+
+  .about-page .principle-card {
+    padding: 1.25rem;
+  }
+
+  .about-page .principle-icon-wrapper {
+    width: 42px;
+    height: 42px;
+  }
+
+  .about-page .principle-number {
+    font-size: 1.8rem;
   }
 }

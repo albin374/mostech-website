@@ -219,8 +219,12 @@
 }
 
 @media (max-width: 640px) {
+  .about-page .about-overview {
+    padding: 3rem 0 2rem 0;
+  }
+
   .about-page .overview-image-wrapper {
-    height: 300px;
+    height: 280px;
     border-radius: var(--radius-lg);
   }
 
@@ -228,11 +232,61 @@
     bottom: 16px;
     left: 16px;
     right: 16px;
-    padding: 12px 16px;
+    padding: 12px 14px;
+    gap: 10px;
   }
   
   .about-page .location-badge .location-icon {
     width: 38px;
     height: 38px;
+  }
+
+  .about-page .overview-title {
+    font-size: clamp(1.35rem, 5.5vw, 1.6rem);
+    margin-bottom: var(--space-3);
+  }
+
+  .about-page .overview-desc {
+    font-size: 0.875rem;
+    margin-bottom: var(--space-3);
+  }
+
+  .about-page .overview-features {
+    margin-top: var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .about-page .overview-feature-card {
+    padding: var(--space-3) var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .about-page .overview-feature-card .feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-page .overview-feature-card h4 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .overview-image-wrapper {
+    height: 240px;
+  }
+
+  .about-page .location-badge {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 12px;
+  }
+
+  .about-page .location-badge .location-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .about-page .location-badge .location-info p {
+    font-size: 0.75rem;
   }
 }

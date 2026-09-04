@@ -103,8 +103,49 @@
   }
 }
 
+@media (max-width: 640px) {
+  .about-page .about-technical-impact {
+    padding: 3rem 0;
+  }
+
+  .about-page .impact-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .about-page .impact-subtitle {
+    max-width: 100%;
+    font-size: 0.875rem;
+  }
+
+  .about-page .impact-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+
+  .about-page .impact-card {
+    padding: var(--space-4) var(--space-3);
+    min-width: unset;
+  }
+
+  .about-page .impact-number {
+    font-size: 1.75rem;
+  }
+
+  .about-page .impact-label {
+    font-size: 0.82rem;
+  }
+}
+
 @media (max-width: 480px) {
+  .about-page .about-technical-impact {
+    padding: 2.5rem 0;
+  }
+
   .about-page .impact-cards-row {
     grid-template-columns: 1fr;
+  }
+
+  .about-page .impact-card {
+    padding: var(--space-4);
   }
 }

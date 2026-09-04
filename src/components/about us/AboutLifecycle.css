@@ -292,3 +292,69 @@
     margin-bottom: var(--space-3);
   }
 }
+
+@media (max-width: 640px) {
+  .about-page .about-lifecycle {
+    padding: 3rem 0;
+  }
+
+  .about-page .lifecycle-header {
+    margin-bottom: var(--space-7);
+  }
+
+  .about-page .lifecycle-subtitle {
+    max-width: 100%;
+    font-size: 0.875rem;
+  }
+
+  .about-page .lifecycle-nodes {
+    gap: var(--space-6);
+    padding-left: 28px;
+  }
+
+  .about-page .lifecycle-node-wrapper {
+    gap: var(--space-4);
+  }
+
+  .about-page .lifecycle-content-box {
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .about-page .lifecycle-content-box h4 {
+    font-size: 0.95rem;
+  }
+
+  .about-page .lifecycle-content-box p {
+    font-size: 0.8rem;
+  }
+
+  .about-page .phase-icon {
+    padding: 8px;
+    margin-bottom: var(--space-2);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .about-lifecycle {
+    padding: 2.5rem 0;
+  }
+
+  .about-page .lifecycle-nodes {
+    padding-left: 20px;
+    gap: var(--space-5);
+  }
+
+  .about-page .lifecycle-node-point {
+    width: 20px;
+    height: 20px;
+  }
+
+  .about-page .node-inner-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .about-page .lifecycle-content-box {
+    padding: var(--space-3);
+  }
+}

@@ -111,7 +111,46 @@
 }
 
 @media (max-width: 992px) {
+  .about-page .about-hero {
+    padding: 120px 0 var(--space-7) 0;
+  }
   .about-page .about-hero-title {
     font-size: clamp(2rem, 6vw, 3rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-page .about-hero {
+    min-height: auto;
+    padding: 100px 0 2.5rem 0;
+  }
+
+  .about-page .about-hero-container {
+    padding: 0 1rem;
+  }
+
+  .about-page .about-hero-title {
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .about-page .about-hero-subtitle {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-page .about-hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .about-page .hero-btn,
+  .about-page .hero-btn-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 0.7rem 1rem;
+    font-size: 0.875rem;
+    min-height: 44px;
   }
 }

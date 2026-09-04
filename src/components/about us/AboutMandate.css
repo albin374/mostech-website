@@ -124,3 +124,31 @@
     transform: translateY(-4px);
   }
 }
+
+@media (max-width: 640px) {
+  .about-page .about-mandate {
+    padding: 3rem 0;
+  }
+
+  .about-page .mandate-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .about-page .mandate-card {
+    padding: var(--space-5);
+  }
+
+  .about-page .mandate-card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--space-3);
+  }
+
+  .about-page .mandate-card h3 {
+    font-size: 1rem;
+  }
+
+  .about-page .mandate-cards {
+    gap: var(--space-4);
+  }
+}

@@ -222,7 +222,71 @@
 
 @media (max-width: 640px) {
   .about-page .about-ceo {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
   }
 
+  .about-page .ceo-header {
+    margin-bottom: 2rem;
+  }
+
+  .about-page .ceo-image-col {
+    min-height: 320px;
+  }
+
+  .about-page .ceo-text-col {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .about-page .quote-mark {
+    font-size: 6rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .about-page .quote-open-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-page .quote-open-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .about-page .ceo-quote-text {
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  .about-page .ceo-name-plate h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .about-ceo {
+    padding: 2.5rem 0;
+  }
+
+  .about-page .ceo-image-col {
+    min-height: 260px;
+  }
+
+  .about-page .ceo-card {
+    border-radius: 18px;
+  }
+
+  .about-page .ceo-text-col {
+    padding: 1.25rem 1rem;
+  }
+
+  .about-page .quote-mark {
+    font-size: 4rem;
+  }
+
+  .about-page .ceo-image-overlay {
+    padding: 1.5rem;
+  }
 }

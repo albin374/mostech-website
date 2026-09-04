@@ -151,3 +151,31 @@
   max-width: 1400px;
   padding: 0 2rem;
 }
+
+/* =============================================
+   MOBILE OVERRIDES — ≤ 768px
+   ============================================= */
+@media (max-width: 768px) {
+  .about-page .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-page {
+    --space-11: 72px;
+    --space-10: 56px;
+    --space-9:  48px;
+    --space-8:  40px;
+    --text-h2: clamp(1.35rem, 5.5vw, 1.6rem);
+    --text-body-lg: 0.875rem;
+  }
+
+  .about-page .container {
+    padding: 0 1rem;
+  }
+
+  .about-page .section-eyebrow {
+    font-size: 0.65rem;
+  }
+}
