@@ -1,163 +1,299 @@
-.about-ceo-new {
+/* =============================================
+   CEO MESSAGE SECTION — Premium Redesign
+   ============================================= */
+
+.about-page .about-ceo {
   padding: 6rem 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #f8fafc;
-}
-
-.ceo-header-new {
-  margin-bottom: 4rem;
-}
-
-.ceo-badge-new {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.ceo-badge-new .badge-line {
-  width: 30px;
-  height: 2px;
-  background-color: #3b82f6;
-}
-
-.ceo-badge-new span {
-  color: #3b82f6;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.ceo-title-new {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #0a1930;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.ceo-title-new .text-blue {
-  color: #3b82f6;
-}
-
-.ceo-card-new {
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(160deg, #f8fafc 0%, #eef2ff 50%, #f0f9ff 100%);
+  position: relative;
   overflow: hidden;
 }
 
-@media (min-width: 992px) {
-  .ceo-card-new {
-    flex-direction: row;
-  }
+/* Decorative background blobs */
+.about-page .about-ceo::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.07) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
-.ceo-image-col {
-  flex: 0 0 35%;
+.about-page .about-ceo::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ---- Section Header ---- */
+.about-page .ceo-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+
+.about-page .ceo-title {
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.about-page .ceo-title .text-blue {
+  color: #2563eb;
   position: relative;
+  display: inline-block;
 }
 
-.ceo-photo-new {
+/* ---- Main Card ---- */
+.about-page .ceo-card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow:
+    0 4px 6px rgba(2, 12, 76, 0.04),
+    0 20px 60px rgba(2, 12, 76, 0.12),
+    0 0 0 1px rgba(2, 12, 76, 0.06);
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Image Column ---- */
+.about-page .ceo-image-col {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.about-page .ceo-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   display: block;
+  transition: transform 0.6s ease;
 }
 
-.ceo-name-plate {
+.about-page .ceo-card:hover .ceo-photo {
+  transform: scale(1.03);
+}
+
+/* Gradient overlay on image */
+.about-page .ceo-image-overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #0a1930;
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.ceo-name-plate h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 0 0 0.3rem 0;
-}
-
-.ceo-name-plate p {
-  font-size: 0.8rem;
-  color: #94a3b8;
-  margin: 0;
-  letter-spacing: 0.5px;
-}
-
-.ceo-text-col {
-  flex: 1;
-  padding: 4rem;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(2, 12, 76, 0.92) 0%,
+    rgba(2, 12, 76, 0.3) 45%,
+    transparent 100%
+  );
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: #0a1930;
+  justify-content: flex-end;
+  padding: 2rem;
 }
 
-.ceo-quote-text {
-  font-size: 1.05rem;
+/* Gold bar above name */
+.about-page .gold-accent-line {
+  width: 36px;
+  height: 3px;
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  border-radius: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.about-page .ceo-name-plate h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
   color: #ffffff;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  font-style: italic;
+  margin: 0 0 0.3rem 0;
+  letter-spacing: -0.01em;
 }
 
-.ceo-signature-block {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid #e2e8f0;
-  padding-top: 2rem;
-}
-
-.sig-left strong {
-  display: block;
-  font-size: 1.1rem;
-  color: #0a1930;
-  margin-bottom: 0.2rem;
-}
-
-.sig-left p {
-  font-size: 0.85rem;
-  color: #64748b;
+.about-page .ceo-name-plate p {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.65);
   margin: 0;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-.sig-right {
+
+/* ---- Text Column ---- */
+.about-page .ceo-text-col {
+  padding: 3rem 3.5rem;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  position: relative;
 }
 
-.sig-stamp {
-  background-color: #eff6ff;
-  color: #3b82f6;
-  font-size: 0.75rem;
+/* Giant decorative quote icon */
+.about-page .quote-mark {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  font-size: 10rem;
+  font-family: 'Georgia', serif;
+  color: #2563eb;
+  opacity: 0.05;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Opening quote icon */
+.about-page .quote-open-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #020c4c, #2563eb);
+  border-radius: 14px;
+  margin-bottom: 1.75rem;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+  flex-shrink: 0;
+}
+
+.about-page .quote-open-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: white;
+}
+
+/* Quote text */
+.about-page .quote-content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.about-page .ceo-quote-text {
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
+  font-style: normal;
+}
+
+.about-page .ceo-quote-text:last-child {
+  margin-bottom: 0;
+}
+
+.about-page .ceo-quote-text strong {
+  color: #020c4c;
   font-weight: 700;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
 }
 
-@media (max-width: 991px) {
-  .ceo-text-col {
-    padding: 2rem;
+
+
+/* =============================================
+   Responsive
+   ============================================= */
+@media (max-width: 992px) {
+  .about-page .ceo-card {
+    grid-template-columns: 1fr;
   }
-  .ceo-signature-block {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
+
+  .about-page .ceo-image-col {
+    min-height: 420px;
+  }
+
+  .about-page .ceo-text-col {
+    padding: 2.5rem 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .ceo-image-col {
+  .about-page .ceo-image-col {
     display: none;
   }
 }
+
+@media (max-width: 640px) {
+  .about-page .about-ceo {
+    padding: 3.5rem 0;
+  }
+
+  .about-page .ceo-header {
+    margin-bottom: 2rem;
+  }
+
+  .about-page .ceo-image-col {
+    min-height: 320px;
+  }
+
+  .about-page .ceo-text-col {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .about-page .quote-mark {
+    font-size: 6rem;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .about-page .quote-open-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-page .quote-open-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .about-page .ceo-quote-text {
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  .about-page .ceo-name-plate h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .about-ceo {
+    padding: 2.5rem 0;
+  }
+
+  .about-page .ceo-image-col {
+    min-height: 260px;
+  }
+
+  .about-page .ceo-card {
+    border-radius: 18px;
+  }
+
+  .about-page .ceo-text-col {
+    padding: 1.25rem 1rem;
+  }
+
+  .about-page .quote-mark {
+    font-size: 4rem;
+  }
+
+  .about-page .ceo-image-overlay {
+    padding: 1.5rem;
+  }
+}
+

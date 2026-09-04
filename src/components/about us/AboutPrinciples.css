@@ -1,116 +1,163 @@
-.about-principles {
-  padding: 6rem 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #ffffff;
+.about-page .about-principles {
+  padding: var(--space-11) 0;
+  background-color: var(--about-surface-1);
 }
 
-.principles-header {
-  margin-bottom: 4rem;
+.about-page .principles-header {
+  margin-bottom: var(--space-9);
 }
 
-.principles-badge {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  justify-content: center;
-}
-
-.principles-badge .badge-line {
-  width: 30px;
-  height: 2px;
-  background-color: #3b82f6;
-}
-
-.principles-badge span {
-  color: #3b82f6;
-  font-size: 0.85rem;
+.about-page .principles-title {
+  font-size: var(--text-h2);
   font-weight: 700;
-  letter-spacing: 1px;
+  line-height: 1.25;
+  margin-bottom: var(--space-3);
 }
 
-.principles-title {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #0a1930;
-  line-height: 1.2;
-  margin: 0 0 1rem 0;
+.about-page .principles-title .text-blue {
+  color: var(--about-accent);
 }
 
-.principles-subtitle {
-  font-size: 1rem;
-  color: #64748b;
-  line-height: 1.6;
+.about-page .principles-subtitle {
+  font-size: var(--text-body-lg);
+  color: var(--about-text-secondary);
 }
 
-.principles-grid {
+/* 3x3 Grid Layout */
+.about-page .principles-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .principles-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .principles-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.principle-card {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 2rem;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+/* Card Component */
+.about-page .principle-card {
+  background-color: var(--about-surface-0);
+  border: 1px solid var(--about-surface-3);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--duration-base) var(--ease-standard);
 }
 
-.principle-card:hover {
-  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.05);
-  border-color: #bfdbfe;
+.about-page .principle-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(37, 99, 235, 0.25);
 }
 
-.principle-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #eff6ff;
-  color: #3b82f6;
-  border-radius: 8px;
+.about-page .principle-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.about-page .principle-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--about-accent-glow);
+  color: var(--about-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  transition: all var(--duration-base) var(--ease-standard);
 }
 
-.principle-card h4 {
-  font-size: 1.1rem;
+.about-page .principle-card:hover .principle-icon-wrapper {
+  background-color: var(--about-accent);
+  color: var(--about-surface-0);
+  transform: scale(1.05);
+}
+
+.about-page .principle-number {
+  font-size: 2.2rem;
   font-weight: 700;
-  color: #0a1930;
-  margin: 0 0 1rem 0;
+  color: var(--about-accent-soft);
+  opacity: 0.18;
+  line-height: 1;
+  transition: opacity var(--duration-base) var(--ease-standard);
+  user-select: none;
 }
 
-.principle-card p {
-  font-size: 0.9rem;
-  color: #64748b;
-  line-height: 1.6;
+.about-page .principle-card:hover .principle-number {
+  opacity: 0.35;
+  color: var(--about-accent);
+}
+
+.about-page .principle-card-body {
   flex-grow: 1;
-  margin: 0 0 1.5rem 0;
 }
 
-.principle-link {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #3b82f6;
-  text-decoration: none;
-  letter-spacing: 0.5px;
+.about-page .principle-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--about-navy-900);
+  margin-bottom: var(--space-3);
+  line-height: 1.35;
 }
 
-.principle-link:hover {
-  text-decoration: underline;
+.about-page .principle-card-desc {
+  font-size: var(--text-sm);
+  color: var(--about-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .about-page .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-page .about-principles {
+    padding: 3rem 0;
+  }
+
+  .about-page .principles-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .about-page .principles-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .about-page .principle-card {
+    padding: var(--space-5);
+  }
+
+  .about-page .principle-card-title {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .about-principles {
+    padding: 2.5rem 0;
+  }
+
+  .about-page .principle-card {
+    padding: 1.25rem;
+  }
+
+  .about-page .principle-icon-wrapper {
+    width: 42px;
+    height: 42px;
+  }
+
+  .about-page .principle-number {
+    font-size: 1.8rem;
+  }
 }

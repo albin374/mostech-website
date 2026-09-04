@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Target, Users, ShieldCheck, Rocket, Eye } from 'lucide-react';
+import { Building2, Target, Users, ShieldCheck, Rocket, Eye, Briefcase, Settings } from 'lucide-react';
 import './AboutHeroSection.css';
 
 const AboutHeroSection = () => {
@@ -34,7 +34,7 @@ const AboutHeroSection = () => {
 
             <div className="about-list-item">
               <div className="about-list-icon">
-                <Target size={24} />
+                <Briefcase size={24} />
               </div>
               <div className="about-list-content">
                 <h4>What We Do</h4>
@@ -90,7 +90,7 @@ const AboutHeroSection = () => {
 
               <div className="about-card-new">
                 <div className="about-card-icon-new">
-                  <Rocket size={24} />
+                  <Settings size={24} />
                 </div>
                 <h4>Our Approach</h4>
                 <p>Client-focused, agile, and results-driven solutions that make a real impact.</p>

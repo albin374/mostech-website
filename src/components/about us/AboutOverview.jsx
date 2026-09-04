@@ -1,5 +1,5 @@
 import React from 'react';
-import { Monitor, Cloud, ShieldCheck, Building } from 'lucide-react';
+import { Code2, Cloud, ShieldCheck } from 'lucide-react';
 import './AboutOverview.css';
 
 const AboutOverview = () => {
@@ -7,16 +7,13 @@ const AboutOverview = () => {
     <section className="about-overview">
       <div className="container">
         <div className="overview-grid">
-          
           {/* Left Content */}
-          <div className="overview-content">
-
-            
+          <div className="overview-content animate-on-scroll">
+            <div className="section-eyebrow">Who We Are</div>
             <h2 className="overview-title">
-              Mostech Business<br/>
-              <span className="text-blue">Solutions Dubai</span>
+              Mostech Business <span className="text-blue">Solutions</span>
             </h2>
-            
+
             <p className="overview-desc">
               Mostech Business Solutions is a premier software development and technology
               consultancy headquartered in Dubai, UAE. We specialize in digital
@@ -30,48 +27,47 @@ const AboutOverview = () => {
               security, microservices architecture, and agile software development life cycles.
               Scale your digital operations today.
             </p>
-            
+
             <div className="overview-features">
               <div className="overview-feature-card">
                 <div className="feature-icon">
-                  <Monitor size={20} />
+                  <Code2 size={20} />
                 </div>
-                <h4>Custom<br/>Development</h4>
-                <p>Scalable web & mobile apps</p>
+                <div className="feature-text">
+                  <h4>Custom Development</h4>
+                  <p>Scalable web & mobile apps</p>
+                </div>
               </div>
+              
               <div className="overview-feature-card">
                 <div className="feature-icon">
                   <Cloud size={20} />
                 </div>
-                <h4>Cloud Resilience</h4>
-                <p>High-availability cloud architecture</p>
+                <div className="feature-text">
+                  <h4>Cloud Resilience</h4>
+                  <p>High-availability cloud architecture</p>
+                </div>
               </div>
+              
               <div className="overview-feature-card">
                 <div className="feature-icon">
                   <ShieldCheck size={20} />
                 </div>
-                <h4>Zero-Code<br/>Security</h4>
-                <p>Aligned with UAE and GCC compliance</p>
+                <div className="feature-text">
+                  <h4>Zero-Trust Security</h4>
+                  <p>Aligned with UAE and GCC compliance</p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Right Visual */}
-          <div className="overview-visual">
-            <img src="/about burjhhalifa.png" alt="Office Collaboration" className="overview-main-image" />
-            
-            <div className="location-card">
-              <div className="location-icon">
-                <Building size={20} color="#ffffff" />
-              </div>
-              <div className="location-info">
-                <h4>Dubai Technology Center</h4>
-                <p>O14 Tower, Business Bay, Dubai, UAE.</p>
-              </div>
-              <a href="#contact" className="location-link">Our Global Presence &rarr;</a>
+          <div className="overview-visual animate-on-scroll">
+            <div className="overview-image-wrapper">
+              <img src="/about burjhhalifa.png" alt="Mostech Dubai Headquarters" className="overview-main-image" />
+              <div className="overview-image-overlay" />
             </div>
           </div>
-
         </div>
       </div>
     </section>
