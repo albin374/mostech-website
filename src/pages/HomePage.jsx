@@ -10,6 +10,7 @@ import SeoSection from '../components/services/SeoSection';
 import MobileSection from '../components/services/MobileSection';
 import CeoMessage from '../components/home/CeoMessage';
 import S3Model from '../components/home/S3Model';
+import SisterConcerns from '../components/home/SisterConcerns';
 
 const HomePage = () => {
   return (
@@ -24,6 +25,7 @@ const HomePage = () => {
       <MobileSection />
       <CeoMessage />
       <S3Model />
+      <SisterConcerns />
       <TechPartners />
     </>
   );

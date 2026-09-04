@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+.sister-concerns-section {
+  padding: 3rem 0;
+  background-color: #f8fbff;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.sc-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Header Section */
+.sc-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.sc-header-left {
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+.sc-badge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.sc-badge-line {
+  width: 40px;
+  height: 2px;
+  background-color: #3b82f6;
+  margin-bottom: 1.5rem;
+}
+
+.sc-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.sc-highlight {
+  color: #2563eb;
+}
+
+.sc-subtitle {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.sc-header-right {
+  flex: 0 0 33%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.sc-handwritten {
+  font-family: 'Caveat', cursive;
+  font-size: 2.8rem;
+  color: #3b82f6;
+  line-height: 1.1;
+  transform: rotate(-10deg) translateY(80px);
+  opacity: 0.9;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(59, 130, 246, 0.1);
+}
+
+.sc-robot-img {
+  max-width: 320px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 20px 30px rgba(37, 99, 235, 0.15));
+}
+
+/* Grid Section */
+.sc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.sc-card {
+  position: relative;
+  border-radius: 16px;
+  padding: 2.2rem 2rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+  background-color: #061b46;
+  color: #ffffff;
+}
+
+.sc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.sc-card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sc-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.sc-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sc-icon {
+  color: #0d6efd;
+}
+
+.sc-img-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px; /* keeping a slight border radius inside the wrapper */
+}
+
+.sc-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.sc-card-desc {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+  max-width: 85%;
+  flex-grow: 1;
+}
+
+.sc-card-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #60a5fa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-top: auto;
+}
+
+.sc-card-link:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* Background elements for cards to simulate the screenshot graphics */
+.sc-card-bg-element {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Footer */
+.sc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.sc-footer-line {
+  height: 1px;
+  width: 120px;
+  background-color: #cbd5e1;
+}
+
+.sc-footer-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sc-handwritten {
+    left: -10%;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sc-header-row {
+    flex-direction: column;
+  }
+  .sc-header-right {
+    margin-top: 3rem;
+    align-self: center;
+  }
+  .sc-handwritten {
+    top: -20%;
+    left: -15%;
+  }
+  .sc-robot-img {
+    max-width: 260px;
+  }
+  .sc-grid {
+    grid-template-columns: 1fr;
+  }
+  .sc-footer-line {
+    width: 60px;
+  }
+}

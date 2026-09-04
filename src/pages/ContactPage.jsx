@@ -5,26 +5,28 @@ import './ContactPage.css';
 const ContactPage = () => {
   return (
     <main className="contact-page-wrapper">
-      <section className="contact-hero-section">
-        <div className="container">
-          <div className="contact-header-horizontal">
-            <div className="contact-header-left">
-              <div className="contact-badge-wrap">
-                <span className="contact-badge-line" style={{backgroundColor: '#00ccff'}}></span>
-                <span className="contact-badge-text" style={{color: '#0f172a'}}>CONTACT US</span>
-              </div>
-              <h1 className="contact-title" style={{marginBottom: 0}}>
-                Let's Build Your Next <span className="contact-title-blue" style={{color: '#0d6efd'}}>Big Idea</span>
-              </h1>
+      <section className="contact-banner-section">
+        <div className="container contact-banner-container">
+          <div className="contact-banner-left">
+            <div className="cb-badge">
+              <span className="cb-badge-line"></span>
+              CONTACT US
             </div>
             
-            <div className="contact-header-divider"></div>
+            <h1 className="cb-title">
+              Let's Build Your Next<br/>
+              <span className="cb-highlight">Big Idea</span>
+            </h1>
             
-            <div className="contact-header-right">
-              <p>Have a project in mind? Get in touch with our team and let's turn your vision into powerful digital solutions. We'll get back to you within 24 business hours.</p>
-            </div>
+            <p className="cb-subtitle">
+              Have a project in mind? Get in touch with our team and let's turn your vision into powerful digital solutions. We'll get back to you within 24 business hours.
+            </p>
+
+
           </div>
+
         </div>
+      </section>
 
         <div className="container contact-container">
           {/* Center Column: Form */}
@@ -176,16 +178,6 @@ const ContactPage = () => {
 
         </div>
         
-        <div className="contact-bottom-bar">
-          <span className="contact-bar-line"></span>
-          <span>GLOBAL PRESENCE</span>
-          <span className="contact-bar-sep">|</span>
-          <span>LOCAL EXPERTISE</span>
-          <span className="contact-bar-sep">|</span>
-          <span>A BRIGHTER TOMORROW</span>
-          <span className="contact-bar-line"></span>
-        </div>
-      </section>
 
       {/* Map Section */}
       <section className="contact-map-section">

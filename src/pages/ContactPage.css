@@ -3,61 +3,138 @@
   color: #0f172a;
 }
 
-.contact-hero-section {
-  padding: 140px 0 60px 0;
-  background-color: #ffffff;
-  min-height: 100vh;
+.contact-banner-section {
   position: relative;
+  background-image: url('/contact banner333.png');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding: 10rem 0 3rem 0;
+  min-height: 400px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  font-family: 'Inter', sans-serif;
 }
 
-/* ================= HORIZONTAL HEADER ================= */
-.contact-header-horizontal {
+.contact-banner-container {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  justify-content: space-between;
   width: 100%;
 }
 
-@media (min-width: 1024px) {
-  .contact-header-horizontal {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
-  }
+.contact-banner-left {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
 }
 
-.contact-header-left {
-  flex: 1;
+.cb-badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.5rem;
 }
 
-.contact-header-divider {
-  width: 100%;
-  height: 1px;
-  background-color: #cbd5e1;
+.cb-badge-line {
+  width: 30px;
+  height: 2px;
+  background-color: #3b82f6;
 }
 
-@media (min-width: 1024px) {
-  .contact-header-divider {
-    width: 1px;
-    height: 80px;
-  }
+.cb-title {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
 }
 
-.contact-header-right {
-  flex: 1.2;
+.cb-highlight {
+  color: #2563eb;
 }
 
-.contact-header-right p {
-  font-size: 1rem;
+.cb-subtitle {
+  font-size: 1.05rem;
   color: #475569;
   line-height: 1.6;
-  margin: 0;
-  max-width: 600px;
+  margin-bottom: 3rem;
+  max-width: 90%;
+}
+
+.cb-info-grid {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.cb-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.cb-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #e0f2fe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cb-icon-green { background-color: #dcfce7; color: #16a34a; }
+.cb-icon-purple { background-color: #f3e8ff; color: #7c3aed; }
+.cb-icon-orange { background-color: #ffedd5; color: #ea580c; }
+
+.cb-info-item span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.cb-handwritten {
+  font-family: 'Caveat', cursive;
+  font-size: 2.5rem;
+  color: #2563eb;
+  line-height: 1.1;
+  transform: rotate(-5deg);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.contact-banner-right {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+.cb-floating-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 3px;
+  line-height: 2.5;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cb-floating-line {
+  width: 30px;
+  height: 2px;
+  background-color: #3b82f6;
+  margin-top: 1rem;
 }
 
 .contact-container {
@@ -65,116 +142,52 @@
   flex-direction: column;
   gap: 2rem;
   width: 100%;
+  margin-top: 4rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 850px) {
   .contact-container {
     flex-direction: row;
     align-items: stretch;
     justify-content: space-between;
-    gap: 3rem;
+    gap: 2rem;
   }
 }
 
-/* ================= LEFT COLUMN ================= */
-.contact-col-left {
-  flex: 1;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact-badge-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 1.5rem;
-}
-
-.contact-badge-line {
-  height: 2px;
-  width: 30px;
-  background-color: #0d6efd;
-}
-
-.contact-badge-text {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #475569;
-}
-
-.contact-title {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.1;
-  color: #0f172a;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
-}
-
-.contact-title-blue {
-  color: #0d6efd;
-}
-
-.contact-desc {
-  font-size: 1.1rem;
-  color: #475569;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-}
-
-.contact-bullet-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 2rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact-bullet-list li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #475569;
-}
-
-.bullet-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #0d6efd;
-  border-radius: 50%;
-}
-
-.contact-cursive-text {
-  font-family: 'Caveat', cursive; /* Using a fallback cursive */
-  font-size: 2.5rem;
-  color: #0d6efd;
-  line-height: 1;
-  transform: rotate(-5deg);
-  margin-top: 1rem;
+@media (max-width: 768px) {
+  .contact-banner-section {
+    padding: 6rem 0 4rem 0;
+    background-position: center right -400px;
+  }
+  .contact-banner-container {
+    flex-direction: column;
+  }
+  .contact-banner-right {
+    display: none;
+  }
+  .cb-info-grid {
+    gap: 1rem;
+  }
 }
 
 /* ================= CENTER COLUMN (FORM) ================= */
 .contact-col-center {
-  flex: 1.2;
+  flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .contact-form-card {
-  background-color: #042570;
-  border-radius: 20px;
+  background-color: #061b46;
+  border-radius: 16px;
   padding: 2.5rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
   width: 100%;
-  max-width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-form-card h2 {
@@ -199,6 +212,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  flex-grow: 1;
 }
 
 .form-group label {
@@ -213,8 +227,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #122c6b;
+  border: none;
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -273,7 +287,7 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 0.5rem;
+  margin-top: auto;
 }
 
 .contact-submit-btn:hover {
@@ -299,10 +313,10 @@
 
 /* ================= RIGHT COLUMN (CARDS) ================= */
 .contact-col-right {
-  flex: 1.2;
+  flex: 1.3;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -312,24 +326,24 @@
 }
 
 .contact-info-card {
-  background-color: #042570; /* Dark blue from the image */
+  background-color: #061b46; /* Dark blue from the image */
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: 1.25rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
   display: flex;
   flex-direction: column;
 }
 
 .info-icon-box {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   background-color: rgba(255, 255, 255, 0.15); /* Translucent box for icon */
-  border-radius: 12px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .info-card-title {
@@ -344,14 +358,14 @@
   width: 100%;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.15); /* Light translucent divider */
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   border-radius: 0;
 }
 
 .info-list {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 0.8rem;
 }
 
 .info-list-item {
@@ -379,41 +393,12 @@
   flex-shrink: 0;
 }
 
-/* ================= BOTTOM DECORATIVE BAR ================= */
-.contact-bottom-bar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #64748b;
-  letter-spacing: 2px;
-  margin-top: 2rem;
-  padding-bottom: 2rem;
-}
 
-.contact-bar-line {
-  height: 1px;
-  width: 50px;
-  background-color: #cbd5e1;
-}
-
-.contact-bar-sep {
-  color: #cbd5e1;
-}
-
-@media (max-width: 1023px) {
-  .contact-bottom-bar {
-    display: none;
-  }
-}
 
 /* ================= MAP SECTION ================= */
 .contact-map-section {
-  padding: 0 0 6rem 0;
-  background-color: #ffffff;
+  padding: 4rem 0 6rem 0;
+  background-color: transparent;
 }
 
 .map-wrapper {
