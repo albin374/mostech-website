@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Header from './components/home/Header';
 import Footer from './components/home/Footer';
@@ -21,10 +21,21 @@ import AccountingPage from './pages/AccountingPage';
 import PosMachinePage from './pages/PosMachinePage';
 import ContactPage from './pages/ContactPage';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <div className="app-container">
           <Helmet>
             <title>Leading software company in dubai</title>
