@@ -170,7 +170,7 @@
   .gp-legend { flex: 1 1 auto; width: 100%; }
   .gp-eyebrow-title { font-size: 38px; }
   #map-svg {
-    transform: scale(1.2);
+    transform: scale(1.6);
     margin: 45px 0;
   }
 }
