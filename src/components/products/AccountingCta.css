@@ -9,11 +9,7 @@
   min-height: 600px;
   display: flex;
   align-items: center;
-}
-
-/* Fallback background color in case the image doesn't load fast enough */
-.accounting-cta-section {
-  background-color: #051630;
+  background-color: #051630; /* Fallback background color */
 }
 
 .accounting-cta-container {
@@ -23,11 +19,11 @@
   width: 100%;
 }
 
-.cta-content {
+.accounting-cta-section .cta-content {
   max-width: 600px;
 }
 
-.cta-subtitle {
+.accounting-cta-section .cta-subtitle {
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 3px;
@@ -37,7 +33,7 @@
   margin-bottom: 1rem;
 }
 
-.cta-title {
+.accounting-cta-section .cta-title {
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.15;
@@ -45,17 +41,17 @@
   color: #ffffff;
 }
 
-.cta-blue-text {
-  color: #3b82f6; /* Bright cyan/blue as seen in the screenshot */
+.accounting-cta-section .cta-blue-text {
+  color: #3b82f6; /* Bright cyan/blue */
 }
 
 @media (min-width: 768px) {
-  .cta-title {
+  .accounting-cta-section .cta-title {
     font-size: 3.5rem;
   }
 }
 
-.cta-desc {
+.accounting-cta-section .cta-desc {
   font-size: 1.125rem;
   color: #cbd5e1;
   line-height: 1.6;
@@ -63,7 +59,7 @@
   max-width: 500px;
 }
 
-.cta-btn {
+.accounting-cta-section .cta-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -79,60 +75,60 @@
   margin-bottom: 4rem;
 }
 
-.cta-btn:hover {
+.accounting-cta-section .cta-btn:hover {
   background-color: #f1f5f9;
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
 }
 
-.cta-features-list {
+.accounting-cta-section .cta-features-list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
 @media (min-width: 576px) {
-  .cta-features-list {
+  .accounting-cta-section .cta-features-list {
     flex-direction: row;
     align-items: center;
     gap: 1rem;
   }
 }
 
-.cta-feature-item {
+.accounting-cta-section .cta-feature-item {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.cta-icon {
+.accounting-cta-section .cta-icon {
   color: #93c5fd; /* Soft light blue icon */
 }
 
-.cta-feature-text {
+.accounting-cta-section .cta-feature-text {
   display: flex;
   flex-direction: column;
 }
 
-.cta-feat-title {
+.accounting-cta-section .cta-feat-title {
   font-size: 0.95rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 2px;
 }
 
-.cta-feat-desc {
+.accounting-cta-section .cta-feat-desc {
   font-size: 0.75rem;
   color: #94a3b8;
   font-weight: 500;
 }
 
-.cta-feature-divider {
+.accounting-cta-section .cta-feature-divider {
   display: none;
 }
 
 @media (min-width: 576px) {
-  .cta-feature-divider {
+  .accounting-cta-section .cta-feature-divider {
     display: block;
     width: 1px;
     height: 30px;
@@ -145,9 +141,10 @@
     background-image: url("/accounting mobile view .png");
     background-position: bottom center;
     align-items: flex-start;
-    padding: 60px 0 300px 0; /* Add bottom padding so text doesn't overlap hardware, similar to POS CTA */
+    padding: 60px 0 300px 0;
   }
-  .cta-features-list {
+  .accounting-cta-section .cta-features-list {
     display: none;
   }
 }
+

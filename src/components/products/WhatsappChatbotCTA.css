@@ -5,7 +5,7 @@
 }
 
 /* ================= Top Content Row ================= */
-.cta-top-row {
+.whatsapp-cta-section .cta-top-row {
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -13,25 +13,25 @@
 }
 
 @media (min-width: 1024px) {
-  .cta-top-row {
+  .whatsapp-cta-section .cta-top-row {
     flex-direction: row;
     align-items: center;
     gap: 4rem;
   }
 }
 
-.cta-left-content {
+.whatsapp-cta-section .cta-left-content {
   flex: 1;
 }
 
-.cta-badge {
+.whatsapp-cta-section .cta-badge {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 1.5rem;
 }
 
-.cta-badge .badge-number {
+.whatsapp-cta-section .cta-badge .badge-number {
   background-color: #1a56db;
   color: white;
   width: 32px;
@@ -44,13 +44,13 @@
   font-size: 0.95rem;
 }
 
-.cta-badge .badge-text {
+.whatsapp-cta-section .cta-badge .badge-text {
   font-size: 0.95rem;
   font-weight: 700;
   color: #1a56db;
 }
 
-.cta-main-title {
+.whatsapp-cta-section .cta-main-title {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 800;
   color: #051636;
@@ -59,7 +59,7 @@
   letter-spacing: -1px;
 }
 
-.cta-subtitle {
+.whatsapp-cta-section .cta-subtitle {
   font-size: clamp(1.4rem, 2vw, 1.8rem);
   font-weight: 700;
   color: #1e293b;
@@ -68,7 +68,7 @@
   position: relative;
 }
 
-.cta-subtitle::before {
+.whatsapp-cta-section .cta-subtitle::before {
   content: '';
   position: absolute;
   top: -15px;
@@ -78,11 +78,11 @@
   background-color: #1a56db;
 }
 
-.cta-subtitle .text-blue {
+.whatsapp-cta-section .cta-subtitle .text-blue {
   color: #1a56db;
 }
 
-.cta-desc {
+.whatsapp-cta-section .cta-desc {
   font-size: 1rem;
   color: #4b5563;
   line-height: 1.6;
@@ -90,13 +90,13 @@
   max-width: 550px;
 }
 
-.text-bold-blue {
+.whatsapp-cta-section .text-bold-blue {
   color: #1a56db;
   font-weight: 700;
 }
 
 /* ================= 4 Feature Icons ================= */
-.cta-features-grid {
+.whatsapp-cta-section .cta-features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -104,19 +104,19 @@
 }
 
 @media (min-width: 640px) {
-  .cta-features-grid {
+  .whatsapp-cta-section .cta-features-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }
 }
 
-.cta-feature-item {
+.whatsapp-cta-section .cta-feature-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.cta-f-icon {
+.whatsapp-cta-section .cta-f-icon {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -126,24 +126,25 @@
   margin-bottom: 1rem;
 }
 
-.bg-light-blue { background-color: #eff6ff; }
-.text-blue { color: #1a56db; }
-.bg-light-gray { background-color: #f1f5f9; }
-.text-gray { color: #64748b; }
+.whatsapp-cta-section .bg-light-blue { background-color: #eff6ff; }
+.whatsapp-cta-section .text-blue { color: #1a56db; }
+.whatsapp-cta-section .bg-light-gray { background-color: #f1f5f9; }
+.whatsapp-cta-section .text-gray { color: #64748b; }
 
-.cta-feature-item h4 {
+.whatsapp-cta-section .cta-feature-item h4 {
   font-size: 0.85rem;
   font-weight: 800;
   color: #051636;
   margin-bottom: 0.25rem;
 }
 
-.cta-feature-item p {
+.whatsapp-cta-section .cta-feature-item p {
   font-size: 0.75rem;
   color: #64748b;
   line-height: 1.4;
   margin: 0;
 }
+
 
 /* ================= Right Graphic ================= */
 .cta-right-graphic {
