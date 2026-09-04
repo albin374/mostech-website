@@ -52,7 +52,7 @@ const AboutLifecycle = () => {
       icon: <CloudCog size={28} />,
       title: "Cloud & Support",
       desc: "Zero-downtime deployment, network monitoring, and 24/7 SLA maintenance."
-    }
+    }g
   ];
 
   return (
