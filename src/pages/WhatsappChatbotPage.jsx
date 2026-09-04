@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { ArrowRight, MessageCircle, ShieldCheck } from 'lucide-react';
 import './WhatsappChatbotPage.css';
-import WhatsappChatbotUseCases from '../components/WhatsappChatbotUseCases';
-import WhatsappChatbotPersonalized from '../components/WhatsappChatbotPersonalized';
-import WhatsappChatbotCTA from '../components/WhatsappChatbotCTA';
+import WhatsappChatbotUseCases from '../components/products/WhatsappChatbotUseCases';
+import WhatsappChatbotPersonalized from '../components/products/WhatsappChatbotPersonalized';
+import WhatsappChatbotCTA from '../components/products/WhatsappChatbotCTA';
 
 const WhatsappChatbotPage = () => {
   useEffect(() => {

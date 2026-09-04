@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import OnpageSeo from '../components/OnpageSeo';
-import OffpageSeo from '../components/OffpageSeo';
-import TechnicalSeo from '../components/TechnicalSeo';
-import LocalSeo from '../components/LocalSeo';
-import ContentStrategy from '../components/ContentStrategy';
-import SeoWhyChooseUs from '../components/SeoWhyChooseUs';
+import OnpageSeo from '../components/services/OnpageSeo';
+import OffpageSeo from '../components/services/OffpageSeo';
+import TechnicalSeo from '../components/services/TechnicalSeo';
+import LocalSeo from '../components/services/LocalSeo';
+import ContentStrategy from '../components/services/ContentStrategy';
+import SeoWhyChooseUs from '../components/services/SeoWhyChooseUs';
 
 const SeoPage = () => {
   useEffect(() => {

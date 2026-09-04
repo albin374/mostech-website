@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import HrmsHero from '../components/HrmsHero';
-import HrmsDashboards from '../components/HrmsDashboards';
-import HrmsModules from '../components/HrmsModules';
-import HrmsLifecycle from '../components/HrmsLifecycle';
-import HrmsCta from '../components/HrmsCta';
+import HrmsHero from '../components/products/HrmsHero';
+import HrmsDashboards from '../components/products/HrmsDashboards';
+import HrmsModules from '../components/products/HrmsModules';
+import HrmsLifecycle from '../components/products/HrmsLifecycle';
+import HrmsCta from '../components/products/HrmsCta';
 
 const HrmsPage = () => {
   useEffect(() => {

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { ArrowRight, Users, Package, Store, SlidersHorizontal, DollarSign } from 'lucide-react';
-import ErpProductFeatures from '../components/ErpProductFeatures';
-import ErpProductCta from '../components/ErpProductCta';
+import ErpProductFeatures from '../components/products/ErpProductFeatures';
+import ErpProductCta from '../components/products/ErpProductCta';
 import './ErpProductPage.css';
 
 const ErpProductPage = () => {

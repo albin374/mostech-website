@@ -14,8 +14,8 @@ import {
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import './TaskManagementPage.css';
-import TaskFeatures from '../components/TaskFeatures';
-import TaskWorkflowSection from '../components/TaskWorkflowSection';
+import TaskFeatures from '../components/products/TaskFeatures';
+import TaskWorkflowSection from '../components/products/TaskWorkflowSection';
 
 const TaskManagementPage = () => {
   useEffect(() => {

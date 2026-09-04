@@ -9,9 +9,9 @@ import {
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import './ProjectManagementPage.css';
-import ProjectFeatures from '../components/ProjectFeatures';
-import ProjectWorkflow from '../components/ProjectWorkflow';
-import ProjectCta from '../components/ProjectCta';
+import ProjectFeatures from '../components/products/ProjectFeatures';
+import ProjectWorkflow from '../components/products/ProjectWorkflow';
+import ProjectCta from '../components/products/ProjectCta';
 
 const ProjectManagementPage = () => {
   useEffect(() => {

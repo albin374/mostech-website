@@ -1,12 +1,12 @@
 import React from 'react';
-import AboutPageHero from '../components/AboutPageHero';
-import AboutOverview from '../components/AboutOverview';
-import AboutCeoMessage from '../components/AboutCeoMessage';
-import AboutTechnicalImpact from '../components/AboutTechnicalImpact';
-import AboutMandate from '../components/AboutMandate';
-import AboutPrinciples from '../components/AboutPrinciples';
-import AboutLifecycle from '../components/AboutLifecycle';
-import AboutCTA from '../components/AboutCTA';
+import AboutPageHero from '../components/about us/AboutPageHero';
+import AboutOverview from '../components/about us/AboutOverview';
+import AboutCeoMessage from '../components/about us/AboutCeoMessage';
+import AboutTechnicalImpact from '../components/about us/AboutTechnicalImpact';
+import AboutMandate from '../components/about us/AboutMandate';
+import AboutPrinciples from '../components/about us/AboutPrinciples';
+import AboutLifecycle from '../components/about us/AboutLifecycle';
+import AboutCTA from '../components/about us/AboutCTA';
 import './AboutPage.css';
 
 const AboutPage = () => {
