@@ -153,11 +153,14 @@ const GlobalPresence = () => {
 
   return (
     <section className="global-presence-section">
-      <div className="gp-header">
-        <h2 className="gp-title">Our <span>Global Presence</span></h2>
-      </div>
-      <div className="gp-map-container">
-        <svg id="map-svg" ref={svgRef} viewBox="0 0 1180 620" preserveAspectRatio="xMidYMid meet"></svg>
+      <div className="container gp-container">
+        <div className="gp-header">
+          <h2 className="gp-title">Our <span>Global Presence</span></h2>
+          <p className="gp-desc">Building technology solutions for businesses across multiple markets, with a growing presence across the GCC, India, Kazakhstan, Ethiopia, and beyond.</p>
+        </div>
+        <div className="gp-map-container">
+          <svg id="map-svg" ref={svgRef} viewBox="0 0 1180 620" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
       </div>
     </section>
   );
