@@ -47,7 +47,7 @@
 }
 
 .about-title-new {
-  font-size: 3.2rem;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
   font-weight: 800;
   color: #0a1930;
   line-height: 1.15;

@@ -6,18 +6,17 @@ const AboutMandate = () => {
   return (
     <section className="about-mandate">
       <div className="container">
-        
-        <div className="mandate-header text-center">
-          <div className="mandate-badge">
-            <div className="badge-line"></div>
-            <span>STRATEGY & ARCHITECTURE</span>
-          </div>
-          <h2 className="mandate-title">Institutional Architecture & Mandate</h2>
+
+        <div className="mandate-header text-center animate-on-scroll">
+          <div className="section-eyebrow">Strategy & Architecture</div>
+          <h2 className="mandate-title">
+            Institutional Architecture & <span className="text-blue">Mandate</span>
+          </h2>
         </div>
 
         <div className="mandate-cards">
-          
-          <div className="mandate-card">
+
+          <div className="mandate-card animate-on-scroll" style={{ animationDelay: '0.1s' }}>
             <div className="mandate-card-icon">
               <Target size={24} />
             </div>
@@ -30,7 +29,7 @@ const AboutMandate = () => {
             </a>
           </div>
 
-          <div className="mandate-card active-card">
+          <div className="mandate-card featured-card animate-on-scroll" style={{ animationDelay: '0.2s' }}>
             <div className="mandate-card-icon">
               <Eye size={24} />
             </div>
@@ -43,7 +42,7 @@ const AboutMandate = () => {
             </a>
           </div>
 
-          <div className="mandate-card">
+          <div className="mandate-card animate-on-scroll" style={{ animationDelay: '0.3s' }}>
             <div className="mandate-card-icon">
               <Trophy size={24} />
             </div>

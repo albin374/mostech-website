@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Globe, Users, Award, Rocket, Trophy, Lightbulb, Gauge, ShieldCheck } from 'lucide-react';
+import { Globe, Users, Award, Rocket, Trophy, Lightbulb, Gauge, ShieldCheck, Handshake } from 'lucide-react';
 import './AboutSection.css';
 
 const AboutSection = () => {
@@ -109,7 +109,7 @@ const AboutSection = () => {
 
           <div className="expertise-item" style={{flexDirection: 'row', alignItems: 'center', textAlign: 'left', gap: '0.5rem', flex: '1 1 180px'}}>
             <div style={{padding: '10px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>
-              <Users className="expertise-icon" style={{color: 'white'}} size={24} />
+              <Handshake className="expertise-icon" style={{color: 'white'}} size={24} />
             </div>
             <div>
               <span style={{display: 'block', fontSize: '0.95rem', fontWeight: 700, color: 'white', marginBottom: '0.2rem'}}>Partnership</span>
