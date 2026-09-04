@@ -6,24 +6,44 @@
 }
 
 .responsive-bg-section {
-  background-image: url("/robot%20bannerrrr.png");
   background-size: cover;
-  background-position: center top;
   background-repeat: no-repeat;
-  padding-top: 400px; /* Space for the desktop robot */
   display: flex;
   flex-direction: column;
 }
 
+.badge-overlay {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  z-index: 3;
+}
+
+/* Mobile View Styles */
 @media (max-width: 768px) {
   .responsive-bg-section {
     background-image: url("/robotbannermobileview.png");
-    padding-top: 220px; /* Space for the mobile robot */
+    background-position: center top;
+    padding-top: 450px; /* Push cards down to clear the robot */
+  }
+  
+  .badge-overlay {
+    position: absolute;
+    top: -330px; /* Adjusted slightly to sit perfectly in the center of the sky */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    width: max-content;
+    justify-content: center;
   }
 }
 
+/* Web View Styles */
 @media (min-width: 769px) {
   .responsive-bg-section {
+    background-image: url("/robot%20bannerrrr.png");
+    background-position: center bottom !important;
+    padding-top: 420px; /* Space for the desktop robot */
     min-height: 650px;
   }
   
@@ -41,12 +61,7 @@
   flex-grow: 1;
 }
 
-.badge-overlay {
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  z-index: 3;
-}
+
 
 .stats-badge {
   display: flex;
