@@ -87,11 +87,11 @@ const ServicesGrid = () => {
       ></div>
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="services-header">
-          <h2 className="services-title">
+          <h2 className="services-title" style={{ color: '#ffffff' }}>
             Our <span>Services</span>
           </h2>
           
-          <p className="services-desc">
+          <p className="services-desc" style={{ color: '#ffffff' }}>
             Innovative digital solutions to streamline operations and drive business growth.
           </p>
 
