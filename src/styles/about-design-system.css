@@ -12,10 +12,10 @@
   --space-5: 24px;
   --space-6: 32px;
   --space-7: 48px;
-  --space-8: 64px;
-  --space-9: 80px;
-  --space-10: 96px;
-  --space-11: 120px;
+  --space-8: 52px;
+  --space-9: 60px;
+  --space-10: 64px;
+  --space-11: 72px;
 
   /* Primary Brand Colors */
   --about-navy-900: #020c4c; /* deepest navy — headings, hero bg */
@@ -110,7 +110,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(28px);
   }
   to {
     opacity: 1;
@@ -118,8 +118,21 @@
   }
 }
 
-.about-page .animate-fade-in-up {
-  animation: fadeInUp var(--duration-slow) var(--ease-out) forwards;
+/* Initial hidden state — elements start invisible and slide up when observed */
+.about-page .animate-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--duration-slower) var(--ease-out),
+              transform var(--duration-slower) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+/* When the IntersectionObserver fires, it adds this class which reveals the element */
+.about-page .animate-on-scroll.animate-fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+  /* Keep the animation for backwards compat but transition does the real work */
+  animation: none;
 }
 
 /* Base resets inside the about page */
@@ -163,10 +176,10 @@
 
 @media (max-width: 640px) {
   .about-page {
-    --space-11: 72px;
-    --space-10: 56px;
-    --space-9:  48px;
-    --space-8:  40px;
+    --space-11: 48px;
+    --space-10: 40px;
+    --space-9:  36px;
+    --space-8:  32px;
     --text-h2: clamp(1.35rem, 5.5vw, 1.6rem);
     --text-body-lg: 0.875rem;
   }

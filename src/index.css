@@ -19,14 +19,13 @@
   padding: 0;
 }
 
-html,
-body {
-  overflow-x: hidden;
+html {
   width: 100%;
   max-width: 100vw;
 }
 
 body {
+  overflow-x: hidden;
   font-family: var(--font-family-sans);
   color: var(--color-text-main);
   background-color: var(--color-white);

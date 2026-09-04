@@ -11,18 +11,27 @@ import '../styles/about-design-system.css';
 import './AboutPage.css';
 
 const AboutPage = () => {
-  // Add observer for animations
+  // Scroll-reveal: reveal elements with animate-on-scroll when they enter viewport
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in-up');
+          // Small stagger based on element's position among siblings
+          const siblings = Array.from(
+            entry.target.parentElement?.querySelectorAll('.animate-on-scroll') || []
+          );
+          const idx = siblings.indexOf(entry.target);
+          const delay = idx >= 0 ? idx * 80 : 0;
+
+          setTimeout(() => {
+            entry.target.classList.add('animate-fade-in-up');
+          }, delay);
           observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
     });
 
     const hiddenElements = document.querySelectorAll('.about-page .animate-on-scroll');
