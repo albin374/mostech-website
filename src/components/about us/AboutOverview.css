@@ -115,7 +115,7 @@
   position: relative;
   width: 100%;
   max-width: 620px;
-  height: 480px;
+  height: 540px;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(2, 12, 76, 0.18), 0 8px 24px rgba(37, 99, 235, 0.12);
@@ -129,11 +129,6 @@
   object-fit: cover;
   object-position: center;
   display: block;
-  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.about-page .overview-image-wrapper:hover .overview-main-image {
-  transform: scale(1.04);
 }
 
 .about-page .overview-image-overlay {
@@ -141,69 +136,6 @@
   inset: 0;
   background: linear-gradient(180deg, rgba(2, 12, 76, 0.05) 0%, rgba(2, 12, 76, 0.35) 100%);
   pointer-events: none;
-}
-
-/* Luxury Glassmorphic Location Badge */
-.about-page .location-badge {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  right: 24px;
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  padding: 16px 20px;
-  border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 16px 36px rgba(2, 12, 76, 0.2), 0 4px 12px rgba(0, 0, 0, 0.05);
-  z-index: 2;
-  transition: transform var(--duration-base) var(--ease-standard), box-shadow var(--duration-base) ease;
-}
-
-.about-page .overview-image-wrapper:hover .location-badge {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 44px rgba(2, 12, 76, 0.25);
-}
-
-.about-page .location-badge .location-icon {
-  background: linear-gradient(135deg, #2563eb 0%, #0b4487 100%);
-  color: #ffffff;
-  width: 46px;
-  height: 46px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-md);
-  flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
-}
-
-.about-page .location-badge .location-tag {
-  display: inline-block;
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--about-accent);
-  margin-bottom: 2px;
-}
-
-.about-page .location-badge .location-info h4 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--about-navy-900);
-  margin: 0 0 2px 0;
-  line-height: 1.2;
-}
-
-.about-page .location-badge .location-info p {
-  font-size: 0.82rem;
-  color: var(--about-text-secondary);
-  margin: 0;
-  font-weight: 500;
 }
 
 @media (max-width: 1024px) {
@@ -226,19 +158,6 @@
   .about-page .overview-image-wrapper {
     height: 280px;
     border-radius: var(--radius-lg);
-  }
-
-  .about-page .location-badge {
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    padding: 12px 14px;
-    gap: 10px;
-  }
-  
-  .about-page .location-badge .location-icon {
-    width: 38px;
-    height: 38px;
   }
 
   .about-page .overview-title {
@@ -274,19 +193,5 @@
 @media (max-width: 480px) {
   .about-page .overview-image-wrapper {
     height: 240px;
-  }
-
-  .about-page .location-badge {
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 12px;
-  }
-
-  .about-page .location-badge .location-info h4 {
-    font-size: 0.9rem;
-  }
-
-  .about-page .location-badge .location-info p {
-    font-size: 0.75rem;
   }
 }

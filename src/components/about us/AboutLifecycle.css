@@ -226,34 +226,41 @@
 }
 
 @media (max-width: 992px) {
+  .about-page .lifecycle-timeline {
+    position: relative;
+    padding-left: 0;
+  }
+
   .about-page .lifecycle-nodes {
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
-    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    padding-left: 44px;
+    position: relative;
+    z-index: 2;
   }
 
   .about-page .lifecycle-node-wrapper {
-    grid-template-rows: 1fr;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    justify-items: start;
-    gap: var(--space-6);
+    display: block;
+    position: relative;
+    width: 100%;
   }
 
+  /* Vertical timeline line passing exactly through dot center (44px padding - 22px dot / 2 - 1px line = 32px) */
   .about-page .timeline-connector-track {
-    top: 0;
-    left: 12px;
-    /* 24px point / 2 */
+    top: 24px;
+    left: 10px;
     width: 2px;
-    height: 100%;
+    height: calc(100% - 48px);
     transform: none;
-    background: linear-gradient(180deg, transparent 0%, var(--about-surface-3) 5%, var(--about-surface-3) 95%, transparent 100%);
+    background: linear-gradient(180deg, var(--about-surface-3) 0%, var(--about-surface-3) 100%);
+    z-index: 1;
   }
 
   .about-page .timeline-connector-fill {
     width: 100%;
     height: 0%;
-    background: linear-gradient(180deg, transparent 0%, var(--about-accent) 5%, var(--about-accent) 100%);
+    background: linear-gradient(180deg, var(--about-accent) 0%, var(--about-accent) 100%);
     transition: height 1.5s ease-out;
   }
 
@@ -263,24 +270,57 @@
   }
 
   .about-page .lifecycle-node-point {
-    grid-column: 1;
-    grid-row: 1;
+    position: absolute;
+    left: -44px;
+    top: 24px;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--about-surface-0);
+    border: 3px solid var(--about-accent);
+    z-index: 3;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  }
+
+  .about-page .node-inner-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--about-accent);
   }
 
   .about-page .lifecycle-content-box {
-    grid-column: 2;
-    grid-row: 1;
     width: 100%;
     max-width: 100%;
     text-align: left;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding: var(--space-5);
+    background: var(--about-surface-0);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 6px 20px rgba(2, 12, 76, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .about-page .lifecycle-content-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--about-accent);
+    border-top-left-radius: var(--radius-lg);
+    border-bottom-left-radius: var(--radius-lg);
   }
 
   .about-page .box-top,
   .about-page .box-bottom {
-    align-self: center;
+    align-self: stretch;
     margin: 0;
   }
 
@@ -290,6 +330,30 @@
 
   .about-page .phase-icon {
     margin-bottom: var(--space-3);
+    padding: 10px;
+  }
+
+  .about-page .phase-number {
+    top: 14px;
+    right: 16px;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: rgba(37, 99, 235, 0.12);
+    -webkit-text-stroke: none;
+    opacity: 1;
+  }
+
+  .about-page .lifecycle-content-box h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+    padding-right: 40px;
+  }
+
+  .about-page .lifecycle-content-box p {
+    font-size: 0.875rem;
+    color: var(--about-text-secondary);
+    line-height: 1.6;
   }
 }
 
@@ -299,7 +363,7 @@
   }
 
   .about-page .lifecycle-header {
-    margin-bottom: var(--space-7);
+    margin-bottom: var(--space-6);
   }
 
   .about-page .lifecycle-subtitle {
@@ -308,29 +372,42 @@
   }
 
   .about-page .lifecycle-nodes {
-    gap: var(--space-6);
-    padding-left: 28px;
+    gap: var(--space-5);
+    padding-left: 36px;
   }
 
-  .about-page .lifecycle-node-wrapper {
-    gap: var(--space-4);
+  .about-page .timeline-connector-track {
+    left: 9px;
+  }
+
+  .about-page .lifecycle-node-point {
+    left: -36px;
+    width: 20px;
+    height: 20px;
+    top: 22px;
   }
 
   .about-page .lifecycle-content-box {
-    padding: var(--space-4) var(--space-3);
+    padding: var(--space-4) var(--space-4);
   }
 
   .about-page .lifecycle-content-box h4 {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
   }
 
   .about-page .lifecycle-content-box p {
-    font-size: 0.8rem;
+    font-size: 0.825rem;
   }
 
   .about-page .phase-icon {
     padding: 8px;
     margin-bottom: var(--space-2);
+  }
+
+  .about-page .phase-number {
+    top: 10px;
+    right: 12px;
+    font-size: 1.8rem;
   }
 }
 
@@ -340,21 +417,28 @@
   }
 
   .about-page .lifecycle-nodes {
-    padding-left: 20px;
-    gap: var(--space-5);
+    padding-left: 32px;
+    gap: var(--space-4);
+  }
+
+  .about-page .timeline-connector-track {
+    left: 8px;
   }
 
   .about-page .lifecycle-node-point {
-    width: 20px;
-    height: 20px;
+    left: -32px;
+    width: 18px;
+    height: 18px;
+    top: 20px;
+    border-width: 2px;
   }
 
   .about-page .node-inner-dot {
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
   }
 
   .about-page .lifecycle-content-box {
-    padding: var(--space-3);
+    padding: 14px 16px;
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Cloud, ShieldCheck, MapPin } from 'lucide-react';
+import { Code2, Cloud, ShieldCheck } from 'lucide-react';
 import './AboutOverview.css';
 
 const AboutOverview = () => {
@@ -66,16 +66,6 @@ const AboutOverview = () => {
             <div className="overview-image-wrapper">
               <img src="/about burjhhalifa.png" alt="Mostech Dubai Headquarters" className="overview-main-image" />
               <div className="overview-image-overlay" />
-              <div className="location-badge glass">
-                <div className="location-icon">
-                  <MapPin size={22} />
-                </div>
-                <div className="location-info">
-                  <span className="location-tag">UAE Headquarters</span>
-                  <h4>Dubai Technology Center</h4>
-                  <p>O14 Tower, Business Bay, Dubai</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
