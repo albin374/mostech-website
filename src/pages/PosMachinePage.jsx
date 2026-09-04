@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import PosFeatures from './PosFeatures';
@@ -38,9 +39,9 @@ const PosMachinePage = () => {
             </p>
             
             <div className="pos-hero-buttons">
-              <a href="#demo" className="pos-btn-primary">
+              <Link to="/contact" className="pos-btn-primary">
                 Request a Demo <ArrowRight size={18} />
-              </a>
+              </Link>
               <a href="#features" className="pos-btn-outline">
                 Explore POS Features
               </a>

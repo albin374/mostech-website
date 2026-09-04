@@ -1,6 +1,6 @@
 import React from 'react';
 import { Phone, Mail, ChevronRight } from 'lucide-react';
-import { FaLinkedinIn, FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { FaLinkedinIn, FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -18,6 +18,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/company/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link linkedin"><FaLinkedinIn size={20} /></a>
               <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link facebook"><FaFacebookF size={20} /></a>
               <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-link instagram"><FaInstagram size={20} /></a>
+              <a href="https://wa.me/971581730112" target="_blank" rel="noreferrer" className="social-icon-link whatsapp"><FaWhatsapp size={20} /></a>
             </div>
           </div>
           

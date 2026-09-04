@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Layers, Settings, ShieldCheck, Infinity } from 'lucide-react';
 import './ErpProductCta.css';
 
@@ -29,9 +30,9 @@ const ErpProductCta = () => {
               Simplify processes. Connect departments. Gain visibility. <span className="font-semibold text-blue">Grow your business from one powerful platform.</span>
             </p>
             
-            <button className="erp-btn-primary mt-4">
+            <Link to="/contact" className="erp-btn-primary mt-4" style={{ textDecoration: 'none', display: 'inline-flex' }}>
               Request a Demo <ArrowRight size={20} />
-            </button>
+            </Link>
           </div>
           
           {/* Right Image */}

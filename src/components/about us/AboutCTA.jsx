@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './AboutCTA.css';
 
 const AboutCTA = () => {
@@ -18,9 +19,9 @@ const AboutCTA = () => {
               technical feasibility evaluation.
             </p>
             <div className="cta-actions">
-              <button className="btn-primary cta-btn">
+              <Link to="/contact" className="btn-primary cta-btn" style={{ textDecoration: 'none', display: 'inline-flex' }}>
                 Talk to our Team <ArrowRight size={16} />
-              </button>
+              </Link>
               <a href="mailto:sales@mostech.ae" className="btn-outline cta-btn-outline">
                 sales@mostech.ae
               </a>

@@ -273,11 +273,17 @@
   flex: 1;
   color: #475569;
   font-weight: 500;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .expense-amount {
   font-weight: 600;
   color: #0f172a;
+  font-size: 0.7rem;
+  white-space: nowrap;
 }
 
 /* 3. Mini Bar Chart */
@@ -423,12 +429,16 @@
 .transaction-name {
   flex: 1;
   color: #475569;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .transaction-amount {
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
+  white-space: nowrap;
 }
 
 .text-green { color: #16a34a; }

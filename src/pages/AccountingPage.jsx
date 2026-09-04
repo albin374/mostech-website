@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Clock, ShieldCheck, TrendingUp } from 'lucide-react';
 import AccountingFeatures from '../components/products/AccountingFeatures';
 import AccountingBenefits from '../components/products/AccountingBenefits';
@@ -36,9 +37,9 @@ const AccountingPage = () => {
 
             {/* Action Buttons */}
             <div className="accounting-action-buttons">
-              <a href="#demo" className="accounting-btn-primary">
+              <Link to="/contact" className="accounting-btn-primary">
                 Request a Demo <ArrowRight size={18} />
-              </a>
+              </Link>
               <a href="#features" className="accounting-btn-secondary">
                 Explore Features <ArrowRight size={18} />
               </a>

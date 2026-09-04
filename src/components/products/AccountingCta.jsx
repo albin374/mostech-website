@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, BarChart3, ShieldCheck, Target } from 'lucide-react';
 import './AccountingCta.css';
 
@@ -19,9 +20,9 @@ const AccountingCta = () => {
             Bring your accounting, financial data, and business insights together in one powerful platform.
           </p>
           
-          <a href="#demo" className="cta-btn">
+          <Link to="/contact" className="cta-btn">
             Request a Demo <ArrowRight size={18} />
-          </a>
+          </Link>
           
           <div className="cta-features-list">
             <div className="cta-feature-item">

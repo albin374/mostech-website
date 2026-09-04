@@ -40,10 +40,10 @@ const Header = () => {
           </div>
           <div className="top-bar-right">
             <div className="social-links">
-              <a href="#" className="social-icon"><FaLinkedinIn size={14} /></a>
-              <a href="#" className="social-icon"><FaFacebookF size={14} /></a>
-              <a href="#" className="social-icon"><FaInstagram size={14} /></a>
-              <a href="#" className="social-icon"><FaWhatsapp size={14} /></a>
+              <a href="https://www.linkedin.com/company/mostech.ae" target="_blank" rel="noreferrer" className="social-icon"><FaLinkedinIn size={14} /></a>
+              <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon"><FaFacebookF size={14} /></a>
+              <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon"><FaInstagram size={14} /></a>
+              <a href="https://wa.me/971581730112" target="_blank" rel="noreferrer" className="social-icon"><FaWhatsapp size={14} /></a>
             </div>
           </div>
         </div>
@@ -106,10 +106,10 @@ const Header = () => {
                 </a>
               </div>
               <div className="mobile-menu-socials">
-                <a href="#" className="mobile-social-icon"><FaLinkedinIn size={20} /></a>
-                <a href="#" className="mobile-social-icon"><FaFacebookF size={20} /></a>
-                <a href="#" className="mobile-social-icon"><FaInstagram size={20} /></a>
-                <a href="#" className="mobile-social-icon"><FaWhatsapp size={20} /></a>
+                <a href="https://www.linkedin.com/company/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaLinkedinIn size={20} /></a>
+                <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaFacebookF size={20} /></a>
+                <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaInstagram size={20} /></a>
+                <a href="https://wa.me/971581730112" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaWhatsapp size={20} /></a>
               </div>
             </nav>
             

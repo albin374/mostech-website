@@ -1,5 +1,6 @@
 import React from 'react';
-import { MessageSquare, Link, Shield, TrendingUp, ArrowRight, Zap, GitMerge, Headphones, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { MessageSquare, Link as LinkIcon, Shield, TrendingUp, ArrowRight, Zap, GitMerge, Headphones, MessageCircle } from 'lucide-react';
 import './WhatsappChatbotCTA.css';
 
 const WhatsappChatbotCTA = () => {
@@ -43,7 +44,7 @@ const WhatsappChatbotCTA = () => {
                 <p>Understand. Respond.<br/>Engage.</p>
               </div>
               <div className="cta-feature-item">
-                <div className="cta-f-icon bg-light-gray text-gray"><Link size={20} /></div>
+                <div className="cta-f-icon bg-light-gray text-gray"><LinkIcon size={20} /></div>
                 <h4>System Integration</h4>
                 <p>Connect to the tools<br/>you already use.</p>
               </div>
@@ -87,10 +88,10 @@ const WhatsappChatbotCTA = () => {
           <div className="cta-banner-right">
             <h4 className="cta-banner-question">Ready to transform your customer conversations?</h4>
             
-            <a href="#demo" className="cta-btn-primary">
+            <Link to="/contact" className="cta-btn-primary">
               <div className="btn-icon-wrapper"><ArrowRight size={20} className="btn-icon-arrow" /></div>
               Request a Demo <ArrowRight size={20} />
-            </a>
+            </Link>
             
             <div className="cta-banner-features">
               <span><Zap size={16} /> Quick Setup</span>

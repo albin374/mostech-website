@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Star, ArrowRight, Users, ShieldCheck, UserCheck, BarChart2 } from 'lucide-react';
 import './HrmsCta.css';
 
@@ -21,9 +22,9 @@ const HrmsCta = () => {
               Take control of your HR operations with a smarter, simpler, and more connected workforce management platform.
             </p>
             
-            <button className="cta-button">
+            <Link to="/contact" className="cta-button" style={{ textDecoration: 'none', display: 'inline-flex' }}>
               Request a Demo <ArrowRight size={18} />
-            </button>
+            </Link>
             
             <div className="cta-footer-blurb">
               <div className="blurb-icon">

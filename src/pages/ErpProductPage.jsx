@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Package, Store, SlidersHorizontal, DollarSign } from 'lucide-react';
 import ErpProductFeatures from '../components/products/ErpProductFeatures';
 import ErpProductCta from '../components/products/ErpProductCta';
@@ -41,9 +42,9 @@ const ErpProductPage = () => {
 
             {/* Action Buttons */}
             <div className="erp-product-action-buttons">
-              <a href="/#demo" className="erp-product-btn-primary">
+              <Link to="/contact" className="erp-product-btn-primary">
                 Request a Demo <ArrowRight size={18} />
-              </a>
+              </Link>
               <a href="/#modules" className="erp-product-btn-secondary">
                 Explore Modules
               </a>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, MessageCircle, ShieldCheck } from 'lucide-react';
 import './WhatsappChatbotPage.css';
 import WhatsappChatbotUseCases from '../components/products/WhatsappChatbotUseCases';
@@ -38,10 +39,10 @@ const WhatsappChatbotPage = () => {
 
             {/* Action Buttons */}
             <div className="whatsapp-action-buttons">
-              <a href="#demo" className="whatsapp-btn-primary">
+              <Link to="/contact" className="whatsapp-btn-primary">
                 <div className="btn-icon"><MessageCircle size={18} /></div>
                 Request a Demo
-              </a>
+              </Link>
               <a href="#explore" className="whatsapp-btn-secondary">
                 Explore Capabilities <ArrowRight size={18} />
               </a>

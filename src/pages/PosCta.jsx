@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, BarChart2, Settings, Rocket } from 'lucide-react';
 import './PosCta.css';
 
@@ -22,9 +23,9 @@ const PosCta = () => {
             Bring sales, inventory, payments, and business management together with reliable POS hardware and powerful software.
           </p>
           
-          <a href="#demo" className="pos-cta-btn">
+          <Link to="/contact" className="pos-cta-btn">
             Request a Demo <ArrowRight size={18} />
-          </a>
+          </Link>
           
           <div className="pos-cta-features">
             <div className="pos-cta-feat-item">

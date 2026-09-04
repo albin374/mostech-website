@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CalendarDays, ArrowRight, Users, Clock, CalendarX2, BadgeDollarSign, BarChart3 } from 'lucide-react';
 import './HrmsHero.css';
 
@@ -25,10 +26,10 @@ const HrmsHero = () => {
           </p>
           
           <div className="hrms-hero-buttons">
-            <button className="btn-primary hrms-btn">
+            <Link to="/contact" className="btn-primary hrms-btn" style={{ textDecoration: 'none', display: 'inline-flex' }}>
               <CalendarDays size={18} />
               Request a Demo
-            </button>
+            </Link>
             <button className="btn-secondary hrms-btn-outline">
               Explore Features
               <ArrowRight size={18} />
