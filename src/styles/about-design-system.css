@@ -1,0 +1,181 @@
+/* 
+  Mostech About Us — Premium Redesign 
+  Scoped explicitly to .about-page to avoid leaking to other pages 
+*/
+
+.about-page {
+  /* Spacing System (8pt grid) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 80px;
+  --space-10: 96px;
+  --space-11: 120px;
+
+  /* Primary Brand Colors */
+  --about-navy-900: #020c4c; /* deepest navy — headings, hero bg */
+  --about-navy-800: #0a1930; /* primary cards, strong elements */
+  --about-navy-700: #0d285c; /* gradient ends */
+  --about-navy-600: #0b4487; /* mid-range CTAs */
+
+  /* Accent — Electric Blue */
+  --about-accent: #2563eb;
+  --about-accent-soft: #3b82f6;
+  --about-accent-glow: rgba(37, 99, 235, 0.15);
+
+  /* Neutral Surface */
+  --about-surface-0: #ffffff;
+  --about-surface-1: #f8fafc;
+  --about-surface-2: #f1f5f9;
+  --about-surface-3: #e2e8f0;
+
+  /* Text Hierarchy */
+  --about-text-primary: #0a1930;
+  --about-text-secondary: #334155;
+  --about-text-muted: #64748b;
+  --about-text-inverse: #f8fafc;
+
+  /* Special */
+  --about-gradient-hero: linear-gradient(135deg, #020c4c 0%, #0b4487 60%, #1d4ed8 100%);
+  --about-gradient-cta: linear-gradient(135deg, #020c4c 0%, #0d285c 100%);
+  --about-gold-accent: #f59e0b;
+
+  /* Typography System */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --text-hero: clamp(1.8rem, 3vw, 2.8rem);
+  --text-h2: clamp(1.2rem, 2.2vw, 1.8rem);
+  --text-h3: clamp(0.9rem, 1.5vw, 1.1rem);
+  --text-h4: 1rem;
+  --text-label: 0.7rem;
+  --text-body-lg: 0.9rem;
+  --text-body: 0.85rem;
+  --text-sm: 0.8rem;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 3px rgba(2, 12, 76, 0.06);
+  --shadow-sm: 0 4px 12px rgba(2, 12, 76, 0.08);
+  --shadow-md: 0 8px 24px rgba(2, 12, 76, 0.10);
+  --shadow-lg: 0 16px 48px rgba(2, 12, 76, 0.12);
+  --shadow-xl: 0 24px 64px rgba(2, 12, 76, 0.15);
+  --shadow-glow: 0 8px 32px rgba(37, 99, 235, 0.20);
+  --shadow-glow-lg: 0 16px 48px rgba(37, 99, 235, 0.25);
+
+  /* Animations */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 700ms;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Badge / Label System (Unified) */
+.about-page .section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--about-accent);
+  margin-bottom: 1rem;
+}
+
+.about-page .section-eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--about-accent);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Animation utilities for the about page */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-page .animate-fade-in-up {
+  animation: fadeInUp var(--duration-slow) var(--ease-out) forwards;
+}
+
+/* Base resets inside the about page */
+.about-page h1, 
+.about-page h2, 
+.about-page h3, 
+.about-page h4, 
+.about-page h5, 
+.about-page h6 {
+  font-family: var(--font-sans);
+  color: var(--about-text-primary);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.about-page p {
+  font-family: var(--font-sans);
+  color: var(--about-text-secondary);
+  line-height: 1.7;
+  font-size: var(--text-body);
+}
+
+.about-page a {
+  text-decoration: none;
+}
+
+/* Adjust container width for about page */
+.about-page .container {
+  max-width: 1400px;
+  padding: 0 2rem;
+}
+
+/* =============================================
+   MOBILE OVERRIDES — ≤ 768px
+   ============================================= */
+@media (max-width: 768px) {
+  .about-page .container {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-page {
+    --space-11: 72px;
+    --space-10: 56px;
+    --space-9:  48px;
+    --space-8:  40px;
+    --text-h2: clamp(1.35rem, 5.5vw, 1.6rem);
+    --text-body-lg: 0.875rem;
+  }
+
+  .about-page .container {
+    padding: 0 1rem;
+  }
+
+  .about-page .section-eyebrow {
+    font-size: 0.65rem;
+  }
+}
