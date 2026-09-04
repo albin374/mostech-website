@@ -1,0 +1,134 @@
+.pos-cta-section {
+  padding: 100px 0;
+  background-image: url("/pos4.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* Fallback dark blue matching the image's left edge */
+  background-color: #03142e; 
+}
+
+.pos-cta-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.pos-cta-content {
+  max-width: 600px;
+}
+
+.pos-cta-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.cta-badge-line {
+  height: 2px;
+  width: 32px;
+  background-color: #0d6efd;
+}
+
+.cta-badge-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e2e8f0;
+}
+
+.pos-cta-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.pos-cta-blue {
+  color: #1e90ff; /* Bright blue for the POS text */
+}
+
+@media (min-width: 768px) {
+  .pos-cta-title {
+    font-size: 3.5rem;
+  }
+}
+
+.pos-cta-desc {
+  font-size: 1.125rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.pos-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0d6efd 0%, #00aeff 100%);
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-bottom: 3rem;
+  border: none;
+}
+
+.pos-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.4);
+}
+
+.pos-cta-features {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.pos-cta-feat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 1px;
+}
+
+.cta-feat-icon {
+  color: #1e90ff; /* Light blue icons */
+}
+
+.cta-feat-divider {
+  width: 1px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 576px) {
+  .pos-cta-features {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .cta-feat-divider {
+    display: none;
+  }
+}

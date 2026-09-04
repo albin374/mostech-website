@@ -98,7 +98,7 @@ const DigitalMarketingPage = () => {
 
           {/* Right Image */}
           <div className="dm-hero-img-col">
-            <img src="/digital marketing.png" alt="Digital Marketing Dubai" className="dm-hero-img" />
+            <img src="/digital marketingnew.png" alt="Digital Marketing Dubai" className="dm-hero-img" />
           </div>
 
         </div>

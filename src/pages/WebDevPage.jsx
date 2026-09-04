@@ -91,7 +91,7 @@ const WebDevPage = () => {
           {/* Right Content */}
           <div className="web-hero-right">
             <div className="web-image-wrapper">
-              <img src="/web desgin.png" alt="Mostech Web Design & Development" className="web-hero-img" />
+              <img src="/webdesginnew.png" alt="Mostech Web Design & Development" className="web-hero-img" />
             </div>
 
             {/* Services Grid Moved Here */}

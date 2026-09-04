@@ -13,7 +13,7 @@ const GlobalPresence = () => {
     d3.select(svgRef.current).selectAll('*').remove();
     
     const renderMap = async () => {
-      const width = 1180, height = 620;
+      const width = 1180, height = 560;
       const svg = d3.select(svgRef.current);
       
       const targetList = [
@@ -50,8 +50,9 @@ const GlobalPresence = () => {
       try {
         const world = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
         const countries = topojson.feature(world, world.objects.countries);
+        countries.features = countries.features.filter(d => +d.id !== 10); // drop Antarctica
 
-        const projection = d3.geoNaturalEarth1().fitSize([width, height], countries);
+        const projection = d3.geoNaturalEarth1().fitExtent([[40,15],[width-40,height-15]], countries);
         const path = d3.geoPath(projection);
 
         svg.append('g').selectAll('path')
@@ -153,14 +154,38 @@ const GlobalPresence = () => {
 
   return (
     <section className="global-presence-section">
-      <div className="container gp-container">
+      <div className="slide container">
+
         <div className="gp-header">
-          <h2 className="gp-title">Our <span>Global Presence</span></h2>
-          <p className="gp-desc">Building technology solutions for businesses across multiple markets, with a growing presence across the GCC, India, Kazakhstan, Ethiopia, and beyond.</p>
+          <div className="gp-header-bar"></div>
+          <div className="gp-header-text">
+            <div className="gp-eyebrow-title">Our</div>
+            <div className="gp-eyebrow-title">Global Presence</div>
+          </div>
         </div>
-        <div className="gp-map-container">
-          <svg id="map-svg" ref={svgRef} viewBox="0 0 1180 620" preserveAspectRatio="xMidYMid meet"></svg>
+
+        <p className="gp-lede">
+          <b>Mostech</b> operates across <b>Europe, the CIS, the Middle East &amp; Africa, South &amp; Southeast Asia,
+          Oceania, and North America</b>, coordinated from a hub in Dubai, UAE. With a robust marketing network, the company
+          has built a strong presence in key markets, ensuring extensive reach, sustained growth, and meaningful influence
+          across its operating regions.
+        </p>
+
+        <div className="gp-body-row">
+          <div className="gp-map-wrap">
+            <svg id="map-svg" ref={svgRef} viewBox="0 0 1180 560" preserveAspectRatio="xMidYMid meet"></svg>
+          </div>
+
+          <div className="gp-legend">
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'#33506F'}}></span><span className="gp-legend-label">Hub – Dubai, UAE</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'#2A4160'}}></span><span className="gp-legend-label">Europe &amp; CIS</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'#2A4160'}}></span><span className="gp-legend-label">Middle East &amp; Africa</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'#2A4160'}}></span><span className="gp-legend-label">South Asia</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'#2A4160'}}></span><span className="gp-legend-label">Southeast Asia &amp; Oceania</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'#2A4160'}}></span><span className="gp-legend-label">North America</span></div>
+          </div>
         </div>
+
       </div>
     </section>
   );

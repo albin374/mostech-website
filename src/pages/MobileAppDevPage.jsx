@@ -86,7 +86,7 @@ const MobileAppDevPage = () => {
 
           {/* Right Content */}
           <div className="mobile-hero-right">
-            <img src="/mobilebanner.png" alt="Mostech Mobile Solutions" className="mobile-hero-banner-img" />
+            <img src="/mobile banner new .png" alt="Mostech Mobile Solutions" className="mobile-hero-banner-img" />
           </div>
         </div>
       </section>

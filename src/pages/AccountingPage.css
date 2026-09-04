@@ -1,0 +1,217 @@
+.accounting-page-wrapper {
+  font-family: 'Inter', sans-serif;
+  color: #1a202c;
+  overflow-x: hidden;
+}
+
+/* ================= HERO SECTION ================= */
+.accounting-hero-section {
+  padding: 140px 0 80px; /* Increased top padding to push it down */
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* Optional soft blue blob background behind the image like in the screenshot */
+.accounting-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 50vw;
+  height: 80%;
+  background: radial-gradient(circle, rgba(224,242,254,1) 0%, rgba(255,255,255,0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.accounting-hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 992px) {
+  .accounting-hero-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+}
+
+/* Left Content */
+.accounting-hero-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.accounting-hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.badge-line {
+  height: 2px;
+  width: 40px;
+  background-color: #3b82f6; /* Bright blue */
+}
+
+.badge-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.accounting-main-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a; /* Dark navy/slate */
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.accounting-blue-text {
+  color: #0d6efd; /* Brand blue */
+}
+
+@media (min-width: 768px) {
+  .accounting-main-title {
+    font-size: 3.5rem;
+  }
+}
+
+.accounting-desc {
+  font-size: 1.125rem;
+  color: #475569; /* Slate gray */
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+/* Action Buttons */
+.accounting-action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.accounting-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #0d6efd;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #0d6efd;
+}
+
+.accounting-btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
+}
+
+.accounting-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: transparent;
+  color: #0d6efd;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #0d6efd;
+}
+
+.accounting-btn-secondary:hover {
+  background-color: #f8fbff;
+  transform: translateY(-2px);
+}
+
+/* Features List */
+.accounting-hero-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .accounting-hero-features-list {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+}
+
+.accounting-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.accounting-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d6efd;
+}
+
+.accounting-feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.feature-subtitle {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Right Content */
+.accounting-hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* To stack image and features */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem; /* Spacing between image and features */
+}
+
+.accounting-hero-img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.1));
+}

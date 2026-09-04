@@ -1,0 +1,304 @@
+.pos-benefits-section {
+  padding: 80px 0;
+  background-color: #fcfdfd; /* Very subtle off-white as per screenshot */
+  font-family: 'Inter', sans-serif;
+}
+
+.pos-benefits-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Header */
+.pos-ben-header {
+  text-align: center;
+}
+
+.pos-ben-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.pos-ben-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.pos-ben-blue {
+  color: #0044cc;
+}
+
+@media (min-width: 768px) {
+  .pos-ben-title {
+    font-size: 3.25rem;
+  }
+}
+
+.pos-ben-subtitle {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.pos-ben-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .pos-ben-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card-wide {
+    grid-column: span 2;
+  }
+}
+
+.pos-ben-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Base Card Styling */
+.pos-ben-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0, 51, 153, 0.03);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pos-ben-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 51, 153, 0.08);
+}
+
+/* Specific Card: 01 Large */
+.card-01 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  background: linear-gradient(135deg, #051630 0%, #003399 100%); /* Navy blue */
+  color: #ffffff;
+}
+
+.ben-num-large {
+  font-size: 6rem;
+  font-weight: 800;
+  color: #60a5fa; /* Adjusted for dark background */
+  line-height: 1;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.ben-card-title-large {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff; /* White text */
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.ben-divider-blue {
+  width: 40px;
+  height: 2px;
+  background-color: #3b82f6; /* Brighter blue line */
+  margin-bottom: 1rem;
+}
+
+.ben-card-desc {
+  font-size: 1.125rem;
+  color: #cbd5e1; /* Light gray text */
+  line-height: 1.5;
+}
+
+.ben-btn-dark {
+  align-self: flex-end;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.ben-btn-dark:hover {
+  background-color: #3b82f6;
+}
+
+/* Small Cards (02, 03) */
+.card-small {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.ben-num-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.ben-num {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #a4c8f9;
+  line-height: 1;
+}
+
+.ben-vert-divider {
+  width: 1px;
+  height: 80%;
+  background-color: #e2e8f0;
+}
+
+.ben-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ben-card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0b1a30;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.ben-horiz-divider {
+  width: 30px;
+  height: 2px;
+  background-color: #0044cc;
+  margin-bottom: 0.75rem;
+}
+
+.ben-card-desc-small {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ben-btn-light {
+  align-self: center;
+  background-color: #e0efff;
+  color: #0b1a30;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.ben-btn-light:hover {
+  background-color: #0044cc;
+  color: #ffffff;
+}
+
+/* Wide Card (04) */
+.card-wide {
+  display: flex;
+  align-items: stretch;
+  padding: 2rem;
+  background: linear-gradient(135deg, #051630 0%, #003399 100%); /* Navy blue */
+  color: #ffffff;
+}
+
+.ben-num-wrap-wide {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 2rem;
+}
+
+.ben-num-huge {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #60a5fa; /* Adjusted for dark background */
+  line-height: 1;
+}
+
+.ben-vert-divider-wide {
+  width: 1px;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.2); /* Adjusted for dark background */
+}
+
+.ben-card-body-wide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-wide .ben-card-title {
+  color: #ffffff; /* Override shared class color */
+}
+
+.card-wide .ben-horiz-divider {
+  background-color: #3b82f6;
+}
+
+.card-wide .ben-card-desc-small {
+  color: #cbd5e1; /* Override shared class color */
+}
+
+.ben-wide-btn-wrap {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+@media (max-width: 767px) {
+  .card-small, .card-wide {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ben-num-wrap, .ben-num-wrap-wide {
+    margin-bottom: 1.5rem;
+  }
+  .ben-vert-divider, .ben-vert-divider-wide {
+    display: none;
+  }
+  .ben-btn-light {
+    align-self: flex-end;
+    margin-top: 1rem;
+  }
+  .ben-wide-btn-wrap {
+    padding-left: 0;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

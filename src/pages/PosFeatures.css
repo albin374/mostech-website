@@ -1,0 +1,243 @@
+.pos-features-section {
+  padding: 50px 0 30px 0;
+  background-color: #051630; /* Navy blue background */
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+.pos-features-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header */
+.pos-feat-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.pos-feat-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.pos-feat-badge .badge-line {
+  height: 2px;
+  width: 32px;
+  background-color: #3b82f6;
+}
+
+.pos-feat-badge .badge-text {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.pos-feat-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.pos-feat-blue {
+  color: #60a5fa; /* Lighter blue for dark background */
+}
+
+@media (min-width: 768px) {
+  .pos-feat-title {
+    font-size: 3rem;
+  }
+}
+
+.pos-feat-subtitle {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Body Layout */
+.pos-feat-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  .pos-feat-body {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* We assume the pos machine in the image takes up the center 40% */
+  }
+}
+
+.pos-feat-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  max-width: 400px;
+}
+
+.left-col {
+  align-items: flex-end; /* cards align towards the center */
+}
+
+.right-col {
+  align-items: flex-start;
+}
+
+.pos-feat-center {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.center-pos-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  /* Make sure it's prominent but doesn't overflow */
+  max-height: 500px;
+}
+
+@media (max-width: 991px) {
+  .pos-feat-col {
+    max-width: 100%;
+    align-items: center;
+  }
+  .pos-feat-center {
+    display: none; /* Hide spacer on mobile, let cards stack */
+  }
+}
+
+/* Cards */
+.pos-card {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+  border-radius: 12px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.pos-card:hover {
+  transform: translateY(-3px);
+}
+
+.dark-card {
+  background: linear-gradient(135deg, #001a4d 0%, #003399 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.light-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+}
+
+.pos-card-left {
+  display: flex;
+  align-items: center;
+  margin-right: 1.25rem;
+}
+
+.pos-card-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.dark-card .pos-card-num {
+  color: #ffffff;
+}
+
+.light-card .pos-card-num {
+  color: #0f172a;
+}
+
+.pos-card-divider {
+  width: 1px;
+  height: 40px;
+  margin-left: 12px;
+}
+
+.dark-card .pos-card-divider {
+  background-color: rgba(255,255,255,0.3);
+}
+
+.light-card .pos-card-divider {
+  background-color: #cbd5e1;
+}
+
+.pos-card-content {
+  flex: 1;
+}
+
+.pos-card-content h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+}
+
+.pos-card-content p {
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.dark-card .pos-card-content p {
+  color: #cbd5e1;
+}
+
+.light-card .pos-card-content p {
+  color: #475569;
+}
+
+.pos-card-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+.dark-card .pos-card-icon-wrap {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.light-card .pos-card-icon-wrap {
+  background-color: #f0f7ff;
+}
+
+.icon-light {
+  color: #ffffff;
+}
+
+.icon-blue {
+  color: #0044cc;
+}
+
+

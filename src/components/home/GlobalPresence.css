@@ -1,77 +1,82 @@
 :root {
   --ink: #0A1526;
+  --navy: #0B2454;
+  --navy-deep: #081A3D;
   --land: #16283F;
   --land-line: #223A55;
   --paper: #F4F1E9;
   --brass: #C6A05C;
   --skyline: #7EC8E3;
+  --body-text: #232733;
 }
 
 .global-presence-section {
-  background: #ffffff;
-  padding: 4rem 0;
-  position: relative;
-  overflow: hidden;
+  background: #FFFFFF;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--body-text);
 }
 
-.gp-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  width: 100%;
+.slide {
+  max-width: 1760px;
+  margin: 0 auto;
+  padding: 56px 0 72px; /* Adjusted padding to rely on .container on mobile/tablet */
 }
 
+/* ---- Header ---- */
 .gp-header {
-  flex: 0 0 auto;
-  text-align: left;
-  z-index: 10;
-  align-self: flex-start;
-  margin-top: 3rem;
+  display: flex;
+  align-items: stretch;
+  gap: 28px;
+  margin-bottom: 34px;
 }
 
-.gp-title {
-  font-size: 2.5rem;
+.gp-header-bar {
+  width: 12px;
+  flex: 0 0 12px;
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+  border-radius: 2px;
+}
+
+.gp-header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.gp-eyebrow-title {
+  font-family: 'Poppins', sans-serif;
   font-weight: 800;
-  color: #0A1526;
-  margin: 0;
-  line-height: 1.2;
-  white-space: nowrap;
+  font-size: 52px;
+  line-height: 1.05;
+  color: var(--navy);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
-.gp-title span {
-  color: #000080;
-}
-
-.gp-desc {
-  font-size: 1.1rem;
-  color: #4a5568;
-  margin-top: 1.5rem;
+.gp-lede {
+  max-width: 1180px;
+  font-size: 19px;
   line-height: 1.6;
-  max-width: 450px;
+  text-align: justify;
+  color: var(--body-text);
+  margin-bottom: 46px;
 }
 
-.gp-map-container {
-  flex: 1;
-  max-width: 900px;
-  width: 100%;
+.gp-lede b { 
+  color: var(--navy); 
 }
 
-@media (max-width: 992px) {
-  .gp-container {
-    flex-direction: column;
-  }
-  
-  .gp-header {
-    flex: auto;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .gp-title br {
-    display: none;
-  }
+/* ---- Body: map + legend ---- */
+.gp-body-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.gp-map-wrap {
+  flex: 1 1 62%;
+  min-width: 0;
 }
 
 #map-svg { 
@@ -80,6 +85,34 @@
   display: block; 
 }
 
+.gp-legend {
+  flex: 0 0 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-left: 8px;
+}
+
+.gp-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.gp-legend-swatch {
+  width: 34px;
+  height: 22px;
+  border-radius: 2px;
+  flex: 0 0 34px;
+}
+
+.gp-legend-label {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ---- Map styling ---- */
 .land { fill: var(--land); stroke: var(--land-line); stroke-width: 0.6; }
 .land.on { fill: #2A4160; stroke: #3E5A7C; }
 .land.hub-country { fill: #33506F; }
@@ -89,13 +122,14 @@
   stroke-linecap: round; opacity: 0.8;
   stroke-dasharray: 3 5; animation: flow 22s linear infinite;
 }
+
 @keyframes flow { to { stroke-dashoffset: -400; } }
 
 .dot-outer { fill: var(--skyline); opacity: 0.18; }
 .dot { fill: var(--paper); stroke: var(--ink); stroke-width: 0.6; }
 .dot-label {
-  font-family: 'Inter', sans-serif; 
-  font-size: 10px; 
+  font-family: 'IBM Plex Sans', sans-serif; 
+  font-size: 9.5px; 
   font-weight: 500;
   fill: #D7E4EC; 
   pointer-events: none;
@@ -110,18 +144,26 @@
   transform-origin: center; transform-box: fill-box;
   animation: pulse 2.6s ease-out infinite;
 }
+
 @keyframes pulse {
   0% { transform: scale(0.4); opacity: 0.9; }
   100% { transform: scale(2.6); opacity: 0; }
 }
+
 .hub-dot { fill: var(--brass); stroke: var(--paper); stroke-width: 1; }
 .hub-label {
-  font-family: 'Inter', sans-serif; 
-  font-size: 11px; 
+  font-family: 'Space Grotesk', sans-serif; /* Keep user's font */
+  font-size: 10.5px; 
   font-weight: 600;
   fill: var(--brass);
   paint-order: stroke; 
   stroke: var(--ink); 
   stroke-width: 3px; 
   stroke-linejoin: round;
+}
+
+@media (max-width: 900px) {
+  .gp-body-row { flex-direction: column; }
+  .gp-legend { flex: 1 1 auto; width: 100%; }
+  .gp-eyebrow-title { font-size: 38px; }
 }

@@ -88,8 +88,8 @@ const Header = () => {
                     <li><Link to="/whatsapp-chatbot" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>WHATSAPP CHATBOT</Link></li>
                     <li><Link to="/project-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>PROJECT MANAGEMENT</Link></li>
                     <li><Link to="/task-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>TASK MANAGEMENT</Link></li>
-                    <li><a href="/#accounting-software" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ACCOUNTING SOFTWARE</a></li>
-                    <li><a href="/#pos-machine" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>POS MACHINE + SOFTWARE</a></li>
+                    <li><Link to="/accounting-software" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ACCOUNTING SOFTWARE</Link></li>
+                    <li><Link to="/pos-machine" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>POS MACHINE + SOFTWARE</Link></li>
                   </ul>
                 </li>
 
