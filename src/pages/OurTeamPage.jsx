@@ -112,7 +112,7 @@ const OurTeamPage = () => {
             </div>
           </div>
 
-          <h2 className="team-heading" style={{ marginTop: '40px' }}>SEO & MARKETING TEAM</h2>
+          <h2 className="team-heading" style={{ marginTop: '40px' }}>SEO & DIGITAL MARKETING TEAM</h2>
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image-wrapper">
@@ -120,6 +120,14 @@ const OurTeamPage = () => {
               </div>
               <h3>Aswathi Unnikrishnan</h3>
               <p>Senior SEO Specialist</p>
+            </div>
+            
+            <div className="team-member">
+              <div className="member-image-wrapper">
+                <img src="/our team/misriya.png" alt="Nafeesath Misriya Haris" />
+              </div>
+              <h3>Nafeesath Misriya Haris</h3>
+              <p>Digital Marketing Executive</p>
             </div>
             
             <div className="team-member">

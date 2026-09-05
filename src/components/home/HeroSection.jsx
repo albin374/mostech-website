@@ -8,15 +8,41 @@ const videos = [
   "/banner2 final (online-video-cutter.com).mp4"
 ];
 
+const statsData = [
+  { icon: Globe, value: '25+', label: 'Countries' },
+  { icon: Calendar, value: '8+', label: 'Years of Experience' },
+  { icon: Users, value: '1,000+', label: 'Clients' },
+  { icon: FileText, value: '10,000+', label: 'Projects' }
+];
+
 const HeroSection = () => {
   const [activeVideo, setActiveVideo] = useState(0);
   const videoRefs = [useRef(null), useRef(null), useRef(null)];
+  const statsRef = useRef(null);
 
   useEffect(() => {
     if (videoRefs[activeVideo] && videoRefs[activeVideo].current) {
       videoRefs[activeVideo].current.play().catch(e => console.log("Video auto-play prevented:", e));
     }
   }, [activeVideo]);
+
+  useEffect(() => {
+    const scrollInterval = setInterval(() => {
+      if (statsRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = statsRef.current;
+        if (scrollWidth > clientWidth) {
+          const singleSetWidth = scrollWidth / 3;
+          // When scrolled deep into the duplicated sets, silently jump back to the first set
+          if (scrollLeft >= singleSetWidth * 1.5) {
+            statsRef.current.scrollLeft = scrollLeft - singleSetWidth;
+          }
+          // Then smoothly scroll to the next card
+          statsRef.current.scrollBy({ left: 160, behavior: 'smooth' });
+        }
+      }
+    }, 2500);
+    return () => clearInterval(scrollInterval);
+  }, []);
 
   const handleVideoEnd = () => {
     setActiveVideo(prev => (prev + 1) % videos.length);
@@ -64,7 +90,7 @@ const HeroSection = () => {
 
       {/* Text Content Overlay */}
       <div className="hero-content">
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', alignItems: 'center', width: '100%' }}>
+        <div className="container hero-content-grid">
           {/* Left Side: Text */}
           <div className="hero-text-box">
             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '1.2rem', justifyContent: 'flex-start' }}>
@@ -94,42 +120,17 @@ const HeroSection = () => {
           </div>
 
           {/* Right Side: Stats Cards */}
-          <div className="hero-stats-grid">
-            <div className="hero-stat-card">
-              <div className="hero-stat-icon">
-                <Globe size={22} />
+          <div className="hero-stats-grid" ref={statsRef}>
+            {[...statsData, ...statsData, ...statsData].map((stat, index) => (
+              <div className="hero-stat-card" key={index}>
+                <div className="hero-stat-icon">
+                  <stat.icon size={22} />
+                </div>
+                <h3>{stat.value}</h3>
+                <p>{stat.label}</p>
+                <div className="hero-stat-line"></div>
               </div>
-              <h3>25+</h3>
-              <p>Countries</p>
-              <div className="hero-stat-line"></div>
-            </div>
-            
-            <div className="hero-stat-card">
-              <div className="hero-stat-icon">
-                <Calendar size={22} />
-              </div>
-              <h3>8+</h3>
-              <p>Years of Experience</p>
-              <div className="hero-stat-line"></div>
-            </div>
-
-            <div className="hero-stat-card">
-              <div className="hero-stat-icon">
-                <Users size={22} />
-              </div>
-              <h3>1,000+</h3>
-              <p>Clients</p>
-              <div className="hero-stat-line"></div>
-            </div>
-
-            <div className="hero-stat-card">
-              <div className="hero-stat-icon">
-                <FileText size={22} />
-              </div>
-              <h3>10,000+</h3>
-              <p>Projects</p>
-              <div className="hero-stat-line"></div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
