@@ -86,10 +86,7 @@ const WebDevSection = () => {
             </div>
           </div>
 
-          <a href="#build" className="wds-btn-dark">
-            Let's Build Something Great 
-            <span className="wds-btn-arrow"><ArrowRight size={18} color="#0f172a" /></span>
-          </a>
+
         </div>
 
         <div className="wds-right-dark">

@@ -1,27 +1,26 @@
 :root {
-  --ink: #0A1526;
-  --navy: #0B2454;
-  --navy-deep: #081A3D;
-  --land: #16283F;
-  --land-line: #223A55;
-  --paper: #F4F1E9;
-  --brass: #C6A05C;
-  --skyline: #7EC8E3;
-  --body-text: #232733;
+  --ink: #020c4c;
+  --navy: #020c4c;
+  --navy-deep: #000080;
+  --land: #e2e8f0;
+  --land-line: #cbd5e1;
+  --land-on: #3b82f6;
+  --land-hub: #1d4ed8;
+  --skyline: #60a5fa;
+  --body-text: #334155;
 }
 
 .global-presence-section {
-  background-color: #f8fbff;
-  background-image: radial-gradient(circle at 100% 0%, rgba(200, 220, 255, 0.3) 0%, transparent 50%),
-                    radial-gradient(circle at 0% 100%, rgba(220, 230, 255, 0.3) 0%, transparent 50%);
-  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
   color: var(--body-text);
+  padding-bottom: 4rem;
 }
 
 .global-presence-section .slide {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 60px 40px; /* Reduced vertical padding */
+  padding: 60px 40px;
 }
 
 /* ---- Header ---- */
@@ -77,7 +76,7 @@
 }
 
 .gp-map-wrap {
-  flex: 1 1 62%;
+  flex: 1 1 75%;
   min-width: 0;
 }
 
@@ -88,7 +87,7 @@
 }
 
 .gp-legend {
-  flex: 0 0 340px;
+  flex: 0 0 300px;
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -104,45 +103,53 @@
 .gp-legend-swatch {
   width: 34px;
   height: 22px;
-  border-radius: 2px;
+  border-radius: 4px;
   flex: 0 0 34px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .gp-legend-label {
-  font-size: 19px;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--ink);
 }
 
 /* ---- Map styling ---- */
-.land { fill: var(--land); stroke: var(--land-line); stroke-width: 0.6; }
-.land.on { fill: #2A4160; stroke: #3E5A7C; }
-.land.hub-country { fill: #33506F; }
+.land { fill: var(--land); stroke: var(--land-line); stroke-width: 0.6; transition: fill 0.3s; }
+.land.on { fill: var(--land-on); stroke: #2563eb; }
+.land.hub-country { fill: var(--land-hub); stroke: #1e40af; }
+
+.land:hover {
+  fill: #cbd5e1;
+}
+.land.on:hover {
+  fill: #2563eb;
+}
 
 .arc {
-  fill: none; stroke: var(--skyline); stroke-width: 1.3;
+  fill: none; stroke: var(--skyline); stroke-width: 1.5;
   stroke-linecap: round; opacity: 0.8;
-  stroke-dasharray: 3 5; animation: flow 22s linear infinite;
+  stroke-dasharray: 4 6; animation: flow 22s linear infinite;
 }
 
 @keyframes flow { to { stroke-dashoffset: -400; } }
 
-.dot-outer { fill: var(--skyline); opacity: 0.18; }
-.dot { fill: var(--paper); stroke: var(--ink); stroke-width: 0.6; }
+.dot-outer { fill: var(--skyline); opacity: 0.3; }
+.dot { fill: #ffffff; stroke: var(--land-hub); stroke-width: 1.5; }
 .dot-label {
-  font-family: 'IBM Plex Sans', sans-serif; 
-  font-size: 9.5px; 
-  font-weight: 500;
-  fill: #D7E4EC; 
+  font-family: 'Inter', sans-serif; 
+  font-size: 10.5px; 
+  font-weight: 600;
+  fill: var(--ink); 
   pointer-events: none;
   paint-order: stroke; 
-  stroke: var(--ink); 
+  stroke: #ffffff; 
   stroke-width: 3px; 
   stroke-linejoin: round;
 }
 
 .hub-ring {
-  fill: none; stroke: var(--skyline); stroke-width: 1;
+  fill: none; stroke: var(--land-hub); stroke-width: 1.5;
   transform-origin: center; transform-box: fill-box;
   animation: pulse 2.6s ease-out infinite;
 }
@@ -152,25 +159,28 @@
   100% { transform: scale(2.6); opacity: 0; }
 }
 
-.hub-dot { fill: var(--brass); stroke: var(--paper); stroke-width: 1; }
+.hub-dot { fill: #ef4444; stroke: #ffffff; stroke-width: 1.5; }
 .hub-label {
-  font-family: 'Space Grotesk', sans-serif; /* Keep user's font */
-  font-size: 10.5px; 
-  font-weight: 600;
-  fill: var(--brass);
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px; 
+  font-weight: 700;
+  fill: #ef4444;
   paint-order: stroke; 
-  stroke: var(--ink); 
-  stroke-width: 3px; 
+  stroke: #ffffff; 
+  stroke-width: 4px; 
   stroke-linejoin: round;
 }
 
 @media (max-width: 900px) {
   .global-presence-section { overflow-x: hidden; }
   .gp-body-row { flex-direction: column; }
-  .gp-legend { flex: 1 1 auto; width: 100%; }
-  .gp-eyebrow-title { font-size: 38px; }
+  .gp-legend { flex: 1 1 auto; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;}
+  .gp-main-title { font-size: 2.2rem; }
   #map-svg {
     transform: scale(1.6);
     margin: 45px 0;
   }
+}
+@media (max-width: 600px) {
+  .gp-legend { grid-template-columns: 1fr; }
 }

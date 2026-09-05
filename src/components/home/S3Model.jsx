@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { Layers, Settings, Users } from 'lucide-react';
 import './S3Model.css';
 
 const S3Model = () => {
@@ -7,17 +7,20 @@ const S3Model = () => {
     {
       number: "01",
       title: "Solution Assets",
-      desc: "Horizontal technology solutions and solution accelerators that drive efficiency and innovation."
+      desc: "Horizontal technology solutions and solution accelerators that drive efficiency and innovation.",
+      icon: <Layers size={24} strokeWidth={2.5} />
     },
     {
       number: "02",
       title: "Services Lines",
-      desc: "Robust methodologies, optimized delivery processes, and industry best practices."
+      desc: "Robust methodologies, optimized delivery processes, and industry best practices.",
+      icon: <Settings size={24} strokeWidth={2.5} />
     },
     {
       number: "03",
       title: "Skills & Competency",
-      desc: "Deep and diverse resource skills, combined with technical expertise to deliver exceptional outcomes."
+      desc: "Deep and diverse resource skills, combined with technical expertise to deliver exceptional outcomes.",
+      icon: <Users size={24} strokeWidth={2.5} />
     }
   ];
 
@@ -41,22 +44,31 @@ const S3Model = () => {
         </div>
 
         <div className="s3-cards-wrapper">
-          {cards.map((card, index) => (
-            <div className="s3-card" key={index}>
-              <div className="s3-card-number-box">
-                {card.number}
+          {cards.map((card, index) => {
+            const isDark = index === 0 || index === 2;
+            const cardClass = isDark ? "s3-card s3-card-dark" : "s3-card s3-card-light";
+            return (
+              <div className={cardClass} key={index}>
+                <div className="s3-card-top-row">
+                  <div className="s3-card-icon-circle">
+                    {card.icon}
+                  </div>
+                  <div className="s3-card-connector">
+                     <div className="s3-connector-line"></div>
+                     <div className="s3-connector-dot"></div>
+                  </div>
+                  <div className="s3-card-number">
+                    {card.number}
+                  </div>
+                </div>
+                <div className="s3-card-content">
+                  <h3 className="s3-card-title">{card.title}</h3>
+                  <div className="s3-card-divider"></div>
+                  <p className="s3-card-desc">{card.desc}</p>
+                </div>
               </div>
-              <div className="s3-card-content">
-                <h3 className="s3-card-title">{card.title}</h3>
-                <div className="s3-card-divider"></div>
-                <p className="s3-card-desc">{card.desc}</p>
-              </div>
-              <a href="#learn-more" className="s3-card-footer">
-                <span className="s3-card-footer-text">Learn More</span>
-                <ArrowRight size={20} className="s3-card-footer-icon" />
-              </a>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

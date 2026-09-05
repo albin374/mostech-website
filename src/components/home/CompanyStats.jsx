@@ -7,7 +7,6 @@ const CompanyStats = () => {
     <section className="stats-section responsive-bg-section">
       <div className="stats-container">
         
-
         <div className="stats-visual-area">
           <div className="stats-badge badge-overlay">
             <span className="stats-badge-line"></span>

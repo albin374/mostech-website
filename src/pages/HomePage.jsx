@@ -25,7 +25,7 @@ const HomePage = () => {
       <MobileSection />
       <CeoMessage />
       <S3Model />
-      <SisterConcerns />
+      {/* <SisterConcerns /> */}
       <TechPartners />
     </>
   );

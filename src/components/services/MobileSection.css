@@ -126,14 +126,15 @@
 .mobile-image-content {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
+  margin-left: -40px;
 }
 
 .mobile-hero-img {
   width: 100%;
-  max-width: 350px;
+  max-width: 550px;
   height: auto;
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
 }

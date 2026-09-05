@@ -103,7 +103,7 @@ const MobileSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <img src="/mobilesection.png" alt="Mobile App Development" className="mobile-hero-img" />
+            <img src="/home pagemobile section.png" alt="Mobile App Development" className="mobile-hero-img" />
           </motion.div>
         </div>
 

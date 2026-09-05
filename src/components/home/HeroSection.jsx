@@ -1,35 +1,69 @@
-import React from 'react';
-import { ArrowRight, PlayCircle } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { ArrowRight } from 'lucide-react';
 import './HeroSection.css';
 
+const videos = [
+  "/banner1watermark.mp4",
+  "/banner2watermark.mp4",
+  "/banner2 final (online-video-cutter.com).mp4"
+];
+
 const HeroSection = () => {
+  const [activeVideo, setActiveVideo] = useState(0);
+  const videoRefs = [useRef(null), useRef(null), useRef(null)];
+
+  useEffect(() => {
+    if (videoRefs[activeVideo] && videoRefs[activeVideo].current) {
+      videoRefs[activeVideo].current.play().catch(e => console.log("Video auto-play prevented:", e));
+    }
+  }, [activeVideo]);
+
+  const handleVideoEnd = () => {
+    setActiveVideo(prev => (prev + 1) % videos.length);
+  };
+
   return (
     <section className="hero-section">
-      {/* Background Image Only */}
-      <div className="hero-bg-image-wrapper">
-        <picture>
-          <source media="(max-width: 768px)" srcSet="/mobile%20banner%20final.png" />
-          <img 
-            src="/final%20banner%20222.png" 
-            alt="Banner"
-            className="hero-bg-image"
+      {/* Background Videos */}
+      <div className="hero-bg-video-wrapper" style={{ position: 'relative', width: '100%', height: '85vh', minHeight: '600px', overflow: 'hidden', backgroundColor: '#030816' }}>
+        {videos.map((src, index) => (
+          <video
+            key={index}
+            ref={videoRefs[index]}
+            src={src}
+            muted
+            playsInline
+            autoPlay={index === 0}
+            preload="auto"
+            onEnded={index === activeVideo ? handleVideoEnd : undefined}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              opacity: activeVideo === index ? 1 : 0,
+              zIndex: activeVideo === index ? 2 : 1,
+              pointerEvents: 'none'
+            }}
           />
-        </picture>
+        ))}
       </div>
 
       {/* Text Content Overlay */}
       <div className="hero-content">
         <div className="hero-text-box">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '1.2rem', justifyContent: 'center' }}>
-            <div style={{ height: '1px', background: '#94a3b8', width: '30px' }}></div>
-            <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#94a3b8' }}></div>
-            <span style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '2px', color: '#020c4c' }}>SMART SOLUTIONS</span>
-            <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#94a3b8' }}></div>
-            <div style={{ height: '1px', background: '#94a3b8', width: '30px' }}></div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '1.2rem', justifyContent: 'flex-start' }}>
+            <div style={{ height: '1px', background: '#ffffff', width: '30px' }}></div>
+            <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#ffffff' }}></div>
+            <span style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '2px', color: '#ffffff' }}>SMART SOLUTIONS</span>
+            <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#ffffff' }}></div>
+            <div style={{ height: '1px', background: '#ffffff', width: '30px' }}></div>
           </div>
           <h1 className="hero-main-title">
-            <span style={{ display: 'block', color: '#020c4c' }}>Smarter Business.</span>
-            <span style={{ display: 'block', color: '#020c4c' }}>Stronger Tomorrow.</span>
+            <span style={{ display: 'block', color: '#ffffff' }}>Smarter Business.</span>
+            <span style={{ display: 'block', color: '#ffffff' }}>Stronger Tomorrow.</span>
           </h1>
           <p className="hero-subtitle">
             We deliver cutting-edge AI, software, and digital<br />

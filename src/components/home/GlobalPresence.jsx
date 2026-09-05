@@ -159,8 +159,8 @@ const GlobalPresence = () => {
         <div className="gp-header">
           <div className="gp-header-bar"></div>
           <div className="gp-header-text">
-            <div className="gp-eyebrow-title">Our</div>
-            <div className="gp-eyebrow-title">Global Presence</div>
+            <div className="gp-eyebrow-title">OUR</div>
+            <div className="gp-eyebrow-title">GLOBAL PRESENCE</div>
           </div>
         </div>
 
@@ -177,12 +177,12 @@ const GlobalPresence = () => {
           </div>
 
           <div className="gp-legend">
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'#33506F'}}></span><span className="gp-legend-label">Hub – Dubai, UAE</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'#2A4160'}}></span><span className="gp-legend-label">Europe &amp; CIS</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'#2A4160'}}></span><span className="gp-legend-label">Middle East &amp; Africa</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'#2A4160'}}></span><span className="gp-legend-label">South Asia</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'#2A4160'}}></span><span className="gp-legend-label">Southeast Asia &amp; Oceania</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'#2A4160'}}></span><span className="gp-legend-label">North America</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-hub)'}}></span><span className="gp-legend-label">Hub – Dubai, UAE</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Europe &amp; CIS</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Middle East &amp; Africa</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">South Asia</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Southeast Asia &amp; Oceania</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">North America</span></div>
           </div>
         </div>
 

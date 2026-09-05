@@ -61,10 +61,7 @@ const Footer = () => {
           </div>
           
         </div>
-        
-        <div className="footer-bottom">
-          <p>All rights reserved | &copy; Mostech Business Solutions</p>
-        </div>
+
       </div>
     </footer>
   );
