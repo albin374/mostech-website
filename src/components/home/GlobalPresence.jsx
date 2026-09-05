@@ -159,8 +159,8 @@ const GlobalPresence = () => {
         <div className="gp-header">
           <div className="gp-header-bar"></div>
           <div className="gp-header-text">
-            <div className="gp-eyebrow-title">OUR</div>
-            <div className="gp-eyebrow-title">GLOBAL PRESENCE</div>
+            <div className="gp-eyebrow-title">Our</div>
+            <div className="gp-eyebrow-title">Global Footprint</div>
           </div>
         </div>
 

@@ -62,9 +62,6 @@ const MobileSection = () => {
                 <p className="card-desc">
                   We offer high-performance, customised Android app development services that satisfy all your business needs.
                 </p>
-                <button className="card-btn">
-                  Explore Android <ArrowRight size={14} className="btn-icon" />
-                </button>
               </div>
               
               <div className="mobile-card">
@@ -75,9 +72,6 @@ const MobileSection = () => {
                 <p className="card-desc">
                   Our rich expertise in iOS mobile app development helps to build beautiful and engaging iOS applications for our clients.
                 </p>
-                <button className="card-btn">
-                  Explore iOS <ArrowRight size={14} className="btn-icon" />
-                </button>
               </div>
               
               <div className="mobile-card">
@@ -88,9 +82,6 @@ const MobileSection = () => {
                 <p className="card-desc">
                   We build consistent and cost effective hybrid mobility solutions that work equally well across multiple platforms.
                 </p>
-                <button className="card-btn">
-                  Explore Cross-Platform <ArrowRight size={14} className="btn-icon" />
-                </button>
               </div>
             </div>
 
@@ -103,7 +94,7 @@ const MobileSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <img src="/home pagemobile section.png" alt="Mobile App Development" className="mobile-hero-img" />
+            <img src="/mobiehome page imge final.png" alt="Mobile App Development" className="mobile-hero-img" />
           </motion.div>
         </div>
 

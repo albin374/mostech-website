@@ -10,12 +10,6 @@
   display: block;
 }
 
-.hero-bg-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 .hero-content {
   position: absolute;
   top: 0;
@@ -25,7 +19,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 10%;
   z-index: 10;
 }
 
@@ -38,6 +31,12 @@
   align-items: flex-start;
 }
 
+@media (min-width: 992px) {
+  .hero-text-box {
+    margin-left: -5rem; /* Pulls text left while keeping container and milestones centered */
+  }
+}
+
 .hero-main-title {
   font-size: clamp(2.2rem, 4vw, 3.8rem);
   font-weight: 800;
@@ -45,10 +44,6 @@
   margin-bottom: 1.5rem;
   letter-spacing: -1px;
   white-space: nowrap;
-}
-
-.hero-navy-text {
-  color: #000080; /* Classic Navy blue */
 }
 
 .hero-subtitle {
@@ -94,13 +89,13 @@
 
 .hero-btn-secondary {
   background: transparent;
-  color: #0f172a;
+  color: #ffffff;
   border: 1px solid #94a3b8;
 }
 
 .hero-btn-secondary:hover {
-  background: rgba(15, 23, 42, 0.05);
-  border-color: #0f172a;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
 }
 
 @media (max-width: 991px) {
@@ -122,11 +117,75 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-top: 14rem;
+    margin-top: 2rem;
   }
   .hero-btn {
     padding: 12px 20px;
     font-size: 0.9rem;
     gap: 0.4rem;
   }
+}
+
+.hero-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .hero-stats-grid {
+    display: none; /* Hide on mobile to save space, or style as needed */
+  }
+}
+
+.hero-stat-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.hero-stat-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #11368a; /* Deep blue to match image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-stat-card h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0 0 0.2rem 0;
+  letter-spacing: -0.5px;
+}
+
+.hero-stat-card p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 1rem 0;
+  font-weight: 500;
+}
+
+.hero-stat-line {
+  width: 25px;
+  height: 2px;
+  background-color: #3b82f6; /* Bright blue line */
+  border-radius: 2px;
 }

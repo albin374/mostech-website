@@ -109,9 +109,9 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-.country-label {
+.contact-item .country-label {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff !important;
   width: 45px;
 }
 

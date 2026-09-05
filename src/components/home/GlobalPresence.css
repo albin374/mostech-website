@@ -14,7 +14,7 @@
   background-color: #ffffff;
   font-family: 'Inter', sans-serif;
   color: var(--body-text);
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 }
 
 .global-presence-section .slide {
@@ -52,7 +52,6 @@
   line-height: 1.05;
   color: var(--navy);
   letter-spacing: 0.5px;
-  text-transform: uppercase;
 }
 
 .gp-lede {
