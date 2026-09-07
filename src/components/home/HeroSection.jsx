@@ -95,7 +95,7 @@ const HeroSection = () => {
           {/* Left Side: Text */}
           <div className="hero-text-box">
             <h1 className="hero-main-title">
-              <span style={{ display: 'block', color: '#ffffff' }}>smart solutions</span>
+              <span style={{ display: 'block', color: '#ffffff' }}>Smart Solutions</span>
               <span style={{ display: 'block', color: '#ffffff' }}>Smarter Business.</span>
               <span style={{ display: 'block', color: '#ffffff' }}>Stronger Tomorrow.</span>
             </h1>
