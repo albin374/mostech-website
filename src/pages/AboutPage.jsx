@@ -7,6 +7,7 @@ import AboutMandate from '../components/about us/AboutMandate';
 import AboutPrinciples from '../components/about us/AboutPrinciples';
 import AboutLifecycle from '../components/about us/AboutLifecycle';
 import AboutCTA from '../components/about us/AboutCTA';
+import SisterConcerns from '../components/home/SisterConcerns';
 import '../styles/about-design-system.css';
 import './AboutPage.css';
 
@@ -49,6 +50,7 @@ const AboutPage = () => {
       <AboutMandate />
       <AboutPrinciples />
       <AboutLifecycle />
+      <SisterConcerns />
       <AboutCTA />
     </main>
   );

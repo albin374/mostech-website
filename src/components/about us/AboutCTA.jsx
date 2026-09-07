@@ -7,7 +7,7 @@ const AboutCTA = () => {
   return (
     <section className="about-cta">
       <div className="container">
-        <div className="cta-wrapper animate-on-scroll">
+        <div className="cta-wrapper">
 
           <div className="cta-content">
             <h2 className="cta-title">

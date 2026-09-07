@@ -98,104 +98,155 @@
   margin-bottom: 2rem;
 }
 
-.sc-card {
+.sc-card-new {
   position: relative;
   border-radius: 16px;
-  padding: 2.2rem 2rem;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 160px;
-  background-color: #061b46;
-  color: #ffffff;
+  overflow: hidden;
+  height: 220px;
 }
 
-.sc-card:hover {
+.sc-card-new:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.sc-card-content {
+.sc-card-inner {
   position: relative;
-  z-index: 2;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.sc-card-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  z-index: 1;
+}
+
+.sc-card-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+.sc-card-number {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.sc-card-number::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 4px;
+}
+
+.sc-content-layer {
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sc-card-header {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.2rem;
+  align-items: flex-start;
+  gap: 16px;
 }
 
-.sc-icon-wrapper {
-  width: 44px;
-  height: 44px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.sc-logo-box {
+  width: 64px;
+  height: 64px;
+  background-color: #0f172a;
+  border-radius: 16px;
+  padding: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.sc-icon {
-  color: #0d6efd;
-}
-
-.sc-img-logo {
+.sc-logo-box img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 8px; /* keeping a slight border radius inside the wrapper */
 }
 
-.sc-card-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0;
-}
-
-.sc-card-desc {
-  font-size: 0.95rem;
-  color: #cbd5e1;
-  line-height: 1.5;
-  margin: 0 0 2rem 0;
-  max-width: 85%;
+.sc-text-box {
   flex-grow: 1;
+  padding-right: 36px; /* space for the arrow circle */
 }
 
-.sc-card-link {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #60a5fa;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.about-page .sc-card-title-new,
+.sc-text-box .sc-card-title-new {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.about-page .sc-card-desc-new,
+.sc-text-box .sc-card-desc-new {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 90%;
+}
+
+.sc-card-footer {
   margin-top: auto;
 }
 
-.sc-card-link:hover {
-  color: #93c5fd;
-  text-decoration: underline;
+.sc-link-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-/* Background elements for cards to simulate the screenshot graphics */
-.sc-card-bg-element {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 150px;
-  height: 150px;
+.sc-link-new:hover {
+  color: #1d4ed8;
+}
+
+.sc-link-arrow-circle {
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  filter: blur(40px);
-  z-index: 1;
-  opacity: 0.6;
+  background-color: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.sc-link-new:hover .sc-link-arrow-circle {
+  background-color: #dbeafe;
+}
+
+.sc-link-arrow {
+  color: #2563eb;
 }
 
 /* Footer */

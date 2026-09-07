@@ -17,7 +17,7 @@ const SisterConcerns = () => {
       title: "Fath Creative",
       desc: "Creative solutions for a digital world.",
       icon: <img src="/fath-logo.webp" alt="Fath Creative" className="sc-img-logo" />,
-      theme: "sc-blue",
+      bgImage: "/fathbackground.png",
       link: "https://Fathcreative.com",
       linkText: "Fathcreative.com"
     },
@@ -26,7 +26,7 @@ const SisterConcerns = () => {
       title: "Mosbizuae",
       desc: "Business setup and corporate solutions in UAE.",
       icon: <img src="/mosbiz.webp" alt="Mosbizuae" className="sc-img-logo" />,
-      theme: "sc-green",
+      bgImage: "/mosbiz background.png",
       link: "https://Mosbizuae.com",
       linkText: "Mosbizuae.com"
     },
@@ -35,7 +35,7 @@ const SisterConcerns = () => {
       title: "Pixora Design",
       desc: "Designs that make an impact.",
       icon: <img src="/pixora-logo.webp" alt="Pixora Design" className="sc-img-logo" />,
-      theme: "sc-orange",
+      bgImage: "/pixora desgins.png",
       link: "https://Pixoradesign.in",
       linkText: "Pixoradesign.in"
     },
@@ -44,21 +44,21 @@ const SisterConcerns = () => {
       title: "Mosmart",
       desc: "General trading for a smarter tomorrow.",
       icon: <img src="/mozmart.png" alt="Mosmart" className="sc-img-logo" />,
-      theme: "sc-purple",
+      bgImage: "/mosmartbg.png"
     },
     {
       id: 5,
       title: "MOS Academy",
       desc: "Learning today for a brighter tomorrow.",
       icon: <img src="/mozacademey.png" alt="MOS Academy" className="sc-img-logo" />,
-      theme: "sc-light-blue",
+      bgImage: "/mosacademy.png"
     },
     {
       id: 6,
       title: "Mosbiz",
       desc: "Corporate services for your growth.",
       icon: <img src="/mosbiz.webp" alt="Mosbiz" className="sc-img-logo" />,
-      theme: "sc-pink",
+      bgImage: "/mosbiz.png"
     }
   ];
 
@@ -88,21 +88,41 @@ const SisterConcerns = () => {
 
         {/* Grid Section */}
         <div className="sc-grid">
-          {cards.map(card => (
-            <div className={`sc-card ${card.theme}`} key={card.id}>
-              <div className="sc-card-content">
-                <div className="sc-card-header">
-                  <div className="sc-icon-wrapper">
-                    {card.icon}
+          {cards.map((card, index) => (
+            <div className="sc-card-new" key={card.id}>
+              <div className="sc-card-inner">
+                {/* Background Image Layer */}
+                {card.bgImage && (
+                  <div className="sc-card-bg">
+                    <img src={card.bgImage} alt="" />
                   </div>
-                  <h3 className="sc-card-title">{card.title}</h3>
-                </div>
-                <p className="sc-card-desc">{card.desc}</p>
-                {card.link && (
-                  <a href={card.link} target="_blank" rel="noopener noreferrer" className="sc-card-link">
-                    {card.linkText}
-                  </a>
                 )}
+                
+                {/* Number on Top Right */}
+                <div className="sc-card-number">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+
+                {/* Content Layer */}
+                <div className="sc-content-layer">
+                  <div className="sc-card-header">
+                    <div className="sc-logo-box">
+                      {card.icon}
+                    </div>
+                    <div className="sc-text-box">
+                      <h3 className="sc-card-title-new">{card.title}</h3>
+                      <p className="sc-card-desc-new">{card.desc}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="sc-card-footer">
+                    {card.link && (
+                      <a href={card.link} target="_blank" rel="noopener noreferrer" className="sc-link-new">
+                        {card.linkText}
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
