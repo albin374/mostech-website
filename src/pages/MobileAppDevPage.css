@@ -421,68 +421,225 @@
   }
 }
 
-.mobile-why-left {
-  flex: 1;
+.new-why-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-why-layout {
+  flex: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .new-why-layout {
+    margin-left: 2rem;
+  }
+}
+
+.why-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .why-cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.why-card-new {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card-new:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(47, 107, 216, 0.1);
+}
+
+.why-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+}
+
+.why-icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-circle {
+  background-color: #0c2b7e;
+}
+
+.light-circle {
+  background-color: #e8f0fe;
+}
+
+.why-number {
+  color: #a0aec0;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.why-card-new h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0a1930;
+  margin-bottom: 0.6rem;
+}
+
+.why-card-new p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1.2rem;
+}
+
+.why-arrow-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a0aec0;
+  align-self: flex-end;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.why-card-new:hover .why-arrow-btn {
+  background-color: #0c2b7e;
+  border-color: #0c2b7e;
+  color: #ffffff;
+}
+
+.why-card-wide {
+  background-color: #0c2b7e;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 10px 30px rgba(12, 43, 126, 0.2);
+}
+
+@media (min-width: 768px) {
+  .why-card-wide {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.wide-card-left {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.why-card {
+@media (min-width: 576px) {
+  .wide-card-left {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.wide-icon-circle {
+  width: 65px;
+  height: 65px;
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
-  border-left: 5px solid #2f6bd8;
-  padding: 1.2rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 1.2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.why-card:hover {
-  transform: translateX(10px);
-  box-shadow: 0 10px 30px rgba(47, 107, 216, 0.1);
-}
-
-.why-icon-box {
-  width: 55px;
-  height: 55px;
-  background-color: #0c2b7e; /* Dark navy blue */
-  border-radius: 12px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.why-card-text {
-  flex: 1;
-}
-
-.why-card-text h3 {
-  font-size: 1.05rem;
+.wide-card-text h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
   font-weight: 700;
-  color: #0a1930;
   margin-bottom: 0.4rem;
 }
 
-.why-card-text p {
+.wide-card-text p {
+  color: #a7bce3;
   font-size: 0.85rem;
-  color: #64748b;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 400px;
 }
 
-.mobile-why-right {
-  flex: 1.2;
+.wide-card-right {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .wide-card-right {
+    width: auto;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+  }
+}
+
+.why-number-wide {
+  color: #3b5c9b;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.why-arrow-btn-wide {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.why-arrow-btn-wide:hover {
+  background-color: #ffffff;
+  color: #0c2b7e;
+}
+
+
+.mobile-why-right {
+  flex: 0.9;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .why-choose-img {
   width: 100%;
-  max-width: 700px;
+  max-width: 500px;
   height: auto;
   object-fit: contain;
   animation: float-new 6s ease-in-out infinite;

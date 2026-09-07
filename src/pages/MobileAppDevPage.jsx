@@ -20,7 +20,8 @@ import {
   Cloud,
   Layers,
   Cpu,
-  Send
+  Send,
+  ArrowRight
 } from 'lucide-react';
 import { FaAndroid, FaApple } from 'react-icons/fa';
 import { SiFlutter } from 'react-icons/si';
@@ -171,69 +172,81 @@ const MobileAppDevPage = () => {
         <div className="mobile-hero-dots" style={{ top: '10%', right: '5%', left: 'auto' }}></div>
         
         <div className="container">
-          <div className="mobile-services-header">
+          <div className="mobile-services-header new-why-header">
+            <div className="explore-badge-wrap">
+              <span className="explore-badge-line"></span>
+              <span className="explore-badge-text">OUR ADVANTAGE</span>
+              <span className="explore-badge-line"></span>
+            </div>
             <h2>Why Choose <span className="mobile-title-highlight">Mostech?</span></h2>
-            <div className="mobile-services-title-line"></div>
             <p>
-              We combine innovation, expertise, and commitment to deliver mobile solutions
-              that drive real business impact.
+              We combine innovation, expertise, and commitment to deliver mobile solutions that drive real business impact.
             </p>
           </div>
 
           <div className="mobile-why-content">
             {/* Left side: Feature cards */}
-            <div className="mobile-why-left">
-              
-              <div className="why-card">
-                <div className="why-icon-box">
-                  <Sliders size={24} color="#ffffff" />
-                </div>
-                <div className="why-card-text">
+            <div className="mobile-why-left new-why-layout">
+              <div className="why-cards-grid">
+                <div className="why-card-new">
+                  <div className="why-card-header">
+                    <div className="why-icon-circle dark-circle">
+                      <Sliders size={20} color="#ffffff" />
+                    </div>
+                    <span className="why-number">01</span>
+                  </div>
                   <h3>Customized Solutions</h3>
                   <p>We know that no two businesses are alike and provide custom solutions to meet individual requirements of our clients.</p>
                 </div>
-              </div>
 
-              <div className="why-card">
-                <div className="why-icon-box">
-                  <Users size={24} color="#ffffff" />
-                </div>
-                <div className="why-card-text">
+                <div className="why-card-new">
+                  <div className="why-card-header">
+                    <div className="why-icon-circle light-circle">
+                      <Users size={20} color="#2f6bd8" />
+                    </div>
+                    <span className="why-number">02</span>
+                  </div>
                   <h3>User Centered Design</h3>
                   <p>Our team at Mostech ensures to design engaging, visually appealing, and user-friendly interfaces which connect well with the target audience.</p>
                 </div>
-              </div>
 
-              <div className="why-card">
-                <div className="why-icon-box">
-                  <Rocket size={24} color="#ffffff" />
-                </div>
-                <div className="why-card-text">
+                <div className="why-card-new">
+                  <div className="why-card-header">
+                    <div className="why-icon-circle light-circle">
+                      <Rocket size={20} color="#2f6bd8" />
+                    </div>
+                    <span className="why-number">03</span>
+                  </div>
                   <h3>Full Service Development</h3>
                   <p>We offer complete development services for a project starting from analysis to testing. This way our approach to planning and execution is ensured to be comprehensive.</p>
                 </div>
-              </div>
 
-              <div className="why-card">
-                <div className="why-icon-box">
-                  <Award size={24} color="#ffffff" />
-                </div>
-                <div className="why-card-text">
+                <div className="why-card-new">
+                  <div className="why-card-header">
+                    <div className="why-icon-circle dark-circle">
+                      <Award size={20} color="#ffffff" />
+                    </div>
+                    <span className="why-number">04</span>
+                  </div>
                   <h3>Skills & Expertise</h3>
                   <p>With years of experience in developing mobile apps, they are familiar with using the latest technologies to develop efficient apps.</p>
                 </div>
               </div>
 
-              <div className="why-card">
-                <div className="why-icon-box">
-                  <ShieldCheck size={24} color="#ffffff" />
+              <div className="why-card-wide">
+                <div className="wide-card-left">
+                  <div className="wide-icon-circle">
+                    <ShieldCheck size={28} color="#0c2b7e" />
+                  </div>
+                  <div className="wide-card-text">
+                    <h3>Quality Assurance & Support</h3>
+                    <p>We provide rigorous testing and continuous support to ensure high performance, security, and long-term success.</p>
+                  </div>
                 </div>
-                <div className="why-card-text">
-                  <h3>Quality Assurance & Support</h3>
-                  <p>Our quality assurance team makes sure to test the app properly before releasing it to ensure there are no issues with the app. We conduct strict security tests for the protection of user data. Once the app goes live, we offer you support and maintenance services.</p>
+                <div className="wide-card-right">
+                  <span className="why-number-wide">05</span>
                 </div>
               </div>
-
             </div>
 
             {/* Right side: Image */}
