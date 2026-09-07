@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   ShoppingCart, 
   ShieldCheck, 
@@ -65,12 +66,7 @@ const EcommercePage = () => {
 
 
 
-            {/* Contact Action */}
-            <div className="ecom-contact-action">
-              <a href="/#contact" className="ecom-contact-btn">
-                CONTACT US <FaWhatsapp size={20} />
-              </a>
-            </div>
+
 
           </div>
 
@@ -137,9 +133,7 @@ const EcommercePage = () => {
                 <p className="card-desc">
                   Complete end-to-end eCommerce development tailored to your business needs — from product catalog setup to checkout, payment integration, and order management.
                 </p>
-                <a href="#learn-more" className="card-link">
-                  Learn more <div className="link-icon"><ArrowRight size={16} /></div>
-                </a>
+
               </div>
             </div>
 
@@ -154,9 +148,7 @@ const EcommercePage = () => {
                 <p className="card-desc">
                   Seamless theme integration and customization to match your brand identity. Choose your preferred theme or let our experts design the perfect storefront experience.
                 </p>
-                <a href="#learn-more" className="card-link">
-                  Learn more <div className="link-icon"><ArrowRight size={16} /></div>
-                </a>
+
               </div>
             </div>
 
@@ -171,9 +163,7 @@ const EcommercePage = () => {
                 <p className="card-desc">
                   Ongoing support to keep your store running smoothly — performance optimization, bug fixes, security updates, and feature enhancements.
                 </p>
-                <a href="#learn-more" className="card-link">
-                  Learn more <div className="link-icon"><ArrowRight size={16} /></div>
-                </a>
+
               </div>
             </div>
 
@@ -188,9 +178,7 @@ const EcommercePage = () => {
                 <p className="card-desc">
                   Not sure how to start or scale your online store? Our consultants help you choose the right platform, architecture, and strategy for long-term growth.
                 </p>
-                <a href="#learn-more" className="card-link">
-                  Learn more <div className="link-icon"><ArrowRight size={16} /></div>
-                </a>
+
               </div>
             </div>
 
@@ -205,9 +193,7 @@ const EcommercePage = () => {
                 <p className="card-desc">
                   Fully customized eCommerce solutions built around your unique workflows, integrations, and customer experience requirements.
                 </p>
-                <a href="#learn-more" className="card-link">
-                  Learn more <div className="link-icon"><ArrowRight size={16} /></div>
-                </a>
+
               </div>
             </div>
 
@@ -222,9 +208,7 @@ const EcommercePage = () => {
                 <p className="card-desc">
                   Safe and seamless migration from any existing eCommerce platform without data loss — including products, customers, orders, and SEO value.
                 </p>
-                <a href="#learn-more" className="card-link">
-                  Learn more <div className="link-icon"><ArrowRight size={16} /></div>
-                </a>
+
               </div>
             </div>
 
@@ -386,12 +370,12 @@ const EcommercePage = () => {
               Ready to transform your vision into reality with unparalleled technical expertise?
             </p>
             <div className="ecom-cta-buttons">
-              <a href="/#contact" className="btn-primary-dark">
+              <Link to="/contact" className="btn-primary-dark">
                 Request a Quote <ArrowRight size={18} />
-              </a>
-              <a href="/#contact" className="btn-secondary-light">
+              </Link>
+              <Link to="/contact" className="btn-secondary-light">
                 Contact Our Experts <ArrowRight size={18} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

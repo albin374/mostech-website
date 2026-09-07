@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Rocket, 
   ShieldCheck, 
@@ -395,16 +396,16 @@ const WebDevPage = () => {
               </p>
 
               <div className="approach-buttons">
-                <a href="/#contact" className="approach-btn dark">
+                <Link to="/contact" className="approach-btn dark">
                   <MessageCircle size={18} />
                   <span>Talk to Our Web Experts</span>
                   <ArrowRight size={16} />
-                </a>
-                <a href="/#contact" className="approach-btn outline">
+                </Link>
+                <Link to="/contact" className="approach-btn outline">
                   <Rocket size={18} color="#2f6bd8" />
                   <span>Create a Seamless<br/>Web Experience</span>
                   <ArrowRight size={16} color="#2f6bd8" />
-                </a>
+                </Link>
               </div>
             </div>
 

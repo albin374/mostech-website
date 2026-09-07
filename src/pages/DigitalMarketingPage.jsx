@@ -86,10 +86,10 @@ const DigitalMarketingPage = () => {
             </p>
 
             <div className="dm-hero-buttons">
-              <a href="/#contact" className="dm-btn primary">
+              <Link to="/contact" className="dm-btn primary">
                 Let's Grow Together <ArrowRight size={16} />
-              </a>
-              <a href="/#contact" className="dm-btn secondary">
+              </Link>
+              <a href="/#services" className="dm-btn secondary">
                 Explore Our Services
               </a>
             </div>
@@ -189,9 +189,9 @@ const DigitalMarketingPage = () => {
                 on investment.
               </p>
 
-              <a href="/#contact" className="dm-btn primary">
+              <Link to="/contact" className="dm-btn primary">
                 Start Your Digital Marketing Journey <ArrowRight size={16} />
-              </a>
+              </Link>
             </div>
 
             {/* Right Image */}

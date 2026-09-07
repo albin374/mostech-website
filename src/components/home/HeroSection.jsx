@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Calendar, Users, FileText } from 'lucide-react';
 import './HeroSection.css';
 
@@ -107,9 +108,9 @@ const HeroSection = () => {
               <a href="#services" className="hero-btn hero-btn-primary">
                 Explore Solutions <ArrowRight size={18} />
               </a>
-              <button className="hero-btn hero-btn-secondary">
+              <Link to="/contact" className="hero-btn hero-btn-secondary" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
                 Contact Us
-              </button>
+              </Link>
             </div>
           </div>
 

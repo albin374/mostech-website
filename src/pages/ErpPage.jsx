@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Rocket, 
   TrendingUp, 
@@ -68,9 +69,9 @@ const ErpPage = () => {
 
             {/* Contact Action */}
             <div className="erp-contact-action">
-              <a href="/#contact" className="erp-contact-btn">
+              <Link to="/contact" className="erp-contact-btn">
                 CONTACT US FOR DEMO <ArrowRight size={18} />
-              </a>
+              </Link>
             </div>
 
           </div>

@@ -25,7 +25,7 @@ const AboutPageHero = () => {
             <Link to="/contact" className="btn btn-primary hero-btn">
               Talk to Our Team <MessageSquare size={15} />
             </Link>
-            <Link to="/portfolio" className="btn btn-outline hero-btn-outline">
+            <Link to="/contact" className="btn btn-outline hero-btn-outline">
               View Our Work <ArrowRight size={15} />
             </Link>
           </div>
