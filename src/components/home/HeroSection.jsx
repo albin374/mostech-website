@@ -93,14 +93,8 @@ const HeroSection = () => {
         <div className="container hero-content-grid">
           {/* Left Side: Text */}
           <div className="hero-text-box">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '1.2rem', justifyContent: 'flex-start' }}>
-              <div style={{ height: '1px', background: '#ffffff', width: '30px' }}></div>
-              <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#ffffff' }}></div>
-              <span style={{ fontSize: '0.85rem', fontWeight: 800, letterSpacing: '2px', color: '#ffffff' }}>SMART SOLUTIONS</span>
-              <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#ffffff' }}></div>
-              <div style={{ height: '1px', background: '#ffffff', width: '30px' }}></div>
-            </div>
             <h1 className="hero-main-title">
+              <span style={{ display: 'block', color: '#ffffff' }}>smart solutions</span>
               <span style={{ display: 'block', color: '#ffffff' }}>Smarter Business.</span>
               <span style={{ display: 'block', color: '#ffffff' }}>Stronger Tomorrow.</span>
             </h1>

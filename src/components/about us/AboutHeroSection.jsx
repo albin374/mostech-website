@@ -10,7 +10,6 @@ const AboutHeroSection = () => {
         {/* Left Column */}
         <div className="about-hero-left">
           <div className="about-badge-new">
-            <div className="badge-line"></div>
             <span>WHO WE ARE</span>
           </div>
           <h1 className="about-title-new">

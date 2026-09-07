@@ -96,15 +96,7 @@
   margin-bottom: 1rem;
 }
 
-.about-page .section-eyebrow::before {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--about-accent);
-  border-radius: 2px;
-  flex-shrink: 0;
-}
+
 
 /* Animation utilities for the about page */
 @keyframes fadeInUp {

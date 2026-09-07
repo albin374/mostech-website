@@ -9,9 +9,7 @@ const CompanyStats = () => {
         
         <div className="stats-visual-area">
           <div className="stats-badge badge-overlay">
-            <span className="stats-badge-line"></span>
             <span className="stats-badge-text">OUR ACHIEVEMENTS</span>
-            <span className="stats-badge-line"></span>
           </div>
 
           <div className="container stats-cards-wrapper">

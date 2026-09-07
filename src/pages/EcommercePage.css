@@ -2,7 +2,7 @@
    ECOMMERCE PAGE STYLES
    ================================================== */
 .ecom-page {
-  padding-top: 140px; /* Offset for fixed header */
+  padding-top: 70px; /* Offset for fixed header */
   min-height: 100vh;
   background-color: #f6f9fc;
 }

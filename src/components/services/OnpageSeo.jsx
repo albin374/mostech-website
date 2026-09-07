@@ -14,11 +14,6 @@ const OnpageSeo = () => {
           </div>
           
           <div className="onpage-header-content">
-            <div className="onpage-dots">
-              <span className="dot small"></span>
-              <span className="dot large"></span>
-              <span className="dot small"></span>
-            </div>
             <h2 className="onpage-title">
               What We Offer at <span className="blue-text">Mostech Business Solutions SEO</span>
             </h2>

@@ -25,7 +25,6 @@ const PosMachinePage = () => {
           
           <div className="pos-hero-content">
             <div className="pos-badge">
-              <span className="pos-badge-line"></span>
               <span className="pos-badge-text">POS MACHINE & SOFTWARE</span>
             </div>
             

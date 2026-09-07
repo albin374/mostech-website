@@ -7,11 +7,7 @@ const SeoWhyChooseUs = () => {
       <div className="container">
         
         <div className="seo-wcu-header">
-          <div className="seo-wcu-subtitle">
-            <span className="dash-dot-line"><span className="dash"></span><span className="dot"></span></span>
-            Why Choose Us?
-            <span className="dash-dot-line"><span className="dot"></span><span className="dash"></span></span>
-          </div>
+
           <h2 className="seo-wcu-title">Why Choose <span className="dark-blue">Us?</span></h2>
           <p className="seo-wcu-desc">
             Partner with <strong>Mostech Business Solutions</strong> and take your business to the next level with innovative technology 

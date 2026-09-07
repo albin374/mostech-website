@@ -12,7 +12,6 @@ const CeoMessage = () => {
         <div className="ceo-top-content">
           <div className="ceo-left">
             <div className="ceo-badge">
-              <span className="ceo-badge-line"></span>
               <span className="ceo-badge-text">CEO MESSAGE</span>
             </div>
             

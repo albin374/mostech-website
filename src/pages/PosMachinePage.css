@@ -4,7 +4,7 @@
 }
 
 .pos-hero-section {
-  padding: 170px 0 80px 0; /* Pushed down to avoid navbar overlap */
+  padding: 90px 0 80px 0; /* Pushed down to avoid navbar overlap */
   background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
   position: relative;
   overflow: hidden;

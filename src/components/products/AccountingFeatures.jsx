@@ -20,10 +20,9 @@ const AccountingFeatures = () => {
       <div className="container accounting-features-container">
         
         {/* Section Header */}
-        <div className="features-header-top">
-          <span className="features-badge-line"></span>
-          <span className="features-badge-text">FEATURES</span>
-        </div>
+          <div className="features-badge">
+            <span className="features-badge-text">EVERYTHING YOU NEED</span>
+          </div>
         <h2 className="features-main-title">
           Everything You Need.<br/>
           <span className="features-blue-text">One Powerful Platform.</span>

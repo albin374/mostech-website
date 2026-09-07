@@ -30,9 +30,7 @@ const S3Model = () => {
         
         <div className="s3-header">
           <div className="s3-badge">
-            <span className="s3-badge-line"></span>
             OUR FRAMEWORK
-            <span className="s3-badge-line"></span>
           </div>
           <h2 className="s3-title">
             Productized <span className="s3-highlight">S3+ Services</span> Model

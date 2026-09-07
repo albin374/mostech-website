@@ -10,7 +10,6 @@ const PosFeatures = () => {
         {/* Header */}
         <div className="pos-feat-header">
           <div className="pos-feat-badge">
-            <span className="badge-line"></span>
             <span className="badge-text">MORE THAN A POS MACHINE</span>
           </div>
           <h2 className="pos-feat-title">

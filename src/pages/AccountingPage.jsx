@@ -20,8 +20,7 @@ const AccountingPage = () => {
           {/* Left Content */}
           <div className="accounting-hero-left">
             <div className="accounting-hero-badge">
-              <span className="badge-line"></span>
-              <span className="badge-text">ACCOUNTING SOFTWARE</span>
+              <span className="badge-text">SMART ACCOUNTING</span>
             </div>
 
             <h1 className="accounting-main-title">

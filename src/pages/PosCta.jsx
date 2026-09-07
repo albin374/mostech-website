@@ -10,7 +10,6 @@ const PosCta = () => {
         
         <div className="pos-cta-content">
           <div className="pos-cta-badge">
-            <span className="cta-badge-line"></span>
             <span className="cta-badge-text">READY TO UPGRADE YOUR CHECKOUT?</span>
           </div>
           

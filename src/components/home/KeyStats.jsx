@@ -75,9 +75,7 @@ const KeyStats = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className="key-stats-dot"></span>
             <span className="key-stats-subtitle">OUR ACHIEVEMENTS</span>
-            <span className="key-stats-dot"></span>
           </motion.div>
           
           <motion.h2 
