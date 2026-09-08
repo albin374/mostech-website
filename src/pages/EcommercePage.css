@@ -430,19 +430,9 @@
 }
 
 /* Applying Colors */
-.ecom-service-card.color-blue .card-top-accent { background: var(--accent); }
-.ecom-service-card.color-lightblue .card-top-accent { background: var(--accent); }
-.ecom-service-card.color-green .card-top-accent { background: var(--accent); }
-.ecom-service-card.color-purple .card-top-accent { background: var(--accent); }
-.ecom-service-card.color-orange .card-top-accent { background: var(--accent); }
-.ecom-service-card.color-teal .card-top-accent { background: var(--accent); }
+.ecom-service-card .card-top-accent { background: #0a1930; }
 
-.ecom-service-card.color-blue .card-icon-wrapper { background: var(--icon-bg); }
-.ecom-service-card.color-lightblue .card-icon-wrapper { background: var(--icon-bg); }
-.ecom-service-card.color-green .card-icon-wrapper { background: var(--icon-bg); }
-.ecom-service-card.color-purple .card-icon-wrapper { background: var(--icon-bg); }
-.ecom-service-card.color-orange .card-icon-wrapper { background: var(--icon-bg); }
-.ecom-service-card.color-teal .card-icon-wrapper { background: var(--icon-bg); }
+.ecom-service-card .card-icon-wrapper { background: #0a1930; }
 
 .ecom-service-card .card-link { color: var(--icon-bg); }
 .ecom-service-card .link-icon { 
