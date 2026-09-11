@@ -21,8 +21,10 @@
 
 @media (min-width: 992px) {
   .ceo-person-image {
-    max-height: 75%; /* Reduce image size in web view */
-    right: 8%; /* Position slightly more left */
+    max-height: 75%;
+    /* Reduce image size in web view */
+    right: 8%;
+    /* Position slightly more left */
   }
 }
 
@@ -67,7 +69,8 @@
 .ceo-badge-line {
   width: 30px;
   height: 2px;
-  background-color: #3b82f6; /* Blue line */
+  background-color: #3b82f6;
+  /* Blue line */
 }
 
 .ceo-badge-text {
@@ -237,7 +240,13 @@
   .ceo-section {
     background-image: url('/mobileview ceo.png');
   }
+
   .ceo-person-image {
-    display: none;
+    display: block;
+    height: 70%;
+    max-width: none;
+    width: auto;
+    right: -15%;
+    bottom: 0;
   }
 }

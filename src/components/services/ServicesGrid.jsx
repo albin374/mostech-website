@@ -74,20 +74,10 @@ const ServicesGrid = () => {
       >
         <source src={isMobile ? "/ourservices banner video.mp4" : "/The_year_is_2125_Dubai_2026090316578.mp4"} type="video/mp4" />
       </video>
-      <div 
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.8)',
-          zIndex: 1
-        }}
-      ></div>
+
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="services-header">
-          <h2 className="services-title" style={{ color: '#ffffff' }}>
+          <h2 className="services-title" style={{ color: '#0d3870' }}>
             Our <span>Services</span>
           </h2>
           
@@ -111,21 +101,26 @@ const ServicesGrid = () => {
             }
           }}
         >
-          {services.map((service) => (
-            <motion.div 
-              key={service.id} 
-              className="service-modern-card" 
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 50 } }
-              }}
-              whileHover={{ y: -5 }}
-            >
-              <h3 className="service-card-title">{service.title}</h3>
-              <div className="service-card-divider"></div>
-              <p className="service-card-desc">{service.description}</p>
-            </motion.div>
-          ))}
+          {services.map((service, index) => {
+            const isLight = index % 2 === 0;
+            return (
+              <motion.div 
+                key={service.id} 
+                className={`service-modern-card ${isLight ? 'service-card-light' : 'service-card-dark'}`}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 50 } }
+                }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="service-card-number">
+                  0{index + 1}
+                </div>
+                <h3 className="service-card-title">{service.title}</h3>
+                <p className="service-card-desc">{service.description}</p>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
