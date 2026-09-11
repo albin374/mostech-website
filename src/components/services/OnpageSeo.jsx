@@ -35,12 +35,7 @@ const OnpageSeo = () => {
           
           {/* Left Column */}
           <div className="onpage-card-left">
-            <div className="onpage-badge">
-              <div className="badge-icon">
-                <Search size={16} color="#ffffff" />
-              </div>
-              <span>ON-PAGE SEO</span>
-            </div>
+
 
             <h3 className="onpage-card-title">On-page SEO</h3>
             

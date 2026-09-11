@@ -11,20 +11,11 @@ const LocalSeo = () => {
           
           {/* Left Column (Text) */}
           <div className="local-card-left">
-            <div className="local-badge">
-              <div className="badge-icon">
-                <MapPin size={16} color="#ffffff" />
-              </div>
-              <span>LOCAL SEO</span>
-            </div>
+
 
             <h3 className="local-card-title">Local <span className="blue-text">SEO</span></h3>
             
-            <div className="local-divider">
-              <span className="line"></span>
-              <span className="dot"></span>
-              <span className="dot small"></span>
-            </div>
+
 
             <p className="local-card-desc">
               In case you would like to see your business appearing in all the right places, 

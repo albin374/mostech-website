@@ -168,6 +168,9 @@
 .about-page .contact-details {
   display: flex;
   flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .about-page .contact-label {

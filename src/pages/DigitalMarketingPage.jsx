@@ -254,9 +254,7 @@ const DigitalMarketingPage = () => {
           
           <div className="dm-services-header">
             <div className="dm-section-badge">
-              <div className="dm-badge-dash"></div>
               <span>OUR DIGITAL MARKETING SERVICES</span>
-              <div className="dm-badge-dash"></div>
             </div>
             <h2>
               Data-Driven Strategies. <span className="dm-blue-text">Measurable Results.</span>
@@ -273,7 +271,6 @@ const DigitalMarketingPage = () => {
             <Link to="/seo" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="dm-service-card" style={{ cursor: 'pointer', height: '100%' }}>
                 <div className="dm-service-icon-wrapper">
-                  <div className="dm-icon-bg-shape"></div>
                   <Search size={28} color="#2f6bd8" />
                 </div>
                 <h4>Search Engine Optimization (SEO)</h4>
@@ -289,7 +286,6 @@ const DigitalMarketingPage = () => {
             {/* Card 2 */}
             <div className="dm-service-card">
               <div className="dm-service-icon-wrapper">
-                <div className="dm-icon-bg-shape"></div>
                 <MousePointerClick size={28} color="#2f6bd8" />
               </div>
               <h4>Pay-Per-Click (PPC) Advertising</h4>
@@ -304,7 +300,6 @@ const DigitalMarketingPage = () => {
             {/* Card 3 */}
             <div className="dm-service-card">
               <div className="dm-service-icon-wrapper">
-                <div className="dm-icon-bg-shape"></div>
                 <ThumbsUp size={28} color="#2f6bd8" />
               </div>
               <h4>Social Media Marketing</h4>
@@ -319,7 +314,6 @@ const DigitalMarketingPage = () => {
             {/* Card 4 */}
             <div className="dm-service-card">
               <div className="dm-service-icon-wrapper">
-                <div className="dm-icon-bg-shape"></div>
                 <PenTool size={28} color="#2f6bd8" />
               </div>
               <h4>Content Marketing</h4>
@@ -334,7 +328,6 @@ const DigitalMarketingPage = () => {
             {/* Card 5 */}
             <div className="dm-service-card">
               <div className="dm-service-icon-wrapper">
-                <div className="dm-icon-bg-shape"></div>
                 <MapPin size={28} color="#2f6bd8" />
               </div>
               <h4>Local SEO & Geo-Targeting</h4>
@@ -349,7 +342,6 @@ const DigitalMarketingPage = () => {
             {/* Card 6 */}
             <div className="dm-service-card">
               <div className="dm-service-icon-wrapper">
-                <div className="dm-icon-bg-shape"></div>
                 <BarChart2 size={28} color="#2f6bd8" />
               </div>
               <h4>Analytics & Reporting</h4>
@@ -464,10 +456,7 @@ const DigitalMarketingPage = () => {
           
           {/* Left Column */}
           <div className="dm-choose-left">
-            <div className="dm-choose-badge">
-              <span className="dm-slash">//</span>
-              <span>WHY CHOOSE US</span>
-            </div>
+
 
             <h2>
               Why Choose<br/>

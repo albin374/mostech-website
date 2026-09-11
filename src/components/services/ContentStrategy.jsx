@@ -11,20 +11,11 @@ const ContentStrategy = () => {
           
           {/* Left Column (Text) */}
           <div className="content-card-left">
-            <div className="content-badge">
-              <div className="badge-icon">
-                <PenTool size={16} color="#ffffff" />
-              </div>
-              <span>BUILD. ENGAGE. CONVERT.</span>
-            </div>
+
 
             <h3 className="content-card-title">CONTENT <span className="light-blue-text">STRATEGY</span></h3>
             
-            <div className="content-divider">
-              <span className="line"></span>
-              <span className="dot"></span>
-              <span className="dot small"></span>
-            </div>
+
 
             <p className="content-card-desc">
               Our company offers content that addresses the needs of your target audience on blogs, 

@@ -11,20 +11,11 @@ const TechnicalSeo = () => {
           
           {/* Left Column (Text) */}
           <div className="technical-card-left">
-            <div className="technical-badge">
-              <div className="badge-icon">
-                <Settings size={16} color="#ffffff" />
-              </div>
-              <span>TECHNICAL SEO</span>
-            </div>
+
 
             <h3 className="technical-card-title">Technical <span className="blue-text">SEO</span></h3>
             
-            <div className="technical-divider">
-              <span className="line"></span>
-              <span className="dot"></span>
-              <span className="dot small"></span>
-            </div>
+
 
             <p className="technical-card-desc">
               The speed of your website must be optimized along with making sure it is crawlable 

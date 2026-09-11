@@ -18,10 +18,7 @@ const OffpageSeo = () => {
           <div className="offpage-card-right">
             
             <h3 className="offpage-title">OFF-PAGE SEO</h3>
-            <div className="offpage-divider">
-              <span className="dot"></span>
-              <span className="line"></span>
-            </div>
+
             
             <p className="offpage-desc">
               Off-page SEO is an essential element in the successful SEO performance of your website. 
