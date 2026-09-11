@@ -124,13 +124,7 @@ const HrmsModules = () => {
 
           <div className="banner-right">
             <div className="node-graphic">
-              <svg viewBox="0 0 100 100" className="node-lines">
-                <path d="M 20 80 Q 50 20 80 50" fill="none" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="3" strokeDasharray="5,5" />
-                <path d="M 80 50 Q 60 80 20 80" fill="none" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="3" strokeDasharray="5,5" />
-              </svg>
-              <div className="node n1"><Users size={16} color="#ffffff"/></div>
               <div className="node n2"><Users size={20} color="#ffffff"/></div>
-              <div className="node n3"><Users size={14} color="#ffffff"/></div>
             </div>
           </div>
         </div>
