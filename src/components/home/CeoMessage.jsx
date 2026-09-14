@@ -11,9 +11,7 @@ const CeoMessage = () => {
         {/* Top Content */}
         <div className="ceo-top-content">
           <div className="ceo-left">
-            <div className="ceo-badge">
-              <span className="ceo-badge-text">CEO MESSAGE</span>
-            </div>
+
             
             <h2 className="ceo-title">
               A Vision for a<br/>Smarter Tomorrow
@@ -24,9 +22,12 @@ const CeoMessage = () => {
             </p>
 
             <div className="ceo-profile">
+              <div className="ceo-profile-image-mobile">
+                <img src="/ceoceo.png" alt="Ayoob K A - CEO" />
+              </div>
               <div className="ceo-profile-details">
                 <h4 className="ceo-name">Ayoob K A</h4>
-                <p className="ceo-role">Founder & CEO</p>
+                <p className="ceo-role">Chairman</p>
                 <p className="ceo-company">Mostech Business Solutions</p>
               </div>
             </div>
