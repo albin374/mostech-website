@@ -4,6 +4,7 @@ import { ArrowRight, Clock, ShieldCheck, TrendingUp } from 'lucide-react';
 import AccountingFeatures from '../components/products/AccountingFeatures';
 import AccountingBenefits from '../components/products/AccountingBenefits';
 import AccountingCta from '../components/products/AccountingCta';
+import PosFeatures from './PosFeatures';
 import './AccountingPage.css';
 
 const AccountingPage = () => {
@@ -92,6 +93,9 @@ const AccountingPage = () => {
 
       {/* ================= BENEFITS SECTION ================= */}
       <AccountingBenefits />
+
+      {/* ================= POS FEATURES SECTION ================= */}
+      <PosFeatures />
 
       {/* ================= CTA SECTION ================= */}
       <AccountingCta />

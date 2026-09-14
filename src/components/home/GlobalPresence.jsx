@@ -177,12 +177,13 @@ const GlobalPresence = () => {
           </div>
 
           <div className="gp-legend">
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-hub)'}}></span><span className="gp-legend-label">Hub – Dubai, UAE</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Europe &amp; CIS</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Middle East &amp; Africa</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-hub)'}}></span><span className="gp-legend-label">HQ - Dubai, UAE</span></div>
             <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">South Asia</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Southeast Asia &amp; Oceania</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Middle East</span></div>
             <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">North America</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Europe &amp; UK</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Commonwealth of Independent States</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Africa</span></div>
           </div>
         </div>
 

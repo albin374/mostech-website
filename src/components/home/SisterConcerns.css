@@ -211,6 +211,15 @@
   max-width: 90%;
 }
 
+.sc-card-location {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #3b82f6;
+  margin-top: 0.4rem;
+  letter-spacing: 0.5px;
+}
+
 .sc-card-footer {
   margin-top: auto;
 }

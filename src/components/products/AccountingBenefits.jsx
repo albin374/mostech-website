@@ -1,76 +1,39 @@
 import React from 'react';
-import './AccountingBenefits.css';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import '../../pages/PosMachinePage.css';
 
 const AccountingBenefits = () => {
   return (
-    <section className="accounting-benefits-section">
-      <div className="container accounting-benefits-container">
+    <section className="pos-hero-section">
+      <div className="container pos-hero-container">
         
-        {/* Left Side: Image */}
-        <div className="benefits-image-col">
-          <img 
-            src="/accounting%20sofware2.png" 
-            alt="Mostech Accounting Software Dashboard" 
-            className="benefits-main-image" 
-          />
+        <div className="pos-hero-content">
+          <div className="pos-badge">
+            <span className="pos-badge-text">POS MACHINE & SOFTWARE</span>
+          </div>
+          
+          <h1 className="pos-hero-title">
+            Smart POS Solutions<br/>
+            <span className="pos-blue-text">Built for Modern<br/>Businesses</span>
+          </h1>
+          
+          <p className="pos-hero-desc">
+            Power your sales with reliable POS hardware and intuitive software designed to manage transactions, products, inventory, and business operations from one connected system.
+          </p>
+          
+          <div className="pos-hero-buttons">
+            <Link to="/contact" className="pos-btn-primary">
+              Request a Demo <ArrowRight size={18} />
+            </Link>
+            <a href="#features" className="pos-btn-outline">
+              Explore POS Features
+            </a>
+          </div>
         </div>
 
-        {/* Right Side: Content */}
-        <div className="benefits-content-col">
-          
-          <h2 className="benefits-title">
-            Less Manual Work.<br/>
-            <span className="benefits-blue-text">More Financial Control.</span>
-          </h2>
-
-          <p className="benefits-desc">
-            Our accounting software helps you streamline your financial processes, reduce errors, and focus on what really matters — growing your business.
-          </p>
-
-          <div className="benefits-grid">
-            
-            {/* Box 1 */}
-            <div className="benefit-box">
-              <div className="benefit-header">
-                <span className="benefit-number">01</span>
-                <span className="benefit-line"></span>
-              </div>
-              <h4 className="benefit-box-title">Save Time</h4>
-              <p className="benefit-box-desc">Automate repetitive accounting tasks and reduce manual work.</p>
-            </div>
-
-            {/* Box 2 */}
-            <div className="benefit-box">
-              <div className="benefit-header">
-                <span className="benefit-number">02</span>
-                <span className="benefit-line"></span>
-              </div>
-              <h4 className="benefit-box-title">Reduce Errors</h4>
-              <p className="benefit-box-desc">Keep financial information organized and consistent.</p>
-            </div>
-
-            {/* Box 3 */}
-            <div className="benefit-box">
-              <div className="benefit-header">
-                <span className="benefit-number">03</span>
-                <span className="benefit-line"></span>
-              </div>
-              <h4 className="benefit-box-title">Make Better Decisions</h4>
-              <p className="benefit-box-desc">Access clear financial data when you need it.</p>
-            </div>
-
-            {/* Box 4 */}
-            <div className="benefit-box">
-              <div className="benefit-header">
-                <span className="benefit-number">04</span>
-                <span className="benefit-line"></span>
-              </div>
-              <h4 className="benefit-box-title">Grow With Confidence</h4>
-              <p className="benefit-box-desc">Build a stronger financial foundation as your business grows.</p>
-            </div>
-
-          </div>
-
+        <div className="pos-hero-image">
+          <img src="/pos.png" alt="POS Machine and Software Interface" />
         </div>
 
       </div>

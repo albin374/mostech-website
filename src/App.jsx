@@ -59,7 +59,7 @@ function App() {
             <Route path="/project-management" element={<ProjectManagementPage />} />
             <Route path="/task-management" element={<TaskManagementPage />} />
             <Route path="/accounting-software" element={<AccountingPage />} />
-            <Route path="/pos-machine" element={<PosMachinePage />} />
+            <Route path="/pro-solutions" element={<PosMachinePage />} />
             <Route path="/our-team" element={<OurTeamPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>

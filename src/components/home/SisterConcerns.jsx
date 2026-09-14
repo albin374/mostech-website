@@ -14,51 +14,60 @@ const SisterConcerns = () => {
   const cards = [
     {
       id: 1,
+      title: "Mostech Information Technology LLC",
+      desc: "Innovative IT services and technology solutions.",
+      location: "Dubai, UAE",
+      icon: <img src="/mostechlogo.png" alt="Mostech Information Technology" className="sc-img-logo" />,
+      bgImage: "/fathbackground.png",
+      link: "https://mostech.ae",
+      linkText: "mostech.ae"
+    },
+    {
+      id: 2,
+      title: "Mostech Business Solutions LLP",
+      desc: "Business setup and corporate solutions.",
+      location: "Kannur, Kerala, India",
+      icon: <img src="/logo.webp" alt="Mostech Business Solutions" className="sc-img-logo" />,
+      logoBg: "#ffffff",
+      bgImage: "/mosbiz background.png",
+      link: "https://mostech.ae",
+      linkText: "mostech.ae"
+    },
+    {
+      id: 3,
+      title: "Mosbiz Corporate Services FZC",
+      desc: "Corporate services for your growth.",
+      location: "Sharjah, UAE",
+      icon: <img src="/mosbiz.webp" alt="Mosbiz Corporate Services" className="sc-img-logo" />,
+      bgImage: "/mosbiz.png",
+      link: "https://Mosbizuae.com",
+      linkText: "Mosbizuae.com"
+    },
+    {
+      id: 4,
+      title: "Mos Academy",
+      desc: "Learning today for a brighter tomorrow.",
+      location: "Thalassery, Kerala, India",
+      icon: <img src="/mosacademyfinal.png" alt="Mos Academy" className="sc-img-logo" />,
+      bgImage: "/mosacademy.png"
+    },
+    {
+      id: 5,
       title: "Fath Creative",
       desc: "Creative solutions for a digital world.",
+      location: "Jeddah, Saudi Arabia",
       icon: <img src="/fath-logo.webp" alt="Fath Creative" className="sc-img-logo" />,
       bgImage: "/fathbackground.png",
       link: "https://Fathcreative.com",
       linkText: "Fathcreative.com"
     },
     {
-      id: 2,
-      title: "Mosbizuae",
-      desc: "Business setup and corporate solutions in UAE.",
-      icon: <img src="/mosbiz.webp" alt="Mosbizuae" className="sc-img-logo" />,
-      bgImage: "/mosbiz background.png",
-      link: "https://Mosbizuae.com",
-      linkText: "Mosbizuae.com"
-    },
-    {
-      id: 3,
-      title: "Pixora Design",
-      desc: "Designs that make an impact.",
-      icon: <img src="/pixora-logo.webp" alt="Pixora Design" className="sc-img-logo" />,
-      bgImage: "/pixora desgins.png",
-      link: "https://Pixoradesign.in",
-      linkText: "Pixoradesign.in"
-    },
-    {
-      id: 4,
-      title: "Mosmart",
-      desc: "General trading for a smarter tomorrow.",
-      icon: <img src="/mozmart.png" alt="Mosmart" className="sc-img-logo" />,
-      bgImage: "/mosmartbg.png"
-    },
-    {
-      id: 5,
-      title: "MOS Academy",
-      desc: "Learning today for a brighter tomorrow.",
-      icon: <img src="/mozacademey.png" alt="MOS Academy" className="sc-img-logo" />,
-      bgImage: "/mosacademy.png"
-    },
-    {
       id: 6,
-      title: "Mosbiz",
-      desc: "Corporate services for your growth.",
-      icon: <img src="/mosbiz.webp" alt="Mosbiz" className="sc-img-logo" />,
-      bgImage: "/mosbiz.png"
+      title: "Mosmart General Trading",
+      desc: "General trading for a smarter tomorrow.",
+      location: "Dubai, UAE",
+      icon: <img src="/mozmart.png" alt="Mosmart General Trading" className="sc-img-logo" />,
+      bgImage: "/mosmartbg.png"
     }
   ];
 
@@ -106,12 +115,13 @@ const SisterConcerns = () => {
                 {/* Content Layer */}
                 <div className="sc-content-layer">
                   <div className="sc-card-header">
-                    <div className="sc-logo-box">
+                    <div className="sc-logo-box" style={card.logoBg ? { backgroundColor: card.logoBg } : {}}>
                       {card.icon}
                     </div>
                     <div className="sc-text-box">
                       <h3 className="sc-card-title-new">{card.title}</h3>
                       <p className="sc-card-desc-new">{card.desc}</p>
+                      {card.location && <div className="sc-card-location">{card.location}</div>}
                     </div>
                   </div>
                   

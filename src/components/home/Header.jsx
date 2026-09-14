@@ -70,13 +70,13 @@ const Header = () => {
                   <li className={`has-dropdown ${activeDropdown === 'products' ? 'dropdown-open' : ''}`}>
                     <a href="#" className="nav-link" onClick={(e) => toggleDropdown(e, 'products')}>PRODUCTS <ChevronDown size={14} className="dropdown-icon" /></a>
                     <ul className="dropdown">
-                      <li><Link to="/hrms" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>HRMS</Link></li>
-                      <li><Link to="/erp-product" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ERP</Link></li>
-                      <li><Link to="/whatsapp-chatbot" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>WHATSAPP CHATBOT</Link></li>
-                      <li><Link to="/project-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>PROJECT MANAGEMENT</Link></li>
-                      <li><Link to="/task-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>TASK MANAGEMENT</Link></li>
+                      <li><Link to="/erp-product" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ERP APPLICATION</Link></li>
+                      <li><Link to="/hrms" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>HRMS APPLICATION</Link></li>
                       <li><Link to="/accounting-software" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>ACCOUNTING SOFTWARE</Link></li>
-                      <li><Link to="/pos-machine" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>POS MACHINE + SOFTWARE</Link></li>
+                      <li><Link to="/whatsapp-chatbot" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>CHATBOT APPLICATION</Link></li>
+                      <li><Link to="/project-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>PROJECT MANAGEMENT APPLICATION</Link></li>
+                      <li><Link to="/task-management" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>TASK MANAGEMENT SOFTWARE</Link></li>
+                      <li><Link to="/pro-solutions" onClick={() => {setIsMobileMenuOpen(false); setActiveDropdown(null);}}>PRO SOLUTIONS</Link></li>
                     </ul>
                   </li>
                   <li><Link to="/contact" className={`nav-link ${currentPath === '/contact' ? 'nav-link-active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link></li>
