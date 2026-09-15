@@ -22,9 +22,6 @@ const AboutCTA = () => {
               <Link to="/contact" className="btn-primary cta-btn" style={{ textDecoration: 'none', display: 'inline-flex' }}>
                 Talk to our Team <ArrowRight size={16} />
               </Link>
-              <a href="mailto:sales@mostech.ae" className="btn-outline cta-btn-outline">
-                sales@mostech.ae
-              </a>
             </div>
           </div>
 

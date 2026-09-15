@@ -81,11 +81,11 @@ const AboutCeoMessage = () => {
 
           <div className="ceo-image-wrapper">
             <div className="ceo-glow-circle"></div>
-            <img src="/ceoceo.png" alt="Ayoob K. A. - CEO" className="ceo-portrait" />
+            <img src="/ceoceo.png" alt="Ayoob K A - CEO" className="ceo-portrait" />
             
             {/* Floating Glassmorphism Card */}
             <div className="ceo-floating-card">
-              <h3 className="ceo-card-name">Ayoob K. A.</h3>
+              <h3 className="ceo-card-name">Ayoob K A</h3>
               <p className="ceo-card-role">CHAIRMAN</p>
               <div className="ceo-card-line"></div>
             </div>

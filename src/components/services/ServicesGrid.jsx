@@ -96,8 +96,6 @@ const ServicesGrid = () => {
           <p className="services-desc" style={{ color: '#ffffff' }}>
             Innovative digital solutions to streamline operations and drive business growth.
           </p>
-
-          <div className="services-header-divider"></div>
         </div>
         
         <motion.div 

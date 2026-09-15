@@ -1,8 +1,43 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Send, MapPin, Phone, Mail, Clock, MessageSquare, Building2, Globe2, HeadphonesIcon } from 'lucide-react';
 import './ContactPage.css';
 
 const ContactPage = () => {
+  const form = useRef();
+  const [status, setStatus] = useState('');
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    const formData = new FormData(form.current);
+    const data = {
+      user_name: formData.get('user_name'),
+      user_email: formData.get('user_email'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/send-message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        form.current.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setStatus('error');
+    }
+  };
+
   return (
     <main className="contact-page-wrapper">
       <section className="contact-banner-section">
@@ -37,37 +72,33 @@ const ContactPage = () => {
                 Fill out the form below and our team will get back to you within 24 business hours.
               </p>
               
-              <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+              <form ref={form} className="contact-form" onSubmit={sendEmail}>
+                {status === 'success' && <div style={{color: '#16a34a', marginBottom: '1.5rem', fontWeight: '600', padding: '1rem', backgroundColor: '#f0fdf4', borderRadius: '8px', border: '1px solid #bbf7d0'}}>✅ Your message has been sent successfully!</div>}
+                {status === 'error' && <div style={{color: '#dc2626', marginBottom: '1.5rem', fontWeight: '600', padding: '1rem', backgroundColor: '#fef2f2', borderRadius: '8px', border: '1px solid #fecaca'}}>❌ Failed to send message. Please try again later.</div>}
+                
                 <div className="form-group">
                   <label>Your Name *</label>
                   <div className="input-wrapper">
-                    <input type="text" placeholder="Enter your name" />
+                    <input type="text" name="user_name" placeholder="Enter your name" required />
                   </div>
                 </div>
                 
                 <div className="form-group">
                   <label>Your Email Address *</label>
                   <div className="input-wrapper">
-                    <input type="email" placeholder="Enter your email address" />
-                  </div>
-                </div>
-                
-                <div className="form-group">
-                  <label>Subject *</label>
-                  <div className="input-wrapper">
-                    <input type="text" placeholder="Enter the subject" />
+                    <input type="email" name="user_email" placeholder="Enter your email address" required />
                   </div>
                 </div>
                 
                 <div className="form-group">
                   <label>Message *</label>
                   <div className="input-wrapper textarea-wrapper">
-                    <textarea placeholder="Enter your message..." rows="4"></textarea>
+                    <textarea name="message" placeholder="Enter your message..." rows="4" required></textarea>
                   </div>
                 </div>
                 
-                <button type="submit" className="contact-submit-btn">
-                  <Send size={18} /> Send Message <span style={{marginLeft: '8px'}}>→</span>
+                <button type="submit" className="contact-submit-btn" disabled={status === 'sending'} style={{ opacity: status === 'sending' ? 0.7 : 1 }}>
+                  {status === 'sending' ? 'Sending...' : <><Send size={18} /> Send Message <span style={{marginLeft: '8px'}}>→</span></>}
                 </button>
                 
                 <div className="contact-form-footer">
@@ -139,15 +170,15 @@ const ContactPage = () => {
               <div className="info-list">
                 <div className="info-list-item">
                   <div className="info-list-icon-cal">📅</div>
-                  <span><strong>Monday - Friday</strong><br/>9:00 AM - 5:00 PM (GST)</span>
+                  <span><strong>Monday - Thursday</strong><br/>9:00 AM - 5:00 PM (GST)</span>
                 </div>
                 <div className="info-list-item">
                   <div className="info-list-icon-cal">📅</div>
-                  <span><strong>Saturday</strong><br/>9:00 AM - 2:00 PM (GST)</span>
+                  <span><strong>Friday</strong><br/>9:00 AM - 1:00 PM (GST)</span>
                 </div>
                 <div className="info-list-item">
                   <div className="info-list-icon-cal">❌</div>
-                  <span><strong>Sunday</strong><br/>Closed</span>
+                  <span><strong>Saturday & Sunday</strong><br/>Closed</span>
                 </div>
               </div>
             </div>

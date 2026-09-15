@@ -55,8 +55,8 @@ const Footer = () => {
                 <a href="tel:+97450547557" className="contact-link"><strong>+974 5054 7557</strong></a>
               </div>
               <div className="contact-item mt-3">
-                <Mail size={16} />
-                <a href="mailto:info@mostech.ae" className="contact-link">info@mostech.ae</a>
+                <Mail size={20} />
+                <a href="mailto:info@mostech.ae" className="contact-link" style={{ fontSize: '1.1rem' }}><strong>info@mostech.ae</strong></a>
               </div>
             </div>
           </div>

@@ -182,7 +182,7 @@ const GlobalPresence = () => {
             <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Middle East</span></div>
             <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">North America</span></div>
             <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Europe &amp; UK</span></div>
-            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Commonwealth of Independent States</span></div>
+            <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">CIS</span></div>
             <div className="gp-legend-item"><span className="gp-legend-swatch" style={{background:'var(--land-on)'}}></span><span className="gp-legend-label">Africa</span></div>
           </div>
         </div>
