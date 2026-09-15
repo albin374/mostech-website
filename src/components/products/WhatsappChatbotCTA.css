@@ -270,7 +270,7 @@
 .cta-btn-primary {
   display: inline-flex;
   align-items: center;
-  background-color: #1a56db;
+  background-color: #032b5e;
   color: white;
   padding: 10px 30px 10px 10px;
   border-radius: 50px;
@@ -282,16 +282,16 @@
 }
 
 .cta-btn-primary:hover {
-  background-color: #1e40af;
+  background-color: #021a38;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(26, 86, 219, 0.3);
+  box-shadow: 0 10px 20px rgba(3, 43, 94, 0.3);
 }
 
 .btn-icon-wrapper {
   width: 40px;
   height: 40px;
   background-color: white;
-  color: #1a56db;
+  color: #032b5e;
   border-radius: 50%;
   display: flex;
   align-items: center;

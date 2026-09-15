@@ -141,13 +141,13 @@
 
 /* BOTTOM BANNER (5 items) */
 .pm-bottom-banner-5 {
-  background-color: #ffffff;
+  background-color: #032b5e;
   border-radius: 20px;
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgba(3, 43, 94, 0.2);
 }
 
 @media (min-width: 768px) {
@@ -171,10 +171,17 @@
   gap: 12px;
 }
 
-.orange-bg { background-color: #f59e0b; }
-.blue-bg-dark { background-color: #1d4ed8; }
+.white-bg { background-color: #ffffff; }
 
 .pm-f-text-5 {
   display: flex;
   flex-direction: column;
+}
+
+.pm-bottom-banner-5 .pm-f-title {
+  color: #ffffff;
+}
+
+.pm-bottom-banner-5 .pm-f-desc {
+  color: #cbd5e1;
 }

@@ -21,11 +21,7 @@ const ProjectWorkflow = () => {
         
         {/* Left Column (Text + Workflow + Quote) */}
         <div className="pm-workflow-left">
-          <div className="pm-section-badge">
-            <span className="pm-badge-number">03</span>
-            <span className="pm-badge-text">Built to Keep Teams Moving</span>
-          </div>
-          
+
           <h2 className="pm-workflow-title">
             From Planning to Completion,<br/>
             <span className="pm-text-light-blue">Stay in Control.</span>
@@ -87,7 +83,7 @@ const ProjectWorkflow = () => {
       <div className="container">
         <div className="pm-bottom-banner-5">
           <div className="pm-feature-5">
-            <div className="pm-icon-wrap blue-bg"><Eye size={20} color="#ffffff" /></div>
+            <div className="pm-icon-wrap white-bg"><Eye size={20} color="#032b5e" /></div>
             <div className="pm-f-text-5">
               <span className="pm-f-title">Clear Visibility</span>
               <span className="pm-f-desc">See everything in real time and stay informed.</span>
@@ -95,7 +91,7 @@ const ProjectWorkflow = () => {
           </div>
           
           <div className="pm-feature-5">
-            <div className="pm-icon-wrap green-bg"><Users size={20} color="#ffffff" /></div>
+            <div className="pm-icon-wrap white-bg"><Users size={20} color="#032b5e" /></div>
             <div className="pm-f-text-5">
               <span className="pm-f-title">Better Accountability</span>
               <span className="pm-f-desc">Everyone knows their role and responsibilities.</span>
@@ -103,7 +99,7 @@ const ProjectWorkflow = () => {
           </div>
           
           <div className="pm-feature-5">
-            <div className="pm-icon-wrap purple-bg"><Clock size={20} color="#ffffff" /></div>
+            <div className="pm-icon-wrap white-bg"><Clock size={20} color="#032b5e" /></div>
             <div className="pm-f-text-5">
               <span className="pm-f-title">On-Time Delivery</span>
               <span className="pm-f-desc">Track timelines and meet every deadline.</span>
@@ -111,7 +107,7 @@ const ProjectWorkflow = () => {
           </div>
           
           <div className="pm-feature-5">
-            <div className="pm-icon-wrap orange-bg"><MessageCircle size={20} color="#ffffff" /></div>
+            <div className="pm-icon-wrap white-bg"><MessageCircle size={20} color="#032b5e" /></div>
             <div className="pm-f-text-5">
               <span className="pm-f-title">Stronger Collaboration</span>
               <span className="pm-f-desc">Communicate, share, and work together seamlessly.</span>
@@ -119,7 +115,7 @@ const ProjectWorkflow = () => {
           </div>
           
           <div className="pm-feature-5">
-            <div className="pm-icon-wrap blue-bg-dark"><Target size={20} color="#ffffff" /></div>
+            <div className="pm-icon-wrap white-bg"><Target size={20} color="#032b5e" /></div>
             <div className="pm-f-text-5">
               <span className="pm-f-title">Better Results</span>
               <span className="pm-f-desc">Deliver projects efficiently and achieve goals.</span>

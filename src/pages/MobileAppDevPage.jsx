@@ -173,11 +173,7 @@ const MobileAppDevPage = () => {
         
         <div className="container">
           <div className="mobile-services-header new-why-header">
-            <div className="explore-badge-wrap">
-              <span className="explore-badge-line"></span>
-              <span className="explore-badge-text">OUR ADVANTAGE</span>
-              <span className="explore-badge-line"></span>
-            </div>
+
             <h2>Why Choose <span className="mobile-title-highlight">Mostech?</span></h2>
             <p>
               We combine innovation, expertise, and commitment to deliver mobile solutions that drive real business impact.
@@ -251,7 +247,7 @@ const MobileAppDevPage = () => {
 
             {/* Right side: Image */}
             <div className="mobile-why-right">
-              <img src="/why choose as.png" alt="Why Choose Mostech" className="why-choose-img" />
+              <img src="/chooseus3.png" alt="Why Choose Mostech" className="why-choose-img" />
             </div>
           </div>
         </div>

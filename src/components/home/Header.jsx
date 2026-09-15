@@ -36,9 +36,9 @@ const Header = () => {
                 <Phone size={14} className="contact-icon" />
                 <span>+971 58 579 2020</span>
               </a>
-              <a href="mailto:info@mostech.ae" className="contact-item">
+              <a href="mailto:support@mostech.ae" className="contact-item">
                 <Mail size={14} className="contact-icon" />
-                <span>info@mostech.ae</span>
+                <span>support@mostech.ae</span>
               </a>
             </div>
             
@@ -82,9 +82,9 @@ const Header = () => {
                   <li><Link to="/contact" className={`nav-link ${currentPath === '/contact' ? 'nav-link-active' : ''}`} onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link></li>
                 </ul>
                 <div className="mobile-menu-contact-info">
-                  <a href="mailto:info@mostech.ae" className="mobile-contact-link">
+                  <a href="mailto:support@mostech.ae" className="mobile-contact-link">
                     <Mail size={16} />
-                    <span>info@mostech.ae</span>
+                    <span>support@mostech.ae</span>
                   </a>
                   <a href="tel:+971585792020" className="mobile-contact-link">
                     <Phone size={16} />

@@ -68,7 +68,7 @@
 }
 
 .tm-text-blue-bold {
-  color: #1d4ed8;
+  color: #032b5e;
   font-weight: 700;
 }
 
@@ -102,15 +102,15 @@
 }
 
 .tm-btn-primary {
-  background-color: #3b82f6;
+  background-color: #032b5e;
   color: #ffffff;
-  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 10px 25px rgba(3, 43, 94, 0.3);
 }
 
 .tm-btn-primary:hover {
-  background-color: #2563eb;
+  background-color: #021a38;
   transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 15px 35px rgba(3, 43, 94, 0.4);
 }
 
 .tm-btn-secondary {
@@ -154,7 +154,7 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.icon-blue { color: #3b82f6; }
+.icon-blue { color: #032b5e; }
 .icon-green { color: #22c55e; }
 .icon-purple { color: #2dd4bf; }
 

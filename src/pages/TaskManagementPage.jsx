@@ -61,7 +61,7 @@ const TaskManagementPage = () => {
               <div className="tm-hero-features">
                 <div className="tm-feature-item">
                   <div className="tm-feature-icon icon-blue">
-                    <CheckCircle2 size={20} color="#3b82f6" />
+                    <CheckCircle2 size={20} color="#032b5e" />
                   </div>
                   <div className="tm-feature-text">
                     <h4>Stay Organized</h4>
@@ -104,7 +104,7 @@ const TaskManagementPage = () => {
                 {/* Card 1 */}
                 <div className="tm-task-card card-1">
                   <div className="tm-task-card-header">
-                    <Layout size={14} color="#3b82f6" />
+                    <Layout size={14} color="#032b5e" />
                     <span className="tm-task-title">Design Homepage</span>
                   </div>
                   <div className="tm-task-card-body">
@@ -125,7 +125,7 @@ const TaskManagementPage = () => {
                 {/* Card 2 */}
                 <div className="tm-task-card card-2">
                   <div className="tm-task-card-header">
-                    <Code size={14} color="#3b82f6" />
+                    <Code size={14} color="#032b5e" />
                     <span className="tm-task-title">API Integration</span>
                   </div>
                   <div className="tm-task-card-body">

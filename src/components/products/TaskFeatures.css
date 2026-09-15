@@ -1,5 +1,5 @@
 .tm-features-section {
-  padding: 6rem 0;
+  padding: 3rem 0;
   background-color: #ffffff;
   font-family: 'Inter', sans-serif;
   text-align: center;
@@ -8,7 +8,7 @@
 .tm-section-badge-center {
   display: inline-block;
   background-color: #eff6ff;
-  color: #1d4ed8;
+  color: #032b5e;
   padding: 8px 20px;
   border-radius: 50px;
   font-size: 0.85rem;
@@ -26,7 +26,7 @@
 }
 
 .tm-text-blue {
-  color: #2563eb;
+  color: #032b5e;
 }
 
 .tm-features-subtitle {
@@ -125,7 +125,7 @@
 }
 
 /* Numbers color */
-.num-blue { color: #3b82f6; }
+.num-blue { color: #032b5e; }
 .num-green { color: #22c55e; }
 .num-orange { color: #f97316; }
 .num-purple { color: #8b5cf6; }

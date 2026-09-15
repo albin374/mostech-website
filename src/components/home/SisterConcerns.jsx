@@ -18,9 +18,9 @@ const SisterConcerns = () => {
       desc: "Innovative IT services and technology solutions.",
       location: "Dubai, UAE",
       icon: <img src="/mostechlogo.png" alt="Mostech Information Technology" className="sc-img-logo" />,
-      bgImage: "/fathbackground.png",
-      link: "https://mostech.ae",
-      linkText: "mostech.ae"
+      bgImage: "/uaemostech.png",
+      link: "https://www.mostech.ae",
+      linkText: "www.mostech.ae"
     },
     {
       id: 2,
@@ -29,9 +29,9 @@ const SisterConcerns = () => {
       location: "Kannur, Kerala, India",
       icon: <img src="/logo.webp" alt="Mostech Business Solutions" className="sc-img-logo" />,
       logoBg: "#ffffff",
-      bgImage: "/mosbiz background.png",
-      link: "https://mostech.ae",
-      linkText: "mostech.ae"
+      bgImage: "/ChatGPT Image Sep 15, 2026, 01_08_36 PM.png",
+      link: "https://www.mostech.in",
+      linkText: "www.mostech.in"
     },
     {
       id: 3,
@@ -40,8 +40,8 @@ const SisterConcerns = () => {
       location: "Sharjah, UAE",
       icon: <img src="/mosbiz.webp" alt="Mosbiz Corporate Services" className="sc-img-logo" />,
       bgImage: "/mosbiz.png",
-      link: "https://Mosbizuae.com",
-      linkText: "Mosbizuae.com"
+      link: "https://www.mosbizuae.com",
+      linkText: "www.mosbizuae.com"
     },
     {
       id: 4,
@@ -49,7 +49,9 @@ const SisterConcerns = () => {
       desc: "Learning today for a brighter tomorrow.",
       location: "Thalassery, Kerala, India",
       icon: <img src="/mosacademyfinal.png" alt="Mos Academy" className="sc-img-logo" />,
-      bgImage: "/mosacademy.png"
+      bgImage: "/mosacademy.png",
+      link: "https://www.mosacademy.org",
+      linkText: "www.mosacademy.org"
     },
     {
       id: 5,
@@ -57,9 +59,9 @@ const SisterConcerns = () => {
       desc: "Creative solutions for a digital world.",
       location: "Jeddah, Saudi Arabia",
       icon: <img src="/fath-logo.webp" alt="Fath Creative" className="sc-img-logo" />,
-      bgImage: "/fathbackground.png",
-      link: "https://Fathcreative.com",
-      linkText: "Fathcreative.com"
+      bgImage: "/exhibition.png",
+      link: "https://www.fathcreative.com",
+      linkText: "www.fathcreative.com"
     },
     {
       id: 6,
@@ -67,7 +69,9 @@ const SisterConcerns = () => {
       desc: "General trading for a smarter tomorrow.",
       location: "Dubai, UAE",
       icon: <img src="/mozmart.png" alt="Mosmart General Trading" className="sc-img-logo" />,
-      bgImage: "/mosmartbg.png"
+      bgImage: "/e commerce.png",
+      link: "https://www.mosmart.me",
+      linkText: "www.mosmart.me"
     }
   ];
 

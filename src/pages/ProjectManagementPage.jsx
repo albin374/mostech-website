@@ -69,50 +69,7 @@ const ProjectManagementPage = () => {
             </div>
           </div>
           
-          {/* Bottom Banner */}
-          <div className="container">
-            <div className="pm-bottom-banner">
-              <div className="pm-feature">
-                <div className="pm-icon-wrap blue-bg">
-                  <Users size={22} color="#ffffff" />
-                </div>
-                <div className="pm-feature-text">
-                  <span className="pm-f-title">Centralize</span>
-                  <span className="pm-f-desc">all project information</span>
-                </div>
-              </div>
-              
-              <div className="pm-feature">
-                <div className="pm-icon-wrap green-bg">
-                  <CheckCircle2 size={22} color="#ffffff" />
-                </div>
-                <div className="pm-feature-text">
-                  <span className="pm-f-title">Track Progress</span>
-                  <span className="pm-f-desc">in real time</span>
-                </div>
-              </div>
-              
-              <div className="pm-feature">
-                <div className="pm-icon-wrap purple-bg">
-                  <UsersRound size={22} color="#ffffff" />
-                </div>
-                <div className="pm-feature-text">
-                  <span className="pm-f-title">Collaborate</span>
-                  <span className="pm-f-desc">seamlessly</span>
-                </div>
-              </div>
-              
-              <div className="pm-feature">
-                <div className="pm-icon-wrap red-bg">
-                  <TrendingUp size={22} color="#ffffff" />
-                </div>
-                <div className="pm-feature-text">
-                  <span className="pm-f-title">Deliver Results</span>
-                  <span className="pm-f-desc">on time, every time</span>
-                </div>
-              </div>
-            </div>
-          </div>
+
         </section>
         
         <ProjectFeatures />

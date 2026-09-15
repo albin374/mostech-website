@@ -96,7 +96,7 @@ const ContactPage = () => {
                 </div>
                 <div className="info-list-item">
                   <Phone size={18} color="#0d6efd" className="info-list-icon" />
-                  <span><strong>+971 58 173 0112</strong></span>
+                  <span><strong>+971 585792020</strong></span>
                 </div>
                 <div className="info-list-item">
                   <Mail size={18} color="#0d6efd" className="info-list-icon" />
@@ -121,7 +121,7 @@ const ContactPage = () => {
                 </div>
                 <div className="info-list-item">
                   <Phone size={18} color="#0d6efd" className="info-list-icon" />
-                  <span><strong>+91 85475<br/>57283</strong></span>
+                  <span style={{ whiteSpace: 'nowrap' }}><strong>+91 85475 57283</strong></span>
                 </div>
                 <div className="info-list-item">
                   <Building2 size={18} color="#0d6efd" className="info-list-icon" />
@@ -139,7 +139,7 @@ const ContactPage = () => {
               <div className="info-list">
                 <div className="info-list-item">
                   <div className="info-list-icon-cal">📅</div>
-                  <span><strong>Monday - Friday</strong><br/>9:00 AM - 6:00 PM (GST)</span>
+                  <span><strong>Monday - Friday</strong><br/>9:00 AM - 5:00 PM (GST)</span>
                 </div>
                 <div className="info-list-item">
                   <div className="info-list-icon-cal">📅</div>
@@ -165,11 +165,11 @@ const ContactPage = () => {
                 </div>
                 <div className="info-list-item">
                   <Send size={18} color="#0d6efd" className="info-list-icon" />
-                  <span><strong>Drop us an email</strong><br/>info@mostech.ae</span>
+                  <span><strong>Drop us an email</strong><br/>support@mostech.ae</span>
                 </div>
                 <div className="info-list-item">
                   <Phone size={18} color="#0d6efd" className="info-list-icon" />
-                  <span><strong>Call us anytime</strong><br/>+971 58 173 0112</span>
+                  <span><strong>Call us anytime</strong><br/>+971 585792020</span>
                 </div>
               </div>
             </div>

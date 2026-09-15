@@ -5,6 +5,7 @@ import { ArrowRight, Users, FileText, Clock } from 'lucide-react';
 import PosFeatures from './PosFeatures';
 import ProFeaturesSection from '../components/products/ProFeaturesSection';
 import ProExpirySection from '../components/products/ProExpirySection';
+import ProCtaSection from '../components/products/ProCtaSection';
 import './PosMachinePage.css';
 
 const PosMachinePage = () => {
@@ -91,6 +92,8 @@ const PosMachinePage = () => {
       {/* Expiry & Renewal Section */}
       <ProExpirySection />
 
+      {/* Final CTA Section */}
+      <ProCtaSection />
     </main>
   );
 };

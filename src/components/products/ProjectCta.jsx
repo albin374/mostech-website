@@ -9,11 +9,7 @@ const ProjectCta = () => {
         
         {/* Left Column */}
         <div className="pm-cta-left">
-          <div className="pm-section-badge">
-            <span className="pm-badge-number">04</span>
-            <span className="pm-badge-text">Final CTA</span>
-          </div>
-          
+
           <h2 className="pm-cta-title">
             Turn Every Project<br/>
             <span className="pm-text-light-blue">Into Progress.</span>

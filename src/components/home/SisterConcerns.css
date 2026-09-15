@@ -138,6 +138,16 @@
   transform: scale(1.06);
 }
 
+.sc-card-new:nth-child(2) .sc-card-bg {
+  right: -30px;
+}
+
+.sc-card-new:nth-child(2) .sc-card-bg img {
+  transform: scale(1.15);
+  object-position: right bottom;
+  object-fit: cover;
+}
+
 .sc-card-number {
   position: absolute;
   top: 24px;

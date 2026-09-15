@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, ChevronRight } from 'lucide-react';
 import { FaLinkedinIn, FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
@@ -25,12 +26,12 @@ const Footer = () => {
           <div className="footer-col">
             <h3 className="footer-title">Quick Links</h3>
             <ul className="footer-links">
-              <li><a href="#services"><ChevronRight size={14} /> Web Development</a></li>
-              <li><a href="#services"><ChevronRight size={14} /> App Development</a></li>
-              <li><a href="#services"><ChevronRight size={14} /> Digital Marketing</a></li>
-              <li><a href="#services"><ChevronRight size={14} /> SEO Services</a></li>
-              <li><a href="#services"><ChevronRight size={14} /> Ecommerce</a></li>
-              <li><a href="#services"><ChevronRight size={14} /> ERP Solutions</a></li>
+              <li><Link to="/web-development"><ChevronRight size={14} /> Web Development</Link></li>
+              <li><Link to="/mobile-app-development"><ChevronRight size={14} /> App Development</Link></li>
+              <li><Link to="/digital-marketing"><ChevronRight size={14} /> Digital Marketing</Link></li>
+              <li><Link to="/seo"><ChevronRight size={14} /> SEO Services</Link></li>
+              <li><Link to="/ecommerce"><ChevronRight size={14} /> Ecommerce</Link></li>
+              <li><Link to="/erp-product"><ChevronRight size={14} /> ERP Solutions</Link></li>
             </ul>
           </div>
           
@@ -39,7 +40,7 @@ const Footer = () => {
             <div className="footer-contact">
               <div className="contact-item">
                 <span className="country-label">UAE:</span>
-                <a href="tel:+971581730112" className="contact-link"><strong>+971 581730112</strong></a>
+                <a href="tel:+971585792020" className="contact-link"><strong>+971 585792020</strong></a>
               </div>
               <div className="contact-item">
                 <span className="country-label">INDIA:</span>

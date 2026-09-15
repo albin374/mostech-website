@@ -9,9 +9,7 @@ const TaskFeatures = () => {
         
         {/* Section Header */}
         <div className="tm-features-header">
-          <div className="tm-section-badge-center">
-            02 — Everything Your Team Needs
-          </div>
+
           <h2 className="tm-features-title">
             One Place to <span className="tm-text-blue">Create, Organize & Complete</span> Tasks.
           </h2>

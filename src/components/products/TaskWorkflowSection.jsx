@@ -9,9 +9,7 @@ const TaskWorkflowSection = () => {
         
         {/* Left Column */}
         <div className="tm-workflow-left">
-          <div className="tm-section-badge-left">
-            03 — Keep Work Moving
-          </div>
+
           
           <h2 className="tm-workflow-title">
             Know What Needs<br/>
@@ -31,12 +29,29 @@ const TaskWorkflowSection = () => {
             </p>
           </div>
           
-          {/* Workflow Steps */}
+
+          
+          {/* Bottom Bar */}
+          <div className="tm-workflow-bottom-bar">
+            <div className="tm-bottom-star">
+              <Star size={20} color="#ffffff" fill="#ffffff" />
+            </div>
+            <p>
+              <strong>Clear tasks.</strong> <span className="tm-text-light-blue">Focused teams.</span> <strong className="tm-text-light-blue">Work</strong> that gets done.
+            </p>
+          </div>
+          
+        </div>
+
+        {/* Right Column (Image) */}
+        <div className="tm-workflow-right">
+          <img src="/taskmanagement3.png" alt="Task Management Workflow" className="tm-workflow-img" />
+          
+          {/* Workflow Steps (Moved under image) */}
           <div className="tm-workflow-steps">
-            
             <div className="tm-w-step">
               <div className="tm-w-icon-wrap icon-blue-outline">
-                <FilePlus size={24} color="#3b82f6" />
+                <FilePlus size={24} color="#032b5e" />
               </div>
               <h4>Create</h4>
               <p>Create tasks<br/>in seconds.</p>
@@ -81,24 +96,7 @@ const TaskWorkflowSection = () => {
               <h4>Complete</h4>
               <p>Finish on time and<br/>celebrate success.</p>
             </div>
-            
           </div>
-          
-          {/* Bottom Bar */}
-          <div className="tm-workflow-bottom-bar">
-            <div className="tm-bottom-star">
-              <Star size={20} color="#ffffff" fill="#ffffff" />
-            </div>
-            <p>
-              <strong>Clear tasks.</strong> <span className="tm-text-blue">Focused teams.</span> <strong className="tm-text-blue">Work</strong> that gets done.
-            </p>
-          </div>
-          
-        </div>
-
-        {/* Right Column (Image) */}
-        <div className="tm-workflow-right">
-          <img src="/taskmanagement3.png" alt="Task Management Workflow" className="tm-workflow-img" />
         </div>
         
       </div>

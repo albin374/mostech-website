@@ -13,11 +13,7 @@ const WhatsappChatbotCTA = () => {
           
           {/* Left Side Content */}
           <div className="cta-left-content">
-            <div className="cta-badge">
-              <span className="badge-number">05</span>
-              <span className="badge-text">Final CTA</span>
-            </div>
-            
+
             <h2 className="cta-main-title">
               Let Your Business<br/>
               Talk Smarter.
@@ -36,29 +32,7 @@ const WhatsappChatbotCTA = () => {
               From a simple website chatbot to a fully integrated <span className="text-bold-blue">WhatsApp AI business assistant</span>, Mostech can build a solution around your requirements.
             </p>
 
-            {/* 4 Feature Icons */}
-            <div className="cta-features-grid">
-              <div className="cta-feature-item">
-                <div className="cta-f-icon bg-light-blue text-blue"><MessageSquare size={20} /></div>
-                <h4>Smart Conversations</h4>
-                <p>Understand. Respond.<br/>Engage.</p>
-              </div>
-              <div className="cta-feature-item">
-                <div className="cta-f-icon bg-light-gray text-gray"><LinkIcon size={20} /></div>
-                <h4>System Integration</h4>
-                <p>Connect to the tools<br/>you already use.</p>
-              </div>
-              <div className="cta-feature-item">
-                <div className="cta-f-icon bg-light-blue text-blue"><Shield size={20} /></div>
-                <h4>Secure & Reliable</h4>
-                <p>Enterprise-grade security<br/>you can trust.</p>
-              </div>
-              <div className="cta-feature-item">
-                <div className="cta-f-icon bg-light-blue text-blue"><TrendingUp size={20} /></div>
-                <h4>Built for Growth</h4>
-                <p>Scale your business<br/>with every conversation.</p>
-              </div>
-            </div>
+
           </div>
 
           {/* Right Side Graphic */}
@@ -79,7 +53,7 @@ const WhatsappChatbotCTA = () => {
               <MessageCircle size={48} color="white" />
             </div>
             <div className="cta-banner-titles">
-              <h2>MOSTECH<br/><span className="text-light-blue">AI CHATBOT</span></h2>
+              <h2>Mostech<br/><span className="text-light-blue">AI CHATBOT</span></h2>
               <p>One Conversation. <span className="text-light-blue">Endless Possibilities.</span></p>
             </div>
           </div>

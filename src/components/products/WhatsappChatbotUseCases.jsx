@@ -12,11 +12,7 @@ const WhatsappChatbotUseCases = () => {
           
           {/* Left Side */}
           <div className="usecases-left-content">
-            <div className="usecases-badge">
-              <span className="badge-number">02</span>
-              <span className="badge-text">One Chatbot. Multiple Business Use Cases.</span>
-            </div>
-            
+
             <h2 className="usecases-main-title">
               More Than a Chatbot.<br/>
               Your <span className="text-blue">Digital Business Assistant.</span>

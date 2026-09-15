@@ -12,11 +12,7 @@ const WhatsappChatbotPersonalized = () => {
           
           {/* Left Side */}
           <div className="personalized-left-content">
-            <div className="personalized-badge">
-              <span className="badge-number">04</span>
-              <span className="badge-text">Personalized for Every Business</span>
-            </div>
-            
+
             <h2 className="personalized-main-title">
               One Platform.<br/>
               A Chatbot Built Around<br/>
@@ -27,7 +23,7 @@ const WhatsappChatbotPersonalized = () => {
               Every customer has different products, processes, customers, and requirements.
             </p>
             <p className="personalized-desc">
-              MOSTECH AI Chatbot can be configured based on the business it serves.
+              Mostech AI Chatbot can be configured based on the business it serves.
             </p>
           </div>
 

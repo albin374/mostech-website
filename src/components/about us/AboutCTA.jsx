@@ -37,7 +37,7 @@ const AboutCTA = () => {
                 </div>
                 <div className="contact-details">
                   <span className="contact-label">Dubai (HQ) Sales:</span>
-                  <a href="tel:+971581730112" className="contact-value">+971 58 173 0112</a>
+                  <a href="tel:+971585792020" className="contact-value">+971 585792020</a>
                 </div>
               </li>
               <li>

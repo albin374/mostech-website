@@ -1,5 +1,5 @@
 .tm-workflow-section {
-  padding: 6rem 0;
+  padding: 3rem 0;
   background-color: #f8fafc; /* Very light slate background */
   font-family: 'Inter', sans-serif;
   overflow: hidden;
@@ -32,7 +32,7 @@
   display: inline-flex;
   align-self: flex-start;
   background-color: #eff6ff;
-  color: #1d4ed8;
+  color: #032b5e;
   padding: 8px 20px;
   border-radius: 50px;
   font-size: 0.85rem;
@@ -50,11 +50,15 @@
 }
 
 .tm-text-blue {
-  color: #2563eb;
+  color: #032b5e;
+}
+
+.tm-text-light-blue {
+  color: #4da6ff;
 }
 
 .tm-text-blue-bold {
-  color: #1d4ed8;
+  color: #032b5e;
   font-weight: 700;
 }
 
@@ -66,7 +70,7 @@
 .tm-divider-line {
   width: 40px;
   height: 4px;
-  background-color: #1d4ed8;
+  background-color: #032b5e;
   margin-bottom: 1.5rem;
 }
 
@@ -89,7 +93,9 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin-top: 2rem;
   margin-bottom: 3rem;
+  width: 100%;
   position: relative;
 }
 
@@ -146,11 +152,11 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: #ffffff;
+  background: #032b5e;
   padding: 1rem 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  border: 1px solid #f1f5f9;
+  box-shadow: 0 10px 30px rgba(3, 43, 94, 0.2);
+  border: none;
   width: max-content;
   max-width: 100%;
 }
@@ -159,7 +165,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #2563eb;
+  background-color: #4da6ff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,12 +174,12 @@
 
 .tm-workflow-bottom-bar p {
   font-size: 1.1rem;
-  color: #334155;
+  color: #cbd5e1;
   margin: 0;
 }
 
 .tm-workflow-bottom-bar strong {
-  color: #0b1c3e;
+  color: #ffffff;
 }
 
 /* RIGHT COLUMN (IMAGE) */
@@ -181,7 +187,8 @@
   flex: 1.8;
   position: relative;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
 }
 
@@ -191,7 +198,6 @@
   height: auto;
   object-fit: contain;
   margin-left: -40px;
-  margin-top: 60px; /* Aligns visually with the heading */
 }
 
 @media (max-width: 1023px) {

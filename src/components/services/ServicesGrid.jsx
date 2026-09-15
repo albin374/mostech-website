@@ -75,9 +75,21 @@ const ServicesGrid = () => {
         <source src={isMobile ? "/ourservices banner video.mp4" : "/The_year_is_2125_Dubai_2026090316578.mp4"} type="video/mp4" />
       </video>
 
+      {/* Navy blue shadow/overlay over the video */}
+      <div 
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(13, 56, 112, 0.6)', /* Light navy blue shadow */
+          zIndex: 1
+        }}
+      ></div>
       <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div className="services-header">
-          <h2 className="services-title" style={{ color: '#0d3870' }}>
+          <h2 className="services-title" style={{ color: '#ffffff' }}>
             Our <span>Services</span>
           </h2>
           

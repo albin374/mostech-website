@@ -245,7 +245,7 @@
 .pro-top-badge-line {
   height: 2px;
   width: 32px;
-  background-color: #0d6efd;
+  background-color: #032b5e;
 }
 
 .pro-top-badge span {
@@ -265,7 +265,7 @@
 }
 
 .pro-blue-text {
-  color: #0d6efd;
+  color: #032b5e;
 }
 
 .pro-hero-desc {
@@ -287,7 +287,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: #0d6efd;
+  background-color: #032b5e;
   color: white;
   padding: 14px 28px;
   border-radius: 8px;
@@ -296,7 +296,7 @@
   transition: all 0.3s ease;
 }
 .pro-btn-primary:hover {
-  background-color: #0b5ed7;
+  background-color: #021a38;
   transform: translateY(-2px);
   color: white;
 }
@@ -343,7 +343,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0d6efd;
+  color: #032b5e;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 

@@ -16,11 +16,7 @@ const ProjectFeatures = () => {
         
         {/* Left Column (Text + Cards) */}
         <div className="pm-features-left">
-          <div className="pm-section-badge">
-            <span className="pm-badge-number">02</span>
-            <span className="pm-badge-text">Everything Your Projects Need</span>
-          </div>
-          
+
           <h2 className="pm-features-title">
             One Platform.<br/>
             <span className="pm-text-light-blue">Complete Project Control.</span>
@@ -88,12 +84,6 @@ const ProjectFeatures = () => {
             
           </div>
         </div>
-
-        {/* Right Column (Image) */}
-        <div className="pm-features-right">
-          <img src="/project management2.png" alt="Project Control Dashboard" className="pm-dashboard-img" />
-        </div>
-
       </div>
     </section>
   );
