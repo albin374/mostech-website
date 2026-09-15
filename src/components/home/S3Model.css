@@ -146,16 +146,7 @@
   filter: blur(20px);
 }
 
-.s3-card-dark:last-child::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 60%;
-  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0,100 L0,80 Q20,90 40,70 T80,40 L100,20 L100,100 Z" fill="rgba(59,130,246,0.2)"/></svg>') bottom right/contain no-repeat;
-  z-index: 0;
-}
+
 
 /* Make sure text stays above absolute backgrounds */
 .s3-card-top-row,
