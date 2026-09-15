@@ -90,9 +90,9 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/saleel.png" alt="Saleel Hashim" />
+                <img src="/our team/sabeel.png" alt="Sabeel Hashim" />
               </div>
-              <h3>Saleel Hashim</h3>
+              <h3>Sabeel Hashim</h3>
               <p>Business Development Manager</p>
             </div>
             

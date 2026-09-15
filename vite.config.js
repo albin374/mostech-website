@@ -6,13 +6,5 @@ export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
     include: ['react-simple-maps', 'prop-types']
-  },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true
-      }
-    }
   }
 })

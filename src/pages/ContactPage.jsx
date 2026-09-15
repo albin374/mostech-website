@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { Send, MapPin, Phone, Mail, Clock, MessageSquare, Building2, Globe2, HeadphonesIcon } from 'lucide-react';
 import './ContactPage.css';
 
@@ -6,36 +7,18 @@ const ContactPage = () => {
   const form = useRef();
   const [status, setStatus] = useState('');
 
-  const sendEmail = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     setStatus('sending');
 
-    const formData = new FormData(form.current);
-    const data = {
-      user_name: formData.get('user_name'),
-      user_email: formData.get('user_email'),
-      message: formData.get('message'),
-    };
-
-    try {
-      const response = await fetch('/api/send-message', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+    // Make sure to replace these with your actual EmailJS credentials
+    emailjs.sendForm('service_6vdumow', 'template_r37cvxg', form.current, '-G08WgHo8YaudEBwv')
+      .then((result) => {
+          setStatus('success');
+          form.current.reset();
+      }, (error) => {
+          setStatus('error');
       });
-
-      if (response.ok) {
-        setStatus('success');
-        form.current.reset();
-      } else {
-        setStatus('error');
-      }
-    } catch (error) {
-      console.error('Error sending message:', error);
-      setStatus('error');
-    }
   };
 
   return (
@@ -74,7 +57,7 @@ const ContactPage = () => {
               
               <form ref={form} className="contact-form" onSubmit={sendEmail}>
                 {status === 'success' && <div style={{color: '#16a34a', marginBottom: '1.5rem', fontWeight: '600', padding: '1rem', backgroundColor: '#f0fdf4', borderRadius: '8px', border: '1px solid #bbf7d0'}}>✅ Your message has been sent successfully!</div>}
-                {status === 'error' && <div style={{color: '#dc2626', marginBottom: '1.5rem', fontWeight: '600', padding: '1rem', backgroundColor: '#fef2f2', borderRadius: '8px', border: '1px solid #fecaca'}}>❌ Failed to send message. Please try again later.</div>}
+                {status === 'error' && <div style={{color: '#dc2626', marginBottom: '1.5rem', fontWeight: '600', padding: '1rem', backgroundColor: '#fef2f2', borderRadius: '8px', border: '1px solid #fecaca'}}>❌ Failed to send message. Please verify your EmailJS credentials.</div>}
                 
                 <div className="form-group">
                   <label>Your Name *</label>
