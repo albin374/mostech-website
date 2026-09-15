@@ -166,7 +166,7 @@ const GlobalPresence = () => {
 
         <p className="gp-lede">
           <b>Mostech</b> operates across <b>Europe, the CIS, the Middle East &amp; Africa, South &amp; Southeast Asia,
-          Oceania, and North America</b>, coordinated from a hub in Dubai, UAE. With a robust marketing network, the company
+          and North America</b>, coordinated from a hub in Dubai, UAE. With a robust marketing network, the company
           has built a strong presence in key markets, ensuring extensive reach, sustained growth, and meaningful influence
           across its operating regions.
         </p>
