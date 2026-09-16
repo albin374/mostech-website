@@ -1,4 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { User } from 'lucide-react';
+
+const ProfileImage = ({ src, alt, className }) => {
+  const [error, setError] = useState(false);
+  if (error) {
+    return (
+      <div className={`fallback-avatar ${className || ''}`} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%', backgroundColor: '#e2e8f0', color: '#94a3b8' }}>
+        <User size={64} />
+      </div>
+    );
+  }
+  return <img src={src} alt={alt} className={className} onError={() => setError(true)} />;
+};
+
 import './OurTeamPage.css';
 
 const OurTeamPage = () => {
@@ -9,21 +23,21 @@ const OurTeamPage = () => {
           <div className="ceo-message-container">
             <div className="team-ceo-card">
               <div className="ceo-bg-text">CEO</div>
-              <img 
+              <ProfileImage 
                 src="/our team/CEO.png" 
                 alt="Ayoob K A - Founder & CEO" 
                 className="ceo-image" 
               />
               <div className="ceo-info">
                 <h3>Ayoob K A</h3>
-                <p>Founder & CEO</p>
+                <p>Chairman & CEO</p>
               </div>
             </div>
             
-            <div className="team-ceo-card" style={{ marginLeft: '80px' }}>
+            <div className="team-ceo-card">
               <div className="ceo-bg-text">MD</div>
-              <img 
-                src="/our team/shannob.png" 
+              <ProfileImage 
+                src="/our team/shanob-removebg-preview.png" 
                 alt="Muhammed Shanoob - Managing Director" 
                 className="ceo-image"
               />
@@ -42,28 +56,28 @@ const OurTeamPage = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/safferna.png" alt="Safreena Salam" />
+                <ProfileImage src="/our team/safferna.png" alt="Safreena Salam" />
               </div>
               <h3>Safreena Salam</h3>
               <p>Operations Head</p>
             </div>
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/fasil.png" alt="Fasil TP" />
+                <ProfileImage src="/our team/fazhil.png" alt="Fasil TP" />
               </div>
               <h3>Fasil TP</h3>
               <p>Sales Manager</p>
             </div>
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/sanjay.png" alt="Sanjay Bhaskar" />
+                <ProfileImage src="/our team/sanjay.png" alt="Sanjay Bhaskar" />
               </div>
               <h3>Sanjay Bhaskar</h3>
               <p>Creative Head</p>
             </div>
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/anu.png" alt="Anu Mohan" />
+                <ProfileImage src="/our team/anu.png" alt="Anu Mohan" />
               </div>
               <h3>Anu Mohan</h3>
               <p>Team Lead</p>
@@ -74,7 +88,7 @@ const OurTeamPage = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/bilal.png" alt="Bilal Abdul Kareem" />
+                <ProfileImage src="/our team/bilal.png" alt="Bilal Abdul Kareem" />
               </div>
               <h3>Bilal Abdul Kareem</h3>
               <p>Business Development Manager</p>
@@ -82,7 +96,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/Ajmal Abubakr.png" alt="Ajmal Abubakr" />
+                <ProfileImage src="/our team/Ajmal Abubakr.png" alt="Ajmal Abubakr" />
               </div>
               <h3>Ajmal Abubakr</h3>
               <p>Business Development Manager</p>
@@ -90,7 +104,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/sabeel.png" alt="Sabeel Hashim" />
+                <ProfileImage src="/our team/sabeel.png" alt="Sabeel Hashim" />
               </div>
               <h3>Sabeel Hashim</h3>
               <p>Business Development Manager</p>
@@ -98,7 +112,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/saffer.png" alt="Safeer CM" />
+                <ProfileImage src="/our team/saffer.png" alt="Safeer CM" />
               </div>
               <h3>Safeer CM</h3>
               <p>Business Development Manager</p>
@@ -110,7 +124,7 @@ const OurTeamPage = () => {
 
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/fidha.png" alt="Fidha Fathima" />
+                <ProfileImage src="/our team/fidha.png" alt="Fidha Fathima" />
               </div>
               <h3>Fidha Fathima</h3>
               <p>Product Manager (Web)</p>
@@ -118,7 +132,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/jeevan.png" alt="Jeevan Vishnu" />
+                <ProfileImage src="/our team/jeevan.png" alt="Jeevan Vishnu" />
               </div>
               <h3>Jeevan Vishnu</h3>
               <p>Web Developer</p>
@@ -126,7 +140,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/albin.png" alt="Albin Alosious" />
+                <ProfileImage src="/our team/albin.png" alt="Albin Alosious" />
               </div>
               <h3>Albin Alosious</h3>
               <p>Web Developer</p>
@@ -134,7 +148,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/rojin.png" alt="Rojin" />
+                <ProfileImage src="/our team/rojin.png" alt="Rojin" />
               </div>
               <h3>Rojin</h3>
               <p>Junior Web Developer</p>
@@ -145,7 +159,7 @@ const OurTeamPage = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/richard.png" alt="Richard Denny" />
+                <ProfileImage src="/our team/richard new.png" alt="Richard Denny" />
               </div>
               <h3>Richard Denny</h3>
               <p>Multi Media Designer</p>
@@ -153,7 +167,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/harinadanp.png" alt="Harinandan P" />
+                <ProfileImage src="/our team/harinadanp.png" alt="Harinandan P" />
               </div>
               <h3>Harinandan P</h3>
               <p>Graphical Designer</p>
@@ -161,7 +175,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/syam.png" alt="Syam" />
+                <ProfileImage src="/our team/syam.png" alt="Syam" />
               </div>
               <h3>Syam</h3>
               <p>Graphical Designer</p>
@@ -169,7 +183,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/salman.png" alt="Salman Faris" />
+                <ProfileImage src="/our team/salman.png" alt="Salman Faris" />
               </div>
               <h3>Salman Faris</h3>
               <p>Video Editor</p>
@@ -180,7 +194,7 @@ const OurTeamPage = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/Aswathi.png" alt="Aswathi Unnikrishnan" />
+                <ProfileImage src="/our team/Aswathi.png" alt="Aswathi Unnikrishnan" />
               </div>
               <h3>Aswathi Unnikrishnan</h3>
               <p>Senior SEO Specialist</p>
@@ -188,7 +202,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/musliha.png" alt="Musliha" />
+                <ProfileImage src="/our team/musliha.png" alt="Musliha" />
               </div>
               <h3>Musliha</h3>
               <p>Performance Marketer</p>
@@ -196,7 +210,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/misriya.png" alt="Misriya" />
+                <ProfileImage src="/our team/misriya.png" alt="Misriya" />
               </div>
               <h3>Misriya</h3>
               <p>Digital Marketing Cordinator</p>
@@ -207,7 +221,7 @@ const OurTeamPage = () => {
           <div className="team-grid" style={{ marginBottom: '40px', justifyContent: 'center' }}>
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/sajad.png" alt="Sajad Ayoob" />
+                <ProfileImage src="/our team/sajad.png" alt="Sajad Ayoob" />
               </div>
               <h3>Sajad Ayoob</h3>
               <p>Finance Manager</p>
@@ -215,7 +229,7 @@ const OurTeamPage = () => {
 
             <div className="team-member">
               <div className="member-image-wrapper">
-                <img src="/our team/shamila.png" alt="Shamila M" />
+                <ProfileImage src="/our team/shamila.png" alt="Shamila M" />
               </div>
               <h3>Shamila M</h3>
               <p>Accounts Admin HR - Asst Manager</p>

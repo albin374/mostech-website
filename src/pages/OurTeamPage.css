@@ -14,6 +14,7 @@
   flex-direction: column;
   gap: 40px;
   align-items: center;
+  justify-content: center;
   margin-top: 40px;
 }
 
@@ -22,6 +23,7 @@
     flex-direction: row;
     gap: 60px;
     align-items: center;
+    justify-content: center;
   }
 }
 
@@ -154,6 +156,7 @@
   max-width: 260px;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .member-image-wrapper {

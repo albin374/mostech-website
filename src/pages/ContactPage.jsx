@@ -129,8 +129,9 @@ const ContactPage = () => {
                 <div className="info-list-item">
                   <MapPin size={18} color="#0d6efd" className="info-list-icon" />
                   <span>
-                    <strong>KVR Tower,<br/>Caltex</strong><br/>
-                    Kannur, Kerala,<br/>India
+                    <strong>Hilite Business Park,</strong><br/>
+                    Door No. 2/1149/I 100 Olavanna,<br/>
+                    Kozhikode, Kerala, India, 673014
                   </span>
                 </div>
                 <div className="info-list-item">
