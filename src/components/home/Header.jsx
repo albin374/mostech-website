@@ -7,8 +7,31 @@ import './Header.css';
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [countryCode, setCountryCode] = useState(null);
   const location = useLocation();
   const currentPath = location.pathname;
+
+  useEffect(() => {
+    fetch('https://get.geojs.io/v1/ip/country.json')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.country) {
+          setCountryCode(data.country);
+        }
+      })
+      .catch(err => console.error("Could not fetch country data", err));
+  }, []);
+
+  const phoneNumbers = [
+    { code: 'AE', label: 'UAE:', phone: '+971 58 579 2020', href: '+971585792020' },
+    { code: 'IN', label: 'INDIA:', phone: '+91 8547557283', href: '+918547557283' },
+    { code: 'SA', label: 'KSA:', phone: '+966 53 574 4308', href: '+966535744308' },
+    { code: 'QA', label: 'QATAR:', phone: '+974 5054 7557', href: '+97450547557' }
+  ];
+
+  const matchedPhone = phoneNumbers.find(p => p.code === countryCode);
+  const displayPhone = matchedPhone ? matchedPhone : phoneNumbers[0];
+  const whatsappPhone = displayPhone;
 
   const toggleDropdown = (e, dropdown) => {
     e.preventDefault();
@@ -32,9 +55,9 @@ const Header = () => {
           
           <div className="header-right-section">
             <div className="top-contact-info">
-              <a href="tel:+971585792020" className="contact-item">
+              <a href={`tel:${displayPhone.href}`} className="contact-item" title={displayPhone.label}>
                 <Phone size={14} className="contact-icon" />
-                <span>+971 58 579 2020</span>
+                <span>{displayPhone.phone}</span>
               </a>
               <a href="mailto:info@mostech.ae" className="contact-item">
                 <Mail size={14} className="contact-icon" />
@@ -86,16 +109,16 @@ const Header = () => {
                     <Mail size={16} />
                     <span>info@mostech.ae</span>
                   </a>
-                  <a href="tel:+971585792020" className="mobile-contact-link">
+                  <a href={`tel:${displayPhone.href}`} className="mobile-contact-link">
                     <Phone size={16} />
-                    <span>+971 58 579 2020</span>
+                    <span>{displayPhone.phone}</span>
                   </a>
                 </div>
                 <div className="mobile-menu-socials">
                   <a href="https://www.linkedin.com/company/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaLinkedinIn size={20} /></a>
                   <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaFacebookF size={20} /></a>
                   <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaInstagram size={20} /></a>
-                  <a href="https://wa.me/971585792020" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaWhatsapp size={20} /></a>
+                  <a href={`https://wa.me/${whatsappPhone.href.replace('+', '')}`} target="_blank" rel="noreferrer" className="mobile-social-icon"><FaWhatsapp size={20} /></a>
                 </div>
               </nav>
 
@@ -103,7 +126,7 @@ const Header = () => {
                 <a href="https://www.linkedin.com/company/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-circle"><FaLinkedinIn size={14} /></a>
                 <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-circle"><FaFacebookF size={14} /></a>
                 <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-circle"><FaInstagram size={14} /></a>
-                <a href="https://wa.me/971585792020" target="_blank" rel="noreferrer" className="social-icon-circle"><FaWhatsapp size={16} /></a>
+                <a href={`https://wa.me/${whatsappPhone.href.replace('+', '')}`} target="_blank" rel="noreferrer" className="social-icon-circle"><FaWhatsapp size={16} /></a>
               </div>
 
               <button className="mobile-menu-btn" onClick={toggleMobileMenu}>

@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, ChevronRight } from 'lucide-react';
 import { FaLinkedinIn, FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
+  const [countryCode, setCountryCode] = useState(null);
+
+  useEffect(() => {
+    fetch('https://get.geojs.io/v1/ip/country.json')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.country) {
+          setCountryCode(data.country);
+        }
+      })
+      .catch(err => console.error("Could not fetch country data", err));
+  }, []);
+
+  const phoneNumbers = [
+    { code: 'AE', label: 'UAE:', phone: '+971 585792020', href: '+971585792020' },
+    { code: 'IN', label: 'INDIA:', phone: '+91 8547557283', href: '+918547557283' },
+    { code: 'SA', label: 'KSA:', phone: '+966 53 574 4308', href: '+966535744308' },
+    { code: 'QA', label: 'QATAR:', phone: '+974 5054 7557', href: '+97450547557' }
+  ];
+
+  const matchedPhone = phoneNumbers.find(p => p.code === countryCode);
+  const displayPhones = matchedPhone ? [matchedPhone] : phoneNumbers;
+
   return (
     <footer id="contact" className="footer">
       <div className="container">
@@ -38,22 +61,12 @@ const Footer = () => {
           <div className="footer-col">
             <h3 className="footer-title">Contact Us</h3>
             <div className="footer-contact">
-              <div className="contact-item">
-                <span className="country-label">UAE:</span>
-                <a href="tel:+971585792020" className="contact-link"><strong>+971 585792020</strong></a>
-              </div>
-              <div className="contact-item">
-                <span className="country-label">INDIA:</span>
-                <a href="tel:+918547557283" className="contact-link"><strong>+91 8547557283</strong></a>
-              </div>
-              <div className="contact-item">
-                <span className="country-label">KSA:</span>
-                <a href="tel:+966535744308" className="contact-link"><strong>+966 53 574 4308</strong></a>
-              </div>
-              <div className="contact-item">
-                <span className="country-label">QATAR:</span>
-                <a href="tel:+97450547557" className="contact-link"><strong>+974 5054 7557</strong></a>
-              </div>
+              {displayPhones.map((item) => (
+                <div className="contact-item" key={item.code}>
+                  <span className="country-label">{item.label}</span>
+                  <a href={`tel:${item.href}`} className="contact-link"><strong>{item.phone}</strong></a>
+                </div>
+              ))}
               <div className="contact-item mt-3">
                 <Mail size={20} />
                 <a href="mailto:info@mostech.ae" className="contact-link" style={{ fontSize: '1.1rem' }}><strong>info@mostech.ae</strong></a>
