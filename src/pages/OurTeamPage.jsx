@@ -37,7 +37,7 @@ const OurTeamPage = () => {
             <div className="team-ceo-card">
               <div className="ceo-bg-text">MD</div>
               <ProfileImage 
-                src="/our team/shanob-removebg-preview.png" 
+                src="/our team/shannobnew.png" 
                 alt="Muhammed Shanoob - Managing Director" 
                 className="ceo-image"
               />
@@ -140,7 +140,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <ProfileImage src="/our team/albin.png" alt="Albin Alosious" />
+                <ProfileImage src="/our team/albin.png" alt="Albin Alosious" className="zoomed-image" />
               </div>
               <h3>Albin Alosious</h3>
               <p>Web Developer</p>
@@ -148,7 +148,7 @@ const OurTeamPage = () => {
             
             <div className="team-member">
               <div className="member-image-wrapper">
-                <ProfileImage src="/our team/rojin.png" alt="Rojin" />
+                <ProfileImage src="/our team/rojin.png" alt="Rojin" className="zoomed-image" />
               </div>
               <h3>Rojin</h3>
               <p>Junior Web Developer</p>
@@ -194,7 +194,7 @@ const OurTeamPage = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-image-wrapper">
-                <ProfileImage src="/our team/Aswathi.png" alt="Aswathi Unnikrishnan" />
+                <ProfileImage src="/our team/Aswathi.png" alt="Aswathi Unnikrishnan" className="zoomed-image" />
               </div>
               <h3>Aswathi Unnikrishnan</h3>
               <p>Senior SEO Specialist</p>
