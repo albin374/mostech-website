@@ -92,7 +92,7 @@ const Header = () => {
                   </a>
                 </div>
                 <div className="mobile-menu-socials">
-                  <a href="https://www.linkedin.com/company/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaLinkedinIn size={20} /></a>
+                  <a href="https://www.linkedin.com/company/mostech/" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaLinkedinIn size={20} /></a>
                   <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaFacebookF size={20} /></a>
                   <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaInstagram size={20} /></a>
                   <a href="https://wa.me/971585792020" target="_blank" rel="noreferrer" className="mobile-social-icon"><FaWhatsapp size={20} /></a>
@@ -100,7 +100,7 @@ const Header = () => {
               </nav>
 
               <div className="social-links-outline">
-                <a href="https://www.linkedin.com/company/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-circle"><FaLinkedinIn size={14} /></a>
+                <a href="https://www.linkedin.com/company/mostech/" target="_blank" rel="noreferrer" className="social-icon-circle"><FaLinkedinIn size={14} /></a>
                 <a href="https://www.facebook.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-circle"><FaFacebookF size={14} /></a>
                 <a href="https://www.instagram.com/mostech.ae" target="_blank" rel="noreferrer" className="social-icon-circle"><FaInstagram size={14} /></a>
                 <a href="https://wa.me/971585792020" target="_blank" rel="noreferrer" className="social-icon-circle"><FaWhatsapp size={16} /></a>
