@@ -26,7 +26,13 @@ const Footer = () => {
   ];
 
   const matchedPhone = phoneNumbers.find(p => p.code === countryCode);
-  const displayPhones = matchedPhone ? [matchedPhone] : phoneNumbers;
+  let displayPhones = [...phoneNumbers];
+  if (matchedPhone) {
+    displayPhones = [
+      matchedPhone,
+      ...phoneNumbers.filter(p => p.code !== countryCode)
+    ];
+  }
 
   return (
     <footer id="contact" className="footer">
