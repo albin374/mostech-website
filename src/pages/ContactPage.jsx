@@ -156,7 +156,7 @@ const ContactPage = () => {
             <div className="contact-info-card">
               <h4 className="info-card-title" style={{textTransform: 'none'}}>Headquarters - Dubai, UAE</h4>
               <div className="info-card-divider"></div>
-              <div className="info-list">
+              <div className="info-list" style={{ gap: '1.8rem' }}>
                 <div className="info-list-item">
                   <MapPin size={18} color="#0d6efd" className="info-list-icon" />
                   <span>
