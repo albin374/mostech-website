@@ -18,7 +18,7 @@
 .header-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   padding: 10px 0;
 }
 
@@ -31,7 +31,12 @@
   max-height: 70px;
   width: auto;
   object-fit: contain;
-  transform: translateY(14px);
+}
+
+@media (min-width: 992px) {
+  .logo-img {
+    transform: translateY(12px);
+  }
 }
 
 .header-right-section {
@@ -224,6 +229,14 @@
 }
 
 @media (max-width: 991px) {
+  .header-inner {
+    align-items: center;
+    padding: 5px 0;
+  }
+
+  .logo-img {
+    max-height: 55px;
+  }
   
   .header-right-section {
     flex-direction: row;

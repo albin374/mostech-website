@@ -22,7 +22,7 @@ const AboutMandate = () => {
             </div>
             <h3>Our Mission</h3>
             <p>
-              To deliver world-class IT solutions and digital engineering services that maximize client ROI, operational speed, and business innovation. We prioritize long-term client partnerships, continuous technical excellence, and transparent delivery standards while maintaining strict compliance with global software benchmarks.
+              To deliver world-class digital solutions that empower businesses to grow, innovate, and achieve long-term success across industries.
             </p>
           </div>
 
@@ -32,7 +32,7 @@ const AboutMandate = () => {
             </div>
             <h3>Our Vision</h3>
             <p>
-              To be the most trusted technology partner in the UAE and Middle East, empowering enterprises with resilient, secure, and intuitive digital applications that simplify complexity and drive sustainable competitive advantage in an evolving global market.
+              To be a globally recognized technology company that enables businesses to stay ahead through innovation, quality, and excellence.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ const AboutMandate = () => {
             </div>
             <h3>Our Goals</h3>
             <p>
-              Our goal is to assist companies of all sizes—from high-growth startups to established corporate enterprises—in digitizing core operations, expanding online market presence through performance marketing, and executing seamless digital transformation journeys.
+              To drive innovation, deliver measurable value, ensure client success, foster sustainable growth, and uphold integrity in every solution we create.
             </p>
           </div>
 

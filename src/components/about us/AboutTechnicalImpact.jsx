@@ -57,7 +57,7 @@ const AboutTechnicalImpact = () => {
             <div className="impact-number">
               <span className="counter-value" data-target="25" data-suffix="+">0</span>
             </div>
-            <h4 className="impact-label">Countries</h4>
+            <h4 className="impact-label">Countries Served</h4>
           </div>
 
           <div className="impact-card animate-on-scroll" style={{ animationDelay: '0.2s' }}>
@@ -65,7 +65,7 @@ const AboutTechnicalImpact = () => {
             <div className="impact-number">
               <span className="counter-value" data-target="8" data-suffix="+">0</span>
             </div>
-            <h4 className="impact-label">Years of Experience</h4>
+            <h4 className="impact-label">Years of Industry Experience</h4>
           </div>
 
           <div className="impact-card animate-on-scroll" style={{ animationDelay: '0.3s' }}>
@@ -73,7 +73,7 @@ const AboutTechnicalImpact = () => {
             <div className="impact-number">
               <span className="counter-value" data-target="1000" data-suffix="+">0</span>
             </div>
-            <h4 className="impact-label">Clients</h4>
+            <h4 className="impact-label">Clients Served</h4>
           </div>
 
           <div className="impact-card animate-on-scroll" style={{ animationDelay: '0.4s' }}>
@@ -81,7 +81,7 @@ const AboutTechnicalImpact = () => {
             <div className="impact-number">
               <span className="counter-value" data-target="10000" data-suffix="+">0</span>
             </div>
-            <h4 className="impact-label">Projects</h4>
+            <h4 className="impact-label">Projects Completed</h4>
           </div>
 
         </div>

@@ -10,10 +10,10 @@ const videos = [
 ];
 
 const statsData = [
-  { icon: Globe, value: '25+', label: 'Countries' },
-  { icon: Calendar, value: '8+', label: 'Years of Experience' },
-  { icon: Users, value: '1,000+', label: 'Clients' },
-  { icon: FileText, value: '10,000+', label: 'Projects' }
+  { icon: Globe, value: '25+', label: 'Countries Served' },
+  { icon: Calendar, value: '8+', label: 'Years of Industry Experience' },
+  { icon: Users, value: '1,000+', label: 'Clients Served' },
+  { icon: FileText, value: '10,000+', label: 'Projects Completed' }
 ];
 
 const HeroSection = () => {
