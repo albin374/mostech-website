@@ -188,7 +188,7 @@
   height: 72px;
   background-color: #0f172a;
   border-radius: 16px;
-  padding: 4px;
+  padding: 10px;
   flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   display: flex;
@@ -201,7 +201,11 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transform: scale(1.25);
+  transform: scale(1);
+}
+
+.sc-logo-box img.sc-img-logo-zoom {
+  transform: scale(1.4);
 }
 
 .sc-text-box {
