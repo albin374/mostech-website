@@ -28,9 +28,10 @@
 }
 
 .logo-img {
-  max-height: 50px;
+  max-height: 70px;
   width: auto;
   object-fit: contain;
+  transform: translateY(14px);
 }
 
 .header-right-section {

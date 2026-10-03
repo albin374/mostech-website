@@ -50,7 +50,7 @@ const Header = () => {
       <div className="container">
         <div className="header-inner">
           <Link to="/" className="logo">
-            <img src="/logo.webp" alt="Mostech Logo" className="logo-img" />
+            <img src="/main logo .png" alt="Mostech Logo" className="logo-img" />
           </Link>
           
           <div className="header-right-section">
@@ -69,7 +69,7 @@ const Header = () => {
               <nav className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
                 <div className="mobile-menu-top">
                   <Link to="/" onClick={toggleMobileMenu}>
-                    <img src="/logo.webp" alt="Mostech Logo" className="logo-img" />
+                    <img src="/main logo .png" alt="Mostech Logo" className="logo-img" />
                   </Link>
                   <button className="mobile-menu-close-btn" onClick={toggleMobileMenu}>
                     <X size={24} />
