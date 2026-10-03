@@ -9,7 +9,7 @@ const AboutOverview = () => {
         <div className="overview-grid">
           {/* Left Content */}
           <div className="overview-content animate-on-scroll">
-            <h2 className="overview-title">
+            <h2 className="overview-title" style={{ color: '#2563eb' }}>
               Who We Are
             </h2>
 

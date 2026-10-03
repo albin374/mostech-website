@@ -15,7 +15,7 @@ const SisterConcerns = () => {
     {
       id: 1,
       title: "Mostech Information Technology LLC",
-      desc: "Innovative IT services and technology solutions.",
+      desc: "Software company and digital marketing agency.",
       location: "Dubai, UAE",
       icon: <img src="/information.jpeg" alt="Mostech Information Technology" className="sc-img-logo sc-img-logo-zoom" />,
       logoBg: "#ffffff",
