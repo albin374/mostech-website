@@ -18,7 +18,7 @@ const CompanyStats = () => {
                 <Globe size={28} />
               </div>
               <h3>25+</h3>
-              <p>Countries</p>
+              <p>Countries Served</p>
               <div className="stats-card-underline"></div>
             </div>
 
@@ -27,7 +27,7 @@ const CompanyStats = () => {
                 <Shield size={28} />
               </div>
               <h3>8+</h3>
-              <p>Years of Experience</p>
+              <p>Years of Industry Experience</p>
               <div className="stats-card-underline"></div>
             </div>
 
@@ -36,7 +36,7 @@ const CompanyStats = () => {
                 <Users size={28} />
               </div>
               <h3>1,000+</h3>
-              <p>Clients</p>
+              <p>Clients Served</p>
               <div className="stats-card-underline"></div>
             </div>
 
@@ -45,7 +45,7 @@ const CompanyStats = () => {
                 <Rocket size={28} />
               </div>
               <h3>10,000+</h3>
-              <p>Projects</p>
+              <p>Projects Completed</p>
               <div className="stats-card-underline"></div>
             </div>
           </div>

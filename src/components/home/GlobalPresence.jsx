@@ -165,10 +165,8 @@ const GlobalPresence = () => {
         </div>
 
         <p className="gp-lede">
-          <b>Mostech</b> operates across <b>Europe, the CIS, the Middle East &amp; Africa, South &amp; Southeast Asia,
-          and North America</b>, coordinated from a hub in Dubai, UAE. With a robust marketing network, the company
-          has built a strong presence in key markets, ensuring extensive reach, sustained growth, and meaningful influence
-          across its operating regions.
+          <b>Mostech</b> serves businesses across <b>the Middle East, Africa, South Asia, Europe, the CIS, and North America, operating from Dubai, UAE.</b>
+          With a strong regional presence and a robust marketing network, we deliver innovative digital solutions to clients in more than 25 countries, enabling sustainable growth and long-term business success across global markets. 
         </p>
 
         <div className="gp-body-row">

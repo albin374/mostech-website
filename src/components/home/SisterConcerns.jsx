@@ -17,7 +17,8 @@ const SisterConcerns = () => {
       title: "Mostech Information Technology LLC",
       desc: "Innovative IT services and technology solutions.",
       location: "Dubai, UAE",
-      icon: <img src="/mostechlogo.png" alt="Mostech Information Technology" className="sc-img-logo" />,
+      icon: <img src="/4.png" alt="Mostech Information Technology" className="sc-img-logo" />,
+      logoBg: "#ffffff",
       bgImage: "/uaemostech.png",
       link: "https://www.mostech.ae",
       linkText: "www.mostech.ae"
@@ -27,7 +28,7 @@ const SisterConcerns = () => {
       title: "Mostech Business Solutions LLP",
       desc: "Empowering businesses through custom software solutions.",
       location: "Kannur, Kerala, India",
-      icon: <img src="/logo.webp" alt="Mostech Business Solutions" className="sc-img-logo" />,
+      icon: <img src="/5.png" alt="Mostech Business Solutions" className="sc-img-logo" />,
       logoBg: "#ffffff",
       bgImage: "/ChatGPT Image Sep 15, 2026, 01_08_36 PM.png",
       link: "https://www.mostech.in",

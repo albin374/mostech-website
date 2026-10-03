@@ -11,11 +11,11 @@ const AboutCTA = () => {
 
           <div className="cta-content">
             <h2 className="cta-title">
-              Ready to architect your enterprise<br />
+              Ready to transform your enterprise<br />
               <span className="cta-highlight-blue">digital roadmap?</span>
             </h2>
             <p className="cta-subtitle">
-              Engage our enterprise architects in Dubai for an initial discovery and
+              Engage our technology experts for an initial discovery and
               technical feasibility evaluation.
             </p>
             <div className="cta-actions">
@@ -33,7 +33,7 @@ const AboutCTA = () => {
                   <Phone size={18} />
                 </div>
                 <div className="contact-details">
-                  <span className="contact-label">Dubai (HQ) Sales:</span>
+                  <span className="contact-label">Sales:</span>
                   <a href="tel:+971585792020" className="contact-value">+971 585792020</a>
                 </div>
               </li>

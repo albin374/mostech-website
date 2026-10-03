@@ -9,23 +9,15 @@ const AboutOverview = () => {
         <div className="overview-grid">
           {/* Left Content */}
           <div className="overview-content animate-on-scroll">
-            <div className="section-eyebrow">Who We Are</div>
             <h2 className="overview-title">
-              Mostech Business <span className="text-blue">Solutions</span>
+              Who We Are
             </h2>
 
             <p className="overview-desc">
-              Mostech Business Solutions is a premier software development and technology
-              consultancy headquartered in Dubai, UAE. We specialize in digital
-              design and scale enterprise cloud architectures, bespoke ERP platforms,
-              custom mobile applications, and high-network SaaS platforms for the GCC's
-              fastest growing enterprises.
+              Mostech Business Solutions is a premier software development and digital marketing agency headquartered in Dubai, UAE. We specialize in digital design, enterprise software, bespoke ERP platforms, custom mobile applications, eCommerce solutions, and performance-driven digital marketing for the GCC’s fastest-growing businesses.
             </p>
             <p className="overview-desc">
-              We operate at the intersection of innovation, reliability, and human-centric
-              design. Our core development practices are centered on Zero-Trust
-              security, microservices architecture, and agile software development life cycles.
-              Scale your digital operations today.
+              We operate at the intersection of technology, creativity, and human-centric design. Our approach combines scalable development, modern digital strategies, and agile methodologies to deliver secure, reliable, and impactful solutions. Scale your digital presence and business today.
             </p>
 
             <div className="overview-features">

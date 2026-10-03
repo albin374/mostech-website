@@ -18,7 +18,13 @@ const CeoMessage = () => {
             </h2>
             
             <p className="ceo-description">
-              At Mostech Business Solutions, our journey began in Kannur in 2018 when I took the step to establish this company with a small team of four passionate youngsters and tech enthusiasts. With my background and experience in the banking sector, I aimed to create not just a business, but a platform where innovation, reliability, and value-driven solutions could thrive. What started as a modest dream has now grown into a dedicated family of 25+ professionals, each committed to excellence and innovation.
+              At Mostech, our journey began in Kannur in 2018 with a small team of four passionate tech enthusiasts and a vision to build innovative digital solutions that create real business value.
+            </p>
+            <p className="ceo-description">
+              With my background in the banking sector, I wanted to build more than just a technology company—I wanted to create a platform where innovation, reliability, and client success come together. Today, that vision has grown into a team of 25+ dedicated professionals committed to delivering excellence through technology.
+            </p>
+            <p className="ceo-description">
+              As we continue to expand from our operations in Dubai, UAE, our focus remains the same: helping businesses grow with intelligent software, digital transformation, and performance-driven marketing solutions.
             </p>
 
             <div className="ceo-profile">
@@ -49,7 +55,7 @@ const CeoMessage = () => {
               <h3 className="ceo-card-title">OUR MISSION</h3>
             </div>
             <p className="ceo-card-text">
-              To deliver world-class digital solutions across industries, maximizing growth and value for our clients and empowering businesses.
+              To deliver world-class digital solutions that empower businesses to grow, innovate, and achieve long-term success across industries.
             </p>
             <div className="ceo-card-bottom-line"></div>
           </div>
@@ -62,7 +68,7 @@ const CeoMessage = () => {
               <h3 className="ceo-card-title">OUR VISION</h3>
             </div>
             <p className="ceo-card-text">
-              To be a globally recognised company empowering clients to outpace competition through innovation and excellence.
+              To be a globally recognized technology company that enables businesses to stay ahead through innovation, quality, and excellence.
             </p>
             <div className="ceo-card-bottom-line"></div>
           </div>
@@ -75,7 +81,7 @@ const CeoMessage = () => {
               <h3 className="ceo-card-title">OUR GOALS</h3>
             </div>
             <p className="ceo-card-text">
-              Drive innovation, ensure client success, foster growth, deliver excellence, and uphold integrity in every digital solution we provide.
+              To drive innovation, deliver measurable value, ensure client success, foster sustainable growth, and uphold integrity in every solution we create.
             </p>
             <div className="ceo-card-bottom-line"></div>
           </div>

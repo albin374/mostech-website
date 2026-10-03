@@ -18,7 +18,7 @@ const founderMilestones = [
         <path d="M12.5 3.5c3.5 0 7 2 8.5 5.5 1.5 3.5.5 7.5-2.5 10.5-3 3-7 4-10.5 2.5-3.5-1.5-5.5-5-5.5-8.5 0-4 4-8 10-10z"/>
       </svg>
     ),
-    text: 'The journey of Mostech Business Solutions commenced in 2018 with a handful of creative minds coming together in the vibrant city of Kannur. From the very beginning, our vision was clear — to revolutionize the business solutions landscape with innovative ideas and cutting-edge strategies. Our initial steps were taken in the iconic KVR Tower.',
+    text: 'Mostech commenced its journey in 2018 in Kannur with a clear vision: to revolutionize the business solutions landscape. We started with a small team and a commitment to delivering innovative, cutting-edge digital strategies.',
     highlights: ['Founded in Kannur', 'KVR Tower Operations', 'Core Tech Team']
   },
   {
@@ -37,7 +37,7 @@ const founderMilestones = [
         <path d="M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/>
       </svg>
     ),
-    text: 'A significant milestone in our growth unfolded in 2021 when we established our presence in the global business hub, Dubai - UAE. Setting up our headquarters in the prestigious Business Bay marked a strategic move to position ourselves at the heart of international commerce, allowing us to tap into a diverse global market.',
+    text: 'In 2021, we reached a major milestone by establishing our headquarters in Dubai\'s Business Bay. This strategic move positioned us at the heart of international commerce and opened our doors to a diverse global market.',
     highlights: ['Global HQ Business Bay', 'International Commerce', 'Regional Hub']
   },
   {
@@ -56,8 +56,27 @@ const founderMilestones = [
         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
       </svg>
     ),
-    text: 'Building on the success of our Dubai venture, 2023 saw Mostech Business Solutions extending its reach across the Middle East. We ventured into Qatar, Oman and Saudi Arabia, recognizing the immense potential in these dynamic markets and solidifying our presence on a regional scale.',
+    text: 'Building on the success of our Dubai venture, 2023 saw Mostech extending its reach across the Middle East. We ventured into Qatar, Oman and Saudi Arabia, recognizing the immense potential in these dynamic markets and solidifying our presence on a regional scale.',
     highlights: ['Qatar, Oman & KSA', '1,000+ Systems Delivered', 'GCC Market Footprint']
+  },
+  {
+    step: '04',
+    year: '2026',
+    label: 'Global Expansion',
+    location: 'Global',
+    color: '#eab308',
+    colorSoft: 'rgba(234,179,8,0.06)',
+    colorBorder: 'rgba(234,179,8,0.18)',
+    colorGlow: 'rgba(234,179,8,0.25)',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+        <line x1="9" y1="3" x2="9" y2="18"></line>
+        <line x1="15" y1="6" x2="15" y2="21"></line>
+      </svg>
+    ),
+    text: 'Looking ahead, our strategic vision for 2026 encompasses a robust global expansion. We are scaling our operations and extending our digital footprint across the CIS, Africa, Middle East & Europe.',
+    highlights: ['CIS & Africa', 'European Markets', 'Global Reach']
   }
 ];
 

@@ -42,7 +42,7 @@ const Footer = () => {
           <div className="footer-col">
             <h3 className="footer-title">About Mostech</h3>
             <p className="footer-text">
-              Mostech Business Solutions is a Dubai-based software company trusted across the UAE and GCC. We offer Software Development, Web and Mobile Application Development, and Digital Marketing services. We create intelligent, powerful applications that streamline business operations efficiently.
+              Mostech is a Dubai-based software development and digital marketing company serving businesses across the Middle East, Africa, South Asia, Europe, the CIS, and North America. We specialize in software, web and mobile app development, SEO, digital marketing, ERP, and eCommerce solutions, delivering scalable digital solutions that streamline operations and drive business growth.
             </p>
             <div className="footer-socials">
               <a href="https://www.linkedin.com/company/mostech/" target="_blank" rel="noreferrer" className="social-icon-link linkedin"><FaLinkedinIn size={20} /></a>

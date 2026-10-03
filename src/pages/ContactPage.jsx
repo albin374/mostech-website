@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { Send, MapPin, Phone, Mail, Clock, MessageSquare, Building2, Globe2, HeadphonesIcon } from 'lucide-react';
 import './ContactPage.css';
@@ -6,6 +6,65 @@ import './ContactPage.css';
 const ContactPage = () => {
   const form = useRef();
   const [status, setStatus] = useState('');
+  const [country, setCountry] = useState('AE');
+
+  useEffect(() => {
+    fetch('https://ipapi.co/json/')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.country_code) {
+          setCountry(data.country_code);
+        }
+      })
+      .catch((err) => console.error('Error fetching location:', err));
+  }, []);
+
+  const renderBusinessHours = () => {
+    if (country === 'IN') {
+      return (
+        <div className="info-list">
+          <div className="info-list-item">
+            <div className="info-list-icon-cal">📅</div>
+            <span><strong>Monday - Friday</strong><br/>9:00 AM - 6:00 PM</span>
+          </div>
+          <div className="info-list-item">
+            <div className="info-list-icon-cal">📅</div>
+            <span><strong>Saturday</strong><br/>9:00 AM - 1:00 PM</span>
+          </div>
+          <div className="info-list-item">
+            <div className="info-list-icon-cal">❌</div>
+            <span><strong>Sunday</strong><br/>Closed</span>
+          </div>
+        </div>
+      );
+    } else if (country === 'SA') {
+      return (
+        <div className="info-list">
+          <div className="info-list-item">
+            <div className="info-list-icon-cal">📅</div>
+            <span><strong>Saturday - Thursday</strong><br/>9:00 AM - 5:00 PM</span>
+          </div>
+          <div className="info-list-item">
+            <div className="info-list-icon-cal">❌</div>
+            <span><strong>Friday</strong><br/>Closed</span>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="info-list">
+          <div className="info-list-item">
+            <div className="info-list-icon-cal">📅</div>
+            <span><strong>Monday - Friday</strong><br/>9:00 AM - 5:00 PM</span>
+          </div>
+          <div className="info-list-item">
+            <div className="info-list-icon-cal">❌</div>
+            <span><strong>Saturday & Sunday</strong><br/>Closed</span>
+          </div>
+        </div>
+      );
+    }
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -95,22 +154,19 @@ const ContactPage = () => {
           <div className="contact-col-right">
             
             <div className="contact-info-card">
-              <div className="info-icon-box">
-                <Building2 size={24} color="#0d6efd" />
-              </div>
-              <h4 className="info-card-title">DUBAI HEAD<br/>OFFICE</h4>
+              <h4 className="info-card-title" style={{textTransform: 'none'}}>Headquarters - Dubai, UAE</h4>
               <div className="info-card-divider"></div>
               <div className="info-list">
                 <div className="info-list-item">
                   <MapPin size={18} color="#0d6efd" className="info-list-icon" />
                   <span>
-                    <strong>Bay Square<br/>Business Tower</strong><br/>
-                    Business Bay,<br/>Dubai,<br/>United Arab<br/>Emirates
+                    <strong>Bay Square Business Tower</strong><br/>
+                    Business Bay, Dubai, UAE
                   </span>
                 </div>
                 <div className="info-list-item">
                   <Phone size={18} color="#0d6efd" className="info-list-icon" />
-                  <span><strong>+971 585792020</strong></span>
+                  <span><strong>+971585792020</strong></span>
                 </div>
                 <div className="info-list-item">
                   <Mail size={18} color="#0d6efd" className="info-list-icon" />
@@ -120,57 +176,35 @@ const ContactPage = () => {
             </div>
 
             <div className="contact-info-card">
-              <div className="info-icon-box">
-                <Globe2 size={24} color="#0d6efd" />
-              </div>
-              <h4 className="info-card-title">REGIONAL<br/>OFFICE</h4>
+              <h4 className="info-card-title" style={{textTransform: 'none'}}>Regional Office</h4>
               <div className="info-card-divider"></div>
               <div className="info-list">
                 <div className="info-list-item">
                   <MapPin size={18} color="#0d6efd" className="info-list-icon" />
                   <span>
-                    <strong>Hilite Business Park,</strong><br/>
-                    Door No. 2/1149/I 100 Olavanna,<br/>
-                    Kozhikode, Kerala, India, 673014
+                    <strong>Hilite Business Park, Calicut, India</strong><br/>
+                    <strong>KVR Tower, Caltex, Kannur, India</strong><br/>
+                    <strong>Al khabara, Jeddah, Saudi Arabia</strong>
                   </span>
                 </div>
                 <div className="info-list-item">
-                  <Phone size={18} color="#0d6efd" className="info-list-icon" />
-                  <span style={{ whiteSpace: 'nowrap' }}><strong>+91 85475 57283</strong></span>
+                  <Mail size={18} color="#0d6efd" className="info-list-icon" />
+                  <span><strong>support@mostech.ae</strong></span>
                 </div>
                 <div className="info-list-item">
                   <Building2 size={18} color="#0d6efd" className="info-list-icon" />
-                  <span>Regional Support<br/>across GCC</span>
+                  <span>Regional Support<br/>across MiddleEast, Africa, CIS, Europe & North America</span>
                 </div>
               </div>
             </div>
 
             <div className="contact-info-card">
-              <div className="info-icon-box">
-                <Clock size={24} color="#0d6efd" />
-              </div>
               <h4 className="info-card-title">BUSINESS HOURS</h4>
               <div className="info-card-divider"></div>
-              <div className="info-list">
-                <div className="info-list-item">
-                  <div className="info-list-icon-cal">📅</div>
-                  <span><strong>Monday - Thursday</strong><br/>9:00 AM - 5:00 PM (GST)</span>
-                </div>
-                <div className="info-list-item">
-                  <div className="info-list-icon-cal">📅</div>
-                  <span><strong>Friday</strong><br/>9:00 AM - 1:00 PM (GST)</span>
-                </div>
-                <div className="info-list-item">
-                  <div className="info-list-icon-cal">❌</div>
-                  <span><strong>Saturday & Sunday</strong><br/>Closed</span>
-                </div>
-              </div>
+              {renderBusinessHours()}
             </div>
 
             <div className="contact-info-card">
-              <div className="info-icon-box">
-                <HeadphonesIcon size={24} color="#0d6efd" />
-              </div>
               <h4 className="info-card-title">QUICK SUPPORT</h4>
               <div className="info-card-divider"></div>
               <div className="info-list">
