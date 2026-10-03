@@ -41,7 +41,14 @@ const GlobalPresence = () => {
         {id:826,name:'United Kingdom',pt:[-0.13,51.51]},
         {id:840,name:'United States', pt:[-77.04,38.90]},
         {id:124,name:'Canada',        pt:[-75.70,45.42]},
-        {id:643,name:'Russia',        pt:[37.62,55.75]}
+        {id:643,name:'Russia',        pt:[37.62,55.75]},
+        {id:682,name:'KSA',           pt:[46.7, 24.7]},
+        {id:512,name:'Oman',          pt:[58.4, 23.6]},
+        {id:634,name:'Qatar',         pt:[51.5, 25.3]},
+        {id:48, name:'Bahrain',       pt:[50.5, 26.2]},
+        {id:414,name:'Kuwait',        pt:[47.9, 29.3]},
+        {id:760,name:'Syria',         pt:[38.9, 34.8]},
+        {id:422,name:'Lebanon',       pt:[35.8, 33.8]}
       ];
       const targetById = new Map(targetList.map(t => [t.id, t]));
       const HUB_ID = 784; // UAE
